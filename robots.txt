@@ -1,0 +1,9 @@
+User-agent: *
+
+Disallow: /stylesheets
+Disallow: /contact
+Disallow: /imagens
+
+
+Sitemap: http://www.congressojuridicoacre.com.br/index.xml  
+
