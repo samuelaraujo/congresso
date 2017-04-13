@@ -1,0 +1,290 @@
+<div class="transparencia"></div>
+<div class="fundo-estabelecimento">
+	<a href="/" class="voltar ng-scope">Voltar</a>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="list-itens">
+					<h1>Mais facilidades para criação de suas pesquisas.</h1>
+					<ul>
+						<li><i class="fa fa-check"></i> Pesquisas, respondentes e perguntas ilimitadas</li>
+						<li><i class="fa fa-check"></i> Mensalidade de R$14,90 <small>(não cobramos taxas adicionais por usuários)</small></li>
+						<li><i class="fa fa-check"></i> Coleta rápida de respostas por e-mail e rede socias</li>
+						<li><i class="fa fa-check"></i> Analise de resultados<small>(Word, PDF, Excel e Power Point)</small></li>
+						<li><i class="fa fa-check"></i> Relatórios e resultados em tempo real</li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-5" ng-init="step = 1">
+				<div ng-show="step == 1" class="register-company">
+					<h2>Experimente de forma gratuito por 15 dias</h2>
+					<p>Parte 1 - Dados do Administrador</p>
+					<form name="formCadastroEstabelecimento" role="form" class="form-signin" novalidate>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" 
+										name="nome" 
+										ng-model="estabelecimento.usuario.nome" 
+										placeholder="Nome" 
+										type="text"
+										required>
+										<div class="input-group-addon">
+											<i class="fa fa-user-o"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" 
+										name="nomeAdmin" 
+										ng-model="estabelecimento.usuario.sobrenome" 
+										placeholder="Sobrenome" 
+										type="text"
+										required>
+										<div class="input-group-addon">
+											<i class="fa fa-user-o"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" 
+										type="email"
+										name="email" 
+										ng-model="estabelecimento.usuario.email" 
+										ng-change="checkEmail()" 
+										ng-model-options="{ debounce: 500 }"
+										placeholder="E-mail" 
+										required>
+										<div class="input-group-addon">
+											<i ng-class="{
+												'fa fa-check text-success' : email.notfound && formCadastroEstabelecimento.email.$valid,
+												'fa fa-times text-danger' : email.found || (formCadastroEstabelecimento.email.$touched && formCadastroEstabelecimento.email.$invalid),
+												'fa fa-spinner fa-spin' : email.loading,
+												'fa fa-envelope-o' : email
+											}"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" name="senha" ng-model="estabelecimento.usuario.senha" id="senha" placeholder="Senha" 
+										type="password"
+										ng-minlength="5"
+										ng-maxlength="20"
+										required>
+										<div class="input-group-addon">
+											<i class="fa fa-key"></i>
+										</div>
+									</div>
+									<p ng-if="formCadastroEstabelecimento.senha.$error.minlength || formCadastroEstabelecimento.senha.$error.maxlength"
+									class="text-left nopadding">
+										Sua senha deve conter de 5 a 20 carateres
+									</p>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" name="confirmaSenha" ng-model="estabelecimento.usuario.confirmasenha" id="confirmar-senha" placeholder="Confirmar senha"
+										type="password"
+										required>
+										<div class="input-group-addon">
+											<i class="fa fa-key"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<button ng-click="step = 2" ng-disabled="formCadastroEstabelecimento.$invalid || estabelecimento.usuario.senha != estabelecimento.usuario.confirmasenha || email.found" class="btn-success btn btn-avalia-lg">CONTINUAR</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div ng-show="step == 2" class="register-company register2">
+					<h2>Experimente Grátis por 30 dias</h2>
+					<p>Parte 2 - Dados do Estabelecimento</p>
+					<form name="formCadastroEstabelecimentoAdmin" role="form" class="form-signin" novalidate>
+						<div class="row" ng-if="error">
+							<div class="col-md-12">
+								<div class="alert alert-error">
+									<p ng-bind="error"></p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" name="nomefantasia" ng-model="estabelecimento.nomefantasia" id="nome-estabelecimento" placeholder="Nome do estabelecimento"
+											type="text" required>
+										<div class="input-group-addon">
+											<i class="fa fa-building-o"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" 
+										name="cpfcnpj"
+										ng-model="estabelecimento.cpfcnpj" 
+										placeholder="CPF/CNPJ"
+										ng-change="checkCpfCnpj()" 
+										ng-model-options="{ debounce: 500 }" 
+										ui-br-cpfcnpj-mask required>
+										<div class="input-group-addon">
+											<i ng-class="{
+												'fa fa-building-o' : !formCadastroEstabelecimentoAdmin.cpfcnpj.$touched,
+												'fa fa-check text-success' : cpfcnpj.notfound && formCadastroEstabelecimentoAdmin.cpfcnpj.$touched,
+												'fa fa-times text-danger' : cpfcnpj.found && formCadastroEstabelecimentoAdmin.cpfcnpj.$touched,
+												'fa fa-spinner fa-spin' : cpfcnpj.loading
+											}"></i>
+										</div>
+									</div>
+								</div>
+							</div>						
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" 
+										ng-model="estabelecimento.telefone" 
+										id="telefone" 
+										placeholder="Telefone" 
+										type="tel"
+										ui-br-phone-number 
+										required>
+										<div class="input-group-addon">
+											<i class="fa fa-mobile"></i>
+										</div>
+									</div>
+								</div>
+							</div>						
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" 
+										ng-model="estabelecimento.cep" 
+										name="cep" 
+										placeholder="CEP" 
+										ng-change="searchCep()" 
+										ng-model-options="{ debounce: 500 }" 
+										type="text"
+										ui-br-cep-mask >
+										<div class="input-group-addon">
+											<i ng-class="{
+												'fa fa-map-marker' : !formCadastroEstabelecimentoAdmin.cep.$touched,
+												'fa fa-check text-success' : endereco.loaded,
+												'fa fa-times text-danger' : endereco.error,
+												'fa fa-spinner fa-spin' : endereco.loading
+											}"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="select-style">
+										<select ng-model="estabelecimento.idestado" ng-init="loadEstados()" ng-change="loadCidades()" ng-options="estado.id as estado.nome for estado in estados"
+											class="form-control" >
+												<option value="" disabled selected>Estado</option>
+											</select>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="select-style">
+										<select ng-model="estabelecimento.idcidade" ng-options="cidade.id as cidade.nome for cidade in cidades"
+											class="form-control">
+											<option value="" disabled selected>Cidade</option>
+											</select>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" ng-model="estabelecimento.endereco" name="endereco" placeholder="Av. Brasil, 1000" type="text" >
+										<div class="input-group-addon">
+											<i class="fa fa-map-marker"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" ng-model="estabelecimento.bairro" id="bairro" placeholder="Bairro" type="text">
+										<div class="input-group-addon">
+											<i class="fa fa-map-marker"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" ng-model="estabelecimento.numero" id="numero" placeholder="Número" type="number">
+										<div class="input-group-addon">
+											<i class="fa fa-map-marker"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="input-group">
+										<input class="form-control" ng-model="estabelecimento.complemento" id="complemento" placeholder="Complemento (opcional)"
+											type="text">
+										<div class="input-group-addon">
+											<i class="fa fa-map-marker"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<button ng-click="step = 1" 
+								class="btn btn-avalia-middle-left">VOLTAR</button>
+								<button ng-click="save()" ng-disabled="formCadastroEstabelecimentoAdmin.$invalid || status.loading || cpfcnpj.found" 
+								class="btn-success btn btn-avalia-middle-right">CADASTRAR</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

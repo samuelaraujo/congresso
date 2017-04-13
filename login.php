@@ -37,16 +37,16 @@
 		        <div class="flat-form">
 		            <ul class="tabs">
 		                <li>
-		                    <a href="#login" class="active">Login</a>
+		                    <a href="#login">Login</a>
 		                </li>
 		                <li>
-		                    <a href="#register" >Inscreva-se</a>
+		                    <a href="#register" class="active">Inscreva-se</a>
 		                </li>
 		                <li>
 		                    <a href="#reset">Resetar Senha</a>
 		                </li>
 		            </ul>
-		            <div id="login" class="form-action show">
+		            <div id="login" class="form-action hide">
 		                <h1>Login</h1>
 		                <form method="post" action="">
 		                	<div class="row">
@@ -78,7 +78,7 @@
 		            </div>
 		            <!--/#login.form-action-->
 		         
-			            <div id="register" class="form-action hide">
+			            <div id="register" class="form-action show">
 		                <h1>Dados Pessoais</h1>
 		                <form method="post" action="">
                 			<div class="row">
