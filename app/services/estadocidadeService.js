@@ -2,6 +2,13 @@ angular.module('app').service('estadocidadeService', ['$rootScope', '$http', fun
 
   var self = this;
 
+  this.loadPais = function(){
+    $http.get('/controller/guest/estadocidade/getpais')
+    .then(function(response){
+        $rootScope.$broadcast("paises", response.data.results);
+    });
+  };
+  
   this.loadEstados = function(){
     $http.get('/controller/guest/estadocidade/getestado')
     .then(function(response){

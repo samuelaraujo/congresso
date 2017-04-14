@@ -6,7 +6,8 @@ window.app = angular.module('app', [
   'ngRoute',
   'ui.bootstrap',
   'oc.lazyLoad',
-  'ui.utils.masks'
+  'ui.utils.masks',
+  'idf.br-filters'
 ]);
 
 /* configuration and routs */
@@ -33,18 +34,18 @@ angular.module('app').config(['$routeProvider','$locationProvider',  function($r
     .when('/id/:tab', {
       templateUrl: 'views/login.html',
       title: 'login',
-      // controller: 'adicionarEstabelecimentoController',
+      controller: 'adicionarUsuarioController',
       resolve: {
         lazyTestCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
           return $ocLazyLoad.load({
             name: 'app',
             /*name module(YourModuleApp)*/
             files: [
-              // 'app/services/estabelecimentoService.js', 
-              // 'app/services/estadocidadeService.js', 
-              // 'app/services/cepService.js', 
-              // 'app/services/usuarioService.js',
-              // 'app/controllers/estabelecimento/adicionarEstabelecimentoController.js',
+              'app/services/usuarioService.js', 
+              'app/services/estadocidadeService.js', 
+              'app/services/deficienciaService.js', 
+              'app/services/loteService.js', 
+              'app/controllers/usuario/adicionarUsuarioController.js',
               'assets/css/bootstrap.css',
               'assets/css/bootstrap-select.css',
               'assets/css/login.css'
@@ -57,18 +58,18 @@ angular.module('app').config(['$routeProvider','$locationProvider',  function($r
     .when('/id/:tab/:inscription', {
       templateUrl: 'views/login.html',
       title: 'login',
-      // controller: 'adicionarEstabelecimentoController',
+      controller: 'adicionarUsuarioController',
       resolve: {
         lazyTestCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
           return $ocLazyLoad.load({
             name: 'app',
             /*name module(YourModuleApp)*/
             files: [
-              // 'app/services/estabelecimentoService.js', 
-              // 'app/services/estadocidadeService.js', 
-              // 'app/services/cepService.js', 
-              // 'app/services/usuarioService.js',
-              // 'app/controllers/estabelecimento/adicionarEstabelecimentoController.js',
+              'app/services/usuarioService.js', 
+              'app/services/estadocidadeService.js', 
+              'app/services/deficienciaService.js', 
+              'app/services/loteService.js', 
+              'app/controllers/usuario/adicionarUsuarioController.js',
               'assets/css/bootstrap.css',
               'assets/css/bootstrap-select.css',
               'assets/css/login.css'
