@@ -26,6 +26,9 @@
 
 /* Preloader
 -------------------------------------------------------------- */
+.valido {
+	color: #00A859 !important;
+}
 .preloader {
 	width: 100%;
 	height: 100%;
