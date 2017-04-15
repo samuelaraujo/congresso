@@ -29,6 +29,11 @@
 .valido {
 	color: #00A859 !important;
 }
+
+a.link:hover, a.link:active{
+	 text-decoration: underline !important;
+}
+
 .margemApoio{
  margin-top: -40px !important;
 }

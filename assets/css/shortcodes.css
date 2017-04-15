@@ -293,7 +293,7 @@ h2.title.center:after {
 			transition: all 0.4s;
 }
 .feature:hover .media-object {
-	color: #fff212;
+	color: #00A859;
 	border: 15px solid #e0e0e0;
 }
 .feature .media-heading {
