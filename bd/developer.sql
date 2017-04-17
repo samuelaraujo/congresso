@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.35)
 # Base de Dados: congresso
-# Tempo de Geração: 2017-04-15 16:53:41 +0000
+# Tempo de Geração: 2017-04-17 04:35:04 +0000
 # ************************************************************
 
 
@@ -9894,7 +9894,7 @@ LOCK TABLES `lote` WRITE;
 INSERT INTO `lote` (`id`, `nome`, `status`, `created_at`, `update_at`)
 VALUES
 	(1,'1º Lote',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-	(2,'2º Lote',1,'0000-00-00 00:00:00','0000-00-00 00:00:00');
+	(2,'2º Lote',2,'0000-00-00 00:00:00','0000-00-00 00:00:00');
 
 /*!40000 ALTER TABLE `lote` ENABLE KEYS */;
 UNLOCK TABLES;
