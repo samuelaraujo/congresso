@@ -236,3 +236,8 @@ form input[type=password] {
   text-transform: uppercase;
   margin: 10px;
 }
+.loading-check{
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}

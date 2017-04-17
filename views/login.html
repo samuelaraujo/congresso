@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        <button ng-click="login()" ng-disabled="formLogin.$invalid || status.loading" type="sumit" class="btn btn-success btn-fill btn-wd">Acessar</button>
+                                        <button ng-click="login()" ng-disabled="formLogin.$invalid || status.loading" type="sumit" class="btn btn-success btn-fill btn-wd">ACESSAR</button>
                                     </div>
                                 </div>
                             </div>
@@ -55,6 +55,27 @@
                 <div id="register" class="form-action show">
                     <h1>Dados Pessoais</h1>
                     <form name="formRegister" role="form" novalidate>
+                        <div ng-if="error" class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-error">
+                                    <span ng-bind="error"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="email.found" class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-warning">
+                                    <span ng-bind="'Sua conta já existe, faça o seu login informando seu e-mail e sua senha para prosseguir'"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="cpf.found" class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-warning">
+                                    <span ng-bind="'CPF informado já existe em nosso sistema'"></span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -73,13 +94,16 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Nome no Crachá</label>
-                                    <input ng-model="usuario.cracha" placeholder="Nome no crachá" class="form-control" type="text" required>
+                                    <input ng-model="usuario.cracha" placeholder="Nome no crachá" class="form-control" type="text">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>E-mail</label>
-                                    <input ng-model="usuario.email" placeholder="E-mail" class="form-control" type="email" required>
+                                    <input ng-model="usuario.email" placeholder="E-mail" class="form-control" name="email" type="email" ng-change="checkEmail()" ng-model-options="{ debounce: 500 }" required>
+                                    <div ng-if="email.loading" class="loading-check">
+                                        <img src="assets/images/common/loading.gif" width="28">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +111,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Ingresso</label>
-                                    <select ng-model="usuario.idingresso" ng-init="loadLote()" class="form-control">
+                                    <select ng-model="usuario.idingresso" ng-init="loadLote()" class="form-control" name="ingresso" required>
                                         <optgroup ng-repeat="lote in lotes"
                                             label="{{lote.nome}}">
                                             <option ng-repeat="ingresso in lote.ingresso"
@@ -104,12 +128,12 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="radio">
-                                            <label><input id="" name="" value="M" type="radio"> Masculino</label>
+                                            <label><input ng-model="usuario.sexo" name="sexo" value="M" type="radio"> Masculino</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="radio">
-                                            <label><input id="" name="" value="F" type="radio"> Feminino</label>
+                                            <label><input ng-model="usuario.sexo" name="sexo" value="F" type="radio"> Feminino</label>
                                         </div>
                                     </div>
                                 </div>
@@ -119,13 +143,17 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>CPF</label>
-                                    <input placeholder="CPF" class="form-control" type="text">
+                                    <input ng-model="usuario.cpf" placeholder="CPF" name="cpf" class="form-control" type="text" 
+                                    ng-change="checkCpf()" ng-model-options="{ debounce: 500 }" ui-br-cpf-mask required>
+                                    <div ng-if="cpf.loading" class="loading-check">
+                                        <img src="assets/images/common/loading.gif" width="28">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Possui algum tipo de deficiência?</label>
-                                    <select ng-model="usuario.iddeficiencia" ng-init="loadDeficiencia()" ng-options="definicia.id as definicia.nome for definicia in deficiencias" class="form-control">
+                                    <select ng-model="usuario.iddeficiencia" ng-init="loadDeficiencia()" ng-options="deficiencia.id as deficiencia.nome for deficiencia in deficiencias" name="deficiencia" class="form-control" required>
                                         <option value="" disabled selected>Deficiência</option>
                                     </select>
                                 </div>
@@ -135,7 +163,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>País de Origem</label>
-                                    <select ng-model="usuario.idpais" ng-init="loadPais()" ng-options="pais.id as pais.nome for pais in paises" class="form-control">
+                                    <select ng-model="usuario.idpais" ng-init="loadPais()" ng-options="pais.id as pais.nome for pais in paises" name="pais" class="form-control" required>
                                         <option value="" disabled selected>Pais</option>
                                     </select>
                                 </div>
@@ -143,7 +171,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Estado</label>
-                                    <select ng-model="usuario.idestado" ng-init="loadEstados()" ng-change="loadCidades()" ng-options="estado.id as estado.nome for estado in estados" class="form-control">
+                                    <select ng-model="usuario.idestado" ng-init="loadEstados()" ng-change="loadCidades()" ng-options="estado.id as estado.nome for estado in estados" name="estado" class="form-control" required>
                                         <option value="" disabled selected>Estado</option>
                                     </select>
                                 </div>
@@ -151,7 +179,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Cidade</label>
-                                    <select ng-model="usuario.idcidade" ng-options="cidade.id as cidade.nome for cidade in cidades" class="form-control">
+                                    <select ng-model="usuario.idcidade" ng-options="cidade.id as cidade.nome for cidade in cidades" name="cidade" class="form-control" required>
                                         <option value="" disabled selected>Cidade</option>
                                     </select>
                                 </div>
@@ -161,19 +189,26 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Senha</label>
-                                    <input placeholder="Senha" class="form-control" type="password">
+                                    <input ng-model="usuario.senha" name="senha" placeholder="Senha" class="form-control" type="password" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Confirmar Senha</label>
-                                    <input placeholder="Confirmar Senha" class="form-control" type="password">
+                                    <input ng-model="usuario.confirmasenha" placeholder="Confirmar Senha" name="confirmasenha" class="form-control" type="password" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <button type="sumit" class="btn btn-success btn-fill btn-wd">Acessar</button>
+                                <button ng-click="save()" 
+                                ng-disabled="formRegister.$invalid || status.loading || usuario.senha != usuario.confirmasenha || cpf.found || email.found" 
+                                type="sumit" 
+                                class="btn btn-success btn-fill btn-wd"
+                                ng-switch="status.loading">
+                                    <span ng-switch-default>CADASTRAR</span>
+                                    <span ng-switch-when="true">AGUARDE...</span>
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -193,7 +228,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <button ng-click="reset()" class="btn btn-success btn-fill btn-wd" ng-disabled="formReset.$invalid || status.loading" type="sumit">Enviar</button>
+                                <button ng-click="reset()" class="btn btn-success btn-fill btn-wd" ng-disabled="formReset.$invalid || status.loading" type="sumit">ENVIAR</button>
                             </div>
                         </div>
                     </form>

@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.35)
 # Base de Dados: congresso
-# Tempo de Geração: 2017-04-14 19:45:41 +0000
+# Tempo de Geração: 2017-04-15 16:53:41 +0000
 # ************************************************************
 
 
@@ -9910,6 +9910,7 @@ CREATE TABLE `pagamento` (
   `idingresso` int(11) unsigned DEFAULT NULL,
   `idusuario` int(11) unsigned DEFAULT NULL,
   `codigo` varchar(80) DEFAULT NULL,
+  `status` int(11) DEFAULT '1' COMMENT '1 - Pagamento efetuado \\n2 - Pendente \\n3 - Cancelado \\n4 - Estornado ',
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -9920,12 +9921,110 @@ CREATE TABLE `pagamento` (
 LOCK TABLES `pagamento` WRITE;
 /*!40000 ALTER TABLE `pagamento` DISABLE KEYS */;
 
-INSERT INTO `pagamento` (`id`, `idingresso`, `idusuario`, `codigo`, `created_at`, `updated_at`)
+INSERT INTO `pagamento` (`id`, `idingresso`, `idusuario`, `codigo`, `status`, `created_at`, `updated_at`)
 VALUES
-	(1,1,NULL,'123','0000-00-00 00:00:00','0000-00-00 00:00:00');
+	(1,1,2,'123',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+	(11,5,10,'KKW68UCH3OE',1,'2017-05-22 00:19:51','2016-10-24 14:59:41'),
+	(12,3,8,'PRT04DVY2ZG',1,'2017-06-22 14:00:50','2017-04-28 08:57:01'),
+	(13,6,2,'PCI35LJY4AP',1,'2016-04-16 21:35:53','2017-03-03 05:12:23'),
+	(14,6,9,'TUU21APY8YY',1,'2017-03-09 21:49:45','2017-01-13 23:03:27'),
+	(15,6,10,'MPJ87SOE8BZ',1,'2018-03-26 09:02:30','2018-02-19 11:27:07'),
+	(16,4,3,'KQR06HCQ3WK',1,'2018-02-13 23:30:29','2016-10-05 19:03:17'),
+	(17,2,7,'LNS24OEX2AE',1,'2018-02-08 01:33:07','2016-10-17 00:27:57'),
+	(18,2,10,'FYO16BVQ8AS',1,'2017-07-21 11:52:51','2017-12-29 09:48:13'),
+	(19,3,7,'OXL22QWH5VK',1,'2018-02-16 21:15:31','2016-05-07 01:36:06'),
+	(20,3,7,'GKX55GWS7GZ',1,'2016-11-09 00:16:56','2017-03-13 08:49:45'),
+	(21,5,7,'LWS22TZL2FP',1,'2016-04-23 14:47:53','2017-07-14 01:39:50'),
+	(22,3,8,'YSD96ICC4YC',1,'2016-09-16 07:36:07','2017-09-14 09:48:25'),
+	(23,1,5,'USS22FSZ8RM',1,'2016-06-27 22:35:39','2016-10-03 21:31:39'),
+	(24,2,9,'ZGS24FZN1BT',1,'2018-03-24 22:02:06','2018-03-07 16:46:20'),
+	(25,2,3,'PMO59JTJ9UY',1,'2016-10-11 12:03:48','2017-11-01 22:29:00'),
+	(26,5,7,'MYQ02WBK5UN',1,'2018-03-03 16:30:53','2017-01-13 23:00:16'),
+	(27,2,2,'PPS38FYS4CE',1,'2016-09-12 17:10:35','2017-01-23 03:30:59'),
+	(28,6,5,'NTB70OCX5TR',1,'2017-07-23 03:23:10','2017-10-27 06:02:10'),
+	(29,2,4,'VNZ35WKW3QA',1,'2017-10-28 07:17:12','2016-08-08 08:24:25'),
+	(30,1,2,'KZO44TOT2OK',1,'2016-06-27 09:51:29','2017-06-12 16:51:49'),
+	(31,3,7,'XBU29LYL8AI',1,'2017-03-22 01:15:44','2016-11-20 19:10:24'),
+	(32,2,10,'WFK80OYH2LQ',1,'2017-11-06 00:30:46','2017-01-10 12:48:16'),
+	(33,4,2,'NBN72XFJ1WH',1,'2016-11-26 07:34:24','2016-07-31 15:17:56'),
+	(34,6,7,'HQL66PTR1ZQ',1,'2016-09-26 02:33:53','2016-05-27 15:49:53'),
+	(35,1,2,'TTX60NDE0BZ',1,'2017-02-03 10:28:45','2018-03-08 11:45:25'),
+	(36,1,1,'JAG74YUN9IL',1,'2017-01-25 09:30:56','2016-07-14 08:37:23'),
+	(37,4,4,'YEP20RMN4EO',1,'2016-06-28 18:37:23','2017-03-24 18:17:34'),
+	(38,5,3,'ZPR96ADR5YR',1,'2016-11-03 00:26:16','2016-12-11 14:46:52'),
+	(39,5,3,'UNM29NEX4KT',1,'2016-07-02 06:57:56','2017-12-02 17:15:57'),
+	(40,5,9,'GMO95JKL5GY',1,'2016-05-11 19:51:42','2017-04-12 07:57:58'),
+	(41,5,10,'WDY12QMG0EO',1,'2017-11-26 18:43:36','2016-07-17 02:48:58'),
+	(42,2,3,'HTX53EYL3JQ',1,'2017-06-08 01:12:46','2017-08-14 00:56:24'),
+	(43,1,9,'XHI70YVL8ES',1,'2017-05-23 10:25:25','2016-07-31 16:02:52'),
+	(44,5,3,'MLH09RXZ3VV',1,'2016-12-28 15:23:26','2016-11-24 07:26:43'),
+	(45,1,10,'KPG05VHH9YW',1,'2017-08-12 08:54:31','2017-07-12 00:01:28'),
+	(46,3,10,'IGN83XQX4ES',1,'2018-03-06 18:33:13','2017-04-11 02:52:12'),
+	(47,6,8,'DWE24TIB3SP',1,'2017-09-19 18:13:11','2017-07-06 18:40:20'),
+	(48,1,2,'SCE49NLO0UH',1,'2016-12-21 13:37:22','2017-01-24 09:18:37'),
+	(49,2,5,'YRK02SFS6GY',1,'2018-03-28 01:42:39','2017-11-17 21:48:36'),
+	(50,3,8,'XRO27WKB6YV',1,'2017-12-07 22:23:04','2016-11-30 13:10:25'),
+	(51,1,8,'UQH78PHV6GI',1,'2017-05-27 03:50:53','2016-04-23 22:53:03'),
+	(52,4,8,'TBX45JAE1AZ',1,'2017-04-14 15:13:32','2017-04-20 08:59:08'),
+	(53,3,2,'OOO66RWS7II',1,'2017-03-20 02:51:29','2017-02-16 03:03:34'),
+	(54,1,7,'JJR56HXW8FD',1,'2017-11-21 23:18:14','2018-01-16 17:00:10'),
+	(55,1,9,'KNN20DJG1RL',1,'2016-12-09 07:22:25','2017-08-12 15:45:18'),
+	(56,2,6,'DAB96SCX9SQ',1,'2018-03-17 19:55:55','2017-07-09 19:21:18'),
+	(57,5,9,'GYT41BMK4MR',1,'2017-11-26 01:26:32','2017-12-05 18:12:50'),
+	(58,5,2,'NMH13DWH4PA',1,'2016-09-20 21:03:01','2016-05-29 17:16:58'),
+	(59,2,6,'CMU35KRZ2VC',1,'2018-03-26 05:25:53','2016-07-13 12:41:54'),
+	(60,2,2,'PSP96UDN3VX',1,'2018-01-10 05:30:45','2016-06-19 23:29:23'),
+	(61,1,2,'NEJ64RQE0WS',1,'2018-02-14 16:41:41','2016-08-13 03:19:49'),
+	(62,1,3,'KPP33WCG8BS',1,'2017-08-02 09:33:38','2017-06-30 13:25:09'),
+	(63,3,2,'GJM43WWG5SH',1,'2016-12-26 22:50:23','2016-09-26 11:01:53'),
+	(64,1,9,'VUP64DPS3YO',1,'2017-08-07 06:59:51','2016-09-19 04:07:54'),
+	(65,1,6,'UIA49BOO6VX',1,'2018-03-21 09:23:00','2017-01-28 16:11:34'),
+	(66,5,5,'UYO03WJG0LS',1,'2018-04-09 16:53:13','2016-05-04 21:49:15'),
+	(67,2,4,'YDZ99SCC0SQ',1,'2016-07-22 05:52:25','2017-01-30 03:04:47'),
+	(68,1,7,'CBT77SNL9IS',1,'2017-09-25 03:10:56','2016-12-30 17:04:52'),
+	(69,1,5,'JDG70ZOL6VS',1,'2017-02-28 09:49:51','2017-02-09 21:53:31'),
+	(70,2,6,'KPO23QYN4JP',1,'2017-08-15 11:51:23','2017-04-13 08:14:00'),
+	(71,5,2,'XJU19OKK4YE',1,'2016-05-20 13:07:38','2017-03-25 01:09:38'),
+	(72,1,3,'ECM58GIJ9AX',1,'2017-05-15 08:42:39','2017-12-26 22:22:36'),
+	(73,4,6,'JYL31DQD2MT',1,'2017-12-24 01:33:06','2017-02-04 14:52:57'),
+	(74,5,7,'KGL82QJJ0GQ',1,'2018-01-19 13:59:52','2016-04-15 10:29:22'),
+	(75,3,3,'STU20EAR0PG',1,'2017-08-25 19:16:25','2018-02-20 01:47:30'),
+	(76,5,6,'ORQ58ALQ9QK',1,'2018-03-18 19:25:33','2018-02-21 21:45:30'),
+	(77,5,8,'STX96ILF8GU',1,'2016-06-26 10:02:03','2018-04-09 16:42:48'),
+	(78,3,7,'GJQ53WIG6SX',1,'2017-03-08 21:06:58','2017-05-03 11:36:01'),
+	(79,6,5,'ONV60GXT2CT',1,'2017-03-15 09:02:36','2018-04-13 04:21:53'),
+	(80,3,3,'UDJ73ZIY7GM',1,'2016-06-22 06:44:20','2016-09-25 04:48:07'),
+	(81,4,10,'WCY81YGY8YN',1,'2017-01-22 10:01:21','2016-08-22 04:50:09'),
+	(82,4,8,'QHB29UNP2ZK',1,'2016-11-12 23:11:20','2016-05-15 16:34:12'),
+	(83,4,8,'WLG16WSZ5JA',1,'2016-05-16 01:33:29','2017-02-26 20:21:28'),
+	(84,6,6,'GHX74RAE2UY',1,'2016-10-11 23:44:50','2016-09-20 20:40:28'),
+	(85,6,2,'EUS46NZY1VU',1,'2018-03-25 10:44:50','2017-05-29 23:58:37'),
+	(86,2,2,'UKR52NNX8CV',1,'2018-04-11 06:22:17','2016-09-29 04:31:11'),
+	(87,2,9,'CRY61EAE4LI',1,'2017-04-10 05:37:59','2017-03-03 08:44:54'),
+	(88,6,7,'VCU82BEH2GK',1,'2018-01-26 03:06:52','2017-11-20 10:51:14'),
+	(89,6,8,'SFQ58MWJ2XM',1,'2017-02-20 05:36:28','2016-10-12 17:59:05'),
+	(90,4,1,'THR15ADV6UK',1,'2017-10-20 04:17:34','2017-03-04 09:35:49'),
+	(91,2,6,'XLN79LFT9XY',1,'2017-03-03 22:32:47','2016-08-21 23:40:46'),
+	(92,2,2,'CTB74ZXB9TU',1,'2017-08-22 01:22:29','2017-11-29 09:43:38'),
+	(93,4,2,'FQG22ZXJ6VZ',1,'2017-10-03 23:57:50','2016-07-29 01:39:12'),
+	(94,2,3,'KGV86OEG0JI',1,'2016-09-11 04:26:24','2016-08-29 14:00:13'),
+	(95,4,9,'AJL27HVK7AX',1,'2016-04-21 14:52:15','2018-03-31 02:49:04'),
+	(96,5,2,'DZZ55ROA9SE',1,'2017-04-24 06:18:42','2017-01-15 04:28:08'),
+	(97,4,9,'IKO59EID4MQ',1,'2016-12-23 08:29:44','2017-11-27 08:42:51'),
+	(98,1,3,'RHH13MMP0WE',1,'2017-08-30 23:43:05','2017-12-25 20:09:27'),
+	(99,2,8,'XEH48LGB7TE',1,'2016-05-25 05:42:17','2017-06-09 07:32:46'),
+	(100,1,9,'XFY45ERS6RU',1,'2016-10-05 18:41:15','2017-09-03 20:39:10');
 
 /*!40000 ALTER TABLE `pagamento` ENABLE KEYS */;
 UNLOCK TABLES;
+
+DELIMITER ;;
+/*!50003 SET SESSION SQL_MODE="NO_ENGINE_SUBSTITUTION" */;;
+/*!50003 CREATE */ /*!50017 DEFINER=`root`@`localhost` */ /*!50003 TRIGGER `tgr_pagamentoefetuado` AFTER INSERT ON `pagamento` FOR EACH ROW BEGIN
+	CALL sp_atualizaingresso(new.idingresso);
+END */;;
+DELIMITER ;
+/*!50003 SET SESSION SQL_MODE=@OLD_SQL_MODE */;
 
 
 # Dump da tabela pais
@@ -10235,6 +10334,114 @@ CREATE TABLE `usuario` (
   CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`idpais`) REFERENCES `pais` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `usuario` WRITE;
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+
+INSERT INTO `usuario` (`id`, `idingresso`, `nome`, `sobrenome`, `cracha`, `sexo`, `email`, `cpf`, `senha`, `idpais`, `idcidade`, `gestor`, `status`, `created_at`, `updated_at`)
+VALUES
+	(1,2,'Rajah','David','Chester','F','nonummy@bibendumfermentum.edu','82066114435','WOK18RYZ2US',1,16,0,1,'2017-03-17 05:45:34','2017-03-13 03:34:52'),
+	(2,3,'Davis','Odysseus','Drake','F','lectus.a@sitametconsectetuer.org','70251506594','ZKP26FQN3UJ',1,8,0,1,'2017-08-15 05:03:51','2017-05-21 03:49:31'),
+	(3,2,'Marsden','Arden','Steel','F','orci.in.consequat@auguescelerisque.net','96067742923','OXO37MGL2AV',1,16,0,1,'2016-05-12 01:51:05','2017-09-01 13:18:24'),
+	(4,4,'Ronan','Jasper','Garrett','F','facilisis@augueid.org','88687120112','VAV68QLC9GV',1,13,0,1,'2016-08-03 19:47:20','2017-08-30 11:14:47'),
+	(5,3,'Troy','Honorato','Chester','F','eget.ipsum.Suspendisse@Donecat.edu','97110798544','GZW55IKL7CI',1,8,0,1,'2018-02-23 14:05:23','2017-04-26 20:24:41'),
+	(6,5,'Mark','Chadwick','Drew','M','eget.metus@ipsum.co.uk','71744098211','DHI44OTT5UU',1,8,0,1,'2018-04-08 09:37:38','2016-08-01 08:55:11'),
+	(7,5,'Gabriel','Dane','Kermit','F','et@turpisnec.org','06148981574','QYI35BZX2II',1,13,0,1,'2017-11-21 23:43:37','2018-02-23 18:22:09'),
+	(8,4,'Chase','Simon','Hu','M','turpis.vitae.purus@purusDuis.edu','49108159985','ISA36TZV3PH',1,13,0,1,'2016-10-09 00:39:38','2017-08-30 22:42:57'),
+	(9,6,'Hall','Yuli','Bruce','M','Maecenas.mi.felis@laciniavitaesodales.com','46508819369','NVU10TXL3FT',1,2,0,1,'2016-05-20 18:11:00','2016-09-15 11:18:27'),
+	(10,2,'Ira','Jordan','Zeus','M','non@gravida.org','78046634106','QWU70VHK3JT',1,7,0,1,'2017-06-05 01:21:48','2017-09-21 22:49:23'),
+	(11,4,'Camden','Raphael','Randall','M','congue.In.scelerisque@quam.org','75953341778','VRP48JLU0EM',1,15,0,1,'2016-10-05 13:07:52','2016-06-07 01:02:16'),
+	(12,2,'Akeem','Jakeem','Lev','M','eu@nasceturridiculusmus.edu','17093531809','QVC72XHE2JI',1,21,0,1,'2017-03-19 08:22:16','2017-07-13 04:38:38'),
+	(13,4,'Merritt','Quamar','Eric','F','facilisis.vitae.orci@eudoloregestas.edu','23655635986','ZVI91KHG2SR',1,14,0,1,'2017-03-12 10:03:31','2016-07-19 19:58:36'),
+	(14,4,'John','Patrick','Phelan','M','aliquet.libero@milaciniamattis.edu','11308504618','YUM53CEF1MV',1,18,0,1,'2016-12-12 19:21:05','2017-09-11 15:46:08'),
+	(15,1,'Perry','Jermaine','Hakeem','M','Cras.interdum@magnisdisparturient.co.uk','97354078188','KME33WBB0AU',1,20,0,1,'2017-04-09 13:16:34','2017-03-07 17:11:18'),
+	(16,5,'Theodore','Vernon','Abbot','F','eu.tellus.Phasellus@nonummyutmolestie.co.uk','89710526826','ZPO53FNK4LE',1,16,0,1,'2018-04-14 05:23:09','2016-11-21 07:30:06'),
+	(17,5,'Nero','Ezekiel','Kirk','F','Cras@ornareegestas.co.uk','86950109231','XHP58EDR5PL',1,5,0,1,'2017-12-01 18:14:14','2017-11-20 05:52:01'),
+	(18,6,'Tad','Graham','Garrett','M','egestas.Duis.ac@eu.com','96712871654','ZRC12LCK1DB',1,22,0,1,'2016-07-16 06:30:54','2017-10-09 14:00:44'),
+	(19,4,'Joshua','Colt','Jack','F','eu@quispede.co.uk','32301923517','QLN31TEX5CC',1,5,0,1,'2016-07-11 20:30:58','2016-09-08 15:11:13'),
+	(20,4,'Mark','Joel','Valentine','M','Etiam@mauris.co.uk','42387616962','HPM39XCV8RU',1,17,0,1,'2017-07-28 14:25:59','2017-01-15 12:33:02'),
+	(21,2,'Sawyer','Samson','Kareem','F','molestie.sodales@aliquetPhasellus.ca','06740289817','NDW24FWZ7VT',1,5,0,1,'2017-11-12 08:22:04','2017-11-25 23:58:21'),
+	(22,2,'Acton','Ryder','Yasir','F','at@egettinciduntdui.com','86181370568','AYN83ONG5SN',1,8,0,1,'2017-06-19 17:38:50','2016-06-29 02:34:48'),
+	(23,6,'Brock','Hashim','Josiah','F','auctor.velit@etrutrumeu.com','62925406565','GDO50WNT0ZQ',1,4,0,1,'2016-11-07 17:00:35','2018-02-17 03:33:45'),
+	(24,6,'Neil','Reece','Jack','F','litora.torquent@mattisCraseget.com','63544200381','TMK50FQM3EB',1,13,0,1,'2016-11-23 22:29:45','2017-08-26 21:48:16'),
+	(25,3,'Ferdinand','Adrian','Sawyer','M','mauris@dolorFuscefeugiat.com','79493857756','ALX79NFD5VF',1,6,0,1,'2016-11-06 11:35:38','2017-04-19 00:53:20'),
+	(26,2,'Nissim','Silas','Martin','M','luctus.sit.amet@sedconsequat.org','04887527573','WUF47EFJ4MZ',1,7,0,1,'2017-07-13 12:41:09','2017-01-05 14:31:41'),
+	(27,5,'Brent','Aquila','Yoshio','F','dui.quis@ametdiameu.com','66293419728','AVW59HXZ6TI',1,15,0,1,'2018-02-19 14:25:23','2016-07-20 07:57:42'),
+	(28,2,'Porter','Luke','Hammett','F','magna@Etiambibendumfermentum.com','88946520330','UMG91EZV0LM',1,20,0,1,'2017-08-06 01:04:36','2016-08-26 05:09:58'),
+	(29,4,'Cole','Ignatius','Martin','F','Phasellus.nulla@egetvolutpatornare.com','98413426751','DBG41SCZ1NZ',1,4,0,1,'2018-01-22 19:28:26','2016-07-04 02:13:08'),
+	(30,2,'Kenneth','Xanthus','Basil','F','Mauris.magna.Duis@convallis.edu','95861770009','FQX03TSP5UV',1,21,0,1,'2016-09-14 03:30:41','2018-03-22 22:23:33'),
+	(31,6,'Castor','Dennis','Raja','F','eleifend@orcisem.org','55784988960','QJF52ELG0PS',1,6,0,1,'2017-04-15 15:59:40','2017-07-01 14:49:31'),
+	(32,3,'Quinn','Bert','Blaze','M','ante.dictum.cursus@ornaretortor.org','80115533870','HVS53ZUB8KB',1,5,0,1,'2017-11-25 08:23:43','2017-07-05 03:46:08'),
+	(33,2,'Michael','Christian','Alvin','F','erat.eget@porttitorscelerisqueneque.edu','72838927360','YZQ71RUW1FX',1,16,0,1,'2017-07-28 14:24:05','2018-03-06 02:21:38'),
+	(34,2,'Zahir','Sawyer','Alan','M','libero.et.tristique@vitaemauris.edu','04746112639','OHA20ADQ0NT',1,3,0,1,'2016-05-02 15:19:17','2017-04-05 06:52:17'),
+	(35,1,'Zahir','Rudyard','Curran','F','Praesent.luctus@maurisblandit.net','43741900669','CNU37ADW8WL',1,5,0,1,'2016-06-17 04:15:46','2016-06-29 02:41:19'),
+	(36,1,'Hu','Orlando','Elton','M','ac.risus@dictummi.ca','06010924419','KCK50WLF3FK',1,17,0,1,'2017-04-03 18:10:02','2018-02-05 21:12:32'),
+	(37,3,'Len','Gary','Mason','F','montes.nascetur@imperdiet.edu','86603674543','XWT38QZD9FY',1,4,0,1,'2016-07-08 10:45:10','2017-05-04 09:18:54'),
+	(38,3,'Ronan','Preston','Lucius','M','Curae@risusDonec.edu','93782088846','TEP31OKH8GM',1,1,0,1,'2017-06-16 01:31:45','2016-12-11 13:21:48'),
+	(39,3,'Aquila','Brent','Xavier','F','nisl.sem.consequat@necluctus.ca','01418916323','YIR80EDD9GA',1,8,0,1,'2016-10-07 11:44:23','2017-08-21 14:54:33'),
+	(40,6,'Kyle','Dominic','Yasir','F','pede.Nunc.sed@dui.com','63961227079','QOD78QLK2KV',1,6,0,1,'2017-01-08 00:34:29','2016-09-17 07:25:01'),
+	(41,2,'Lucas','Jackson','Carson','F','est@enim.net','92301662876','YRX49VEH5CL',1,7,0,1,'2017-12-10 01:42:34','2016-05-29 08:27:41'),
+	(42,4,'Lucas','Wesley','Mannix','M','aliquet.magna.a@semmolestie.net','50791465058','QKC87IBF1NM',1,6,0,1,'2018-03-23 03:09:56','2016-12-24 10:29:39'),
+	(43,5,'Hop','Axel','Henry','M','ipsum.Phasellus@ridiculusmusProin.co.uk','56224937215','MMM50HFA6UI',1,1,0,1,'2018-01-11 01:02:07','2017-09-14 14:00:24'),
+	(44,3,'Abraham','Brady','Clarke','F','elit.dictum.eu@Phasellus.org','98512916980','HSX77WDM4UC',1,17,0,1,'2017-12-21 04:55:33','2018-03-14 16:20:54'),
+	(45,4,'Craig','Gabriel','Boris','M','enim.sit.amet@liberoatauctor.net','07543260753','IGV13CXT9KG',1,5,0,1,'2018-03-13 11:50:54','2017-04-02 22:03:22'),
+	(46,2,'Chaney','Callum','Dale','F','nibh.dolor@Pellentesque.edu','71674879054','BON55UGW6NN',1,20,0,1,'2017-10-09 11:47:46','2016-04-24 11:39:43'),
+	(47,1,'Talon','Oliver','Vaughan','M','sapien.gravida.non@urna.org','79252622108','FIB16RHT3SQ',1,20,0,1,'2017-09-18 10:58:19','2016-12-26 08:19:38'),
+	(48,6,'Sylvester','Michael','Jonas','M','vehicula.risus@egetnisidictum.co.uk','08354374886','RPA59JEC3YW',1,19,0,1,'2016-08-25 22:39:41','2018-03-27 12:30:43'),
+	(49,1,'Edan','Phillip','Hashim','F','risus.Quisque@ipsumDonec.com','24420461458','SWB01GPN0BR',1,16,0,1,'2017-11-02 16:59:06','2018-02-17 08:43:17'),
+	(50,2,'Gregory','Zane','Craig','F','risus@NullamenimSed.edu','41449486397','IBL60MEA5WB',1,4,0,1,'2016-11-10 21:11:29','2016-07-27 09:59:27'),
+	(51,1,'Hector','Evan','Ignatius','F','Suspendisse.sagittis.Nullam@facilisisnonbibendum.net','67218458445','XQA51AGM9VY',1,1,0,1,'2016-08-06 03:14:08','2016-04-23 19:12:30'),
+	(52,5,'Oliver','Coby','Cyrus','M','tempus@accumsansed.edu','56317968265','ZMK96APE0KX',1,17,0,1,'2017-12-10 03:33:46','2017-10-01 04:13:12'),
+	(53,1,'Chaney','Jamal','Peter','F','mauris.erat@Namnullamagna.co.uk','53339185480','AGZ87FAW6ZC',1,19,0,1,'2017-10-13 08:31:51','2017-07-14 14:03:51'),
+	(54,4,'Raja','Zeph','Gareth','F','sollicitudin@sitametnulla.net','01710493323','SET94LQR7LF',1,11,0,1,'2016-11-09 12:25:11','2016-11-09 05:58:55'),
+	(55,6,'Bruce','Logan','Emmanuel','M','quis.pede@etlacinia.com','81272290199','IDL77XSN8SP',1,17,0,1,'2018-03-15 15:17:23','2017-07-10 19:06:09'),
+	(56,4,'Russell','Yardley','Alden','F','elit@acmattissemper.ca','68450934215','KGG05OTN9TH',1,16,0,1,'2017-04-16 00:52:56','2016-04-30 03:47:28'),
+	(57,5,'Solomon','Xanthus','Quentin','F','tincidunt.aliquam.arcu@a.co.uk','23706821756','RVX82QZK4ST',1,4,0,1,'2016-08-04 09:31:31','2018-02-12 20:43:29'),
+	(58,6,'Nolan','Dale','Kyle','M','mattis.Cras.eget@volutpat.net','82687119259','QFJ90OWN2IX',1,20,0,1,'2016-08-01 08:33:41','2016-11-18 11:07:25'),
+	(59,5,'Cairo','Mufutau','Hamish','F','eget.odio.Aliquam@urna.com','54512022496','AJF73PQN8MV',1,8,0,1,'2017-08-24 12:06:49','2017-07-07 16:23:12'),
+	(60,4,'Fletcher','Edward','Ezra','M','ipsum.primis.in@nuncrisusvarius.ca','66594548313','KHV45NQJ7DQ',1,3,0,1,'2016-05-30 02:41:47','2017-08-23 08:34:50'),
+	(61,2,'Quentin','Armando','Logan','M','malesuada.fames@ultricessit.ca','48307951090','IXJ38PYP4MD',1,4,0,1,'2017-02-26 05:49:29','2016-06-13 02:29:48'),
+	(62,6,'Ryder','Connor','Jonas','M','ultrices.iaculis.odio@lacus.net','55308284447','NHW55DRJ5JJ',1,16,0,1,'2016-05-17 09:53:50','2016-12-03 15:39:37'),
+	(63,1,'Xenos','Avram','Stewart','M','aliquet.libero.Integer@Seddiam.co.uk','08433512475','RTT34AYD9CM',1,22,0,1,'2017-05-16 17:48:52','2017-10-07 06:07:58'),
+	(64,3,'Quamar','Cruz','Grant','F','Nunc.commodo.auctor@neque.net','00485160522','ZQS36TDS0EF',1,14,0,1,'2016-11-17 13:37:53','2016-10-14 03:36:01'),
+	(65,3,'Lucian','Kareem','Isaac','F','odio@Donec.edu','87620407888','SWW17DLR6SU',1,20,0,1,'2016-06-12 15:21:52','2017-10-15 02:42:44'),
+	(66,4,'Linus','Gil','Samson','M','mus@elit.edu','18710203199','OET72UOC5OC',1,3,0,1,'2016-09-22 13:27:27','2018-03-28 02:51:38'),
+	(67,6,'Walker','Linus','Sawyer','M','Etiam.imperdiet.dictum@acarcuNunc.net','93756886494','NZD31TQO0GM',1,3,0,1,'2017-03-31 05:12:54','2017-12-27 13:29:52'),
+	(68,2,'Mannix','Gary','Barrett','M','lectus.rutrum.urna@disparturient.edu','70118353839','LJF58YRW0CB',1,19,0,1,'2017-12-10 15:59:10','2016-06-22 14:28:30'),
+	(69,4,'Holmes','Colby','Elmo','F','tincidunt.pede@rutrum.com','44519722306','USI98DFO8XE',1,12,0,1,'2017-09-16 18:26:49','2016-12-15 21:52:45'),
+	(70,1,'Xander','Arthur','Ian','M','vel.arcu@sitametlorem.edu','79707447004','LKI69DYF7HH',1,7,0,1,'2017-10-25 09:47:25','2017-11-25 12:56:19'),
+	(71,5,'Ira','Keith','Graham','M','morbi.tristique@dictum.net','57925317167','GZO23DKU3HK',1,6,0,1,'2016-10-12 07:52:44','2017-12-01 16:05:25'),
+	(72,1,'Kelly','Abbot','Edan','M','vestibulum@dui.edu','32689729877','PCM81MEQ4EY',1,2,0,1,'2017-04-22 12:47:22','2017-08-06 07:11:19'),
+	(73,3,'Cadman','Chandler','Emmanuel','M','urna@Innecorci.com','47226706517','NNG98JRC5BR',1,8,0,1,'2018-03-31 05:46:55','2016-07-08 05:24:40'),
+	(74,5,'Caesar','Forrest','Stuart','F','sagittis.Nullam@elitafeugiat.ca','80308144781','THH52NAX6ZB',1,7,0,1,'2017-07-29 21:49:44','2016-07-27 19:48:31'),
+	(75,3,'Samuel','Cruz','Daniel','M','pharetra.nibh@PhasellusornareFusce.net','64828497040','WOK57GCO0QK',1,20,0,1,'2017-05-31 04:52:15','2016-12-08 10:00:24'),
+	(76,4,'Lance','Orlando','Dylan','F','at.sem@Nullainterdum.ca','98659594930','OHY29HEL5AJ',1,10,0,1,'2017-03-13 16:52:31','2017-01-09 17:30:38'),
+	(77,6,'Michael','Dylan','Reuben','M','lorem@magnamalesuadavel.com','82947484165','JXK69QRG1EI',1,21,0,1,'2016-05-05 08:32:36','2016-10-23 16:51:49'),
+	(78,5,'Gage','Thaddeus','Stuart','M','diam@parturient.co.uk','50529245962','FQZ06HWI7TS',1,20,0,1,'2017-08-09 20:02:42','2018-03-04 15:44:18'),
+	(79,4,'Dieter','Malachi','Troy','M','diam.nunc@adipiscing.com','58600457287','UIA88FUI5RP',1,21,0,1,'2017-05-26 17:35:16','2016-11-30 04:30:55'),
+	(80,1,'Ishmael','Robert','Lamar','F','vel.mauris@Donectemporest.net','45181901069','EBG43VWT1FJ',1,4,0,1,'2017-08-19 22:09:56','2016-09-10 09:27:49'),
+	(81,2,'Jerry','Macaulay','Lester','M','vulputate@turpisIn.ca','16653292761','WTV81ROP8XB',1,15,0,1,'2016-10-08 02:04:18','2016-09-12 15:22:14'),
+	(82,3,'Luke','Xenos','Seth','M','dolor@velitegestas.co.uk','85841333114','DKJ45CMJ7SE',1,10,0,1,'2016-05-26 08:10:54','2017-05-01 09:26:13'),
+	(83,4,'Odysseus','Mufutau','Austin','M','nec.ligula@massanonante.edu','57932445053','NBS75FXW4PF',1,16,0,1,'2017-03-25 02:23:19','2017-07-15 05:05:46'),
+	(84,1,'Kareem','James','Melvin','F','sit.amet@nisia.net','29283522843','SVN39JAI2FU',1,1,0,1,'2016-11-07 00:03:12','2016-07-23 07:54:16'),
+	(85,3,'Kane','Bruce','Julian','F','Integer.in@Duis.co.uk','72635799766','ZEU01SYB9OY',1,21,0,1,'2017-09-09 07:38:10','2017-12-14 09:51:32'),
+	(86,6,'Brent','Grant','Jermaine','M','Maecenas.malesuada.fringilla@Mauriseuturpis.co.uk','69256842673','AGE26PRZ6BU',1,10,0,1,'2017-12-19 15:32:03','2018-04-03 05:40:32'),
+	(87,6,'Yuli','Joshua','Noah','F','Aenean.eget@tellusidnunc.ca','58300855636','JTX67OLB2VV',1,14,0,1,'2017-07-03 22:18:44','2018-04-08 20:45:37'),
+	(88,1,'Preston','Aristotle','Christopher','M','nisl.sem@tempusscelerisque.edu','00674881305','SAH38VHA2UG',1,7,0,1,'2016-05-19 22:05:17','2017-02-02 12:07:52'),
+	(89,5,'Merrill','Daquan','George','M','erat@nibhenim.co.uk','65137114448','UJD08ZID6OF',1,20,0,1,'2018-03-28 22:31:38','2016-06-11 14:35:03'),
+	(90,2,'Dieter','Nathaniel','Driscoll','F','amet@Proinvelnisl.net','92059922831','JVF65VJO4OR',1,15,0,1,'2017-10-06 08:05:01','2018-02-08 22:21:05'),
+	(91,1,'Todd','Branden','Kenneth','M','pellentesque.Sed@orciUtsagittis.net','94984688038','XJP30USP4TE',1,19,0,1,'2017-08-23 01:07:06','2017-09-10 21:16:55'),
+	(92,6,'Tobias','Ralph','Hamilton','M','parturient.montes@eratneque.com','18503725964','DYZ39LCO5MV',1,1,0,1,'2017-12-19 04:13:43','2017-08-10 12:24:02'),
+	(93,2,'Carson','Rigel','Paul','M','vehicula.et@arcuSed.com','22256564820','NPT16EMB9DI',1,20,0,1,'2016-06-17 20:26:02','2017-01-01 04:38:53'),
+	(94,5,'Honorato','Joshua','Damon','F','habitant.morbi@aaliquet.com','12556595376','CQM97GVD4ZI',1,3,0,1,'2017-08-06 00:49:27','2018-02-14 22:06:22'),
+	(95,1,'Jonah','Nolan','Kamal','M','ipsum.Phasellus.vitae@sapien.ca','22572596552','WHC06RJL6LD',1,9,0,1,'2017-08-01 18:20:50','2016-10-14 12:53:17'),
+	(96,1,'Zeus','Vincent','Tyler','F','Nunc.mauris@Naminterdum.net','43032724698','REZ70OKT5LJ',1,13,0,1,'2017-03-14 00:05:45','2017-01-22 11:03:31'),
+	(97,4,'Hakeem','Caesar','Allen','M','non.egestas.a@dolor.edu','02570929167','YCH54DZN9DT',1,1,0,1,'2018-01-05 15:39:53','2018-02-22 19:40:55'),
+	(98,3,'Magee','Tucker','Calvin','F','nisi@estmollisnon.ca','50046585386','TDE75ENT8FY',1,15,0,1,'2017-07-25 11:05:42','2017-09-24 04:00:56'),
+	(99,5,'Elvis','Blaze','Cooper','M','tristique.aliquet@elit.co.uk','05250301047','SSJ70AJS1YT',1,6,0,1,'2017-10-22 15:19:50','2017-09-16 02:34:11'),
+	(100,4,'Raphael','Steven','Hedley','F','Mauris@Maecenas.co.uk','59156640409','FIN36UTT0SV',1,7,0,1,'2017-01-10 15:00:42','2017-08-13 08:22:39');
+
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump da tabela usuario_permissao
@@ -10253,6 +10460,34 @@ CREATE TABLE `usuario_permissao` (
 
 
 
+
+--
+-- Dumping routines (PROCEDURE) for database 'congresso'
+--
+DELIMITER ;;
+
+# Dump of PROCEDURE sp_atualizaingresso
+# ------------------------------------------------------------
+
+/*!50003 DROP PROCEDURE IF EXISTS `sp_atualizaingresso` */;;
+/*!50003 SET SESSION SQL_MODE="NO_ENGINE_SUBSTITUTION"*/;;
+/*!50003 CREATE*/ /*!50020 DEFINER=`root`@`localhost`*/ /*!50003 PROCEDURE `sp_atualizaingresso`(
+	_idingresso int
+)
+BEGIN
+	DECLARE qtd_ingresso_disponivel int(11);
+	DECLARE qtd_ingresso_vendido int(11);
+	
+	SELECT qtd INTO qtd_ingresso_disponivel FROM ingresso WHERE id=_idingresso AND status=1;
+	SELECT COUNT(id) INTO qtd_ingresso_vendido FROM pagamento WHERE idingresso=_idingresso AND status=1;
+	
+	IF(qtd_ingresso_vendido >= qtd_ingresso_disponivel)THEN
+		UPDATE ingresso SET status=2 WHERE id=_idingresso;
+	END IF;
+END */;;
+
+/*!50003 SET SESSION SQL_MODE=@OLD_SQL_MODE */;;
+DELIMITER ;
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

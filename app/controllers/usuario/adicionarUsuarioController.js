@@ -1,48 +1,39 @@
 
 angular.module('app').controller('adicionarUsuarioController', 
-['$rootScope', '$scope', '$location', 'usuarioService', 'estadocidadeService', 'deficienciaService', 'loteService',
-function($rootScope, $scope, $location, usuarioService, estadocidadeService, deficienciaService, loteService){
+['$rootScope', '$scope', '$uibModal', '$location', 'usuarioService', 'estadocidadeService', 'deficienciaService', 'loteService',
+function($rootScope, $scope, $uibModal, $location, usuarioService, estadocidadeService, deficienciaService, loteService){
 
-	$scope.usuario = $scope.email = $scope.cpfcnpj = {};
-	// $scope.estados = [];
+	$scope.usuario = $scope.email = $scope.cpf = {};
 
-	// $rootScope.$on('estabelecimento:save', function(event, status) {
- //    	$scope.status = {
-	//       loading: (status == 'loading'),
-	//       success: (status == 'success'),
-	//       error: (status == 'error')
-	//     };
-	//     if(status.error)
-	//     	$scope.error = status.error;
-	// 	if(status.success){
-	// 		// document.location = '/plataforma/dashboard';
-	// 		console.log('cadastro efetuado com sucesso.');
-	// 	}
- //  	});
+	$rootScope.$on('usuario:save', function(event, status) {
+    	$scope.status = {
+	      loading: (status == 'loading'),
+	      success: (status == 'success'),
+	      error: (status == 'error')
+	    };
+	    if(status.error)
+	    	$scope.error = status.error;
+		if(status.success){
+			// document.location = '/plataforma/dashboard';
+			console.log('cadastro efetuado com sucesso.');
+		}
+  	});
 
-	// $rootScope.$on('estabelecimento:cpfcnpj', function(event, status) {
-	//     $scope.cpfcnpj = {
-	//       	found: (status == "found"),
-	//       	notfound: (status == "notfound"),
-	// 		loading: (status === "loading")
-	//     };
-	// });
+	$rootScope.$on('usuario:cpf', function(event, status) {
+	    $scope.cpf = {
+	      	found: (status == "found"),
+	      	notfound: (status == "notfound"),
+			loading: (status === "loading")
+	    };
+	});
 
-	// $rootScope.$on('usuario:email', function(event, status) {
-	//     $scope.email = {
-	//       	found: (status == "found"),
-	//       	notfound: (status == "notfound"),
-	// 		loading: (status === "loading")
-	//     };
-	// });
-
-	// $rootScope.$on('endereco:cep', function(event, status) {
-	//     $scope.endereco = {
-	//       loading: (status == 'loading'),
-	//       loaded: (status == 'loaded'),
-	//       error: (status == 'error')
-	//     };
-	// });
+	$rootScope.$on('usuario:email', function(event, status) {
+	    $scope.email = {
+	      	found: (status == "found"),
+	      	notfound: (status == "notfound"),
+			loading: (status === "loading")
+	    };
+	});
 
 	$rootScope.$on('lotes', function(event, lotes) {
     	$scope.lotes = lotes;
@@ -71,14 +62,22 @@ function($rootScope, $scope, $location, usuarioService, estadocidadeService, def
     	$scope.usuario.iddeficiencia = deficiencias[0].id;
   	});
 
-	// $scope.save = function(){
-	// 	estabelecimentoService.set($scope.estabelecimento);
-	// 	estabelecimentoService.save();
-	// };
-
-	// $scope.searchCep = function() {
- //    	cepService.searchCep($scope.estabelecimento.cep);
- //  	};
+	$scope.save = function(){
+		// usuarioService.set($scope.usuario);
+		// usuarioService.save();
+		var modalInstance = $uibModal.open({
+			templateUrl: 'views/pagamento.html',
+			controller: 'pagamentoIngressoController',
+			backdrop: 'static',
+			size: 'modal-sm',
+			keyboard: false,
+			resolve: {
+				usuario: function(){
+					return $scope.usuario;
+				}
+			}
+		});
+	};
 
  	$scope.loadLote = function(){
 		loteService.load();
@@ -100,12 +99,12 @@ function($rootScope, $scope, $location, usuarioService, estadocidadeService, def
 		estadocidadeService.loadEstados();
 	};
 
-	// $scope.checkEmail = function() {
-	// 	usuarioService.checkEmail($scope.estabelecimento.usuario.email);
-	// };
+	$scope.checkEmail = function() {
+		usuarioService.checkEmail($scope.usuario.email);
+	};
 
-	// $scope.checkCpfCnpj = function() {
-	// 	estabelecimentoService.checkcpfcnpj($scope.estabelecimento.cpfcnpj);
-	// };
+	$scope.checkCpf = function() {
+		usuarioService.checkcpf($scope.usuario.cpf);
+	};
 
 }]);

@@ -46,6 +46,7 @@ angular.module('app').config(['$routeProvider','$locationProvider',  function($r
               'app/services/deficienciaService.js', 
               'app/services/loteService.js', 
               'app/controllers/usuario/adicionarUsuarioController.js',
+              'app/controllers/usuario/pagamentoIngressoController.js',
               'assets/css/bootstrap.css',
               'assets/css/bootstrap-select.css',
               'assets/css/login.css'
@@ -70,6 +71,7 @@ angular.module('app').config(['$routeProvider','$locationProvider',  function($r
               'app/services/deficienciaService.js', 
               'app/services/loteService.js', 
               'app/controllers/usuario/adicionarUsuarioController.js',
+              'app/controllers/usuario/pagamentoIngressoController.js',
               'assets/css/bootstrap.css',
               'assets/css/bootstrap-select.css',
               'assets/css/login.css'
