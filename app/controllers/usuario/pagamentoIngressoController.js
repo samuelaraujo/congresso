@@ -37,9 +37,9 @@ function($rootScope,$scope,$uibModalInstance,$location,usuario,usuarioService) {
 	// 	avaliacaoService.estabelecimentoRating();
 	// }
 
-	// $scope.cancel = function(){
-	// 	$uibModalInstance.dismiss('cancel');
-	// }
+	$scope.cancel = function(){
+		$uibModalInstance.dismiss('cancel');
+	}
 
 	// $scope.countComent = function(count){
 	// 	var max = 500;

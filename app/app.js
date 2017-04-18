@@ -11,10 +11,12 @@ window.app = angular.module('app', [
 ]);
 
 /* configuration and routs */
-angular.module('app').config(['$routeProvider','$locationProvider',  function($routeProvider,$locationProvider) {
+angular.module('app').config(['$routeProvider','$locationProvider','$httpProvider',  function($routeProvider,$locationProvider,$httpProvider) {
   
   //remove the # in URLs
   $locationProvider.html5Mode(true);
+
+  $httpProvider.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
   $routeProvider
     .when('/', {
@@ -47,6 +49,7 @@ angular.module('app').config(['$routeProvider','$locationProvider',  function($r
               'app/services/loteService.js', 
               'app/controllers/usuario/adicionarUsuarioController.js',
               'app/controllers/usuario/pagamentoIngressoController.js',
+              'https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js',
               'assets/css/bootstrap.css',
               'assets/css/bootstrap-select.css',
               'assets/css/login.css'
@@ -72,6 +75,7 @@ angular.module('app').config(['$routeProvider','$locationProvider',  function($r
               'app/services/loteService.js', 
               'app/controllers/usuario/adicionarUsuarioController.js',
               'app/controllers/usuario/pagamentoIngressoController.js',
+              'https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js',
               'assets/css/bootstrap.css',
               'assets/css/bootstrap-select.css',
               'assets/css/login.css'

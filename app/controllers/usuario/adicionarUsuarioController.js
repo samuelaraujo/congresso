@@ -19,6 +19,10 @@ function($rootScope, $scope, $uibModal, $location, usuarioService, estadocidadeS
 		}
   	});
 
+  	$rootScope.$on('usuario:session', function(event, status) {
+    	console.log(status);
+  	});
+
 	$rootScope.$on('usuario:cpf', function(event, status) {
 	    $scope.cpf = {
 	      	found: (status == "found"),
@@ -63,20 +67,22 @@ function($rootScope, $scope, $uibModal, $location, usuarioService, estadocidadeS
   	});
 
 	$scope.save = function(){
+		usuarioService.session();
+
 		// usuarioService.set($scope.usuario);
 		// usuarioService.save();
-		var modalInstance = $uibModal.open({
-			templateUrl: 'views/pagamento.html',
-			controller: 'pagamentoIngressoController',
-			backdrop: 'static',
-			size: 'modal-sm',
-			keyboard: false,
-			resolve: {
-				usuario: function(){
-					return $scope.usuario;
-				}
-			}
-		});
+		// var modalInstance = $uibModal.open({
+		// 	templateUrl: 'views/pagamento.html',
+		// 	controller: 'pagamentoIngressoController',
+		// 	backdrop: 'static',
+		// 	size: 'modal-sm',
+		// 	keyboard: false,
+		// 	resolve: {
+		// 		usuario: function(){
+		// 			return $scope.usuario;
+		// 		}
+		// 	}
+		// });
 	};
 
  	$scope.loadLote = function(){

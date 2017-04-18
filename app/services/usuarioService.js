@@ -43,4 +43,13 @@ angular.module('app').service('usuarioService', ['$rootScope', '$timeout', '$htt
     });
   };
 
+  this.session = function(){
+    $http.post('/controller/guest/pagamento/getsession')
+    .then(function(response){
+      $rootScope.$broadcast("usuario:session", response.data);
+    }, function(response){
+      $rootScope.$broadcast("usuario:session", response.data);
+    });
+  };
+
 }]);

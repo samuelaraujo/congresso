@@ -201,8 +201,15 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <button ng-click="save()" 
+                                <!-- <button ng-click="save()" 
                                 ng-disabled="formRegister.$invalid || status.loading || usuario.senha != usuario.confirmasenha || cpf.found || email.found" 
+                                type="sumit" 
+                                class="btn btn-success btn-fill btn-wd"
+                                ng-switch="status.loading">
+                                    <span ng-switch-default>CADASTRAR</span>
+                                    <span ng-switch-when="true">AGUARDE...</span>
+                                </button> -->
+                                <button ng-click="save()" 
                                 type="sumit" 
                                 class="btn btn-success btn-fill btn-wd"
                                 ng-switch="status.loading">

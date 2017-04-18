@@ -241,3 +241,58 @@ form input[type=password] {
   right: 25px;
   top: 25px;
 }
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.modal-backdrop.in{
+  height: 100%;
+  width: 100%;
+}
+.modal-title{
+  margin: 0;
+    line-height: 1.42857143;
+    color: #333;
+    font-weight: 900;
+    font-family: 'Roboto';
+    letter-spacing: 0.099em;
+}
+.modal-body .pagamento{
+  min-height: 350px;
+}
+.modal-body .pagamento .forma-pagamento{
+  margin-top: 100px;
+  display: block;
+}
+.modal-body .pagamento .forma-pagamento{
+  margin-top: 100px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+.modal-body .pagamento .forma-pagamento:hover{
+  color: #7f191e;
+}
+.modal-body .pagamento .forma-pagamento p{
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+@media (min-width: 768px){
+  modal-dialog {
+      width: 600px;
+      margin: 200px auto;
+  }
+}
