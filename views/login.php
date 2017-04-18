@@ -93,7 +93,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Ingresso</label>
-                                    <select name="ingresso" class="form-control" name="ingresso" required>
+                                    <select id="ingresso" class="form-control" name="ingresso" required>
                                         <!-- <optgroup ng-repeat="lote in lotes"
                                             label="{{lote.nome}}">
                                             <option ng-repeat="ingresso in lote.ingresso"
@@ -145,7 +145,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>País de Origem</label>
-                                    <select name="pais" class="form-control" required>
+                                    <select id="pais" name="pais" class="form-control" required>
                                         <option value="" disabled selected>Pais</option>
                                     </select>
                                 </div>
@@ -153,7 +153,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Estado</label>
-                                    <select name="estado" class="form-control" required>
+                                    <select id="estado" name="estado" class="form-control" required>
                                         <option value="" disabled selected>Estado</option>
                                     </select>
                                 </div>
@@ -161,7 +161,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Cidade</label>
-                                    <select name="cidade" class="form-control" required>
+                                    <select id="cidade" name="cidade" class="form-control" required>
                                         <option value="" disabled selected>Cidade</option>
                                     </select>
                                 </div>

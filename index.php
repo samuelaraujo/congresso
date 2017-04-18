@@ -20,6 +20,7 @@ require_once 'vendor/functions.php';
 <meta charset="utf-8">
 <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 <title><?=TITLE_APP?></title>
+<base href="/">
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
@@ -27,7 +28,9 @@ require_once 'vendor/functions.php';
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" type="text/css" href="main.css">
 <link href="images/common/favicon.png" rel="shortcut icon">
-<script type="text/javascript" src="javascripts/lib/jquery.min.js"></script>
+<!-- Javascript -->
+<script type="text/javascript" src="assets/javascript/plugins.js"></script>
+<script type="text/javascript" src="assets/javascript/jquery.livequery.min.js"></script>
 <!--[if lt IE 9]>
 	<script src="javascript/html5shiv.js"></script>
 	<script src="javascript/respond.min.js"></script>
@@ -59,11 +62,10 @@ if(empty($path)){
 ?>
 
 <!-- Javascript -->
-<script type="text/javascript" src="assets/javascript/plugins.js"></script>
 <script type="text/javascript" src="assets/javascript/jquery.countdown.min.js"></script>
 <script type="text/javascript" src="assets/javascript/main.js"></script>
-<script type="text/javascript" src="assets/javascript/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/javascript/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
 </html>

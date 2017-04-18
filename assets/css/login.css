@@ -228,6 +228,7 @@ form input[type=password] {
   font-weight: 700;
   text-transform: uppercase;
   margin: 10px;
+  color: #FFF;
 }
 .title h2{
   font-size: 16px;
@@ -235,6 +236,7 @@ form input[type=password] {
   font-weight: 300;
   text-transform: uppercase;
   margin: 10px;
+  color: #FFF;
 }
 .loading-check{
   position: absolute;
@@ -263,11 +265,11 @@ form input[type=password] {
 }
 .modal-title{
   margin: 0;
-    line-height: 1.42857143;
-    color: #333;
-    font-weight: 900;
-    font-family: 'Roboto';
-    letter-spacing: 0.099em;
+  line-height: 1.42857143;
+  color: #333;
+  font-weight: 900;
+  font-family: 'Roboto';
+  letter-spacing: 0.099em;
 }
 .modal-body .pagamento{
   min-height: 350px;
