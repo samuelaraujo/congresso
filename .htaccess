@@ -12,11 +12,11 @@ Options -Indexes
     RewriteCond     %{REQUEST_FILENAME} !-f
     RewriteRule     controller/(.*) controller/route.php?path_controller=$1 [L,QSA]
 
-    # Angular
+    # Template
     RewriteCond     %{REQUEST_URI} !^(/index\.php|/img|/js|/css|/robots\.txt|/favicon\.ico)
     RewriteCond     %{REQUEST_FILENAME} !-f
     RewriteCond     %{REQUEST_FILENAME} !-d
-    RewriteRule     . index.html [L]
+    RewriteRule     . index.php [L]
 
     # Images webp
     RewriteCond     %{HTTP_ACCEPT} image/webp
