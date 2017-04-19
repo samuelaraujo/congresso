@@ -1,5 +1,5 @@
 <!-- CSS Login -->
-<link rel="stylesheet" type="text/css" href="<?=URL_APP?>/assets/css/login.css">
+<link rel="stylesheet" type="text/css" href="assets/css/login.css">
 
 <div class="transparencia"></div>
 <div class="container">
@@ -244,8 +244,8 @@
 
 
 <!-- javascripts -->
-<script type="text/javascript" src="assets/javascript/jquery.creditCardValidator.js"></script>
+<script type="text/javascript" src="assets/javascript/jquery.payform.min.js"></script>
 <script type="text/javascript" src="javascripts/vendor/login.js"></script>
 
 <!-- Javascript Pagseguro -->
-<!-- <script type="text/javascript" src="https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js"></script> -->
+<script type="text/javascript" src="<?=javascriptURL?>"></script>

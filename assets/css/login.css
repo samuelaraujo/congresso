@@ -252,6 +252,14 @@ form input[type=password],
 .formCartaoCredito .bandeira{
   margin-top: 25px;
 }
+.formCartaoCredito .bandeira img{
+  padding: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 1px 1px #ccc;
+  width: 48px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
 .formCartaoCredito .transparent {
     opacity: 0.2;
 }
@@ -274,6 +282,10 @@ form input[type=password],
 .modal-backdrop.in{
   height: 100%;
   width: 100%;
+}
+.modal-loading{
+  display: block;
+  min-height: 80px;
 }
 .modal-loading .loading{
   padding: 10px 0;
@@ -318,6 +330,7 @@ form input[type=password],
   color: #61AE24;
   font-size: 11px;
   margin: 0px;
+  padding: 15px 0 0;
 }
 .modal-footer .ambiente-seguro i{
   margin-right: 5px;

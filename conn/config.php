@@ -19,6 +19,14 @@ define('TITLE_APP', 'Iº CONGRESSO JURÍDICO :: UNINORTE ACRE');
 define('EMAIL_NOREPLAY', 'naoresponda@congressojuridicoacre.com.br');
 define('DEBUG', false);
 
+//PagSeguro
+define('PAGSEURO_EMAIL', 'jaissonssantos@gmail.com');
+define('PAGSEURO_TOKEN', 'A23B0F63E9684FF489709FC57243801A');
+define('sessionURL', 'https://ws.sandbox.pagseguro.uol.com.br/v2/sessions');
+define('transactionsURL', 'https://ws.sandbox.pagseguro.uol.com.br/v2/transactions');
+define('javascriptURL', 'https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js');
+
+
 // Storage
 // define('STORAGE_URL', 'https://markday.imgix.net');
 // define('STORAGE_HOST', 'https://markday.com.br:2053');

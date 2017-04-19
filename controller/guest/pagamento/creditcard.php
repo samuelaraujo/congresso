@@ -3,11 +3,24 @@
 use Utils\Conexao;
 
 header('Content-type: application/json');
+$params = json_decode(file_get_contents('php://input'));
 $response = new stdClass();
 
+$url = transactionsURL;
 $credentials['email'] = PAGSEURO_EMAIL;
 $credentials['token'] = PAGSEURO_TOKEN;
-$url = sessionURL.'?email='.PAGSEURO_EMAIL.'&token='.PAGSEURO_TOKEN;
+$credentials['paymentMode'] = 'default';
+$credentials['currency'] = 'BRL';
+$credentials['paymentMethod'] = 'creditCard';
+$credentials['receiverEmail'] = 'suporte@lojamodelo.com.br';
+$credentials['itemId1'] = '0001';
+$credentials['itemDescription1'] = 'Produto de teste';
+$credentials['itemAmount1'] = '80.00';
+$credentials['itemQuantity1'] = 1;
+$credentials['senderName'] = 'Jose Comprador';
+$credentials['senderCPF'] = '11475714734';
+$credentials['senderHash'] = $params->senderhash;
+$credentials['creditCardToken'] = $params->cardtoken;
 
 $credentials = http_build_query($credentials);
 

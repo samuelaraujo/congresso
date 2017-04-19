@@ -93,21 +93,13 @@ $(document).ready(function(){
     	return false;
     });
 
-    //format input creditcard
-    // $('#numerocartao').validateCreditCard(function(result){
-    //     alert('CC type: ' + result.card_type.name
-    //       + '\nLength validation: ' + result.length_valid
-    //       + '\nLuhn validation: ' + result.luhn_valid);
-    // });
-    //https://github.com/CardJs/CardJs
-
     //save
     $('button#registro').livequery('click',function(event){
-	    $("#modal-pagamento .modal-content").load('/views/pagamento.php');
 	    $("#modal-pagamento").modal({
 	    	show: true,
             keyboard: false,
-            backdrop: 'static'
+            backdrop: 'static',
+            remote: '/views/pagamento.php',
         });
 		return false;
 	});

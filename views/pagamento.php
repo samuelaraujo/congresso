@@ -32,8 +32,10 @@
 
   <div id="cartaoCredito" class="row hidden">
     <form class="formCartaoCredito" name="formCartaoCredito" role="form" novalidate>
-      <div id="errorCartaoCredito" class="alert alert-warning hidden">
-        <p>Verifique o código de segurança do seu cartão</p>
+      <div id="errorCartaoCredito" class="col-md-12 hidden">
+        <div class="alert alert-warning">
+          <p></p>
+        </div>
       </div>
       <div class="form-group">
         <div class="col-md-8">
@@ -41,8 +43,8 @@
           <input type="text" class="form-control" id="portador">
         </div>
         <div class="col-md-4">
-          <label for="cvv">CVV<small>(código de segurança)</small></label>
-          <input type="text" class="form-control" id="cvv">
+          <label for="cvc">CVC<small>(código de segurança)</small></label>
+          <input type="text" class="form-control" id="cvc">
         </div>
       </div>
       <div class="form-group">
@@ -54,7 +56,7 @@
       <div class="form-group" id="validade">
         <div class="col-md-3">
           <label>Mês</label>
-          <select class="form-control">
+          <select class="form-control" id="mes">
               <option value="01">Janeiro</option>
               <option value="02">Fevereiro</option>
               <option value="03">Março</option>
@@ -71,17 +73,17 @@
         </div>
         <div class="col-md-3">
           <label>Ano</label>
-          <select class="form-control">
-              <option value="17">2017</option>
-              <option value="18">2018</option>
-              <option value="19">2019</option>
-              <option value="20">2020</option>
-              <option value="21">2021</option>
-              <option value="22">2022</option>
-              <option value="23">2023</option>
-              <option value="24">2024</option>
-              <option value="25">2025</option>
-              <option value="26">2026</option>
+          <select class="form-control" id="ano">
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
           </select>
         </div>
         <div class="col-md-6">
@@ -104,3 +106,142 @@
   </div>
   <button id="pagar" class="btn btn-success hidden" type="button">PAGAR</button>
 </div><!--/.modal-footer-->
+
+<!-- Javascripts -->
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    var portador =  $('input#portador');
+    var numerocartao =  $('input#numerocartao');
+    var cvc =  $('input#cvc');
+    var mes =  $('select#mes');
+    var ano =  $('select#ano');
+    var visa =  $('#visa');
+    var mastercard =  $('#mastercard');
+    var amex =  $('#amex');
+    var brand = undefined;
+    var session = undefined;
+    var senderHash = undefined;
+    var cardToken = undefined;
+
+    //use format
+    numerocartao.payform('formatCardNumber');
+    cvc.payform('formatCardCVC');
+
+    //set flag
+    numerocartao.keyup(function() {
+      amex.removeClass('transparent');
+      visa.removeClass('transparent');
+      mastercard.removeClass('transparent');
+      if($.payform.validateCardNumber(numerocartao.val()) == false){
+        numerocartao.removeClass('has-success');
+        numerocartao.addClass('has-error');
+      }else{
+        numerocartao.removeClass('has-error');
+        numerocartao.addClass('has-success');
+      }
+      if($.payform.parseCardType(numerocartao.val()) == 'visa'){
+        brand = 'visa';
+        mastercard.addClass('transparent');
+        amex.addClass('transparent');
+      }else if($.payform.parseCardType(numerocartao.val()) == 'amex'){
+        brand = 'amex';
+        mastercard.addClass('transparent');
+        visa.addClass('transparent');
+      }else if($.payform.parseCardType(numerocartao.val()) == 'mastercard'){
+        brand = 'mastercard';
+        amex.addClass('transparent');
+        visa.addClass('transparent');
+      }
+    });
+
+    //get session checkout transparent
+    app.util.getjson({
+        url : "/controller/guest/pagamento/getsession",
+        method : 'POST',
+        contentType : "application/json",
+        success: function(response){
+          if(response.results.id){
+            session = response.results.id;
+            PagSeguroDirectPayment.setSessionId(session);
+            senderHash = PagSeguroDirectPayment.getSenderHash();
+          }
+        },
+        error : onError
+    });
+
+
+    //pay
+    $('button#pagar').livequery('click',function(event){
+      var isCardValid = $.payform.validateCardNumber(numerocartao.val());
+      var isCvcValid = $.payform.validateCardCVC(cvc.val());
+      var isExpiryValid = $.payform.validateCardExpiry(mes.val(),ano.val());
+      var errors = 0;
+
+      $('#errorCartaoCredito').find('.alert').html('');
+      if(portador.val().length < 5){
+        errors++;
+        $('#errorCartaoCredito').find('.alert').append('<p>Verifique o nome do portador do cartão</p>');
+      }else if(!isCardValid){
+        errors++;
+        $('#errorCartaoCredito').find('.alert').append('<p>Verifique o número do seu cartão</p>');
+      }else if(!isCvcValid){
+        errors++;
+        $('#errorCartaoCredito').find('.alert').append('<p>Verifique o código de segurança do seu cartão</p>');
+      }else if(!isExpiryValid){
+        errors++;
+        $('#errorCartaoCredito').find('.alert').append('<p>Verifique a validade do seu cartão</p>');
+      }else if(!session && !senderHash){
+        errors++;
+        $('#errorCartaoCredito').find('.alert').append('<p>Ocorreu um erro ao tentar fazer uma requisição de pagamento, tente novamente mais tarde!</p>');
+      }else{
+        $('#errorCartaoCredito').addClass('hidden');
+        PagSeguroDirectPayment.createCardToken({
+          cardNumber: numerocartao.val(),
+          brand: brand,
+          cvv: cvc.val(),
+          expirationMonth: mes.val(),
+          expirationYear: ano.val(),
+          success: function(response){
+            cardToken = response.card.token;
+            //transactions
+            app.util.getjson({
+                url : "/controller/guest/pagamento/creditcard",
+                method : 'POST',
+                contentType : "application/json",
+                data: {
+                  
+                }
+                success: function(response){
+                  if(response.results.id){
+                    session = response.results.id;
+                    PagSeguroDirectPayment.setSessionId(session);
+                    senderHash = PagSeguroDirectPayment.getSenderHash();
+                  }
+                },
+                error : onError
+            });
+          },
+          error: function(response){
+            var html = '<ul>';
+            $.map(response.errors, function(error){
+              html += '<li>'+error+'</li>';
+            });
+            html += '</ul>';
+            $('#errorCartaoCredito').find('.alert').append(html);
+            $('#errorCartaoCredito').removeClass('hidden');
+            console.log(response);
+          },
+          complete: function(response){}
+        });
+      }
+      if(errors)
+        $('#errorCartaoCredito').removeClass('hidden');
+    });
+
+    function onError(args) {
+      console.log( 'onError: ' + args );
+    }
+
+  });
+</script>
