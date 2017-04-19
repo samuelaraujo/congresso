@@ -57,7 +57,7 @@
              
                 <div id="register" class="form-action show">
                     <h1>Dados Pessoais</h1>
-                    <form name="formRegister" role="form" novalidate>
+                    <form name="formRegistro" role="form" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -191,7 +191,7 @@
                                     <span ng-switch-default>CADASTRAR</span>
                                     <span ng-switch-when="true">AGUARDE...</span>
                                 </button> -->
-                                <button type="sumit" 
+                                <button id="registro" type="sumit" 
                                 class="btn btn-success btn-fill btn-wd">
                                     <span>CADASTRAR</span>
                                 </button>
@@ -226,10 +226,26 @@
     </div>
 </div>
 
+<!--.modal -->
+<div id="modal-pagamento" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-loading">
+              <div class="col-md-12 text-center">
+                <div class="loading">
+                    <img src="assets/images/common/loading.gif" width="38">
+                    <p>Aguarde processando...</p>
+                </div>
+              </div>
+            </div><!-- /.modal-loading -->
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 
 <!-- javascripts -->
+<script type="text/javascript" src="assets/javascript/jquery.creditCardValidator.js"></script>
 <script type="text/javascript" src="javascripts/vendor/login.js"></script>
 
 <!-- Javascript Pagseguro -->
-<script type="text/javascript"  
-    src="https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js"></script>
+<!-- <script type="text/javascript" src="https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js"></script> -->

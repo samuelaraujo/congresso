@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	$('ul.tabs a').livequery( "click", function(){
+	$('ul.tabs a').livequery( "click", function(event){
 		var tabnavs = $(this).attr('href');
         $(this).parent().parent().find('li').removeClass('active');
         $(this).parent('li').addClass('active');
@@ -13,7 +13,7 @@ $(document).ready(function(){
 	//pais de origem
 	app.util.getjson({
         url : "/controller/guest/estadocidade/getpais",
-        method : 'GET',
+        method : 'POST',
         contentType : "application/json",
         success: function(response){
         	var options = '<option value="" disabled selected>Pais</option>';
@@ -28,7 +28,7 @@ $(document).ready(function(){
     //estado
     app.util.getjson({
         url : "/controller/guest/estadocidade/getestado",
-        method : 'GET',
+        method : 'POST',
         contentType : "application/json",
         success: function(response){
         	var options = '<option value="" disabled selected>Estado</option>';
@@ -42,18 +42,17 @@ $(document).ready(function(){
 
     //cidade
     $('select#estado').change(function(){
-    	var estado = $(this).val();
+    	var params = {estado: $(this).val()};
+    	params = JSON.stringify(params);
+    	var options = '<option value="" disabled selected>Carregando...</option>';
+    	$("#cidade").html(options);
     	app.util.getjson({
 	        url : "/controller/guest/estadocidade/getcidade",
-	        method : 'GET',
+	        method : 'POST',
 	        contentType : "application/json",
-	        data : { 
-	        	estado:estado
-	        },
-	        dataType: 'json',
-	        async: false,
+	        data : params,
 	        success: function(response){
-	        	var options = '<option value="" disabled selected>Cidade</option>';
+	        	options = undefined;
 		        for (var i=0;i<response.results.length;i++) {
 			        options += '<option value="'+response.results[i].id+'">'+ response.results[i].nome+'</option>';
 		    	}
@@ -66,7 +65,7 @@ $(document).ready(function(){
 	//lote
     app.util.getjson({
         url : "/controller/guest/lote/get",
-        method : 'GET',
+        method : 'POST',
         contentType : "application/json",
         success: function(response){
         	var options = '<option value="" disabled selected>Lote</option>';
@@ -83,6 +82,35 @@ $(document).ready(function(){
         },
         error : onError
     });
+
+    $('a#setPagamento').livequery('click',function(event){
+    	var option = $(this).attr('data-rel');
+    	if(option==1){
+    		$('#pagamento').addClass('hidden');
+    		$('#cartaoCredito').removeClass('hidden');
+    		$('#pagar').removeClass('hidden');;
+    	}
+    	return false;
+    });
+
+    //format input creditcard
+    // $('#numerocartao').validateCreditCard(function(result){
+    //     alert('CC type: ' + result.card_type.name
+    //       + '\nLength validation: ' + result.length_valid
+    //       + '\nLuhn validation: ' + result.luhn_valid);
+    // });
+    //https://github.com/CardJs/CardJs
+
+    //save
+    $('button#registro').livequery('click',function(event){
+	    $("#modal-pagamento .modal-content").load('/views/pagamento.php');
+	    $("#modal-pagamento").modal({
+	    	show: true,
+            keyboard: false,
+            backdrop: 'static'
+        });
+		return false;
+	});
 
 	function onError(args) {
 	  console.log( 'onError: ' + args );
