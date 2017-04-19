@@ -14,7 +14,6 @@ define('SALT', '&$15#*cg!1='); //nunca mudar(salt padrão)
 
 //definindo as URLs padrões do sistema e site
 define('URL_APP', 'http://congresso.dev');
-define('URL_SITE', 'http://congresso.dev');
 define('TITLE_APP', 'Iº CONGRESSO JURÍDICO :: UNINORTE ACRE');
 define('EMAIL_NOREPLAY', 'naoresponda@congressojuridicoacre.com.br');
 define('DEBUG', false);

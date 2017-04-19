@@ -104,8 +104,8 @@ $(document).ready(function(){
 		return false;
 	});
 
-	function onError(args) {
-	  console.log( 'onError: ' + args );
-	}
+	function onError(response) {
+      console.log(response);
+    }
 
 });

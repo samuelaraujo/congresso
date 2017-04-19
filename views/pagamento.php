@@ -204,20 +204,21 @@
           expirationYear: ano.val(),
           success: function(response){
             cardToken = response.card.token;
+            //params
+            var params = {
+              senderhash: senderHash,
+              cardtoken: cardToken,
+              portador: portador.val()
+            };
+            params = JSON.stringify(params);
             //transactions
             app.util.getjson({
                 url : "/controller/guest/pagamento/creditcard",
                 method : 'POST',
                 contentType : "application/json",
-                data: {
-                  
-                }
+                data: params,
                 success: function(response){
-                  if(response.results.id){
-                    session = response.results.id;
-                    PagSeguroDirectPayment.setSessionId(session);
-                    senderHash = PagSeguroDirectPayment.getSenderHash();
-                  }
+                  console.log(response);
                 },
                 error : onError
             });
@@ -239,8 +240,8 @@
         $('#errorCartaoCredito').removeClass('hidden');
     });
 
-    function onError(args) {
-      console.log( 'onError: ' + args );
+    function onError(response) {
+      console.log(response);
     }
 
   });
