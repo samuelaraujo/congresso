@@ -36,7 +36,6 @@
 
   <div id="cartaoCredito" class="hidden">
     <form id="formCartaoCredito" name="formCartaoCredito" class="formCartaoCredito">
-
       <div id="errorCartaoCredito" class="row hidden">
         <div class="col-md-12">
           <div class="alert alert-warning">
@@ -112,15 +111,6 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="cpfportador">CPF<small>(portador do cartão)</small></label>
-            <input type="text" class="form-control" id="cpfportador" name="cpfportador" maxLength="11">
-          </div>
-        </div>
-      </div>
-
     </form>
   </div><!--/.row-->
 
@@ -136,12 +126,9 @@
 
 
 <!-- Javascripts -->
-<script type="text/javascript" src="javascripts/vendor/functions.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-
     var portador =  $('input#portador');
-    var cpfportador =  $('input#cpfportador');
     var numerocartao =  $('input#numerocartao');
     var cvc =  $('input#cvc');
     var mes =  $('select#mes');
@@ -203,10 +190,6 @@
         },
         ano: { 
           required: true
-        },
-        cpfportador: { 
-          required: true,
-          cpfBR: true
         }
       },
       messages: {
@@ -225,10 +208,6 @@
         },
         ano: { 
           required: 'Qual o mês de validade?'
-        },
-        cpfportador: { 
-          required: 'CPF portador do cartão',
-          cpfBR: 'Este número de CPF é inválido'
         }
       },
       highlight: function (element, errorClass, validClass) {
@@ -305,7 +284,6 @@
                 senderhash: senderHash,
                 cardtoken: cardToken,
                 portador: portador.val(),
-                cpfportador: cpfportador.val(),
                 usuario: usuarios //utilizando variavel global(login.js)
               };
               params = JSON.stringify(params);
