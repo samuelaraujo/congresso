@@ -17,7 +17,7 @@
                         <a href="#login">Login</a>
                     </li>
                     <li>
-                        <a href="#register" class="active">Inscreva-se</a>
+                        <a href="#cadastro" class="active">Inscreva-se</a>
                     </li>
                     <li>
                         <a href="#reset">Resetar Senha</a>
@@ -55,35 +55,44 @@
                 </div>
                 <!--/#login.form-action-->
              
-                <div id="register" class="form-action show">
+                <div id="cadastro" class="form-action show">
                     <h1>Dados Pessoais</h1>
-                    <form name="formRegistro" role="form" novalidate>
+                    <form id="formCadastro" name="formCadastro">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Nome</label>
-                                    <input id="nome" name="nome" placeholder="Seu nome" class="form-control" type="text" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Sobrenome</label>
-                                    <input id="sobrenome" name="sobrenome" placeholder="Sobrenome" class="form-control" type="text" required>
+                                    <p class="error">
+                                        <abbr>*</abbr> Campo obrigatório
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Nome no Crachá</label>
-                                    <input id="cracha" name="cracha" placeholder="Nome no crachá" class="form-control" type="text">
+                                    <label>Nome<abbr>*</abbr></label>
+                                    <input id="nome" name="nome" placeholder="Seu nome" class="form-control" type="text" maxLength="60">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>E-mail</label>
-                                    <input id="email" name="email" placeholder="E-mail" class="form-control" name="email" type="email" required>
-                                    <div class="loading-check">
+                                    <label>Sobrenome</label>
+                                    <input id="sobrenome" name="sobrenome" placeholder="Sobrenome" class="form-control" type="text" maxLength="40">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Nome no Crachá<abbr>*</abbr></label>
+                                    <input id="cracha" name="cracha" placeholder="Nome no crachá" class="form-control" type="text" maxLength="60">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>E-mail<abbr>*</abbr></label>
+                                    <input id="email" name="email" placeholder="E-mail" class="form-control" type="email" maxLength="160">
+                                    <div class="loading-check hidden">
                                         <img src="assets/images/common/loading.gif" width="28">
                                     </div>
                                 </div>
@@ -92,14 +101,25 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Ingresso</label>
-                                    <select id="ingresso" class="form-control" name="ingresso" required>
+                                    <label>Ingresso<abbr>*</abbr></label>
+                                    <select id="ingresso" name="ingresso" class="form-control">
                                        <option value="" disabled selected>Lote</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group col-lg-6">
-                                <label>Sexo</label>
+                            <div class="form-group col-md-6">
+                                <label>Sexo<abbr>*</abbr></label>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <div class="radio">
+                                            <label class="col-md-6"><input name="sexo" value="M" type="radio"> Masculino</label>
+                                            <label class="col-md-6"><input name="sexo" value="F" type="radio"> Feminino</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group col-lg-6">
+                                <label>Sexo<abbr>*</abbr></label>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="radio">
@@ -112,22 +132,22 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>CPF</label>
-                                    <input id="cpf" placeholder="CPF" name="cpf" class="form-control" type="text" required>
-                                    <div class="loading-check">
+                                    <label>CPF<small>(Apenas número)</small><abbr>*</abbr></label>
+                                    <input id="cpf" name="cpf" placeholder="CPF" class="form-control" type="text" maxLength="11">
+                                    <div class="loading-check hidden">
                                         <img src="assets/images/common/loading.gif" width="28">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Possui algum tipo de deficiência?</label>
-                                    <select id="deficiencia" name="deficiencia" class="form-control" required>
+                                    <label>Possui algum tipo de deficiência?<abbr>*</abbr></label>
+                                    <select id="deficiencia" name="deficiencia" class="form-control">
                                         <option value="" disabled selected>Deficiência</option>
                                     </select>
                                 </div>
@@ -136,24 +156,24 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label>País de Origem</label>
-                                    <select id="pais" name="pais" class="form-control" required>
+                                    <label>País de Origem<abbr>*</abbr></label>
+                                    <select id="pais" name="pais" class="form-control">
                                         <option value="" disabled selected>Pais</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label>Estado</label>
-                                    <select id="estado" name="estado" class="form-control" required>
+                                    <label>Estado<abbr>*</abbr></label>
+                                    <select id="estado" name="estado" class="form-control">
                                         <option value="" disabled selected>Estado</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label>Cidade</label>
-                                    <select id="cidade" name="cidade" class="form-control" required>
+                                    <label>Cidade<abbr>*</abbr></label>
+                                    <select id="cidade" name="cidade" class="form-control">
                                         <option value="" disabled selected>Cidade</option>
                                     </select>
                                 </div>
@@ -162,14 +182,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Senha</label>
-                                    <input id="senha" name="senha" placeholder="Senha" class="form-control" type="password" required>
+                                    <label>Senha<abbr>*</abbr></label>
+                                    <input id="senha" name="senha" placeholder="Senha" class="form-control" type="password" maxLength="255">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Confirmar Senha</label>
-                                    <input id="confirmasenha" placeholder="Confirmar Senha" name="confirmasenha" class="form-control" type="password" required>
+                                    <label>Confirmar Senha<abbr>*</abbr></label>
+                                    <input id="confirmasenha" name="confirmasenha" placeholder="Confirmar Senha" class="form-control" type="password" maxLength="255">
                                 </div>
                             </div>
                         </div>
@@ -183,7 +203,7 @@
                                     <span ng-switch-default>CADASTRAR</span>
                                     <span ng-switch-when="true">AGUARDE...</span>
                                 </button> -->
-                                <button id="registro" type="sumit" 
+                                <button id="salvar" type="sumit" 
                                 class="btn btn-success btn-fill btn-wd">
                                     <span>CADASTRAR</span>
                                 </button>
@@ -191,7 +211,7 @@
                         </div>
                     </form>
                 </div>
-                <!--/#register.form-action-->
+                <!--/#cadastro.form-action-->
 
                 <div id="reset" class="form-action hide">
                     <h1>Nova Senha</h1>
@@ -237,6 +257,9 @@
 
 <!-- javascripts -->
 <script type="text/javascript" src="assets/javascript/jquery.payform.min.js"></script>
+<script type="text/javascript" src="assets/javascript/jquery.validate.min.js"></script>
+<script type="text/javascript" src="assets/javascript/validate/cpfBR.js"></script>
+<script type="text/javascript" src="javascripts/vendor/functions.js"></script>
 <script type="text/javascript" src="javascripts/vendor/login.js"></script>
 
 <!-- Javascript Pagseguro -->

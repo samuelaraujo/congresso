@@ -76,8 +76,10 @@ if( count($results->error) > 0 ){
 	$response->error = 'Ocorreu um erro na sua transação de pagamento';
 }else{
 	http_response_code(200);
+	$codigo = $results->code;
 	$response = array(
 	    'results' => array(
+	    	'code' => $codigo,
 	    	'codigo' => $results->code,
 	    	'status' => $results->status,
 	    	'descricao' => getStatusPagSeguro($results->status)

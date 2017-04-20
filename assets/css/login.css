@@ -66,7 +66,7 @@ body {
   padding-right: 0;
   text-align: center;
 }
-.tabs li.active {
+.tabs li a.active {
   background: #7f191e;
   border-right: none;
   -webkit-transition: all 0.5s linear;
@@ -131,7 +131,6 @@ form input[type=password],
   border-radius: 4px;
   box-shadow: none;
   color: #565656;
-  height: 40px;
   padding: 8px 12px;
 }
 .form-control {
@@ -146,7 +145,30 @@ form input[type=password],
   height: 40px;
   padding: 8px 12px;
 }
-
+.form-group small{
+  margin-left: 5px;
+}
+.form-group abbr{
+  color: #a94442;
+  font-weight: 600;
+  margin: 0px 5px;
+}
+.form-group .error{
+  color: #a94442;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.form-group span{
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 5px 0;
+}
+.form-group i.fa-validate{
+  top: 32px;
+  right: 5px;
+}
 .dark-box {
   background: #5e0400;
   box-shadow: 1px 3px 3px #3d0100 inset;
