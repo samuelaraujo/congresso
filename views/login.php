@@ -112,27 +112,12 @@
                                 <div class="row">
                                     <div class="form-group col-md-12">
                                         <div class="radio">
-                                            <label class="col-md-6"><input name="sexo" value="M" type="radio"> Masculino</label>
-                                            <label class="col-md-6"><input name="sexo" value="F" type="radio"> Feminino</label>
+                                            <label class="col-md-6"><input id="sexo" name="sexo" value="M" type="radio"> Masculino</label>
+                                            <label class="col-md-6"><input id="sexo" name="sexo" value="F" type="radio"> Feminino</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="form-group col-lg-6">
-                                <label>Sexo<abbr>*</abbr></label>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="radio">
-                                            <label><input name="sexo" value="M" type="radio"> Masculino</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="radio">
-                                            <label><input name="sexo" value="F" type="radio"> Feminino</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
                         <div class="row">
                             <div class="col-md-6">
@@ -203,8 +188,7 @@
                                     <span ng-switch-default>CADASTRAR</span>
                                     <span ng-switch-when="true">AGUARDE...</span>
                                 </button> -->
-                                <button id="salvar" type="sumit" 
-                                class="btn btn-success btn-fill btn-wd">
+                                <button id="salvar" class="btn btn-success btn-fill btn-wd">
                                     <span>CADASTRAR</span>
                                 </button>
                             </div>

@@ -4,7 +4,8 @@
 
 <div class="modal-body"><!--.modal-body-->
 
-  <div id="mensagem" class="mensagem"><!--.mensagem-->
+  <div id="mensagem" class="mensagem hidden"><!--.mensagem-->
+    <p>Mensagem de retorno da transação</p>
   </div><!--/.mensagem-->
 
   <div id="pagamento" class="pagamento"><!--.pagamento-->
@@ -33,76 +34,93 @@
     </div><!--/.row-->
   </div><!--/.pagamento-->
 
-  <div id="cartaoCredito" class="row hidden">
-    <form class="formCartaoCredito" name="formCartaoCredito" role="form" novalidate>
-      <div id="errorCartaoCredito" class="col-md-12 hidden">
-        <div class="alert alert-warning">
-          <p></p>
+  <div id="cartaoCredito" class="hidden">
+    <form id="formCartaoCredito" name="formCartaoCredito" class="formCartaoCredito">
+
+      <div id="errorCartaoCredito" class="row hidden">
+        <div class="col-md-12">
+          <div class="alert alert-warning">
+            <p></p>
+          </div>
         </div>
       </div>
-      <div class="form-group">
+
+      <div class="row">
         <div class="col-md-8">
-          <label for="portador">Nome<small>(como está no cartão)</small></label>
-          <input type="text" class="form-control" id="portador">
+          <div class="form-group">
+            <label for="portador">Nome<small>(como está no cartão)</small></label>
+            <input type="text" class="form-control" id="portador" name="portador">
+          </div>
         </div>
         <div class="col-md-4">
-          <label for="cvc">CVC<small>(código de segurança)</small></label>
-          <input type="text" class="form-control" id="cvc">
+          <div class="form-group">
+            <label for="cvc">CVC<small>(código de segurança)</small></label>
+            <input type="text" class="form-control" id="cvc" name="cvc">
+          </div>
         </div>
       </div>
-      <div class="form-group">
+      <div class="row">
         <div class="col-md-12">
-          <label for="numerocartao">Número do Cartão</label>
-          <input type="text" class="form-control" id="numerocartao">
+          <div class="form-group">
+            <label for="numerocartao">Número do Cartão</label>
+            <input type="text" class="form-control" id="numerocartao" name="numerocartao">
+          </div>
         </div>
       </div>
-      <div class="form-group" id="validade">
+      <div class="row">
         <div class="col-md-3">
-          <label>Mês</label>
-          <select class="form-control" id="mes">
-              <option value="01">Janeiro</option>
-              <option value="02">Fevereiro</option>
-              <option value="03">Março</option>
-              <option value="04">Abril</option>
-              <option value="05">Maio</option>
-              <option value="06">Junho</option>
-              <option value="07">Julho</option>
-              <option value="08">Agosto</option>
-              <option value="09">Setembro</option>
-              <option value="10">Outubro</option>
-              <option value="11">Novembro</option>
-              <option value="12">Dezembro</option>
-          </select>
+          <div class="form-group">
+            <label>Mês</label>
+            <select class="form-control" id="mes" name="mes">
+                <option value="01">Janeiro</option>
+                <option value="02">Fevereiro</option>
+                <option value="03">Março</option>
+                <option value="04">Abril</option>
+                <option value="05">Maio</option>
+                <option value="06">Junho</option>
+                <option value="07">Julho</option>
+                <option value="08">Agosto</option>
+                <option value="09">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+          </div>
         </div>
         <div class="col-md-3">
-          <label>Ano</label>
-          <select class="form-control" id="ano">
-              <option value="2017">2017</option>
-              <option value="2018">2018</option>
-              <option value="2019">2019</option>
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-              <option value="2024">2024</option>
-              <option value="2025">2025</option>
-              <option value="2026">2026</option>
-          </select>
+          <div class="form-group">
+            <label>Ano</label>
+            <select class="form-control" id="ano" name="ano">
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+            </select>
+          </div>
         </div>
         <div class="col-md-6">
-          <div class="form-group bandeira" id="bandeira">
+          <div class="form-group bandeira">
             <img src="assets/images/common/visa.png" id="visa">
             <img src="assets/images/common/mastercard.png" id="mastercard">
             <img src="assets/images/common/amex.png" id="amex">
           </div>
         </div>
       </div>
-      <div class="form-group">
+      <div class="row">
         <div class="col-md-4">
-          <label for="portador">CPF<small>(portador do cartão)</small></label>
-          <input type="text" class="form-control" id="cpfportador">
+          <div class="form-group">
+            <label for="cpfportador">CPF<small>(portador do cartão)</small></label>
+            <input type="text" class="form-control" id="cpfportador" name="cpfportador" maxLength="11">
+          </div>
         </div>
       </div>
+
     </form>
   </div><!--/.row-->
 
@@ -116,7 +134,9 @@
   <button id="pagar" class="btn btn-success hidden" type="button">PAGAR</button>
 </div><!--/.modal-footer-->
 
+
 <!-- Javascripts -->
+<script type="text/javascript" src="javascripts/vendor/functions.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
 
@@ -165,6 +185,69 @@
       }
     });
 
+    //validate
+    $('form#formCartaoCredito').validate({
+      rules: {
+        portador: { 
+          required: true
+        },
+        numerocartao: { 
+          required: true
+        },
+        cvc: { 
+          required: true,
+          minlength: 3
+        },
+        mes: { 
+          required: true
+        },
+        ano: { 
+          required: true
+        },
+        cpfportador: { 
+          required: true,
+          cpfBR: true
+        }
+      },
+      messages: {
+        portador: { 
+          required: 'Qual o nome do portador do cartão?'
+        },
+        numerocartao: { 
+          required: 'Preencha os números do cartão'
+        },
+        cvc: { 
+          required: 'Qual o código de segurança?',
+          minlength: 'Um cartão de crédito tem 3 ou 4 digitos de segurança, nos informe'
+        },
+        mes: { 
+          required: 'Qual o mês de validade?'
+        },
+        ano: { 
+          required: 'Qual o mês de validade?'
+        },
+        cpfportador: { 
+          required: 'CPF portador do cartão',
+          cpfBR: 'Este número de CPF é inválido'
+        }
+      },
+      highlight: function (element, errorClass, validClass) {
+        $(element).closest('.form-group').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+        $(element).closest('.form-group').find('i.fa').remove();
+        $(element).closest('.form-group').append('<i class="fa fa-times fa-validate form-control-feedback"></i>');
+      },
+      unhighlight: function (element, errorClass, validClass) {
+        $(element).closest('.form-group').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+        $(element).closest('.form-group').find('i.fa').remove();
+        $(element).closest('.form-group').append('<i class="fa fa-check fa-validate form-control-feedback"></i>');
+      },
+      errorElement: 'span',
+      errorClass: 'help-block',
+      errorPlacement: function(error, element) {
+        error.insertAfter(element);
+      }
+    });
+
     //get session checkout transparent
     app.util.getjson({
         url : "/controller/guest/pagamento/getsession",
@@ -183,75 +266,87 @@
 
     //pay
     $('button#pagar').livequery('click',function(event){
-      var isCardValid = $.payform.validateCardNumber(numerocartao.val());
-      var isCvcValid = $.payform.validateCardCVC(cvc.val());
-      var isExpiryValid = $.payform.validateCardExpiry(mes.val(),ano.val());
-      var errors = 0;
+      if($("form#formCartaoCredito").valid()){
+        var isCardValid = $.payform.validateCardNumber(numerocartao.val());
+        var isCvcValid = $.payform.validateCardCVC(cvc.val());
+        var isExpiryValid = $.payform.validateCardExpiry(mes.val(),ano.val());
+        var errors = 0;
 
-      $('#errorCartaoCredito').find('.alert').html('');
-      if(portador.val().length < 5){
-        errors++;
-        $('#errorCartaoCredito').find('.alert').append('<p>Verifique o nome do portador do cartão</p>');
-      }else if(!isCardValid){
-        errors++;
-        $('#errorCartaoCredito').find('.alert').append('<p>Verifique o número do seu cartão</p>');
-      }else if(!isCvcValid){
-        errors++;
-        $('#errorCartaoCredito').find('.alert').append('<p>Verifique o código de segurança do seu cartão</p>');
-      }else if(!isExpiryValid){
-        errors++;
-        $('#errorCartaoCredito').find('.alert').append('<p>Verifique a validade do seu cartão</p>');
-      }else if(!session && !senderHash){
-        errors++;
-        $('#errorCartaoCredito').find('.alert').append('<p>Ocorreu um erro ao tentar fazer uma requisição de pagamento, tente novamente mais tarde!</p>');
+        $('#errorCartaoCredito').find('.alert').html('');
+        if(portador.val().length < 5){
+          errors++;
+          $('#errorCartaoCredito').find('.alert').append('<p>Verifique o nome do portador do cartão</p>');
+        }else if(!isCardValid){
+          errors++;
+          $('#errorCartaoCredito').find('.alert').append('<p>Verifique o número do seu cartão</p>');
+        }else if(!isCvcValid){
+          errors++;
+          $('#errorCartaoCredito').find('.alert').append('<p>Verifique o código de segurança do seu cartão</p>');
+        }else if(!isExpiryValid){
+          errors++;
+          $('#errorCartaoCredito').find('.alert').append('<p>Verifique a validade do seu cartão</p>');
+        }else if(!session && !senderHash){
+          errors++;
+          $('#errorCartaoCredito').find('.alert').append('<p>Ocorreu um erro ao tentar fazer uma requisição de pagamento, tente novamente mais tarde!</p>');
+        }else{
+          $('#errorCartaoCredito').addClass('hidden');
+          $('button#pagar').html('PROCESSANDO...');
+          $('button#pagar').prop("disabled",true);
+          PagSeguroDirectPayment.createCardToken({
+            cardNumber: numerocartao.val(),
+            brand: brand,
+            cvv: cvc.val(),
+            expirationMonth: mes.val(),
+            expirationYear: ano.val(),
+            success: function(response){
+              cardToken = response.card.token;
+              //params
+              var params = {
+                senderhash: senderHash,
+                cardtoken: cardToken,
+                portador: portador.val(),
+                cpfportador: cpfportador.val(),
+                usuario: usuarios //utilizando variavel global(login.js)
+              };
+              params = JSON.stringify(params);
+              //transactions
+              app.util.getjson({
+                  url : "/controller/guest/pagamento/creditcard",
+                  method : 'POST',
+                  contentType : "application/json",
+                  data: params,
+                  success: function(response){
+                    console.log(response);
+                    console.log(response.results.codigo);
+                    console.log(response.results.descricao);
+                    console.log(response.results.status);
+                    if(response.results.codigo){
+                      $('button#pagar').addClass('hidden');
+                      $('#cartaoCredito').addClass('hidden');
+                      $('#mensagem').removeClass('hidden');
+                    }
+                  },
+                  error : onError
+              });
+            },
+            error: function(response){
+              var html = '<ul>';
+              $.map(response.errors, function(error){
+                html += '<li>'+error+'</li>';
+              });
+              html += '</ul>';
+              $('#errorCartaoCredito').find('.alert').append(html);
+              $('#errorCartaoCredito').removeClass('hidden');
+            },
+            complete: function(response){}
+          });
+        }
+        if(errors)
+          $('#errorCartaoCredito').removeClass('hidden');
       }else{
-        $('#errorCartaoCredito').addClass('hidden');
-        $('button#pagar').html('PROCESSANDO...');
-        PagSeguroDirectPayment.createCardToken({
-          cardNumber: numerocartao.val(),
-          brand: brand,
-          cvv: cvc.val(),
-          expirationMonth: mes.val(),
-          expirationYear: ano.val(),
-          success: function(response){
-            cardToken = response.card.token;
-            //params
-            var params = {
-              senderhash: senderHash,
-              cardtoken: cardToken,
-              portador: portador.val(),
-              cpfportador: cpfportador.val(),
-              usuario: usuarios //utilizando variavel global(login.js)
-            };
-            params = JSON.stringify(params);
-            //transactions
-            app.util.getjson({
-                url : "/controller/guest/pagamento/creditcard",
-                method : 'POST',
-                contentType : "application/json",
-                data: params,
-                success: function(response){
-                  console.log(response);
-                  $('button#pagar').addClass('hidden');
-                },
-                error : onError
-            });
-          },
-          error: function(response){
-            var html = '<ul>';
-            $.map(response.errors, function(error){
-              html += '<li>'+error+'</li>';
-            });
-            html += '</ul>';
-            $('#errorCartaoCredito').find('.alert').append(html);
-            $('#errorCartaoCredito').removeClass('hidden');
-            console.log(response);
-          },
-          complete: function(response){}
-        });
+        $("form#formCartaoCredito").valid();
       }
-      if(errors)
-        $('#errorCartaoCredito').removeClass('hidden');
+      return false;
     });
 
     function onError(response) {

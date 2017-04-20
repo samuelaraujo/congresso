@@ -135,7 +135,23 @@ $(document).ready(function(){
         }
     });
 
-	//pais de origem
+	//deficiencia
+    app.util.getjson({
+        url : "/controller/guest/deficiencia/get",
+        method : 'POST',
+        contentType : "application/json",
+        success: function(response){
+            var options = '<option value="" disabled selected>Deficiência</option>';
+            for (var i=0;i<response.results.length;i++) {
+                selected = (i==0) ? 'selected' : undefined;
+                options += '<option value="'+response.results[i].id+'" '+selected+'>'+ response.results[i].nome+'</option>';
+            }
+            $("#deficiencia").html(options);
+        },
+        error : onError
+    });
+
+    //pais de origem
 	app.util.getjson({
         url : "/controller/guest/estadocidade/getpais",
         method : 'POST',
@@ -220,34 +236,31 @@ $(document).ready(function(){
 
     //save
     $('button#salvar').livequery('click',function(event){
+        // if($("form#formCadastro").valid()){
+        //     usuarios = {
+        //         nome: $('#nome').val(),
+        //         sobrenome: $('#sobrenome').val(),
+        //         cracha: $('#cracha').val(),
+        //         email: $('#email').val(),
+        //         ingresso: $('#ingresso').val(),
+        //         sexo: $('#sexo:checked').val(),
+        //         cpf: $('#cpf').val(),
+        //         deficiencia: $('#deficiencia').val(),
+        //         pais: $('#pais').val(),
+        //         cidade: $('#cidade').val(),
+        //         senha: $('#senha').val()
+        //     };
 
-        if(!$("form#formCadastro").validate()){
-            console.log('é valido');
-        }else{
-            console.log('não é valido');
-        }
-
-
-  //       usuarios = {
-  //           nome: $('#nome').val(),
-  //           sobrenome: $('#sobrenome').val(),
-  //           cracha: $('#cracha').val(),
-  //           email: $('#email').val(),
-  //           ingresso: $('#ingresso').val(),
-  //           // sexo: $('#sexo').val(),
-  //           cpf: $('#cpf').val(),
-  //           deficiencia: $('#deficiencia').val(),
-  //           cidade: $('#cidade').val(),
-  //           senha: $('#senha').val()
-  //       };
-
-	 //    $("#modal-pagamento").modal({
-	 //    	show: true,
-  //           keyboard: false,
-  //           backdrop: 'static',
-  //           remote: '/views/pagamento.php',
-  //       });
-		// return false;
+            $("#modal-pagamento").modal({
+            	show: true,
+                keyboard: false,
+                backdrop: 'static',
+                remote: '/views/pagamento.php',
+            });
+        // }else{
+        //     $("form#formCadastro").valid();
+        // }
+        return false;
 	});
 
 	function onError(response) {
