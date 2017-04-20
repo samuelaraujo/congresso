@@ -14,7 +14,7 @@ $credentials['paymentMode'] = 'default';
 $credentials['currency'] = 'BRL';
 $credentials['notificationURL'] = URL_APP.'/controller/guest/pagamento/callback';
 $credentials['paymentMethod'] = 'creditCard';
-$credentials['receiverEmail'] = 'suporte@lojamodelo.com.br';
+$credentials['receiverEmail'] = PAGSEURO_EMAIL;
 
 //itens
 $credentials['itemId1'] = '0001';
@@ -22,14 +22,22 @@ $credentials['itemDescription1'] = 'Produto de teste';
 $credentials['itemAmount1'] = '80.00';
 $credentials['itemQuantity1'] = 1;
 
+//parcelamento
+$credentials['installmentQuantity'] = 1;
+$credentials['installmentValue'] = '80.00';
+
 //dados do comprador
-$credentials['senderName'] = $params->portador;
+$credentials['senderName'] = $params->usuario->nome.' '.$params->usuario->sobrenome;
 $credentials['senderCPF'] = $params->usuario->cpf;
 $credentials['senderAreaCode'] = '68';
 $credentials['senderPhone'] = '21025035';
 $credentials['senderEmail'] = $params->usuario->email;
 $credentials['senderHash'] = $params->senderhash;
+
+//dados do cartão de credito
 $credentials['creditCardToken'] = $params->cardtoken;
+$credentials['creditCardHolderName'] = $params->portador;
+$credentials['creditCardHolderCPF'] = $params->cpfportador;
 
 //endereço do cliente
 $credentials['shippingAddressStreet'] = 'R Bartolomeu Bueno';
@@ -38,17 +46,17 @@ $credentials['shippingAddressComplement'] = 'Sala A';
 $credentials['shippingAddressDistrict'] = 'Bosque';
 $credentials['shippingAddressPostalCode'] = '69900541';
 $credentials['shippingAddressCity'] = 'Rio branco';
-$credentials['shippingAddressState'] = 'ACRE';
-$credentials['shippingAddressCountry'] = 'Brasil';
+$credentials['shippingAddressState'] = 'AC';
+$credentials['shippingAddressCountry'] = 'BRA';
 
 //endereço de pagamento
-$credentials['billingAddressStreet'] = = 'R Bartolomeu Bueno';
-$credentials['billingAddressNumber'] = 33
-$credentials['billingAddressDistrict'] = 'Sala A';
-$credentials['billingAddressPostalCode'] = 'Bosque';
-$credentials['billingAddressCity'] = '69900541';
-$credentials['billingAddressState'] = $order_info['payment_zone_code'];
-$credentials['billingAddressCountry'] = $order_info['payment_iso_code_3'];
+$credentials['billingAddressStreet'] = 'R Bartolomeu Bueno';
+$credentials['billingAddressNumber'] = 33;
+$credentials['billingAddressDistrict'] = 'Bosque';
+$credentials['billingAddressPostalCode'] = '69900541';
+$credentials['billingAddressCity'] = 'Rio branco';
+$credentials['billingAddressState'] = 'AC';
+$credentials['billingAddressCountry'] = 'BRA';
 
 $credentials = http_build_query($credentials);
 
@@ -63,36 +71,18 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, $credentials);
 $xml = curl_exec($curl);
 $results = simplexml_load_string($xml);
 
-print_r($results);
-	
-// if( count($results->error) > 0 ){
-// 	http_response_code(500);
-// 	$response->error = 'Ocorreu um erro na requisição(session) de pagamento';
-// 	die();
-// }
+if( count($results->error) > 0 ){
+	http_response_code(500);
+	$response->error = 'Ocorreu um erro na sua transação de pagamento';
+}else{
+	http_response_code(200);
+	$response = array(
+	    'results' => array(
+	    	'codigo' => $results->code,
+	    	'status' => $results->status,
+	    	'descricao' => getStatusPagSeguro($results->status)
+	    )
+	);
+}
 
-// http_response_code(200);
-// $response = array(
-//     'results' => $results
-// );
-
-// echo json_encode($response);
-
-
-/*
-
-https://github.com/samuelaraujo/agendeseuservico/blob/master/php/assinatura/assinatura-boletobancario.php
-
-https://comunidade.pagseguro.uol.com.br/hc/pt-br/community/posts/115001055207-Pagamento-recorrente-transparente
-
-https://pt.stackoverflow.com/questions/39722/recebimento-do-id-de-inicio-de-sess%C3%A3o
-
-https://comunidade.pagseguro.uol.com.br/hc/pt-br/community/posts/115000810047-Por-favor-me-RESPONDAM-
-
-https://github.com/opencart-extension/PagSeguro-Checkout-Transparente/blob/master/upload/catalog/view/theme/default/template/extension/payment/pagseguro_cartao.tpl
-
-https://github.com/opencart-extension/PagSeguro-Checkout-Transparente/blob/master/upload/catalog/controller/extension/payment/pagseguro_cartao.php
-
-http://download.uol.com.br/pagseguro/docs/pagseguro-checkout-transparente.pdf
-
-*/
+echo json_encode($response);

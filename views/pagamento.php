@@ -4,6 +4,9 @@
 
 <div class="modal-body"><!--.modal-body-->
 
+  <div id="mensagem" class="mensagem"><!--.mensagem-->
+  </div><!--/.mensagem-->
+
   <div id="pagamento" class="pagamento"><!--.pagamento-->
     <div class="row">
       <div class="col-md-12">
@@ -94,6 +97,12 @@
           </div>
         </div>
       </div>
+      <div class="form-group">
+        <div class="col-md-4">
+          <label for="portador">CPF<small>(portador do cartão)</small></label>
+          <input type="text" class="form-control" id="cpfportador">
+        </div>
+      </div>
     </form>
   </div><!--/.row-->
 
@@ -112,6 +121,7 @@
   $(document).ready(function(){
 
     var portador =  $('input#portador');
+    var cpfportador =  $('input#cpfportador');
     var numerocartao =  $('input#numerocartao');
     var cvc =  $('input#cvc');
     var mes =  $('select#mes');
@@ -196,6 +206,7 @@
         $('#errorCartaoCredito').find('.alert').append('<p>Ocorreu um erro ao tentar fazer uma requisição de pagamento, tente novamente mais tarde!</p>');
       }else{
         $('#errorCartaoCredito').addClass('hidden');
+        $('button#pagar').html('PROCESSANDO...');
         PagSeguroDirectPayment.createCardToken({
           cardNumber: numerocartao.val(),
           brand: brand,
@@ -208,7 +219,9 @@
             var params = {
               senderhash: senderHash,
               cardtoken: cardToken,
-              portador: portador.val()
+              portador: portador.val(),
+              cpfportador: cpfportador.val(),
+              usuario: usuarios //utilizando variavel global(login.js)
             };
             params = JSON.stringify(params);
             //transactions
@@ -219,6 +232,7 @@
                 data: params,
                 success: function(response){
                   console.log(response);
+                  $('button#pagar').addClass('hidden');
                 },
                 error : onError
             });

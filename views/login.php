@@ -62,13 +62,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Nome</label>
-                                    <input name="nome" placeholder="Seu nome" class="form-control" type="text" required>
+                                    <input id="nome" name="nome" placeholder="Seu nome" class="form-control" type="text" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Sobrenome</label>
-                                    <input name="sobrenome" placeholder="Sobrenome" class="form-control" type="text" required>
+                                    <input id="sobrenome" name="sobrenome" placeholder="Sobrenome" class="form-control" type="text" required>
                                 </div>
                             </div>
                         </div>
@@ -76,13 +76,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Nome no Crachá</label>
-                                    <input name="cracha" placeholder="Nome no crachá" class="form-control" type="text">
+                                    <input id="cracha" name="cracha" placeholder="Nome no crachá" class="form-control" type="text">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>E-mail</label>
-                                    <input name="email" placeholder="E-mail" class="form-control" name="email" type="email" required>
+                                    <input id="email" name="email" placeholder="E-mail" class="form-control" name="email" type="email" required>
                                     <div class="loading-check">
                                         <img src="assets/images/common/loading.gif" width="28">
                                     </div>
@@ -94,14 +94,6 @@
                                 <div class="form-group">
                                     <label>Ingresso</label>
                                     <select id="ingresso" class="form-control" name="ingresso" required>
-                                        <!-- <optgroup ng-repeat="lote in lotes"
-                                            label="{{lote.nome}}">
-                                            <option ng-repeat="ingresso in lote.ingresso"
-                                                ng-disabled="{{ingresso.qtd<=0}}"
-                                                value="{{ingresso.id}}">
-                                                {{ingresso.nome + ' - ' + (ingresso.valor|finance:true:2) }}
-                                            </option>
-                                       </optgroup> -->
                                        <option value="" disabled selected>Lote</option>
                                     </select>
                                 </div>
@@ -126,7 +118,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>CPF</label>
-                                    <input placeholder="CPF" name="cpf" class="form-control" type="text" required>
+                                    <input id="cpf" placeholder="CPF" name="cpf" class="form-control" type="text" required>
                                     <div class="loading-check">
                                         <img src="assets/images/common/loading.gif" width="28">
                                     </div>
@@ -135,7 +127,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Possui algum tipo de deficiência?</label>
-                                    <select name="deficiencia" class="form-control" required>
+                                    <select id="deficiencia" name="deficiencia" class="form-control" required>
                                         <option value="" disabled selected>Deficiência</option>
                                     </select>
                                 </div>
@@ -171,13 +163,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Senha</label>
-                                    <input name="senha" placeholder="Senha" class="form-control" type="password" required>
+                                    <input id="senha" name="senha" placeholder="Senha" class="form-control" type="password" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Confirmar Senha</label>
-                                    <input placeholder="Confirmar Senha" name="confirmasenha" class="form-control" type="password" required>
+                                    <input id="confirmasenha" placeholder="Confirmar Senha" name="confirmasenha" class="form-control" type="password" required>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +226,7 @@
               <div class="col-md-12 text-center">
                 <div class="loading">
                     <img src="assets/images/common/loading.gif" width="38">
-                    <p>Aguarde processando...</p>
+                    <p>Aguarde, processando...</p>
                 </div>
               </div>
             </div><!-- /.modal-loading -->

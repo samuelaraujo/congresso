@@ -437,19 +437,36 @@ function valorMonetario($valor)
     return $valor;
 }
 
-//função para retornar o ID do STATUS do BD referente as transações e documentações de pagamento do Mercado Pago
-function getIdStatusPagamentoPlano($status)
+//função para retornar o STATUS das transações de pagamento do PagSeguro
+function getStatusPagSeguro($status)
 {
-    switch ($status) {
-    case 'pending':     $s = 4; break; //Aguardando Pagamento(O usuário ainda não completou o processo de pagamento.)
-    case 'in_process':  $s = 5; break; //Em análise(O pagamento estão em revisão.)
-    case 'approved':    $s = 6; break; //Paga, Pago ou Aprovado(O pagamento foi aprovado e acreditado.)
-    case 'refunded':    $s = 7; break; //Devolvido(O pagamento foi devolvido ao usuário.)
-    case 'cancelled':   $s = 8; break; //Cancelada(O pagamento foi cancelado por uma das parte ou porque o tempo expirou.)
-    case 'charged_back':$s = 25; break; //Charged Back(Foi feito um chargeback no cartão do comprador.)
+  switch ($status) {
+    case 1:      
+      $results = 'Aguardando pagamento'; //Aguardando Pagamento
+    break; 
+    case 2:      
+      $results = 'Em análise'; //Em análise(O pagamento estão em revisão.)
+    break;
+    case 3:      
+      $results = 'Paga'; //Paga, Pago ou Aprovado(O pagamento foi aprovado e acreditado.)
+    break; 
+    case 4:      
+      $results = 'Disponível'; //a transação foi paga e chegou ao final de seu prazo de liberação sem ter sido retornada e sem que haja nenhuma disputa aberta.
+    break; 
+    case 5:      
+      $results = 'Em disputa'; //o comprador, dentro do prazo de liberação da transação, abriu uma disputa.
+    break; 
+    case 6:      
+      $results = 'Devolvida'; //o valor da transação foi devolvido para o comprador
+    break; 
+    case 7:      
+      $results = 'Cancelada'; //a transação foi cancelada sem ter sido finalizada
+    break; 
+    case 8:      
+      $results = 'Cancelada'; //o valor da transação foi devolvido para o comprador
+    break; 
   }
-
-    return $s;
+  return $results;
 }
 
 function sendPasswordReset($login, $email, $url)

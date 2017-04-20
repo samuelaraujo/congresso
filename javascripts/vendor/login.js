@@ -1,5 +1,8 @@
+//variable global
+var usuarios = {};
+
 $(document).ready(function(){
-	
+
 	$('ul.tabs a').livequery( "click", function(event){
 		var tabnavs = $(this).attr('href');
         $(this).parent().parent().find('li').removeClass('active');
@@ -88,13 +91,27 @@ $(document).ready(function(){
     	if(option==1){
     		$('#pagamento').addClass('hidden');
     		$('#cartaoCredito').removeClass('hidden');
-    		$('#pagar').removeClass('hidden');;
+    		$('button#pagar').removeClass('hidden');
     	}
     	return false;
     });
 
     //save
     $('button#registro').livequery('click',function(event){
+
+        usuarios = {
+            nome: $('#nome').val(),
+            sobrenome: $('#sobrenome').val(),
+            cracha: $('#cracha').val(),
+            email: $('#email').val(),
+            ingresso: $('#ingresso').val(),
+            // sexo: $('#sexo').val(),
+            cpf: $('#cpf').val(),
+            deficiencia: $('#deficiencia').val(),
+            cidade: $('#cidade').val(),
+            senha: $('#senha').val()
+        };
+
 	    $("#modal-pagamento").modal({
 	    	show: true,
             keyboard: false,
