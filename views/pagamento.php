@@ -21,13 +21,14 @@
       <div id="pagamento-aguardando" class="col-md-12 text-center hidden">
         <h1>O pagamento está em processamento</h1>
         <h3>Estamos aguardando a confirmação do pagamento</h3>
+        <h4>Você será notificado em breve, aguarde</h4>
         <p id="pagamento-codigo"></p>
         <p id="pagamento-status"></p>
         <img src="assets/images/common/icon_timer.svg" width="128">
       </div>
       <div id="pagamento-devolvido" class="col-md-12 text-center hidden">
         <h1>O pagamento foi devolvido</h1>
-        <h3>Por favor, aguarde o valor ser devolvido ou retorno e refaça o pagamento</h3>
+        <h3>Por favor, aguarde o valor ser devolvido ou retorne e refaça o pagamento</h3>
         <p id="pagamento-codigo"></p>
         <p id="pagamento-status"></p>
         <img src="assets/images/common/icon_warning.svg" width="128">
@@ -114,18 +115,19 @@
           <div class="form-group">
             <label>Mês</label>
             <select class="form-control" id="mes" name="mes">
-                <option value="01">Janeiro</option>
-                <option value="02">Fevereiro</option>
-                <option value="03">Março</option>
-                <option value="04">Abril</option>
-                <option value="05">Maio</option>
-                <option value="06">Junho</option>
-                <option value="07">Julho</option>
-                <option value="08">Agosto</option>
-                <option value="09">Setembro</option>
-                <option value="10">Outubro</option>
-                <option value="11">Novembro</option>
-                <option value="12">Dezembro</option>
+              <option value=""></option>
+              <option value="01">Janeiro</option>
+              <option value="02">Fevereiro</option>
+              <option value="03">Março</option>
+              <option value="04">Abril</option>
+              <option value="05">Maio</option>
+              <option value="06">Junho</option>
+              <option value="07">Julho</option>
+              <option value="08">Agosto</option>
+              <option value="09">Setembro</option>
+              <option value="10">Outubro</option>
+              <option value="11">Novembro</option>
+              <option value="12">Dezembro</option>
             </select>
           </div>
         </div>
@@ -133,16 +135,21 @@
           <div class="form-group">
             <label>Ano</label>
             <select class="form-control" id="ano" name="ano">
-                <option value="2017">2017</option>
-                <option value="2018">2018</option>
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
+              <option value=""></option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
             </select>
           </div>
         </div>
@@ -157,6 +164,47 @@
     </form>
   </div><!--/.row-->
 
+  <div id="cartaoDebito" class="hidden">
+    <form id="formCartaoDebito" name="formCartaoDebito" class="formCartaoDebito">
+      <div class="col-md-3">
+        <a id="setBanco" 
+          class="block banco text-center" href="javascript:;" data-rel="1">
+          <div class="block-content block-content-full">
+            <img src="assets/images/common/bancobradesco.png">
+            <p>Banco do Bradesco</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a id="setBanco" 
+          class="block banco text-center" href="javascript:;" data-rel="2">
+          <div class="block-content block-content-full">
+            <img src="assets/images/common/bancoitau.png">
+            <p>Itaú</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a id="setBanco" 
+          class="block banco text-center" href="javascript:;" data-rel="3">
+          <div class="block-content block-content-full">
+            <img src="assets/images/common/bancodobrasil.png">
+            <p>Banco de brasil</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a id="setBanco" 
+          class="block banco text-center" href="javascript:;" data-rel="4">
+          <div class="block-content block-content-full">
+            <img src="assets/images/common/bancohsbc.png">
+            <p>HSBC</p>
+          </div>
+        </a>
+      </div>
+    </form>
+  </div><!--/.row-->
+
 </div><!--/.modal-body-->
 
 <div class="modal-footer"><!--.modal-footer-->
@@ -165,6 +213,8 @@
     <span>Ambiente seguro</span>
     <p>Pagamento processado pelo <img src="assets/images/common/logo-pagseguro.png" width="60"></p>
   </div>
+  <button id="alterar" class="btn btn-warning" type="button">ALTERAR INGRESSO</button>
+  <button id="voltar" class="btn btn-warning hidden" type="button">VOLTAR</button>
   <button id="pagar" class="btn btn-success hidden" type="button">PAGAR</button>
   <button id="retornar" class="btn btn-warning hidden" type="button">RETORNAR</button>
   <button id="continuar" class="btn btn-success hidden" type="button">CONTINUAR</button>
@@ -190,7 +240,7 @@
     var pay = false;
 
     //set value cart
-    $('#carrinho .valor').html('R$'+usuarios.valor);
+    $('#carrinho .valor').html(floatToMoney(usuarios.valor,'R$'));
 
     //use format
     numerocartao.payform('formatCardNumber');
@@ -258,7 +308,7 @@
           required: 'Qual o mês de validade?'
         },
         ano: { 
-          required: 'Qual o mês de validade?'
+          required: 'Qual o ano de validade?'
         }
       },
       highlight: function (element, errorClass, validClass) {
@@ -282,8 +332,15 @@
       var option = $(this).attr('data-rel');
       if(option==1){
         $('#pagamento').addClass('hidden');
+        $('button#alterar').addClass('hidden');
+        $('button#voltar').removeClass('hidden');
         $('#cartaoCredito').removeClass('hidden');
         $('button#pagar').removeClass('hidden');
+      }else if(option==2){
+        $('#pagamento').addClass('hidden');
+        $('button#alterar').addClass('hidden');
+        $('button#voltar').removeClass('hidden');
+        $('#cartaoDebito').removeClass('hidden');
       }
       return false;
     });
@@ -331,6 +388,7 @@
           $('#errorCartaoCredito').addClass('hidden');
           $('button#pagar').html('PROCESSANDO...');
           $('button#pagar').prop("disabled",true);
+          $('button#voltar').prop("disabled",true);
 
           PagSeguroDirectPayment.createCardToken({
             cardNumber: numerocartao.val(),
@@ -356,13 +414,18 @@
                   data: params,
                   success: function(response){
                     if(response.results.codigo){
+                      $('#mensagem').removeClass('hidden');
+                        $('#mensagem #pagamento-pago').addClass('hidden');
+                        $('#mensagem #pagamento-aguardando').addClass('hidden');
+                        $('#mensagem #pagamento-cancelado').addClass('hidden');
+                        $('#mensagem #pagamento-devolvido').addClass('hidden');
                       switch(parseInt(response.results.status)){
                         case 1:
                         case 2:
                           $('#carrinho').addClass('hidden');
                           $('button#pagar').addClass('hidden');
+                          $('button#voltar').addClass('hidden');
                           $('#cartaoCredito').addClass('hidden');
-                          $('#mensagem').removeClass('hidden');
                           $('button#finalizar').removeClass('hidden');
                           $('#mensagem #pagamento-aguardando').removeClass('hidden');
                           $('#mensagem #pagamento-aguardando #pagamento-codigo').html('Código: '+response.results.codigo);
@@ -373,8 +436,8 @@
                           pay = true;
                           $('#carrinho').addClass('hidden');
                           $('button#pagar').addClass('hidden');
+                          $('button#voltar').addClass('hidden');
                           $('#cartaoCredito').addClass('hidden');
-                          $('#mensagem').removeClass('hidden');
                           $('button#continuar').removeClass('hidden');
                           $('#mensagem #pagamento-pago').removeClass('hidden');
                           $('#mensagem #pagamento-pago #pagamento-codigo').html('Código: '+response.results.codigo);
@@ -383,8 +446,8 @@
                         case 6:
                           $('#carrinho').addClass('hidden');
                           $('button#pagar').addClass('hidden');
+                          $('button#voltar').addClass('hidden');
                           $('#cartaoCredito').addClass('hidden');
-                          $('#mensagem').removeClass('hidden');
                           $('button#retornar').removeClass('hidden');
                           $('#mensagem #pagamento-devolvido').removeClass('hidden');
                           $('#mensagem #pagamento-devolvido #pagamento-codigo').html('Código: '+response.results.codigo);
@@ -393,8 +456,8 @@
                         case 7:
                           $('#carrinho').addClass('hidden');
                           $('button#pagar').addClass('hidden');
+                          $('button#voltar').addClass('hidden');
                           $('#cartaoCredito').addClass('hidden');
-                          $('#mensagem').removeClass('hidden');
                           $('button#retornar').removeClass('hidden');
                           $('#mensagem #pagamento-cancelado').removeClass('hidden');
                           $('#mensagem #pagamento-cancelado #pagamento-codigo').html('Código: '+response.results.codigo);
@@ -416,12 +479,15 @@
               $('#errorCartaoCredito').removeClass('hidden');
               $('button#pagar').html('PAGAR');
               $('button#pagar').prop("disabled",false);
+              $('button#voltar').prop("disabled",true);
             },
             complete: function(response){}
           });
         }
-        if(errors)
+        if(errors){
           $('#errorCartaoCredito').removeClass('hidden');
+          $('button#voltar').prop("disabled",true);
+        }
       }else{
         $("form#formCartaoCredito").valid();
       }
@@ -441,11 +507,36 @@
     //retornar
     $('button#retornar').livequery('click',function(event){
       if(!pay){
+        $('button#voltar').addClass('hidden');
         $('#pagamento').removeClass('hidden');
+        $('#mensagem').addClass('hidden');
+        $('#mensagem #pagamento-devolvido').addClass('hidden');
         $('#cartaoCredito').addClass('hidden');
         $('button#retornar').addClass('hidden');
         $('button#pagar').addClass('hidden');
+        $('button#pagar').html('PAGAR');
+        $('button#pagar').prop("disabled",false);
+        $('button#alterar').removeClass('hidden');
       }
+    });
+
+    //voltar
+    $('button#voltar').livequery('click',function(event){
+      $('button#pagar').addClass('hidden');
+      $('button#voltar').addClass('hidden');
+      $('#mensagem').addClass('hidden');
+      $('#cartaoCredito').addClass('hidden');
+        $('#mensagem #pagamento-pago').addClass('hidden');
+        $('#mensagem #pagamento-aguardando').addClass('hidden');
+        $('#mensagem #pagamento-cancelado').addClass('hidden');
+        $('#mensagem #pagamento-devolvido').addClass('hidden');
+      $('#pagamento').removeClass('hidden');
+      $('button#alterar').removeClass('hidden');
+    });
+
+    //alterar ingresso
+    $('button#alterar').livequery('click',function(event){
+      $("#modal-pagamento").modal('hide').data('bs.modal',null);
     });
 
     function onError(response) {

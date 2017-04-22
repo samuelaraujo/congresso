@@ -3,8 +3,22 @@
 use Utils\Conexao;
 
 header('Content-type: application/json');
+$oConexao = Conexao::getInstance();
 $params = json_decode(file_get_contents('php://input'));
 $response = new stdClass();
+
+//ingresso
+$stmt = $oConexao->prepare(
+    'SELECT ig.id,lt.nome as lote,ig.nome as ingresso,ig.valor 
+    FROM ingresso ig
+    INNER JOIN lote lt ON(ig.idlote = lt.id) 
+    WHERE ig.id=?
+    AND lt.status=1'
+);
+$stmt->execute(array(
+    $params->usuario->ingresso
+));
+$ingresso = $stmt->fetchObject();
 
 //configurações
 $url = transactionsURL;
@@ -17,14 +31,14 @@ $credentials['paymentMethod'] = 'creditCard';
 $credentials['receiverEmail'] = PAGSEURO_EMAIL;
 
 //itens
-$credentials['itemId1'] = '0001';
-$credentials['itemDescription1'] = 'Produto de teste';
-$credentials['itemAmount1'] = '80.00';
+$credentials['itemId1'] = $ingresso->id;
+$credentials['itemDescription1'] = $ingresso->lote.' - '.$ingresso->ingresso;
+$credentials['itemAmount1'] = $ingresso->valor;
 $credentials['itemQuantity1'] = 1;
 
 //parcelamento
 $credentials['installmentQuantity'] = 1;
-$credentials['installmentValue'] = '80.00';
+$credentials['installmentValue'] = $ingresso->valor;
 
 //dados do comprador
 $credentials['senderName'] = $params->usuario->nome.' '.$params->usuario->sobrenome;

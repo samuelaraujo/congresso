@@ -215,7 +215,7 @@ $(document).ready(function(){
 	        	options += '<optgroup label="'+response.results[i].nome+'">'
 	        	for(var j=0;j<response.results[i].ingresso.length;j++){
         			options += '<option value="'+response.results[i].ingresso[j].id+'" data-value="'+response.results[i].ingresso[j].valor+'">'+ 
-	        					response.results[i].ingresso[j].nome + ' - ' + 'R$' + response.results[i].ingresso[j].valor
+	        					response.results[i].ingresso[j].nome + ' - '  + floatToMoney(response.results[i].ingresso[j].valor,'R$')
 	        				+'</option>';
 	        	}
 	        	options += '</optgroup>';
@@ -234,7 +234,7 @@ $(document).ready(function(){
                 cracha: $('#cracha').val(),
                 email: $('#email').val(),
                 ingresso: $('#ingresso').val(),
-                valor: $('#ingresso option:selected').attr('data-value'),
+                valor: $('#ingresso option:selected').attr('data-value') != undefined ? $('#ingresso option:selected').attr('data-value') : 0.00,
                 sexo: $('#sexo:checked').val(),
                 cpf: $('#cpf').val(),
                 deficiencia: $('#deficiencia').val(),
@@ -244,6 +244,7 @@ $(document).ready(function(){
             };
 
             $("#modal-pagamento").modal({
+                cache:false,
             	show: true,
                 keyboard: false,
                 backdrop: 'static',

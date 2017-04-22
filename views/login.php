@@ -247,4 +247,4 @@
 <script type="text/javascript" src="javascripts/vendor/login.js"></script>
 
 <!-- Javascript Pagseguro -->
-<script type="text/javascript" src="<?=javascriptURL?>"></script>
+<!-- <script type="text/javascript" src="<?=javascriptURL?>"></script> -->

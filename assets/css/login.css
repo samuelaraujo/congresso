@@ -370,6 +370,13 @@ form input[type=password],
   margin: 0;
   font-weight: 400;
 }
+.modal-body h4{
+  font-size: 16px;
+  line-height: 1.42857143;
+  font-family: 'Roboto';
+  margin: 0;
+  font-weight: 400;
+}
 .modal-body .mensagem p{
   color: #4a4a4a;
   margin: 5px 0;
@@ -379,6 +386,15 @@ form input[type=password],
 .modal-body .mensagem img{
   margin-top: 15px;
   margin-bottom: 15px;
+}
+.modal-body .banco{
+  margin-top: 50px;
+  margin-bottom: 40px;
+  display: block;
+  padding: 15px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 1px 1px #ccc;
+  border-radius: 3px;
 }
 .modal-body .pagamento{
   min-height: 350px;
