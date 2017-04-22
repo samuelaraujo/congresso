@@ -159,7 +159,8 @@ $(document).ready(function(){
         success: function(response){
         	var options = '<option value="" disabled selected>Pais</option>';
 	        for (var i=0;i<response.results.length;i++) {
-		        options += '<option value="'+response.results[i].id+'">'+ response.results[i].nome+'</option>';
+                selected = (i==0) ? 'selected' : undefined;
+		        options += '<option value="'+response.results[i].id+'" '+selected+'>'+ response.results[i].nome+'</option>';
 	    	}
 	    	$("#pais").html(options);
         },
@@ -213,7 +214,7 @@ $(document).ready(function(){
 	        for (var i=0;i<response.results.length;i++) {
 	        	options += '<optgroup label="'+response.results[i].nome+'">'
 	        	for(var j=0;j<response.results[i].ingresso.length;j++){
-        			options += '<option value="'+response.results[i].ingresso[j].id+'">'+ 
+        			options += '<option value="'+response.results[i].ingresso[j].id+'" data-value="'+response.results[i].ingresso[j].valor+'">'+ 
 	        					response.results[i].ingresso[j].nome + ' - ' + 'R$' + response.results[i].ingresso[j].valor
 	        				+'</option>';
 	        	}
@@ -224,32 +225,23 @@ $(document).ready(function(){
         error : onError
     });
 
-    $('a#setPagamento').livequery('click',function(event){
-    	var option = $(this).attr('data-rel');
-    	if(option==1){
-    		$('#pagamento').addClass('hidden');
-    		$('#cartaoCredito').removeClass('hidden');
-    		$('button#pagar').removeClass('hidden');
-    	}
-    	return false;
-    });
-
     //save
     $('button#salvar').livequery('click',function(event){
-        // if($("form#formCadastro").valid()){
-        //     usuarios = {
-        //         nome: $('#nome').val(),
-        //         sobrenome: $('#sobrenome').val(),
-        //         cracha: $('#cracha').val(),
-        //         email: $('#email').val(),
-        //         ingresso: $('#ingresso').val(),
-        //         sexo: $('#sexo:checked').val(),
-        //         cpf: $('#cpf').val(),
-        //         deficiencia: $('#deficiencia').val(),
-        //         pais: $('#pais').val(),
-        //         cidade: $('#cidade').val(),
-        //         senha: $('#senha').val()
-        //     };
+        if($("form#formCadastro").valid()){
+            usuarios = {
+                nome: $('#nome').val(),
+                sobrenome: $('#sobrenome').val(),
+                cracha: $('#cracha').val(),
+                email: $('#email').val(),
+                ingresso: $('#ingresso').val(),
+                valor: $('#ingresso option:selected').attr('data-value'),
+                sexo: $('#sexo:checked').val(),
+                cpf: $('#cpf').val(),
+                deficiencia: $('#deficiencia').val(),
+                pais: $('#pais').val(),
+                cidade: $('#cidade').val(),
+                senha: $('#senha').val()
+            };
 
             $("#modal-pagamento").modal({
             	show: true,
@@ -257,9 +249,9 @@ $(document).ready(function(){
                 backdrop: 'static',
                 remote: '/views/pagamento.php',
             });
-        // }else{
-        //     $("form#formCadastro").valid();
-        // }
+        }else{
+            $("form#formCadastro").valid();
+        }
         return false;
 	});
 

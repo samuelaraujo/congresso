@@ -69,12 +69,11 @@ curl_setopt($curl, CURLOPT_HTTPHEADER,
 curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $credentials);
 $xml = curl_exec($curl);
-$results = simplexml_load_string($xml);
 
-if( count($results->error) > 0 ){
-	http_response_code(500);
-	$response->error = 'Ocorreu um erro na sua transação de pagamento';
-}else{
+$results = simplexml_load_string($xml);
+$results = json_decode(json_encode($results));
+
+if(isset($results->code)){
 	http_response_code(200);
 	$response = array(
 	    'results' => array(
@@ -83,6 +82,9 @@ if( count($results->error) > 0 ){
 	    	'descricao' => getStatusPagSeguro($results->status)
 	    )
 	);
+}else{
+	http_response_code(500);
+	$response->error = 'Ocorreu um erro na sua transação de pagamento';
 }
 
 echo json_encode($response);

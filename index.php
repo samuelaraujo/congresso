@@ -46,6 +46,7 @@ $subpath = Url::getURL(1);
 $file = Url::getURL(2);
 $params = Url::getURL(3);
 
+//route url
 if(empty($path)){
 	include "views/home.php";
 }else{

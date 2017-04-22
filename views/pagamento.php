@@ -1,11 +1,45 @@
 <div class="modal-header"><!--.modal-header-->
     <h4 class="modal-title text-uppercase">Pagamento</h4>
+    <div id="carrinho" class="carrinho">
+      <i class="fa fa-shopping-cart"></i>
+      <p class="descricao">Sua compra:</p>
+      <p class="valor">R$0,00</p>
+    </div>
 </div><!--/.modal-header-->
 
 <div class="modal-body"><!--.modal-body-->
 
   <div id="mensagem" class="mensagem hidden"><!--.mensagem-->
-    <p>Mensagem de retorno da transação</p>
+    <div class="row">
+      <div id="pagamento-pago" class="col-md-12 text-center hidden">
+        <h1>Parabéns</h1>
+        <h3>Sua compra foi realizada com sucesso</h3>
+        <p id="pagamento-codigo"></p>
+        <p id="pagamento-status"></p>
+        <img src="assets/images/common/icon_success.svg" width="128">
+      </div>
+      <div id="pagamento-aguardando" class="col-md-12 text-center hidden">
+        <h1>O pagamento está em processamento</h1>
+        <h3>Estamos aguardando a confirmação do pagamento</h3>
+        <p id="pagamento-codigo"></p>
+        <p id="pagamento-status"></p>
+        <img src="assets/images/common/icon_timer.svg" width="128">
+      </div>
+      <div id="pagamento-devolvido" class="col-md-12 text-center hidden">
+        <h1>O pagamento foi devolvido</h1>
+        <h3>Por favor, aguarde o valor ser devolvido ou retorno e refaça o pagamento</h3>
+        <p id="pagamento-codigo"></p>
+        <p id="pagamento-status"></p>
+        <img src="assets/images/common/icon_warning.svg" width="128">
+      </div>
+      <div id="pagamento-cancelado" class="col-md-12 text-center hidden">
+        <h1>O pagamento foi cancelado</h1>
+        <h3>Por favor, retorne e refaça o pagamento</h3>
+        <p id="pagamento-codigo"></p>
+        <p id="pagamento-status"></p>
+        <img src="assets/images/common/icon_cancel.svg" width="128">
+      </div>
+    </div>
   </div><!--/.mensagem-->
 
   <div id="pagamento" class="pagamento"><!--.pagamento-->
@@ -13,7 +47,7 @@
       <div class="col-md-12">
         <h1 class="text-center">Como deseja efetuar o pagamento do seu ingresso?</h1>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <a id="setPagamento" 
           class="block forma-pagamento text-center" href="javascript:;" data-rel="1">
           <div class="block-content block-content-full">
@@ -22,9 +56,18 @@
           </div>
         </a>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <a id="setPagamento" 
           class="block forma-pagamento text-center" href="javascript:;" data-rel="2">
+          <div class="block-content block-content-full bg-modern">
+            <i class="fa fa-credit-card-alt fa-4x"></i>
+            <p>Débito online</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a id="setPagamento" 
+          class="block forma-pagamento text-center" href="javascript:;" data-rel="3">
           <div class="block-content block-content-full bg-modern">
             <i class="fa fa-barcode fa-4x"></i>
             <p>Boleto bancário</p>
@@ -117,11 +160,15 @@
 </div><!--/.modal-body-->
 
 <div class="modal-footer"><!--.modal-footer-->
-  <div class="ambiente-seguro pull-left">
+  <div class="ambiente-seguro">
     <i class="fa fa-lock"></i>
     <span>Ambiente seguro</span>
+    <p>Pagamento processado pelo <img src="assets/images/common/logo-pagseguro.png" width="60"></p>
   </div>
   <button id="pagar" class="btn btn-success hidden" type="button">PAGAR</button>
+  <button id="retornar" class="btn btn-warning hidden" type="button">RETORNAR</button>
+  <button id="continuar" class="btn btn-success hidden" type="button">CONTINUAR</button>
+  <button id="finalizar" class="btn btn-success hidden" type="button">FINALIZAR</button>
 </div><!--/.modal-footer-->
 
 
@@ -140,6 +187,10 @@
     var session = undefined;
     var senderHash = undefined;
     var cardToken = undefined;
+    var pay = false;
+
+    //set value cart
+    $('#carrinho .valor').html('R$'+usuarios.valor);
 
     //use format
     numerocartao.payform('formatCardNumber');
@@ -227,6 +278,16 @@
       }
     });
 
+    $('a#setPagamento').livequery('click',function(event){
+      var option = $(this).attr('data-rel');
+      if(option==1){
+        $('#pagamento').addClass('hidden');
+        $('#cartaoCredito').removeClass('hidden');
+        $('button#pagar').removeClass('hidden');
+      }
+      return false;
+    });
+
     //get session checkout transparent
     app.util.getjson({
         url : "/controller/guest/pagamento/getsession",
@@ -241,7 +302,6 @@
         },
         error : onError
     });
-
 
     //pay
     $('button#pagar').livequery('click',function(event){
@@ -271,6 +331,7 @@
           $('#errorCartaoCredito').addClass('hidden');
           $('button#pagar').html('PROCESSANDO...');
           $('button#pagar').prop("disabled",true);
+
           PagSeguroDirectPayment.createCardToken({
             cardNumber: numerocartao.val(),
             brand: brand,
@@ -294,14 +355,52 @@
                   contentType : "application/json",
                   data: params,
                   success: function(response){
-                    console.log(response);
-                    console.log(response.results.codigo);
-                    console.log(response.results.descricao);
-                    console.log(response.results.status);
                     if(response.results.codigo){
-                      $('button#pagar').addClass('hidden');
-                      $('#cartaoCredito').addClass('hidden');
-                      $('#mensagem').removeClass('hidden');
+                      switch(parseInt(response.results.status)){
+                        case 1:
+                        case 2:
+                          $('#carrinho').addClass('hidden');
+                          $('button#pagar').addClass('hidden');
+                          $('#cartaoCredito').addClass('hidden');
+                          $('#mensagem').removeClass('hidden');
+                          $('button#finalizar').removeClass('hidden');
+                          $('#mensagem #pagamento-aguardando').removeClass('hidden');
+                          $('#mensagem #pagamento-aguardando #pagamento-codigo').html('Código: '+response.results.codigo);
+                          $('#mensagem #pagamento-aguardando #pagamento-status').html('Status: '+response.results.descricao);
+                        break;
+                        case 3:
+                          //set transaction pay approved
+                          pay = true;
+                          $('#carrinho').addClass('hidden');
+                          $('button#pagar').addClass('hidden');
+                          $('#cartaoCredito').addClass('hidden');
+                          $('#mensagem').removeClass('hidden');
+                          $('button#continuar').removeClass('hidden');
+                          $('#mensagem #pagamento-pago').removeClass('hidden');
+                          $('#mensagem #pagamento-pago #pagamento-codigo').html('Código: '+response.results.codigo);
+                          $('#mensagem #pagamento-pago #pagamento-status').html('Status: '+response.results.descricao);
+                        break;
+                        case 6:
+                          $('#carrinho').addClass('hidden');
+                          $('button#pagar').addClass('hidden');
+                          $('#cartaoCredito').addClass('hidden');
+                          $('#mensagem').removeClass('hidden');
+                          $('button#retornar').removeClass('hidden');
+                          $('#mensagem #pagamento-devolvido').removeClass('hidden');
+                          $('#mensagem #pagamento-devolvido #pagamento-codigo').html('Código: '+response.results.codigo);
+                          $('#mensagem #pagamento-devolvido #pagamento-status').html('Status: '+response.results.descricao);
+                        break;
+                        case 7:
+                          $('#carrinho').addClass('hidden');
+                          $('button#pagar').addClass('hidden');
+                          $('#cartaoCredito').addClass('hidden');
+                          $('#mensagem').removeClass('hidden');
+                          $('button#retornar').removeClass('hidden');
+                          $('#mensagem #pagamento-cancelado').removeClass('hidden');
+                          $('#mensagem #pagamento-cancelado #pagamento-codigo').html('Código: '+response.results.codigo);
+                          $('#mensagem #pagamento-cancelado #pagamento-status').html('Status: '+response.results.descricao);
+                        break;
+                      }
                     }
                   },
                   error : onError
@@ -315,6 +414,8 @@
               html += '</ul>';
               $('#errorCartaoCredito').find('.alert').append(html);
               $('#errorCartaoCredito').removeClass('hidden');
+              $('button#pagar').html('PAGAR');
+              $('button#pagar').prop("disabled",false);
             },
             complete: function(response){}
           });
@@ -325,6 +426,26 @@
         $("form#formCartaoCredito").valid();
       }
       return false;
+    });
+
+    //continuar
+    $('button#continuar').livequery('click',function(event){
+      if(pay) window.location.href = "/dashboard"
+    });
+
+    //finalizar
+    $('button#finalizar').livequery('click',function(event){
+      if(!pay) window.location.href = "/"
+    });
+
+    //retornar
+    $('button#retornar').livequery('click',function(event){
+      if(!pay){
+        $('#pagamento').removeClass('hidden');
+        $('#cartaoCredito').addClass('hidden');
+        $('button#retornar').addClass('hidden');
+        $('button#pagar').addClass('hidden');
+      }
     });
 
     function onError(response) {

@@ -463,7 +463,10 @@ function getStatusPagSeguro($status)
       $results = 'Cancelada'; //a transação foi cancelada sem ter sido finalizada
     break; 
     case 8:      
-      $results = 'Cancelada'; //o valor da transação foi devolvido para o comprador
+      $results = 'Debitado'; //o valor da transação foi devolvido para o comprador
+    break;
+    case 9:      
+      $results = 'Retenção temporária'; //o comprador abriu uma solicitação de chargeback junto à operadora do cartão de crédito
     break; 
   }
   return $results;
