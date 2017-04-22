@@ -70,7 +70,7 @@ $(document).ready(function(){
             },
             cracha: { 
                 required: 'Como deseja ter seu nome no crachá?',
-                minlength: 'Só aceitamos nomes superior a duas letras'
+                minlength: 'Só aceitamos nomes superior a cinco letras'
             },
             ingresso: { 
                 required: 'Vamos lá, qual ingresso deseja adquirir?'

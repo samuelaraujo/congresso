@@ -166,41 +166,51 @@
 
   <div id="cartaoDebito" class="hidden">
     <form id="formCartaoDebito" name="formCartaoDebito" class="formCartaoDebito">
-      <div class="col-md-3">
-        <a id="setBanco" 
-          class="block banco text-center" href="javascript:;" data-rel="1">
-          <div class="block-content block-content-full">
-            <img src="assets/images/common/bancobradesco.png">
-            <p>Banco do Bradesco</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3">
-        <a id="setBanco" 
-          class="block banco text-center" href="javascript:;" data-rel="2">
-          <div class="block-content block-content-full">
-            <img src="assets/images/common/bancoitau.png">
-            <p>Itaú</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3">
-        <a id="setBanco" 
-          class="block banco text-center" href="javascript:;" data-rel="3">
-          <div class="block-content block-content-full">
-            <img src="assets/images/common/bancodobrasil.png">
-            <p>Banco de brasil</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3">
-        <a id="setBanco" 
-          class="block banco text-center" href="javascript:;" data-rel="4">
-          <div class="block-content block-content-full">
-            <img src="assets/images/common/bancohsbc.png">
-            <p>HSBC</p>
-          </div>
-        </a>
+      <div class="row">
+        <div class="col-md-3">
+          <a id="setBanco" 
+            class="block banco text-center" href="javascript:;" data-rel="1">
+            <div class="block-content block-content-full">
+              <div class="logo">
+                <img src="assets/images/common/bancobradesco.svg">
+              </div>
+              <p>Banco do Bradesco</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a id="setBanco" 
+            class="block banco text-center" href="javascript:;" data-rel="2">
+            <div class="block-content block-content-full">
+              <div class="logo">
+                <img src="assets/images/common/bancoitau.png">
+              </div>
+              <p>Itaú</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a id="setBanco" 
+            class="block banco text-center" href="javascript:;" data-rel="3">
+            <div class="block-content block-content-full">
+              <div class="logo">
+                <img src="assets/images/common/bancodobrasil.svg">
+              </div>
+              <p>Banco de brasil</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a id="setBanco" 
+            class="block banco text-center" href="javascript:;" data-rel="4">
+            <div class="block-content block-content-full">
+              <div class="logo">
+                <img src="assets/images/common/bancohsbc.svg">
+              </div>
+              <p>HSBC</p>
+            </div>
+          </a>
+        </div>
       </div>
     </form>
   </div><!--/.row-->
@@ -524,8 +534,9 @@
     $('button#voltar').livequery('click',function(event){
       $('button#pagar').addClass('hidden');
       $('button#voltar').addClass('hidden');
-      $('#mensagem').addClass('hidden');
       $('#cartaoCredito').addClass('hidden');
+      $('#cartaoDebito').addClass('hidden');
+      $('#mensagem').addClass('hidden');
         $('#mensagem #pagamento-pago').addClass('hidden');
         $('#mensagem #pagamento-aguardando').addClass('hidden');
         $('#mensagem #pagamento-cancelado').addClass('hidden');

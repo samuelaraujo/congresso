@@ -391,10 +391,26 @@ form input[type=password],
   margin-top: 50px;
   margin-bottom: 40px;
   display: block;
-  padding: 15px;
   border: 1px solid #ccc;
   box-shadow: 0px 1px 1px #ccc;
   border-radius: 3px;
+  min-height: 120px;
+}
+.modal-body .banco .logo{
+  width: 100%;
+  background: #f5f5f5;
+  padding: 7px 0;
+  text-align: center;
+  margin: 6px 0;
+  position: relative;
+}
+.modal-body .banco p{
+  font-size: 12px;
+  font-weight: 900;
+  font-family: sans-serif;
+  margin: 5px 0;
+  text-transform: uppercase;
+  padding: 0 5px;
 }
 .modal-body .pagamento{
   min-height: 350px;
