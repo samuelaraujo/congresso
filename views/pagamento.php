@@ -9,6 +9,14 @@
 
 <div class="modal-body"><!--.modal-body-->
 
+  <div id="gerando-boleto" class="gerando-boleto hidden">
+    <div class="back-drop"></div>
+    <div class="load">
+      <img src="assets/images/common/loading.gif" width="38">
+      <p>Gerando boleto, aguarde...</p>
+    </div>
+  </div>
+
   <div id="mensagem" class="mensagem hidden"><!--.mensagem-->
     <div class="row">
       <div id="pagamento-pago" class="col-md-12 text-center hidden">
@@ -42,6 +50,13 @@
       </div>
       <div id="pagamento-debito" class="col-md-12 text-center hidden">
         <h1>O pagamento está em processamento</h1>
+        <h3>O pedido será confirmado somente após a aprovação do pagamento</h3>
+        <p id="pagamento-codigo"></p>
+        <p id="pagamento-status"></p>
+        <img src="assets/images/common/icon_timer.svg" width="128">
+      </div>
+      <div id="pagamento-boleto" class="col-md-12 text-center hidden">
+        <h1>Seu pagamento está em processamento</h1>
         <h3>O pedido será confirmado somente após a aprovação do pagamento</h3>
         <p id="pagamento-codigo"></p>
         <p id="pagamento-status"></p>
@@ -238,6 +253,7 @@
   <button id="retornar" class="btn btn-warning hidden" type="button">RETORNAR</button>
   <button id="continuar" class="btn btn-success hidden" type="button">CONTINUAR</button>
   <button id="finalizar" class="btn btn-success hidden" type="button">FINALIZAR</button>
+  <button id="imprimir" class="btn btn-success hidden" type="button">IMPRIMIR BOLETO</button>
 </div><!--/.modal-footer-->
 
 
@@ -367,6 +383,49 @@
           $('button#banking').prop("disabled",true);
         }
         $('#cartaoDebito').removeClass('hidden');
+      }else{
+        $('button#alterar').addClass('hidden');
+        $('#gerando-boleto').removeClass('hidden');
+        //params
+        var params = {
+          usuario: usuarios //utilizando variavel global(login.js)
+        };
+        params = JSON.stringify(params);
+        //transactions
+        app.util.getjson({
+          url : "/controller/guest/pagamento/billet",
+          method : 'POST',
+          contentType : "application/json",
+          data: params,
+          success: function(response){
+            if(response.results.codigo){
+              //set pagamentos
+              pagamentos = {
+                codigo: response.results.codigo,
+                status: response.results.status
+              };
+              $('#carrinho').addClass('hidden');
+              $('#pagamento').addClass('hidden');
+              $('#mensagem').removeClass('hidden');
+                $('#mensagem #pagamento-pago').addClass('hidden');
+                $('#mensagem #pagamento-aguardando').addClass('hidden');
+                $('#mensagem #pagamento-cancelado').addClass('hidden');
+                $('#mensagem #pagamento-devolvido').addClass('hidden');
+                $('#mensagem #pagamento-debito').addClass('hidden');
+              $('#mensagem #pagamento-boleto').removeClass('hidden');
+              $('#mensagem #pagamento-boleto #pagamento-codigo').html('Código: '+response.results.codigo);
+              $('#mensagem #pagamento-boleto #pagamento-status').html('Status: '+response.results.descricao);
+              $('#gerando-boleto').addClass('hidden');
+              $('button#voltar').removeClass('hidden');
+              $('button#imprimir').removeClass('hidden');
+              $('button#imprimir').attr('data-link', response.results.link);
+            }
+          },
+          error: function(response){
+            $('button#alterar').removeClass('hidden');
+            $('#gerando-boleto').addClass('hidden');
+          }
+        });
       }
       return false;
     });
@@ -609,6 +668,8 @@
     //internet banking link
     $('button#internetbanking').livequery('click',function(event){
       var link = $(this).data('link');
+      $('button#internetbanking').html('PROCESSANDO...');
+      $('button#internetbanking').prop("disabled",true);
       //params
       var params = {
         pagamento: pagamentos, //utilizando variavel global(login.js)
@@ -624,16 +685,23 @@
         success: function(response){
           if(response.success){
             window.open(link,'_blank');
-            window.location.href = "/";
+            setTimeout(function(){
+              window.location.href = "/";
+            },5000);
           }
         },
-        error(response){}
+        error(response){
+          $('button#internetbanking').html('ACESSAR A PÁGINA DO BANCO');
+          $('button#internetbanking').prop("disabled",false);
+        }
       });
     });
     
     //continuar
     $('button#continuar').livequery('click',function(event){
       if(pay){
+        $('button#continuar').html('PROCESSANDO...');
+        $('button#continuar').prop("disabled",true);
         //params
         var params = {
           pagamento: pagamentos, //utilizando variavel global(login.js)
@@ -651,9 +719,44 @@
               window.location.href = "/dashboard";
             }
           },
-          error(response){}
+          error(response){
+            $('button#continuar').html('CONTINUAR');
+            $('button#continuar').prop("disabled",false);
+          }
         });
       }
+    });
+
+    //imprimir
+    $('button#imprimir').livequery('click',function(event){
+      var link = $(this).data('link');
+      $('button#imprimir').html('PROCESSANDO...');
+      $('button#imprimir').prop("disabled",true);
+      //params
+      var params = {
+        pagamento: pagamentos, //utilizando variavel global(login.js)
+        usuario: usuarios //utilizando variavel global(login.js)
+      };
+      params = JSON.stringify(params);
+      //save
+      app.util.getjson({
+        url : "/controller/guest/usuario/create",
+        method : 'POST',
+        contentType : "application/json",
+        data: params,
+        success: function(response){
+          if(response.success){
+            window.open(link,'_blank');
+            setTimeout(function(){
+              window.location.href = "/";
+            },5000);
+          }
+        },
+        error(response){
+          $('button#imprimir').html('IMPRIMIR');
+          $('button#imprimir').prop("disabled",false);
+        }
+      });
     });
 
     //finalizar
@@ -687,6 +790,7 @@
       $('button#pagar').addClass('hidden');
       $('button#voltar').addClass('hidden');
       $('button#banking').addClass('hidden');
+      $('button#imprimir').addClass('hidden');
       $('#cartaoCredito').addClass('hidden');
       $('#cartaoDebito').addClass('hidden');
       $('#mensagem').addClass('hidden');
@@ -695,8 +799,10 @@
         $('#mensagem #pagamento-cancelado').addClass('hidden');
         $('#mensagem #pagamento-devolvido').addClass('hidden');
         $('#mensagem #pagamento-debito').addClass('hidden');
+        $('#mensagem #pagamento-boleto').addClass('hidden');
       $('#pagamento').removeClass('hidden');
       $('button#alterar').removeClass('hidden');
+      $('#carrinho').removeClass('hidden');
     });
 
     //alterar ingresso

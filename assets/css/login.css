@@ -328,6 +328,28 @@ form input[type=password],
   font-family: 'Roboto';
   letter-spacing: 0.099em;
 }
+.modal .gerando-boleto .back-drop{
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 999;
+}
+.modal .gerando-boleto .load{
+  margin-top: 100px;
+  position: absolute;
+  background-color: #FFF;
+  left: 28%;
+  text-align: center;
+  padding: 15px;
+  margin-left: 30px;
+  text-transform: uppercase;
+  z-index: 999;
+}
 .modal .carrinho{
   float: right;
   padding: 5px;

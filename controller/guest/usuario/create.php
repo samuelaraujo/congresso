@@ -6,13 +6,12 @@ header('Content-type: application/json');
 $oConexao = Conexao::getInstance();
 $params = json_decode(file_get_contents('php://input'));
 $response = new stdClass();
-setlocale(LC_ALL, 'pt_BR.UTF8');
 
 try {
     if (!isset(
         $params->usuario->nome,
         $params->usuario->sobrenome,
-        $params->usuario->cpf
+        $params->usuario->cpf,
         $params->usuario->email, 
         $params->usuario->senha,
         $params->usuario->ingresso,
