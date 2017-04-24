@@ -1,5 +1,5 @@
 //variable global
-var usuarios = {};
+var usuarios = pagamentos = {};
 
 $(document).ready(function(){
 
@@ -26,7 +26,7 @@ $(document).ready(function(){
             },
             cracha: { 
                 required: true,
-                minlength: 5
+                minlength: 3
             },
             ingresso: { 
                 required: true
@@ -70,7 +70,7 @@ $(document).ready(function(){
             },
             cracha: { 
                 required: 'Como deseja ter seu nome no crachá?',
-                minlength: 'Só aceitamos nomes superior a cinco letras'
+                minlength: 'Só aceitamos nomes superior a três letras'
             },
             ingresso: { 
                 required: 'Vamos lá, qual ingresso deseja adquirir?'

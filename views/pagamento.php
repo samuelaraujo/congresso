@@ -40,6 +40,13 @@
         <p id="pagamento-status"></p>
         <img src="assets/images/common/icon_cancel.svg" width="128">
       </div>
+      <div id="pagamento-debito" class="col-md-12 text-center hidden">
+        <h1>O pagamento está em processamento</h1>
+        <h3>O pedido será confirmado somente após a aprovação do pagamento</h3>
+        <p id="pagamento-codigo"></p>
+        <p id="pagamento-status"></p>
+        <img src="assets/images/common/icon_timer.svg" width="128">
+      </div>
     </div>
   </div><!--/.mensagem-->
 
@@ -166,8 +173,16 @@
 
   <div id="cartaoDebito" class="hidden">
     <form id="formCartaoDebito" name="formCartaoDebito" class="formCartaoDebito">
+      <div id="errorCartaoDebito" class="row hidden">
+        <div class="col-md-12">
+          <div class="alert alert-warning">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <a id="setBanco" 
             class="block banco text-center" href="javascript:;" data-rel="bradesco">
             <div class="block-content block-content-full">
@@ -178,7 +193,7 @@
             </div>
           </a>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <a id="setBanco" 
             class="block banco text-center" href="javascript:;" data-rel="itau">
             <div class="block-content block-content-full">
@@ -189,7 +204,7 @@
             </div>
           </a>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <a id="setBanco" 
             class="block banco text-center" href="javascript:;" data-rel="bancodobrasil">
             <div class="block-content block-content-full">
@@ -197,17 +212,6 @@
                 <img src="assets/images/common/bancodobrasil.svg">
               </div>
               <p>Banco de brasil</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a id="setBanco" 
-            class="block banco text-center" href="javascript:;" data-rel="hsbc">
-            <div class="block-content block-content-full">
-              <div class="logo">
-                <img src="assets/images/common/bancohsbc.svg">
-              </div>
-              <p>HSBC</p>
             </div>
           </a>
         </div>
@@ -230,6 +234,7 @@
   <button id="voltar" class="btn btn-warning hidden" type="button">VOLTAR</button>
   <button id="pagar" class="btn btn-success hidden" type="button">PAGAR</button>
   <button id="banking" class="btn btn-success hidden" type="button">PAGAR</button>
+  <button id="internetbanking" class="btn btn-success hidden" type="button">ACESSAR A PÁGINA DO BANCO</button>
   <button id="retornar" class="btn btn-warning hidden" type="button">RETORNAR</button>
   <button id="continuar" class="btn btn-success hidden" type="button">CONTINUAR</button>
   <button id="finalizar" class="btn btn-success hidden" type="button">FINALIZAR</button>
@@ -450,11 +455,18 @@
                   data: params,
                   success: function(response){
                     if(response.results.codigo){
+                      //set pagamentos
+                      pagamentos = {
+                        codigo: response.results.codigo,
+                        status: response.results.status
+                      };
+
                       $('#mensagem').removeClass('hidden');
                         $('#mensagem #pagamento-pago').addClass('hidden');
                         $('#mensagem #pagamento-aguardando').addClass('hidden');
                         $('#mensagem #pagamento-cancelado').addClass('hidden');
                         $('#mensagem #pagamento-devolvido').addClass('hidden');
+                        $('#mensagem #pagamento-debito').addClass('hidden');
                       switch(parseInt(response.results.status)){
                         case 1:
                         case 2:
@@ -549,15 +561,44 @@
           contentType : "application/json",
           data: params,
           success: function(response){
-            console.log(response);
             if(response.results.codigo){
-              // $('button#banking').html('PROCESSANDO...');
-              // $('button#banking').prop("disabled",true);
-              // $('button#voltar').prop("disabled",true);
+              //set pagamentos
+              pagamentos = {
+                codigo: response.results.codigo,
+                status: response.results.status
+              };
+
+              $('#mensagem').removeClass('hidden');
+                $('#mensagem #pagamento-pago').addClass('hidden');
+                $('#mensagem #pagamento-aguardando').addClass('hidden');
+                $('#mensagem #pagamento-cancelado').addClass('hidden');
+                $('#mensagem #pagamento-devolvido').addClass('hidden');
+                $('#mensagem #pagamento-debito').addClass('hidden');
+              $('#carrinho').addClass('hidden');
+              $('button#banking').addClass('hidden');
+              $('button#voltar').addClass('hidden');
+              $('button#internetbanking').removeClass('hidden');
+              $('button#internetbanking').attr('data-link', response.results.link);
+              $('#cartaoDebito').addClass('hidden');
+              $('#mensagem #pagamento-debito').removeClass('hidden');
+              $('#mensagem #pagamento-debito #pagamento-codigo').html('Código: '+response.results.codigo);
+              $('#mensagem #pagamento-debito #pagamento-status').html('Status: '+response.results.descricao);
+              $('button#banking').html('PAGAR');
+              $('button#banking').prop("disabled",true);
+              $('button#voltar').prop("disabled",true);
             }
           },
           error: function(response){
-
+            var html = '<ul>';
+            $.map(response.errors, function(error){
+              html += '<li>'+error+'</li>';
+            });
+            html += '</ul>';
+            $('#errorCartaoDebito').find('.alert').append(html);
+            $('#errorCartaoDebito').removeClass('hidden');
+            $('button#banking').html('PAGAR');
+            $('button#banking').prop("disabled",false);
+            $('button#voltar').prop("disabled",true);
           },
           complete: function(response){}
         });
@@ -565,9 +606,54 @@
       return false;
     });
 
+    //internet banking link
+    $('button#internetbanking').livequery('click',function(event){
+      var link = $(this).data('link');
+      //params
+      var params = {
+        pagamento: pagamentos, //utilizando variavel global(login.js)
+        usuario: usuarios //utilizando variavel global(login.js)
+      };
+      params = JSON.stringify(params);
+      //save
+      app.util.getjson({
+        url : "/controller/guest/usuario/create",
+        method : 'POST',
+        contentType : "application/json",
+        data: params,
+        success: function(response){
+          if(response.success){
+            window.open(link,'_blank');
+            window.location.href = "/";
+          }
+        },
+        error(response){}
+      });
+    });
+    
     //continuar
     $('button#continuar').livequery('click',function(event){
-      if(pay) window.location.href = "/dashboard"
+      if(pay){
+        //params
+        var params = {
+          pagamento: pagamentos, //utilizando variavel global(login.js)
+          usuario: usuarios //utilizando variavel global(login.js)
+        };
+        params = JSON.stringify(params);
+        //save
+        app.util.getjson({
+          url : "/controller/guest/usuario/create",
+          method : 'POST',
+          contentType : "application/json",
+          data: params,
+          success: function(response){
+            if(response.success){
+              window.location.href = "/dashboard";
+            }
+          },
+          error(response){}
+        });
+      }
     });
 
     //finalizar
@@ -581,7 +667,11 @@
         $('button#voltar').addClass('hidden');
         $('#pagamento').removeClass('hidden');
         $('#mensagem').addClass('hidden');
-        $('#mensagem #pagamento-devolvido').addClass('hidden');
+          $('#mensagem #pagamento-pago').addClass('hidden');
+          $('#mensagem #pagamento-aguardando').addClass('hidden');
+          $('#mensagem #pagamento-cancelado').addClass('hidden');
+          $('#mensagem #pagamento-devolvido').addClass('hidden');
+          $('#mensagem #pagamento-debito').addClass('hidden');
         $('#cartaoCredito').addClass('hidden');
         $('button#retornar').addClass('hidden');
         $('button#banking').addClass('hidden');
@@ -604,6 +694,7 @@
         $('#mensagem #pagamento-aguardando').addClass('hidden');
         $('#mensagem #pagamento-cancelado').addClass('hidden');
         $('#mensagem #pagamento-devolvido').addClass('hidden');
+        $('#mensagem #pagamento-debito').addClass('hidden');
       $('#pagamento').removeClass('hidden');
       $('button#alterar').removeClass('hidden');
     });

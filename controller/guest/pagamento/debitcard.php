@@ -91,6 +91,7 @@ if(isset($results->code)){
 }else{
 	http_response_code(500);
 	$response->error = 'Ocorreu um erro na sua transação de pagamento';
+	$response->results = $results;
 }
 
 echo json_encode($response);
