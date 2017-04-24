@@ -7,6 +7,13 @@ body {
   color: white;
   font-family: 'Roboto';
 }
+p{
+  font-size: 13px;
+  color: #565656;
+}
+p.observacao{
+  padding: 15px;
+}
 .transparencia{
   display: block;
   position: fixed;
@@ -282,7 +289,7 @@ form input[type=password],
   border-radius: 3px;
   margin-right: 10px;
 }
-.formCartaoCredito .transparent {
+.transparent {
     opacity: 0.2;
 }
 .modal {

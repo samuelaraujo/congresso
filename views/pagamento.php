@@ -169,7 +169,7 @@
       <div class="row">
         <div class="col-md-3">
           <a id="setBanco" 
-            class="block banco text-center" href="javascript:;" data-rel="1">
+            class="block banco text-center" href="javascript:;" data-rel="bradesco">
             <div class="block-content block-content-full">
               <div class="logo">
                 <img src="assets/images/common/bancobradesco.svg">
@@ -180,7 +180,7 @@
         </div>
         <div class="col-md-3">
           <a id="setBanco" 
-            class="block banco text-center" href="javascript:;" data-rel="2">
+            class="block banco text-center" href="javascript:;" data-rel="itau">
             <div class="block-content block-content-full">
               <div class="logo">
                 <img src="assets/images/common/bancoitau.png">
@@ -191,7 +191,7 @@
         </div>
         <div class="col-md-3">
           <a id="setBanco" 
-            class="block banco text-center" href="javascript:;" data-rel="3">
+            class="block banco text-center" href="javascript:;" data-rel="bancodobrasil">
             <div class="block-content block-content-full">
               <div class="logo">
                 <img src="assets/images/common/bancodobrasil.svg">
@@ -202,7 +202,7 @@
         </div>
         <div class="col-md-3">
           <a id="setBanco" 
-            class="block banco text-center" href="javascript:;" data-rel="4">
+            class="block banco text-center" href="javascript:;" data-rel="hsbc">
             <div class="block-content block-content-full">
               <div class="logo">
                 <img src="assets/images/common/bancohsbc.svg">
@@ -211,6 +211,9 @@
             </div>
           </a>
         </div>
+      </div>
+      <div class="row">
+        <p class="observacao">* Após clicar em "PAGAR" você receberá um link que levará ao site do seu banco, assim é possível realizar o pagamento em total segurança.</p>
       </div>
     </form>
   </div><!--/.row-->
@@ -226,6 +229,7 @@
   <button id="alterar" class="btn btn-warning" type="button">ALTERAR INGRESSO</button>
   <button id="voltar" class="btn btn-warning hidden" type="button">VOLTAR</button>
   <button id="pagar" class="btn btn-success hidden" type="button">PAGAR</button>
+  <button id="banking" class="btn btn-success hidden" type="button">PAGAR</button>
   <button id="retornar" class="btn btn-warning hidden" type="button">RETORNAR</button>
   <button id="continuar" class="btn btn-success hidden" type="button">CONTINUAR</button>
   <button id="finalizar" class="btn btn-success hidden" type="button">FINALIZAR</button>
@@ -244,6 +248,7 @@
     var mastercard =  $('#mastercard');
     var amex =  $('#amex');
     var brand = undefined;
+    var bank = undefined;
     var session = undefined;
     var senderHash = undefined;
     var cardToken = undefined;
@@ -350,10 +355,31 @@
         $('#pagamento').addClass('hidden');
         $('button#alterar').addClass('hidden');
         $('button#voltar').removeClass('hidden');
+        $('button#banking').removeClass('hidden');
+        if(bank!=undefined){
+          $('button#banking').prop("disabled",false);
+        }else{
+          $('button#banking').prop("disabled",true);
+        }
         $('#cartaoDebito').removeClass('hidden');
       }
       return false;
     });
+
+    $('a#setBanco').livequery('click',function(event){
+      var option = $(this).data('rel');
+      $("a#setBanco").addClass('transparent');
+      $("a#setBanco[data-rel]").each(function(){
+        item = $(this).data('rel');
+        if(option == item){
+          $(this).removeClass('transparent');
+          bank = item;
+          $('button#banking').prop("disabled",false);
+        }
+      });
+      return false;
+    });
+    
 
     //get session checkout transparent
     app.util.getjson({
@@ -504,6 +530,41 @@
       return false;
     });
 
+    //pay internet banking
+    $('button#banking').livequery('click',function(event){
+      if(bank!=undefined){
+        $('button#banking').html('PROCESSANDO...');
+        $('button#banking').prop("disabled",true);
+        $('button#voltar').prop("disabled",true);
+        //params
+        var params = {
+          bank: bank,
+          usuario: usuarios //utilizando variavel global(login.js)
+        };
+        params = JSON.stringify(params);
+        //transactions
+        app.util.getjson({
+          url : "/controller/guest/pagamento/debitcard",
+          method : 'POST',
+          contentType : "application/json",
+          data: params,
+          success: function(response){
+            console.log(response);
+            if(response.results.codigo){
+              // $('button#banking').html('PROCESSANDO...');
+              // $('button#banking').prop("disabled",true);
+              // $('button#voltar').prop("disabled",true);
+            }
+          },
+          error: function(response){
+
+          },
+          complete: function(response){}
+        });
+      }
+      return false;
+    });
+
     //continuar
     $('button#continuar').livequery('click',function(event){
       if(pay) window.location.href = "/dashboard"
@@ -523,6 +584,7 @@
         $('#mensagem #pagamento-devolvido').addClass('hidden');
         $('#cartaoCredito').addClass('hidden');
         $('button#retornar').addClass('hidden');
+        $('button#banking').addClass('hidden');
         $('button#pagar').addClass('hidden');
         $('button#pagar').html('PAGAR');
         $('button#pagar').prop("disabled",false);
@@ -534,6 +596,7 @@
     $('button#voltar').livequery('click',function(event){
       $('button#pagar').addClass('hidden');
       $('button#voltar').addClass('hidden');
+      $('button#banking').addClass('hidden');
       $('#cartaoCredito').addClass('hidden');
       $('#cartaoDebito').addClass('hidden');
       $('#mensagem').addClass('hidden');
