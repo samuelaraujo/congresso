@@ -1795,152 +1795,155 @@ d   <!-- Schedule -->
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-3 col-md-3">
-      <div class="speaker">
-        <div class="media"><p><img src="assets/images/pages/laudivon.png" alt="Laudivon Nogueira"></p></div>
-        <div class="info">
-          <p class="name">Laudivon de Oliveira Nogueira</p>
-          <p class="position">Desembargador - TJAC</p>
-          <p>Desembargador do Tribunal de Justiça do Estado do Acre.</p>
-          </br>
-          <a href="#" data-toggle="modal" data-target="#modallaudivonnogueira"><strong>Veja o Mini Currículo!</strong></a>
-          </br>
-          <div class="socials">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3 col-md-3">
-      <div class="speaker">
-        <div class="media"><p><img src="assets/images/pages/mariaberenice.jpg" alt=""></p></div>
-        <div class="info">
-          <p class="name">Maria Berenice Dias</p>
-          <p class="position">Advogada</p>
-          </br>
-          <p align="justify">Desembargadora aposentada do Tribunal de Justiça do Estado do Rio Grande do Sul.</p>
-          <a href="#" data-toggle="modal" data-target="#modalmariaberenice"><strong>Veja o Mini Currículo!</strong></a>
-          </br>
-          <div class="socials">
-            <a href="http://www.facebook.com/MariaBereniceDias" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/mberenicedias"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.instagram.com/mberenicedias/?hl=pt" target="_blank"><i class="fa fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3 col-md-3">
-      <div class="speaker">
-        <div class="media"><p><img src="assets/images/pages/mariapenha.png" alt=""></p></div>
-        <div class="info">
-          <p class="name">Maria Penha Sousa Nascimento</p>
-          <p class="position">Desembargadora Aposentada - TJAC</p>
-          <p>Desembargadora aposentada do Tribunal de Justiça do Estado do Acre.</p>
-          <a href="#" data-toggle="modal" data-target="#modalmariapenha"><strong>Veja o Mini Currículo!</strong></a>
-          </br>
-          <div class="socials">
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3 col-md-3">
-      <div class="speaker">
-        <div class="media"><p><img src="assets/images/pages/rogeriosanches.png" alt=""></p></div>
-        <div class="info">
-          <p class="name">Rogério Sanches Cunha</p>
-          <p class="position">Promotor de Justiça - MPSP</p>
-          <br/>
-          <p>Promotor de Justiça do Ministério Público de São Paulo e Professor da Escola Superior MP.</p>
-          <a href="#" data-toggle="modal" data-target="#modalrogeriosanches"><strong>Veja o Mini Currículo!</strong></a>
-          <br/>
-          <div class="socials">
-            <a href="https://www.facebook.com/RogerioSanchesC" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/rogeriosanchesc" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.youtube.com/user/RogerioSanchesC" target="_blank"><i class="fa fa-youtube"></i></a>
-            <a href="https://www.instagram.com/rogeriosanchescunha/?hl=pt-br" target="_blank"><i class="fa fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3 col-md-3">
-      <div class="speaker">
-        <div class="media"><p><img src="assets/images/pages/cristianofarias.jpg" alt=""></p></div>
-        <div class="info">
-          <p class="name">Cristiano Chaves de Farias</p>
-          <p class="position">Promotor de Justiça - MPBA</p>
-          <p>Promotor de Justiça do Ministério Público do Estado da Bahia. Mestre em Família na Sociedade Contemporânea pela UCSal.</p>
-          <a href="#" data-toggle="modal" data-target="#modalcristianofarias"><strong>Veja o Mini Currículo!</strong></a>
-          <br/>
-          <div class="socials">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3 col-md-3">
-      <div class="speaker">
-        <div class="media"><p><img src="assets/images/pages/rafaelbarreto.png" alt=""></p></div>
-        <div class="info">
-          <p class="name">Rafael Barretto</p>
-          <p class="position">Advogado e Professor</p>
-          <br/>
-          <p>Mestre em Direito Público. Professor de Pós Graduação da Universidade Federal da Bahia (UFBA).</p>
-          <br/>
-          <a href="#" data-toggle="modal" data-target="#modalrafaelbarreto"><strong>Veja o Mini Currículo!</strong></a>
-          <br/>
-          <div class="socials">
-            <a href="http://www.facebook.com/rafael.barretto.1" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/rconstitucional" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.instagram.com/rafaelbarrettoportalf3/?hl=pt" target="_blank"><i class="fa fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-sm-3 col-md-3">
-      <div class="speaker">
-        <div class="media"><p><img src="assets/images/pages/lucioalmeida.png" alt=""></p></div>
-        <div class="info">
-          <p class="name">Lúcio de Almeida Braga Jr.</p>
-          <p class="position">Advogado e Professor</p>
-          <p>Advogado especialista em Direito Econômico e Fiscal Internacional pela Universidade de Liège (Bélgica).</p>
-          <a href="#" data-toggle="modal" data-target="#modallucioalmeida"><strong>Veja o Mini Currículo!</strong></a>
-          <br/>
-          <div class="socials">
-            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+    <div class="col-md-12">
+      <div class="col-sm-3 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/laudivon.png" alt="Laudivon Nogueira"></p></div>
+          <div class="info">
+            <p class="name">Laudivon de Oliveira Nogueira</p>
+            <p class="position">Desembargador - TJAC</p>
+            <p>Desembargador do Tribunal de Justiça do Estado do Acre.</p>
+            <a href="#" class="curriculum" 
+              data-toggle="modal" data-target="#modallaudivonnogueira"><strong>Veja o Mini Currículo!</strong></a>
+            <div class="socials">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="col-sm-3 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/mariaberenice.jpg" alt=""></p></div>
+          <div class="info">
+            <p class="name">Maria Berenice Dias</p>
+            <p class="position">Advogada</p>
+            <p align="justify">Desembargadora aposentada do Tribunal de Justiça do Estado do Rio Grande do Sul.</p>
+            <a href="#" class="curriculum"
+              data-toggle="modal" data-target="#modalmariaberenice"><strong>Veja o Mini Currículo!</strong></a>
+            <div class="socials">
+              <a href="http://www.facebook.com/MariaBereniceDias" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/mberenicedias"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/mberenicedias/?hl=pt" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/mariapenha.png" alt=""></p></div>
+          <div class="info">
+            <p class="name">Maria Penha Sousa Nascimento</p>
+            <p class="position">Desembargadora Aposentada - TJAC</p>
+            <p>Desembargadora aposentada do Tribunal de Justiça do Estado do Acre.</p>
+            <a href="#" class="curriculum"
+              data-toggle="modal" data-target="#modalmariapenha"><strong>Veja o Mini Currículo!</strong></a>
+            <div class="socials">
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <div class="col-sm-3 col-md-3">
-      <div class="speaker">
-        <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
-        <div class="info">
-          <p class="name">Palestrante</p>
-          <p class="position">Palestrante</p>
-          <br/><br/><br/><br/>
-          <p>aguarde</p>
-          <a href="#" data-toggle="modal" data-target="#modalrivanabarreto"><strong>Veja o Mini Currículo!</strong></a>
-          <br/>
-          <div class="socials">
-            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+      <div class="col-sm-3 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/rogeriosanches.png" alt=""></p></div>
+          <div class="info">
+            <p class="name">Rogério Sanches Cunha</p>
+            <p class="position">Promotor de Justiça - MPSP</p>
+            <p>Promotor de Justiça do Ministério Público de São Paulo e Professor da Escola Superior MP.</p>
+            <a href="#" class="curriculum"
+              data-toggle="modal" data-target="#modalrogeriosanches"><strong>Veja o Mini Currículo!</strong></a>
+            <div class="socials">
+              <a href="https://www.facebook.com/RogerioSanchesC" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/rogeriosanchesc" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.youtube.com/user/RogerioSanchesC" target="_blank"><i class="fa fa-youtube"></i></a>
+              <a href="https://www.instagram.com/rogeriosanchescunha/?hl=pt-br" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+    </div><!--/.col-md-12-->
+
+    <div class="col-md-12">
+      <div class="col-sm-3 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/cristianofarias.jpg" alt=""></p></div>
+          <div class="info">
+            <p class="name">Cristiano Chaves de Farias</p>
+            <p class="position">Promotor de Justiça - MPBA</p>
+            <p>Promotor de Justiça do Ministério Público do Estado da Bahia. Mestre em Família na Sociedade Contemporânea pela UCSal.</p>
+            <a href="#" class="curriculum"
+              data-toggle="modal" data-target="#modalcristianofarias"><strong>Veja o Mini Currículo!</strong></a>
+            <div class="socials">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/rafaelbarreto.png" alt=""></p></div>
+          <div class="info">
+            <p class="name">Rafael Barretto</p>
+            <p class="position">Advogado e Professor</p>
+            <p>Mestre em Direito Público. Professor de Pós Graduação da Universidade Federal da Bahia (UFBA).</p>
+            <a href="#" class="curriculum"
+              data-toggle="modal" data-target="#modalrafaelbarreto"><strong>Veja o Mini Currículo!</strong></a>
+            <div class="socials">
+              <a href="http://www.facebook.com/rafael.barretto.1" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/rconstitucional" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/rafaelbarrettoportalf3/?hl=pt" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/lucioalmeida.png" alt=""></p></div>
+          <div class="info">
+            <p class="name">Lúcio de Almeida Braga Jr.</p>
+            <p class="position">Advogado e Professor</p>
+            <p>Advogado especialista em Direito Econômico e Fiscal Internacional pela Universidade de Liège (Bélgica).</p>
+            <a href="#" class="curriculum"
+              data-toggle="modal" data-target="#modallucioalmeida"><strong>Veja o Mini Currículo!</strong></a>
+            <div class="socials">
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
+          <div class="info">
+            <p class="name">Palestrante</p>
+            <p class="position">Palestrante</p>
+            <p>aguarde</p>
+            <a href="#" class="curriculum"
+              data-toggle="modal" data-target="#modalrivanabarreto"><strong>Veja o Mini Currículo!</strong></a>
+            <div class="socials">
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/.col-md-12-->
+
   </div>
 </section>
 <!-- /Speaker -->
@@ -2431,7 +2434,7 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle"><strong>Maria Berenice Dias</strong></h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Maria Berenice Dias</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -2439,9 +2442,6 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="modal-body">
        <p> Desembargadora aposentada do Tribunal de Justiça do Estado do Rio Grande do Sul, sendo a primeira mulher a ingressar na magistratura do Rio Grande do Sul e a primeira Desembargadora nesse Estado. Advogada especializada em Direito Homoafetivo, Direito das Famílias e Sucessões, é Vice-Presidente Nacional do Instituto Brasileiro de Direito de Família - IBDFAM, do qual é uma das fundadoras. É Presidenta da Comissão Especial da Diversidade Sexual do Conselho Federal da OAB. É membro do Conselho de Desenvolvimento Econômico e Social da Presidência da República. Lidera um movimento nacional para criação de Comissões da Diversidade Sexual ligadas à OAB e que estão sendo criadas em todo Brasil. É membro da Comissão Especial da Diversidade Sexual da OAB/RS. É pós-graduada em Processo Civil pela Pontifícia Universidade Católica do Rio Grande do Sul. Mestre em Processo Civil pela Pontifícia Universidade Católica do Rio Grande do Sul. Bacharel em Ciências Jurídicas e Sociais pela Universidade Federal do Rio Grande do Sul. Membro efetivo do Instituto dos Advogados do Rio Grande do Sul. Acadêmica da Academia Literária Feminina do Rio Grande do Sul. É um dos mais importantes nomes da história do Direito Civil, sobretudo na área de Direito de Família e Sucessões, sendo uma das juristas mais premiadas em âmbito nacional e internacional da história do direito brasileiro.</p>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-       </div>
     </div>
   </div>
 </div>
@@ -2450,7 +2450,7 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle"><strong>Maria Berenice Dias</strong></h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Maria Penha Sousa Nascimento</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -2458,9 +2458,6 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="modal-body">
        <p> Desembargadora aposentada do Tribunal de Justiça do Estado do Acre. Especialista em Direto Constitucional (pela UFAC, através de convênio com a UFMG) e possui MBA em Poder Judiciário realizado pela FGV na então Escola Superior da Magistratura no Acre (atualmente ESJUD). Por diversos anos, foi juíza de Direito titular da 1ª Vara da Fazenda Pública de Rio Branco, bem ainda, titular do Juizado Especial da Fazenda Pública, ambas unidades judiciárias da Capital. Ascendeu ao desembargo em novembro de 2015, pelo critério de antiguidade, após se dedicar por mais de 20 anos ao Judiciário Acreano no âmbito da magistratura do 1º Grau, aposentando-se voluntariamente em novembro de 2016.</p>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-       </div>
     </div>
   </div>
 </div>
@@ -2469,7 +2466,7 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle"><strong>Rogério Sanches Cunha</strong></h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Rogério Sanches Cunha</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -2477,9 +2474,6 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="modal-body">
        <p> Promotor de Justiça do Ministério Público de São Paulo, Professor da Escola Superior do MP de São Paulo e do Mato Grasso. Professor de Penal e Coordenador Científico do CERS. Autor das seguintes obras: Manual de Direito Penal - Parte Geral, Manual de Direito Penal - Parte Especial, Código Penal para Concursos, Lei de Execução para Concursos, Prática Penal para o MP, todos publicados pela Editora Juspodivm. Rogério é um dos mais conhecidos e respeitados nomes do Direito Penal do país.</p>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-       </div>
     </div>
   </div>
 </div>
@@ -2488,7 +2482,7 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle"><strong>Cristiano Chaves de Farias</strong></h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Cristiano Chaves de Farias</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -2496,9 +2490,6 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="modal-body">
        <p> Promotor de Justiça do Ministério Público do Estado da Bahia. Mestre em Família na Sociedade Contemporânea pela UCSal. Professor de Direito Civil da Faculdade Baiana de Direito e do CERS Cursos Online. Leciona em outras instituições de ensino jurídico e faculdades, além de ser membro do IBDFAM – Instituto Brasileiro de Direito de Família. É um dos maiores nomes de Direito Civil da atualidade, com milhares de obras vendidas e um conhecimento ímpar de nosso ordenamento jurídico.</p>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-       </div>
     </div>
   </div>
 </div>
@@ -2507,7 +2498,7 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle"><strong>Laudivon de Oliveira Nogueira</strong></h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Laudivon de Oliveira Nogueira</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -2515,9 +2506,6 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="modal-body">
        <p> Desembargador do Tribunal de Justiça do Estado do Acre. Mestre em Direito Constitucional pela Faculdade de Direito da Universidade de Lisboa. É especialista em Direito Público pela Faculdade Integrada de Pernambuco; em  Direito Constitucional pela Faculdade de Direito da Universidade de Lisboa, e MBA em Poder Judiciário pela Fundação Getúlio Vargas.</p>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-       </div>
     </div>
   </div>
 </div>
@@ -2526,7 +2514,7 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle"><strong>Lúcio de Almeida Braga Jr.</strong></h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Lúcio de Almeida Braga Jr.</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -2534,9 +2522,6 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="modal-body">
        <p> Advogado especialista em Direito Econômico e Fiscal Internacional pela Universidade de Liège (Bélgica). Professor da União Educacional do Norte (UNINORTE), com atuação na docência nas disciplinas de Direito Processual Civil e Conciliação, Mediação e Arbitragem.</p>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-       </div>
     </div>
   </div>
 </div>
@@ -2545,7 +2530,7 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle"><strong>Palestrante</strong></h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Palestrante</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -2553,9 +2538,6 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="modal-body">
        <p> aguardem.</p>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-       </div>
     </div>
   </div>
 </div>
@@ -2564,7 +2546,7 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle"><strong>Rafael Barretto</strong></h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Rafael Barretto</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -2572,9 +2554,6 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="modal-body">
        <p> Mestre em Direito Público. Professor de Pós Graduação da Universidade Federal da Bahia (UFBA), da Escola dos Magistrados da Bahia (EMAB) e da Escola Judiciária Eleitoral (EJE)/Tribunal Regional Eleitoral da Bahia (TRE). Secretário-Geral do Tribunal de Ética e Disciplina do Conselho Seccional da OAB/BA.</p>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-       </div>
     </div>
   </div>
 </div>
