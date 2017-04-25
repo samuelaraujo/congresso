@@ -1,4 +1,5 @@
-<!-- CSS Login -->
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <link rel="stylesheet" type="text/css" href="assets/css/login.css">
 
 <div class="transparencia"></div>

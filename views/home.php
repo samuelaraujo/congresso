@@ -1,3 +1,6 @@
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 <!-- Preloader -->
 <div class="preloader">
   <div class="clear-loading loading-effect-2">

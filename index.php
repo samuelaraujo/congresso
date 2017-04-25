@@ -49,12 +49,8 @@ $params = Url::getURL(3);
 //route url
 if(empty($path)){
 	include "views/home.php";
-}else{
-	if(file_exists($path.".php")){
-		include $path.".php";
-    }else if($path == 'login'){
-		include "views/".$path.".php";
-    }
+}else if(file_exists('views/'.$path.".php")){
+	include 'views/'.$path.".php";
 }
 // if(file_exists($path.$subpath.$file)){
 // 	include $path.$subpath.$file;
