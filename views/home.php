@@ -102,6 +102,7 @@
   <div class="row">
     <div class="col-md-12">
         <div class="section-title">
+          <i class="pe-7s-display2"></i>
           <h3 class="text-center">Sobre o Evento</h3>
           <p>O I Congresso Jurídico da UNINORTE/AC é um evento destinado a todos aqueles possuem atuação ou interesse nas mais diversas áreas da ciência do Direito, desde os acadêmicos em formação até advogados, bacharéis e profissionais dos mais variados campos da seara jurídica em todas as partes do Estado do Acre e do Brasil.</p>
           <p>Em um projeto inovador, realizado pela União Educacional do Norte (UNINORTE) e uma comissão de acadêmicos, o presente evento terá por duração o período de 04 (quatro) dias, compreendendo-se entre os dias 14 e 17 de agosto de 2017, em Rio Branco, Acre.</p>
@@ -151,7 +152,7 @@
     </div>
   </div>
   <div class="text-center" data-animation="fadeInUp" data-animation-delay="500">
-    <button class="btn-theme" onclick="window.location.href='/id/register'">inscreva-se agora</button>
+    <button class="btn-theme" onclick="window.location.href='/login'">inscreva-se agora</button>
   </div>
 </section>
 <!-- /Feature -->
@@ -2031,7 +2032,7 @@ Inscrição para estudante válida somente para graduação.</p>
             <li><i class="pe-7s-check pe-lg valido"></i>Pague parcelado!</li>
             <li><i class="pe-7s-check pe-lg valido"></i><a href="#faq" class="scroll-link link">Dúvidas?</a></li>
           </ul>
-          <button  class="btn-theme" onclick="window.location.href='id/register/1'" >Inscreva-se</button>
+          <button  class="btn-theme" onclick="window.location.href='/login'" >Inscreva-se</button>
           <br><br>
           <div class="separator mt-20 mb-10"> </div>
            <p class="price"><span>R$</span><strike>100,00</strike><small>/Lote 2</small></p>
@@ -2039,7 +2040,7 @@ Inscrição para estudante válida somente para graduação.</p>
             <li><i class="pe-7s-check pe-lg"></i>A partir de 1º de junho de 2017</li>
             <li><i class="pe-7s-check pe-lg"></i><a href="#faq" class="scroll-link link">Dúvidas?</a></li>
           </ul>
-          <button  class="btn-theme active" onclick="window.location.href='id/register/1'" disabled >Lote fechado</button>
+          <button  class="btn-theme active" onclick="window.location.href='/login'" disabled >Lote fechado</button>
         </div>
       </div>
       <div class="col-sm-4 col-md-4">
@@ -2051,7 +2052,7 @@ Inscrição para estudante válida somente para graduação.</p>
             <li><i class="pe-7s-check pe-lg valido"></i>Pague parcelado!</li>
             <li><i class="pe-7s-check pe-lg valido"></i><a href="#faq" class="scroll-link link">Dúvidas?</a></li>
           </ul>
-           <button class="btn-theme" onclick="window.location.href='id/register/2'">Inscreva-se</button>
+           <button class="btn-theme" onclick="window.location.href='/login'">Inscreva-se</button>
            <br><br>
           <div class="separator mt-20 mb-10"> </div>
            <p class="price"><span>R$</span><strike>130,00</strike><small>/Lote 2</small></p>
@@ -2059,7 +2060,7 @@ Inscrição para estudante válida somente para graduação.</p>
             <li><i class="pe-7s-check pe-lg"></i>A partir de 1º de junho de 2017</li>
             <li><i class="pe-7s-check pe-lg"></i><a href="#faq" class="scroll-link link">Dúvidas?</a></li>
           </ul>
-          <button class="btn-theme active" onclick="window.location.href='id/register/2'" disabled >Lote Fechado</button>
+          <button class="btn-theme active" onclick="window.location.href='/login'" disabled >Lote Fechado</button>
         </div>
       </div>
       <div class="col-sm-4 col-md-4">
@@ -2071,7 +2072,7 @@ Inscrição para estudante válida somente para graduação.</p>
             <li><i class="pe-7s-check pe-lg valido"></i>Pague parcelado!</li>
             <li><i class="pe-7s-check pe-lg valido"></i><a href="#faq" class="scroll-link link">Dúvidas?</a></li>
           </ul>
-           <button  class="btn-theme" onclick="window.location.href='id/register/1'" >Inscreva-se</button>
+           <button  class="btn-theme" onclick="window.location.href='/login'" >Inscreva-se</button>
           <br><br>
           <div class="separator mt-20 mb-10"> </div>
            <p class="price"><span>R$</span><strike>160,00</strike><small>/Lote 2</small></p>
@@ -2079,7 +2080,7 @@ Inscrição para estudante válida somente para graduação.</p>
             <li><i class="pe-7s-check pe-lg"></i>A partir de 1º de junho de 2017</li>
             <li><i class="pe-7s-check pe-lg"></i><a href="#faq" class="scroll-link link">Dúvidas?</a></li>
           </ul>
-          <button class="btn-theme active" onclick="window.location.href='id/register/3'" disabled >Lote Fechado</button>
+          <button class="btn-theme active" onclick="window.location.href='/login'" disabled >Lote Fechado</button>
         </div>
       </div>
     </div>
