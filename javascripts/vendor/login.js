@@ -5,15 +5,69 @@ $(document).ready(function(){
 
 	$('ul.tabs a').livequery( "click", function(event){
 		var tabnavs = $(this).attr('href');
-        $(this).parent().parent().find('li').removeClass('active');
-        $(this).parent('li').addClass('active');
+        $(this).parent().parent().find('li a').removeClass('active');
+        $(this).addClass('active');
         $('.flat-form .form-action').addClass('hide');
         $('.flat-form .form-action').removeClass('show');
         $('.flat-form '+tabnavs).addClass('show');
         return false;
 	});
 
-    //validate
+    //validate login
+    $('form#formLogin').validate({
+        rules: {
+            email: {
+                required: true, 
+                email: true
+            },
+            senha: {
+                required: true,
+                minlength: 5
+            }
+        },
+        messages: {
+            email: { 
+                required: 'Preencha seu email', 
+                email: 'Ops, tem certeza que é um email válido?'
+            },
+            senha: {
+                required: 'Preencha sua senha',
+                minlength: 'Para sua segurança a senha foi cadastrada com no mínimo cinco caracteres'
+            }
+        },
+        highlight: function (element, errorClass, validClass) {
+            if (element.type === "radio") {
+                this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+                $(element).closest('.form-group').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+            } else {
+                $(element).closest('.form-group').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+                $(element).closest('.form-group').find('i.fa').remove();
+                $(element).closest('.form-group').append('<i class="fa fa-times fa-validate form-control-feedback"></i>');
+            }
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            if (element.type === "radio") {
+                this.findByName(element.name).removeClass(errorClass).addClass(validClass);
+            } else {
+                $(element).closest('.form-group').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+                $(element).closest('.form-group').find('i.fa').remove();
+                $(element).closest('.form-group').append('<i class="fa fa-check fa-validate form-control-feedback"></i>');
+            }
+        },
+        errorElement: 'span',
+        errorClass: 'help-block',
+        errorPlacement: function(error, element) {
+            if(element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else if (element.attr("type") == "radio") {
+                error.insertAfter(element.parent().parent());
+            }else{
+                error.insertAfter(element);
+            }
+        }
+    });
+
+    //validate cadastro
     $('form#formCadastro').validate({
         rules: {
             nome: { 
@@ -22,7 +76,8 @@ $(document).ready(function(){
             },
             email: {
                 required: true, 
-                email: true 
+                email: true,
+                checkemail: true
             },
             cracha: { 
                 required: true,
@@ -36,7 +91,8 @@ $(document).ready(function(){
             },
             cpf: { 
                 required: true,
-                cpfBR: true
+                cpfBR: true,
+                checkcpf: true
             },
             deficiencia: { 
                 required: true
@@ -66,7 +122,8 @@ $(document).ready(function(){
             },
             email: { 
                 required: 'Preencha seu email', 
-                email: 'Ops, tem certeza que é um email válido?' 
+                email: 'Ops, tem certeza que é um email válido?',
+                checkemail: 'Este endereço de E-mail está em uso, tente outro'
             },
             cracha: { 
                 required: 'Como deseja ter seu nome no crachá?',
@@ -80,7 +137,8 @@ $(document).ready(function(){
             },
             cpf: { 
                 required: 'Preencha seu CPF',
-                cpfBR: 'Este número de CPF é inválido'
+                cpfBR: 'Este número de CPF é inválido',
+                checkcpf: 'Este CPF está em uso, tente outro'
             },
             deficiencia: { 
                 required: 'Possui alguma alguma deficiência?'
@@ -255,6 +313,44 @@ $(document).ready(function(){
         }
         return false;
 	});
+
+    //login
+    $('button#login').livequery('click',function(event){
+        if($("form#formLogin").valid()){
+            usuarios = {
+                email: $('form#formLogin #email').val(),
+                senha: $('form#formLogin #senha').val()
+            };
+
+            $('button#login').html('PROCESSANDO...');
+            $('button#login').prop("disabled",true);
+
+            //params
+            var params = {};
+            params = JSON.stringify(usuarios);
+
+            app.util.getjson({
+                url : "/controller/guest/usuario/login",
+                method : 'POST',
+                contentType : "application/json",
+                data: params,
+                success: function(response){
+                    if(response.results.id)
+                        window.location.href = "/dashboard";
+                },
+                error : function(response){
+                    response = JSON.parse(response.responseText);
+                    $('#errorLogin').removeClass('hidden');
+                    $('#errorLogin').find('.alert p').html(response.error);
+                    $('button#login').html('ACESSAR');
+                    $('button#login').prop("disabled",false);
+                }
+            });
+        }else{
+            $("form#formLogin").valid();
+        }
+        return false;
+    });
 
 	function onError(response) {
       console.log(response);

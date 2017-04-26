@@ -16,12 +16,13 @@ try {
     $stmt->execute(array($params->cpf));
     $results = $stmt->fetchObject();
 
+    http_response_code(200);
     if (!$results) {
-        throw new Exception('CPF não cadastrados', 404);
+        $response->error = 'CPF não cadastrado';
+    }else{
+        $response->success = 'CPF encontrado';
     }
 
-    http_response_code(200);
-    $response->success = 'CPF encontrado';
 } catch (PDOException $e) {
     http_response_code(500);
     $response->error = 'Desculpa. Tivemos um problema, tente novamente mais tarde';

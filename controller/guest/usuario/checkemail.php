@@ -15,14 +15,15 @@ try {
     $stmt = $oConexao->prepare('SELECT id FROM usuario WHERE upper(email) = upper(:email) LIMIT 1');
     $stmt->bindParam('email', $params->email);
     $stmt->execute();
-    $usuario = $stmt->fetchObject();
-
-    if (!$usuario) {
-        throw new Exception('Email não cadastrado', 404);
-    }
+    $results = $stmt->fetchObject();
 
     http_response_code(200);
-    $response->success = 'Email encontrado';
+    if (!$results) {
+        $response->error = 'Email não cadastrado';
+    }else{
+        $response->success = 'Email encontrado';
+    }
+
 } catch (PDOException $e) {
     http_response_code(500);
     $response->error = 'Desculpa. Tivemos um problema, tente novamente mais tarde';

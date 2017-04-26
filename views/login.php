@@ -26,14 +26,21 @@
                 </ul>
                 <div id="login" class="form-action hide">
                     <h1>Login</h1>
-                    <form name="formLogin" role="form" novalidate>
+                    <form id="formLogin" name="formLogin">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                                <div id="errorLogin" class="row hidden">
+                                    <div class="col-md-12">
+                                        <div class="alert alert-warning">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>E-mail</label>
-                                            <input name="email" placeholder="E-mail" class="form-control" type="email" required>
+                                            <input id="email" name="email" placeholder="E-mail" class="form-control" type="email">
                                         </div>
                                     </div>
                                 </div>
@@ -41,13 +48,15 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Senha</label>
-                                            <input name="senha" placeholder="Senha" class="form-control" type="password" required>
+                                            <input id="senha" name="senha" placeholder="Senha" class="form-control" type="password">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        <button type="sumit" class="btn btn-success btn-fill btn-wd">ACESSAR</button>
+                                        <button id="login" class="btn btn-success btn-fill btn-wd">
+                                             <span>ACESSAR</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -93,9 +102,6 @@
                                 <div class="form-group">
                                     <label>E-mail<abbr>*</abbr></label>
                                     <input id="email" name="email" placeholder="E-mail" class="form-control" type="email" maxLength="160">
-                                    <div class="loading-check hidden">
-                                        <img src="assets/images/common/loading.gif" width="28">
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -125,9 +131,6 @@
                                 <div class="form-group">
                                     <label>CPF<small>(Apenas número)</small><abbr>*</abbr></label>
                                     <input id="cpf" name="cpf" placeholder="CPF" class="form-control" type="text" maxLength="11">
-                                    <div class="loading-check hidden">
-                                        <img src="assets/images/common/loading.gif" width="28">
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -181,14 +184,6 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <!-- <button ng-click="save()" 
-                                ng-disabled="formRegister.$invalid || status.loading || usuario.senha != usuario.confirmasenha || cpf.found || email.found" 
-                                type="sumit" 
-                                class="btn btn-success btn-fill btn-wd"
-                                ng-switch="status.loading">
-                                    <span ng-switch-default>CADASTRAR</span>
-                                    <span ng-switch-when="true">AGUARDE...</span>
-                                </button> -->
                                 <button id="salvar" class="btn btn-success btn-fill btn-wd">
                                     <span>CADASTRAR</span>
                                 </button>
@@ -244,6 +239,8 @@
 <script type="text/javascript" src="assets/javascript/jquery.payform.min.js"></script>
 <script type="text/javascript" src="assets/javascript/jquery.validate.min.js"></script>
 <script type="text/javascript" src="assets/javascript/validate/cpfBR.js"></script>
+<script type="text/javascript" src="assets/javascript/validate/checkcpf.js"></script>
+<script type="text/javascript" src="assets/javascript/validate/checkemail.js"></script>
 <script type="text/javascript" src="javascripts/vendor/functions.js"></script>
 <script type="text/javascript" src="javascripts/vendor/login.js"></script>
 

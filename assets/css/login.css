@@ -97,6 +97,11 @@ p.observacao{
   padding-bottom: 10px;
   line-height: 25px;
 }
+.form-action .alert p {
+  font-size: 12px;
+  padding-bottom: 0px;
+  line-height: 25px;
+}
 form {  }
 form input[type=text],
 form input[type=email],

@@ -81,6 +81,7 @@ try {
     $_SESSION['congresso_nome'] = $params->usuario->nome;
     $_SESSION['congresso_sobrenome'] = $params->usuario->sobrenome;
     $_SESSION['congresso_email'] = $params->usuario->email;
+    $_SESSION['congresso_cpf'] = $params->usuario->cpf;
     $_SESSION['congresso_gestor'] = false;
 
     $oConexao->commit();
