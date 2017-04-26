@@ -1,3 +1,15 @@
+<?php
+    if (!isset(
+        $_SESSION['congresso_uid'],
+        $_SESSION['congresso_nome'],
+        $_SESSION['congresso_sobrenome'],
+        $_SESSION['congresso_cpf'],
+        $_SESSION['congresso_email'],
+        $_SESSION['congresso_gestor']
+    )) {
+        header('Location: /login');
+    }
+?>
 <!-- Bootstrap Core CSS -->
 <link href="assets/template/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="assets/template/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">

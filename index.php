@@ -2,6 +2,9 @@
 
 use Utils;
 
+ob_start();
+session_start();
+
 require_once 'conn/conexao.class.php';
 require_once 'conn/url.class.php';
 require_once 'vendor/functions.php';
