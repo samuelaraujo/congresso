@@ -107,12 +107,12 @@
         <div class="section-title">
           <i class="pe-7s-display2"></i>
           <h3 class="text-center">Sobre o Evento</h3>
-          <p>O I Congresso Jurídico da UNINORTE/AC é um evento destinado a todos aqueles possuem atuação ou interesse nas mais diversas áreas da ciência do Direito, desde os acadêmicos em formação até advogados, bacharéis e profissionais dos mais variados campos da seara jurídica em todas as partes do Estado do Acre e do Brasil.</p>
-          <p>Em um projeto inovador, realizado pela União Educacional do Norte (UNINORTE) e uma comissão de acadêmicos, o presente evento terá por duração o período de 04 (quatro) dias, compreendendo-se entre os dias 14 e 17 de agosto de 2017, em Rio Branco, Acre.</p>
-          <p>Realizando-se no Centro de Convenções do Resort Hotel, com capacidade para aproximadamente 1.500 (mil e quinhentas) pessoas, a estrutura deste Congresso contará com modernos recursos de som e imagem, bem ainda variados sistemas automatizados de recepção, credenciamento e meios que facilitarão a participação de seus inscritos com os congressistas, o que permitirá a total comodidade, mobilidade e interação de seus inscritos nesta realização.</p>
-          <p>Com foco em ramos jurídicos de direito civil e processual civil, penal e processual penal, bem como o direito constitucional, eleitoral, humanos e a deontologia jurídica, o evento visará discutir temas elementares de alguns dos pontos mais importantes de interesse público na atualidade.</p>
-          <p>Nesta ocasião, serão proporcionados aos seus participantes debates, painéis temáticos, mesas redondas e apresentações de artigos científicos, através de um rico compartilhamento de experiências e aprendizados entre desembargadores, doutrinadores, juízes, procuradores, promotores, discentes, docentes e profissionais da advocacia pública e privada a nível local e nacional, onde sua principal missão vislumbra-se em fomentar a reflexão de assuntos que influenciam diretamente a sociedade em geral por meio das abordagens mencionadas.</p>
-          <p>Este acontecimento, em especial, direciona-se em sua essência para os advogados, bacharéis e para os estudantes de Direito, classes estas que representam o futuro do Direito acreano e nacional, e que merecem total atenção e dedicação para que realizações heterogêneas como esta, possam estimulá-los ainda mais no despertar daquilo que objetivam, lutam ou lutarão em prol da mais pura e lídima justiça – o grande pilar desta louvável profissão.</p>
+          <p class="text-left">O I Congresso Jurídico da UNINORTE/AC é um evento destinado a todos aqueles possuem atuação ou interesse nas mais diversas áreas da ciência do Direito, desde os acadêmicos em formação até advogados, bacharéis e profissionais dos mais variados campos da seara jurídica em todas as partes do Estado do Acre e do Brasil.</p>
+          <p class="text-left">Em um projeto inovador, realizado pela União Educacional do Norte (UNINORTE) e uma comissão de acadêmicos, o presente evento terá por duração o período de 04 (quatro) dias, compreendendo-se entre os dias 14 e 17 de agosto de 2017, em Rio Branco, Acre.</p>
+          <p class="text-left">Realizando-se no Centro de Convenções do Resort Hotel, com capacidade para aproximadamente 1.500 (mil e quinhentas) pessoas, a estrutura deste Congresso contará com modernos recursos de som e imagem, bem ainda variados sistemas automatizados de recepção, credenciamento e meios que facilitarão a participação de seus inscritos com os congressistas, o que permitirá a total comodidade, mobilidade e interação de seus inscritos nesta realização.</p>
+          <p class="text-left">Com foco em ramos jurídicos de direito civil e processual civil, penal e processual penal, bem como o direito constitucional, eleitoral, humanos e a deontologia jurídica, o evento visará discutir temas elementares de alguns dos pontos mais importantes de interesse público na atualidade.</p>
+          <p class="text-left">Nesta ocasião, serão proporcionados aos seus participantes debates, painéis temáticos, mesas redondas e apresentações de artigos científicos, através de um rico compartilhamento de experiências e aprendizados entre desembargadores, doutrinadores, juízes, procuradores, promotores, discentes, docentes e profissionais da advocacia pública e privada a nível local e nacional, onde sua principal missão vislumbra-se em fomentar a reflexão de assuntos que influenciam diretamente a sociedade em geral por meio das abordagens mencionadas.</p>
+          <p class="text-left">Este acontecimento, em especial, direciona-se em sua essência para os advogados, bacharéis e para os estudantes de Direito, classes estas que representam o futuro do Direito acreano e nacional, e que merecem total atenção e dedicação para que realizações heterogêneas como esta, possam estimulá-los ainda mais no despertar daquilo que objetivam, lutam ou lutarão em prol da mais pura e lídima justiça – o grande pilar desta louvável profissão.</p>
       </div>
     </div>
   </div>
@@ -2404,9 +2404,9 @@ Inscrição para estudante válida somente para graduação.</p>
         <div class="contact-info">
           <ul class="clearfix">
             <li><i class="pe-7s-map-marker"></i><p>Resort Hotel<br>Estrada da Floresta, 5000 - Em frente a rotatória da 3º Ponte.</p></li>
-            <li><i class="pe-7s-call"></i><p>+1 123 456 7890<br>+1 987 654 3210</p></li>
-            <li><i class="pe-7s-mail"></i><p>example@event.com<br>support@event.com</p></li>
-            <li><i class="pe-7s-clock"></i><p>Mon - Fri : 9AM - 5PM<br>Sat - Sun : 9AM - 3PM</p></li>
+            <li><i class="pe-7s-call"></i><p>+1 123 456 7890<br>+1 987 654 3210</p><br></li>
+            <li><i class="pe-7s-mail"></i><p>example@event.com<br>support@event.com</p><br></li>
+            <li><i class="pe-7s-clock"></i><p>Mon - Fri : 9AM - 5PM<br>Sat - Sun : 9AM - 3PM</p><br></li>
           </ul>
         </div>
       </div>

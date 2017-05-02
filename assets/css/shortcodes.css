@@ -871,6 +871,7 @@ h2.title.center:after {
 	border: 1px solid #616161;
 	border-radius: 0;
 	color: #464646;
+	margin-top: 7px;
 }
 .submit-btn:hover {
 	background: #7F191E;
