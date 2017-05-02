@@ -131,7 +131,7 @@ h2.title.center:after {
 	padding: 10px 10px 7px;
 	font-size: 15px;
 	text-align: left;
-	width: 177px;
+	min-width: 140px;
 	text-align: center;
 	font-weight: 600;
 }
@@ -479,6 +479,7 @@ h2.title.center:after {
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
+    min-height: 50px;
 }
 #speakers .speaker .info p.position {
 	font-size: 11px;
@@ -552,6 +553,8 @@ h2.title.center:after {
 .pricing-table .item ul li {
 	line-height: 30px;
 	font-size: 15px;
+	text-align: left;
+	padding: 0 40px;
 }
 .pricing-table .item ul li i {
 	margin-right: 5px;
@@ -614,6 +617,9 @@ h2.title.center:after {
 #sponsors {
 	position: relative;
 	background: #414141;
+}
+#sponsors .section-title {
+	margin-top: 25px;
 }
 #sponsors .section-title,
 #sponsors .section-title h3 {
@@ -886,6 +892,7 @@ h2.title.center:after {
 .contact-info ul li {
 	float: left;
 	width: 25%;
+	min-height: 220px;
 	text-align: center;
 	padding: 30px 10px;
 	color: #c7c7c7;
@@ -966,5 +973,22 @@ button.close {
     opacity: .8;
     background-size: 100%;
     background-image: url("../images/common/close.png");
+}
+
+.logo-new {
+	display: block;
+	clear: both;
+	position: relative;
+	z-index: 300;
+	width: 150px;
+	margin: 20px auto;
+}
+.scroll-link img{
+	padding: 5px 0 0;
+}
+.socials a i{
+	position: relative;
+	margin: -5px 0 0 0;
+	top: 50%;
 }
 

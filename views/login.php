@@ -4,6 +4,9 @@
 
 <div class="transparencia"></div>
 <div class="container">
+    <a href="/" class="logo-new">
+        <img src="../assets/images/pages/logo-congresso-login.svg" alt="">
+    </a>
     <div class="title">
         <div class="separador"></div>
         <h1>Identificação</h1>
