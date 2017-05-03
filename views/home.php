@@ -1,5 +1,7 @@
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+<link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
 
 <!-- Preloader -->
 <div class="preloader">
