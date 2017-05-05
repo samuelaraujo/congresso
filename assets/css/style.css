@@ -178,7 +178,8 @@ img {
 	height: auto;
 }
 .imgapoio {
-	max-width: 180%;
+	max-width: 220px;
+	padding: 10px !important;
 	height: auto;
 }
 strong {
@@ -550,7 +551,8 @@ section {
     top: 100%;
     background-color: #840000;
     z-index: 1000;
-    margin: 0 15px;
+    /*margin: 0 15px;*/
+    margin: -10px 20px;
 }
 #mainnav-mobi ul {
 	display: block;
