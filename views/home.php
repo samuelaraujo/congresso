@@ -54,7 +54,7 @@
           <div class="slide-image"><div class="overlay-pattern"></div></div>
           <div class="slide-caption">
             <!-- <h1>I CONGRESSO JURÍDICO <br> UNINORTE ACRE</h1> -->
-            <h3 style="margin-top: 250px;">Agosto 14-17, 2017</h3>
+            <h3>Agosto 14-17, 2017</h3>
           </div>
         </div>
       </li>
@@ -1809,6 +1809,7 @@ d   <!-- Schedule -->
             <p class="name">Laudivon de Oliveira Nogueira</p>
             <p class="position">Desembargador - TJAC</p>
             <p>Desembargador do Tribunal de Justiça do Estado do Acre.</p>
+            <br/>
             <a href="#" class="curriculum" 
               data-toggle="modal" data-target="#modallaudivonnogueira"><strong>Veja o Mini Currículo!</strong></a>
             <div class="socials">

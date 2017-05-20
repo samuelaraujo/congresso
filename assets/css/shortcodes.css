@@ -99,7 +99,7 @@ h2.title.center:after {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: url(../images/pages/bg1.jpg) no-repeat center center;
+	background: url(../images/pages/capa.png) no-repeat center center;
 	background-size: cover;
 }
 .overlay-pattern {
@@ -175,8 +175,9 @@ h2.title.center:after {
 	text-shadow: 3px 4px 5px #2f2f2f;
 }
 .mainslider ul li .slide-caption h3 {
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: 400;
+	margin-top: 24px;
 }
 .countdown-wrapper {
 	position: absolute;
@@ -583,7 +584,7 @@ h2.title.center:after {
 /*==========Register form==========*/
 #register-form {
 	position: relative;
-	background-image: url(../images/pages/bg-register.jpg);
+	background-image: url(../images/pages/bg1.jpg);
 }
 #register-form .overlay {
 	background-color: rgba(54, 54, 54, 0.3);
@@ -988,7 +989,7 @@ button.close {
 	padding: 5px 0 0;
 }
 .socials a i{
-	position: relative;
+	position: static;
 	margin: -5px 0 0 0;
 	top: 50%;
 }
