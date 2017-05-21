@@ -1,6 +1,8 @@
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+
 <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
 
 <!-- Preloader -->
@@ -218,10 +220,10 @@ d   <!-- Schedule -->
       <div id="tab-1" class="tab-pane fade in active">
         <div class="schedule-tabs lv2">
           <ul id="tabs-lv21"  class="nav nav-justified">
-            <li class="active"><a href="#tab-lv21-second" data-toggle="tab">Programação 1º dia</a></li>
-            <li><a href="#tab-lv21-1" data-toggle="tab">Programação 1º dia</a></li>
-            <li><a href="#tab-lv21-third" data-toggle="tab">Programação 1º dia</a></li>
-            <li><a href="#tab-lv21-last" data-toggle="tab">Programação 1º dia</a></li>
+            <li class="active"><a href="#tab-lv21-second" data-toggle="tab"> 1º Ato</a></li>
+            <li><a href="#tab-lv21-1" data-toggle="tab">2º Ato</a></li>
+            <li><a href="#tab-lv21-third" data-toggle="tab">3º Ato</a></li>
+            <li><a href="#tab-lv21-last" data-toggle="tab">4º Ato</a></li>
           </ul>
         </div>
         <div class="tab-content lv2">
@@ -1789,6 +1791,26 @@ d   <!-- Schedule -->
 </section>
 <!-- /Schedule-->
 
+<!--Patrocinador -->
+<section class="page-section bg-parallax" id="donation" style="background-position: 50% 42px;">
+      <div class="overlay"></div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="section-title">
+            <i class="pe-7s-piggy"></i>
+            <h3>Seja um Patrocinador!</h3>
+            <p class="sub-title">Seja um patrocinador! divulgue sua marca aqui!</p>
+            <p class="sub-title">Conheça os planos de patrocíno disponíveis para empresas.</p>
+            <div class="button">
+             <a href="assets/documents/carta_de_patrocinio_I_congresso_juridico_acre.pdf" target="_blank" class="btn btn-theme buy-theme">Veja Mais!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+ </section>
+
+<!-- /Patrocinador -->
+
 <!-- Speaker -->
 <section class="page-section" id="speakers">
   <div class="row">
@@ -1952,6 +1974,7 @@ d   <!-- Schedule -->
 
   </div>
 </section>
+
 <!-- /Speaker -->
 
     <!--Register 
@@ -2004,8 +2027,9 @@ d   <!-- Schedule -->
   <div class="row">
     <div class="col-sm-12">
       <div class="section-title">
+       <i class="pe-7s-cloud-download"></i>
         <h3> Muita interatividade e muito mais conteúdo, durante todo evento.</h3>
-        <p class="subtitle">Baixe o aplicativo do congresso, aproveite toda programação com interatividade entre os participantes e palestrantes, confira nosso app. </p>
+        <p class="sub-title">Baixe o aplicativo do congresso, aproveite toda programação com interatividade entre os participantes e palestrantes, confira nosso app. </p>
         <div class="sistema"></div>
         <div class="button">
           <button class="btn btn-theme" type="submit"><i class="fa fa-android fa-fw" aria-hidden="true"></i>Disponível na Play Store</button>
@@ -2168,7 +2192,7 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="section-title">
         <i class="pe-7s-config"></i>
         <h3>Organização</h3>
-         <p class="sub-title">Seja um patrocinador! divulgue sua marca aqui!</p>
+       
       </div>
     </div>
   </div>

@@ -30,7 +30,7 @@
 	    font-size: 40px;
 	}
 	.mainslider ul li .slide-caption h3 {
-		margin-top: 0;
+		margin-top: 125px;
 	    font-size: 20px;
 	    position: relative;
 	    bottom: 100px;
@@ -155,6 +155,7 @@
 	    margin-bottom: 8px;
 	}
 	.mainslider {
+		margin-top: 10px;
 	    padding: 15px;
 	}
 	.mainslider .event-background .wrap {
@@ -284,6 +285,7 @@
 	    margin-bottom: 15px;
 	}
 	.contact-info ul li {
+		border-bottom: 1px solid;
 	    float: none !important;
 	    width: 100% !important;
 	    padding: 20px 0 10px!important;

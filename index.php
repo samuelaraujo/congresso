@@ -30,6 +30,7 @@ require_once 'vendor/functions.php';
 <!-- Mobile Specific Metas -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="assets/css/shortcodes.css">
 <link href="images/common/favicon.png" rel="shortcut icon">
 <!-- Javascript -->
 <script type="text/javascript" src="assets/javascript/plugins.js"></script>
