@@ -134,8 +134,8 @@
       <div class="media" data-animation="fadeInUp" data-animation-delay="300">
         <div class="media-object pe-7s-map-marker"></div>
         <div class="media-body">
-          <h4 class="media-heading">Local Grandes e Agradável</h4>
-          <p>Mestres, Desembagadores, autores de obras jurídicas, profissionais convidados atuantes na área de Jurídica.</p>
+          <h4 class="media-heading">Espaço Grande e Agradável</h4>
+          <p>Um espaço bonito e amplo que assegura a melhor mobilidade e conforto para os congressistas e convidados.</p>
         </div>
       </div>
     </div>
@@ -152,8 +152,8 @@
       <div class="media" data-animation="fadeInUp" data-animation-delay="500">
         <div class="media-object pe-7s-musiclist"></div>
         <div class="media-body">
-          <h4 class="media-heading">Atração Cultural e Stands</h4>
-          <p>Eventos culturais realizados durante os quatro do congresso, stands, sorteios e promoções.</p>
+          <h4 class="media-heading">Atrações Culturais e Stands</h4>
+          <p>Uma diversidade de eventos culturais realizados durante os quatro dias de congresso, stands, diversos sorteios e muitas promoções.</p>
         </div>
       </div>
     </div>
@@ -175,7 +175,7 @@
         <p class="name">Ingressos</p>
       </div>
       <div class="col-md-3 col-sm-6">
-        <p class="timer" data-from="0" data-to="15" data-speed="8000"></p>
+        <p class="timer" data-from="0" data-to="11" data-speed="8000"></p>
         <p class="separator"></p>
         <p class="name">Palestrantes</p>
       </div>
@@ -220,10 +220,10 @@ d   <!-- Schedule -->
       <div id="tab-1" class="tab-pane fade in active">
         <div class="schedule-tabs lv2">
           <ul id="tabs-lv21"  class="nav nav-justified">
-            <li class="active"><a href="#tab-lv21-second" data-toggle="tab"> 1º Ato</a></li>
-            <li><a href="#tab-lv21-1" data-toggle="tab">2º Ato</a></li>
-            <li><a href="#tab-lv21-third" data-toggle="tab">3º Ato</a></li>
-            <li><a href="#tab-lv21-last" data-toggle="tab">4º Ato</a></li>
+            <li class="active"><a href="#tab-lv21-second" data-toggle="tab">Progrmação  1º dia</a></li>
+            <li><a href="#tab-lv21-1" data-toggle="tab">Progrmação 2º dia</a></li>
+            <li><a href="#tab-lv21-third" data-toggle="tab">Progrmação 3º dia</a></li>
+            <li><a href="#tab-lv21-last" data-toggle="tab">Progrmação 4º dia</a></li>
           </ul>
         </div>
         <div class="tab-content lv2">
@@ -1957,11 +1957,11 @@ d   <!-- Schedule -->
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
           <div class="info">
-            <p class="name">Palestrante</p>
-            <p class="position">Palestrante</p>
-            <p>aguarde</p>
+            <p class="name">Erick Venâncio Lima do Nascimento</p>
+            <p class="position">Advogado e Conselh. federal da OAB</p>
+            <p>Advogado, Especialista em Direito Público, atuando nas áreas eleitoral, administrativa e tributária.</p>
             <a href="#" class="curriculum"
-              data-toggle="modal" data-target="#modalrivanabarreto"><strong>Veja o Mini Currículo!</strong></a>
+              data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
             <div class="socials">
               <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -2340,7 +2340,7 @@ Inscrição para estudante válida somente para graduação.</p>
           </div>
           <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
             <div class="panel-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+               A inscrição poderá ser feita até o primeiro dia do evento, em seu credenciamento, podendo ser feita a qualquer tempo por site, aplicativo ou presencialmente com os organizadores do evento na Uninorte/AC.
             </div>
           </div>
         </div>
@@ -2348,13 +2348,13 @@ Inscrição para estudante válida somente para graduação.</p>
           <div class="panel-heading" role="tab" id="headingFour">
             <h4 class="panel-title">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              Aenean tempor enim a pulvinar convallis?
+              Como faço para pegar o certificado do Congresso?
               </a>
             </h4>
           </div>
           <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
             <div class="panel-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              O certificado do Congresso estará disponível através de link em nosso gerenciador (site do evento) , que redicionará para o site da Uninorte/AC, onde o certificado de 30 (trinta) horas será gerado digitalmente.
             </div>
           </div>
         </div>
@@ -2362,13 +2362,13 @@ Inscrição para estudante válida somente para graduação.</p>
           <div class="panel-heading" role="tab" id="headingFive">
             <h4 class="panel-title">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-              Suspendisse scelerisque dui eu cursus ullamcorper?
+              Como poderei fazer perguntas aos palestrantes?
               </a>
             </h4>
           </div>
           <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
             <div class="panel-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+             As perguntas poderão ser feitas através do chat disponível no aplicativo oficial do evento, onde serão selecionadas pelo presidente do painel ou mediador da mesa redonda.
             </div>
           </div>
         </div>
@@ -2431,7 +2431,11 @@ Inscrição para estudante válida somente para graduação.</p>
         <div class="contact-info">
           <ul class="clearfix">
             <li><i class="pe-7s-map-marker"></i><p>Resort Hotel<br>Estrada da Floresta, 5000 - Em frente a rotatória da 3º Ponte.</p></li>
-            <li><i class="pe-7s-call"></i><p>+1 123 456 7890<br>+1 987 654 3210</p><br></li>
+            <li><i class="pe-7s-call"></i><p>
+            (68) 99946-1324<br>
+            (68) 99954-0696<br>
+            (68) 99973-5547<br>
+            </p><br></li>
             <li><i class="pe-7s-mail"></i><p>example@event.com<br>support@event.com</p><br></li>
             <li><i class="pe-7s-clock"></i><p>Mon - Fri : 9AM - 5PM<br>Sat - Sun : 9AM - 3PM</p><br></li>
           </ul>
@@ -2556,7 +2560,7 @@ Inscrição para estudante válida somente para graduação.</p>
   </div>
 </div>
 
- <div class="modal fade" id="modalrivanabarreto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+ <div class="modal fade" id="modalerickvenancio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -2566,14 +2570,21 @@ Inscrição para estudante válida somente para graduação.</p>
         </button>
       </div>
       <div class="modal-body">
-       <p> aguardem.</p>
+       <p> Advogado, especialista em Direito Público, atuando nas áreas eleitoral, administrativa e tributária. Pós-graduado em direito público e cooperativo. Atualmente é conselheiro federal
+        da OAB e representante da Diretoria do Conselho Federal da OAB junto ao Conselho Nacional do Ministério Público – CNMP, tendo sido escolhido recentemente como conselheiro do 
+        CNMP, função que, após aprovação pelo Senado Federal, passará a exercer em mandato de 2 anos.</p>
       </div>
     </div>
   </div>
 </div>
 
 <div class="modal fade" id="modalrafaelbarreto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialAdvogado, especialista em Direito Público, atuando nas áreas eleitoral, administrativa e
+tributária. Pós-graduado em direito público e cooperativo. Atualmente é conselheiro federal
+da OAB e representante da Diretoria do Conselho Federal da OAB junto ao Conselho Nacional
+do Ministério Público – CNMP, tendo sido escolhido recentemente como conselheiro do
+CNMP, função que, após aprovação pelo Senado Federal, passará a exercer em mandato de 2
+anos.og" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Rafael Barretto</h5>
