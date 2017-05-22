@@ -1824,7 +1824,7 @@ d   <!-- Schedule -->
   <div class="row">
 
     <div class="col-md-12">
-      <div class="col-sm-3 col-md-3">
+      <div class="col-sm-4 col-md-3">
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/laudivon.png" alt="Laudivon Nogueira"></p></div>
           <div class="info">
@@ -1843,7 +1843,7 @@ d   <!-- Schedule -->
           </div>
         </div>
       </div>
-      <div class="col-sm-3 col-md-3">
+      <div class="col-sm-4 col-md-3">
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/mariaberenice.jpg" alt=""></p></div>
           <div class="info">
@@ -1860,7 +1860,7 @@ d   <!-- Schedule -->
           </div>
         </div>
       </div>
-      <div class="col-sm-3 col-md-3">
+      <div class="col-sm-4 col-md-3">
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/mariapenha.png" alt=""></p></div>
           <div class="info">
@@ -1878,7 +1878,7 @@ d   <!-- Schedule -->
         </div>
       </div>
 
-      <div class="col-sm-3 col-md-3">
+      <div class="col-sm-4 col-md-3">
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/rogeriosanches.png" alt=""></p></div>
           <div class="info">
@@ -1900,7 +1900,7 @@ d   <!-- Schedule -->
     </div><!--/.col-md-12-->
 
     <div class="col-md-12">
-      <div class="col-sm-3 col-md-3">
+      <div class="col-sm-4 col-md-3">
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/cristianofarias.jpg" alt=""></p></div>
           <div class="info">
@@ -1917,7 +1917,7 @@ d   <!-- Schedule -->
           </div>
         </div>
       </div>
-      <div class="col-sm-3 col-md-3">
+      <div class="col-sm-4 col-md-3">
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/rafaelbarreto.png" alt=""></p></div>
           <div class="info">
@@ -1935,7 +1935,7 @@ d   <!-- Schedule -->
         </div>
       </div>
 
-      <div class="col-sm-3 col-md-3">
+      <div class="col-sm-4 col-md-3">
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/lucioalmeida.png" alt=""></p></div>
           <div class="info">
@@ -1953,7 +1953,7 @@ d   <!-- Schedule -->
         </div>
       </div>
 
-      <div class="col-sm-3 col-md-3">
+      <div class="col-sm-4 col-md-3">
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
           <div class="info">
@@ -1971,7 +1971,7 @@ d   <!-- Schedule -->
         </div>
       </div>
 
-       <div class="col-sm-3 col-md-3">
+       <div class="col-sm-4 col-md-3">
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
           <div class="info">
@@ -1989,7 +1989,7 @@ d   <!-- Schedule -->
         </div>
       </div>
         
-      <div class="col-sm-3 col-md-3">
+      <div class="col-sm-4 col-md-3">
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
           <div class="info">
@@ -2007,7 +2007,7 @@ d   <!-- Schedule -->
         </div>
       </div>
 
-      <div class="col-sm-3 col-md-3">
+      <div class="col-sm-4 col-md-3">
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
           <div class="info">
@@ -2463,7 +2463,8 @@ Inscrição para estudante válida somente para graduação.</p>
     </div>
     <div class="row">
       <div class="col-sm-12 col-md-12">
-        <div id="gmap"></div>
+        <!-- <div id="gmap"></div> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62871.03910393446!2d-67.86983641651317!3d-9.980470073251194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5cd453ff16c3fa59!2sResort+Hotel+Amaz%C3%B4nia+Rio!5e0!3m2!1spt-PT!2sbr!4v1495459864204" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
         <div class="contact-form clearfix">
           <form id="contact-form" method="post" action="./contact/contact-process.php">
             <div class="col-sm-6">

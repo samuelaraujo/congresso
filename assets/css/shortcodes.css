@@ -469,7 +469,7 @@ h2.title.center:after {
 	margin-bottom: 30px;
     background: #fff;
     box-shadow: 0px 1px 3px 1px #bbb;
-    min-height: 490px;
+    min-height: 505px;
 }
 #speakers .speaker .info {
 	padding: 5px 20px 10px;
@@ -653,7 +653,9 @@ h2.title.center:after {
 /*==========Donation==========*/
 #donation {
 	position: relative;
-	background-image: url(../images/pages/bg1.jpg);
+	background: url(../images/pages/bg1.jpg) no-repeat center center fixed;
+	background-size: cover;
+
 	text-align: center;
 }
 #donation .overlay {
@@ -989,7 +991,7 @@ button.close {
 	padding: 5px 0 0;
 }
 .socials a i{
-	position: static;
+	position: relative;
 	margin: -5px 0 0 0;
 	top: 50%;
 }
