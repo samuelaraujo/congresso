@@ -1786,7 +1786,7 @@ d   <!-- Schedule -->
   </div>
   <!-- /Schedule -->
   <div class="col-sm-12">
-    <div class="btn-download"><a href="assets/documents/01_congresso_juridico_uninorte_acre.pdf" target="_blank" class="btn btn-theme"><i class="fa fa-download"></i>Download da Programação</a></div>
+    <div class="btn-download"><a href="assets/documents/programacao_congresso_juridico_uninorte_acre.pdf" target="_blank" class="btn btn-theme"><i class="fa fa-download"></i>Download da Programação</a></div>
   </div>
 </section>
 <!-- /Schedule-->
