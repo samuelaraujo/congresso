@@ -69,6 +69,8 @@ $(document).ready(function(){
 
     //validate cadastro
     $('form#formCadastro').validate({
+        onfocusout: false,
+        onkeyup: false,
         rules: {
             nome: { 
                 required: true, 
@@ -112,7 +114,7 @@ $(document).ready(function(){
             },
             confirmasenha: { 
                 required: true,
-                equalTo: "#senha"
+                equalTo: "#formCadastro #senha"
             }
         },
         messages: {
@@ -287,18 +289,18 @@ $(document).ready(function(){
     $('button#salvar').livequery('click',function(event){
         if($("form#formCadastro").valid()){
             usuarios = {
-                nome: $('#nome').val(),
-                sobrenome: $('#sobrenome').val(),
-                cracha: $('#cracha').val(),
-                email: $('#email').val(),
-                ingresso: $('#ingresso').val(),
-                valor: $('#ingresso option:selected').attr('data-value') != undefined ? $('#ingresso option:selected').attr('data-value') : 0.00,
-                sexo: $('#sexo:checked').val(),
-                cpf: $('#cpf').val(),
-                deficiencia: $('#deficiencia').val(),
-                pais: $('#pais').val(),
-                cidade: $('#cidade').val(),
-                senha: $('#senha').val()
+                nome: $('form#formCadastro #nome').val(),
+                sobrenome: $('form#formCadastro #sobrenome').val(),
+                cracha: $('form#formCadastro #cracha').val(),
+                email: $('form#formCadastro #email').val(),
+                ingresso: $('form#formCadastro #ingresso').val(),
+                valor: $('form#formCadastro #ingresso option:selected').attr('data-value') != undefined ? $('form#formCadastro #ingresso option:selected').attr('data-value') : 0.00,
+                sexo: $('form#formCadastro #sexo:checked').val(),
+                cpf: $('form#formCadastro #cpf').val(),
+                deficiencia: $('form#formCadastro #deficiencia').val(),
+                pais: $('form#formCadastro #pais').val(),
+                cidade: $('form#formCadastro #cidade').val(),
+                senha: $('form#formCadastro #senha').val()
             };
 
             $("#modal-pagamento").modal({
