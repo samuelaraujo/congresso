@@ -125,7 +125,7 @@
       <div class="media" data-animation="fadeInUp" data-animation-delay="100">
         <div class="media-object pe-7s-date"></div>
         <div class="media-body">
-          <h4 class="media-heading">4 Dias de programações variadas.</h4>
+          <h4 class="media-heading">4 dias de programações variadas.</h4>
           <p> Palestras, Painéis, Debates e análises exclusivas com renomados palestrantes e convidados.</p>
       </div>
       </div>
@@ -220,10 +220,10 @@ d   <!-- Schedule -->
       <div id="tab-1" class="tab-pane fade in active">
         <div class="schedule-tabs lv2">
           <ul id="tabs-lv21"  class="nav nav-justified">
-            <li class="active"><a href="#tab-lv21-second" data-toggle="tab">Progrmação  1º dia</a></li>
-            <li><a href="#tab-lv21-1" data-toggle="tab">Progrmação 2º dia</a></li>
-            <li><a href="#tab-lv21-third" data-toggle="tab">Progrmação 3º dia</a></li>
-            <li><a href="#tab-lv21-last" data-toggle="tab">Progrmação 4º dia</a></li>
+            <li class="active"><a href="#tab-lv21-second" data-toggle="tab">Programação  1º dia</a></li>
+            <li><a href="#tab-lv21-1" data-toggle="tab">Programação 2º dia</a></li>
+            <li><a href="#tab-lv21-third" data-toggle="tab">Programação 3º dia</a></li>
+            <li><a href="#tab-lv21-last" data-toggle="tab">Programação 4º dia</a></li>
           </ul>
         </div>
         <div class="tab-content lv2">
@@ -1970,6 +1970,63 @@ d   <!-- Schedule -->
           </div>
         </div>
       </div>
+
+       <div class="col-sm-3 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
+          <div class="info">
+            <p class="name">Erick Venâncio Lima do Nascimento</p>
+            <p class="position">Advogado e Conselh. federal da OAB</p>
+            <p>Advogado, Especialista em Direito Público, atuando nas áreas eleitoral, administrativa e tributária.</p>
+            <a href="#" class="curriculum"
+              data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
+            <div class="socials">
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="col-sm-3 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
+          <div class="info">
+            <p class="name">Erick Venâncio Lima do Nascimento</p>
+            <p class="position">Advogado e Conselh. federal da OAB</p>
+            <p>Advogado, Especialista em Direito Público, atuando nas áreas eleitoral, administrativa e tributária.</p>
+            <a href="#" class="curriculum"
+              data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
+            <div class="socials">
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
+          <div class="info">
+            <p class="name">Erick Venâncio Lima do Nascimento</p>
+            <p class="position">Advogado e Conselh. federal da OAB</p>
+            <p>Advogado, Especialista em Direito Público, atuando nas áreas eleitoral, administrativa e tributária.</p>
+            <a href="#" class="curriculum"
+              data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
+            <div class="socials">
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
     </div><!--/.col-md-12-->
 
   </div>
@@ -2400,7 +2457,7 @@ Inscrição para estudante válida somente para graduação.</p>
         <div class="section-title">
           <i class="pe-7s-paper-plane"></i>
           <h3>Contato</h3>
-          <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Voluptatem accusamus, obcaecati ut optio ducimus.</p>
+          <p class="sub-title">Para mais informações, esclarecimento de dúvidas, entre em contato conosco por meio dos nossos canais de atendimento.<br> Estamos aqui para ajuda-lo no que precisar.</p>
         </div>
       </div>
     </div>
@@ -2436,7 +2493,10 @@ Inscrição para estudante válida somente para graduação.</p>
             (68) 99954-0696<br>
             (68) 99973-5547<br>
             </p><br></li>
-            <li><i class="pe-7s-mail"></i><p>example@event.com<br>support@event.com</p><br></li>
+            <li><i class="pe-7s-mail"></i><p>
+            congressojuridicoacre<br>
+            @gmail.com
+            </p><br></li>
             <li><i class="pe-7s-clock"></i><p>Mon - Fri : 9AM - 5PM<br>Sat - Sun : 9AM - 3PM</p><br></li>
           </ul>
         </div>
@@ -2447,10 +2507,7 @@ Inscrição para estudante válida somente para graduação.</p>
         <div class="col-sm-12">
           <div class="socials">
             <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-google-plus"></i></a>
             <a href="#"><i class="fa fa-youtube"></i></a>
           </div>
           <div class="copyright"><p class="copyright">© 2017 Kambô Tecnologia. Todos os direitos reservados.</p></div>
