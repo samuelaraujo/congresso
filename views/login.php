@@ -244,8 +244,8 @@
 <script type="text/javascript" src="assets/javascript/validate/cpfBR.js"></script>
 <script type="text/javascript" src="assets/javascript/validate/checkcpf.js"></script>
 <script type="text/javascript" src="assets/javascript/validate/checkemail.js"></script>
-<script type="text/javascript" src="javascripts/vendor/functions.js"></script>
-<script type="text/javascript" src="javascripts/vendor/login.js"></script>
+<script type="text/javascript" src="javascripts/functions.js"></script>
+<script type="text/javascript" src="javascripts/login.js"></script>
 
 <!-- Javascript Pagseguro -->
 <script type="text/javascript" src="<?=javascriptURL?>"></script>

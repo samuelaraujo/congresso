@@ -45,21 +45,34 @@ require_once 'vendor/functions.php';
 
 <?php
 
-$path = Url::getURL(0);
-$subpath = Url::getURL(1);
-$file = Url::getURL(2);
-$params = Url::getURL(3);
+$url_path = Url::getURL(0);
+$url_subpath = Url::getURL(1);
+$url_file = Url::getURL(2);
+$url_params = Url::getURL(3);
+
+// echo $url_path.'<br/>';
+// echo $url_subpath.'<br/>';
+// echo $url_file.'<br/>';
+// echo $url_params.'<br/>';
 
 //route url
-if(empty($path)){
-	include "views/home.php";
-}else if(file_exists('views/'.$path.".php")){
-	include 'views/'.$path.".php";
+if(empty($url_path)){
+	include 'views/home.php';
+}else if(file_exists('views/'.$url_path.'.php')){
+	include 'views/'.$url_path.'.php';
+}else if(file_exists('views/'.$url_path.'/'.$url_subpath.'.php')){
+	include 'views/'.$url_path.'/'.$url_subpath.'.php';
+}else if(file_exists('views/'.$url_path.'/'.$url_subpath.'/'.$url_file.'.php')){
+	include 'views/'.$url_path.'/'.$url_subpath.'/'.$url_file.'.php';
+}else if(file_exists('views/'.$url_path.'/'.$url_subpath.'/')){
+	if(file_exists('views/'.$url_path.'/'.$url_subpath.'/index.php')){
+		include 'views/'.$url_path.'/'.$url_subpath.'/index.php';
+	}else{
+		include 'views/'.$url_path.'/'.$url_subpath.'/list.php';
+	}
+}elseif(file_exists('views/'.$url_path.'/'.$url_subpath.'/'.$url_file.'.php')){
+	include 'views/'.$url_path.'/'.$url_subpath.'/'.$url_file.'.php';
 }
-// if(file_exists($path.$subpath.$file)){
-// 	include $path.$subpath.$file;
-//     exit();
-// }
 ?>
 
 <!-- Javascript -->

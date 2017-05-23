@@ -338,7 +338,7 @@ $(document).ready(function(){
                 data: params,
                 success: function(response){
                     if(response.results.id)
-                        window.location.href = "/dashboard";
+                        window.location.href = "/office/dashboard";
                 },
                 error : function(response){
                     response = JSON.parse(response.responseText);
