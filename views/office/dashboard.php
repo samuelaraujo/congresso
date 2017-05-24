@@ -46,24 +46,136 @@
                 <div class="white-box">
                 
                     <div class="row">
-                        <div class="col-lg-6">
-                            <h3 class="box-title m-b-0">Basic Tooltip</h3>
-                            <p class="text-muted m-b-30">Just put this to any tag <code>data-toggle="tooltip" title="Default tooltip"</code></p>
-                            <div class="button-box">
-                                <button type="button" class="btn btn-default btn-outline" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-                                <button type="button" class="btn btn-default btn-outline" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right">Tooltip on right</button>
-                                <button type="button" class="btn btn-default btn-outline" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom">Tooltip on bottom</button>
-                                <button type="button" class="btn btn-default btn-outline" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left">Tooltip on left</button>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <h3 class="box-title m-b-0">Clickable Tooltip</h3>
-                            <p class="text-muted m-b-30">Four options are available: top, right, bottom, and left aligned.</p>
-                            <div class="button-box">
-                                <button type="button" class="btn btn-default btn-outline tooltip-success" data-toggle="tooltip" data-trigger="click" data-placement="top" title="" data-original-title="Tooltip on top">Click</button>
-                                <button type="button" class="btn btn-default btn-outline tooltip-success" data-toggle="tooltip" data-trigger="click" data-placement="right" title="" data-original-title="Tooltip on right">Click</button>
-                                <button type="button" class="btn btn-default btn-outline tooltip-success" data-toggle="tooltip" data-trigger="click" data-placement="bottom" title="" data-original-title="Tooltip on bottom">Click</button>
-                                <button type="button" class="btn btn-default btn-outline tooltip-success" data-toggle="tooltip" data-trigger="click" data-placement="left" title="" data-original-title="Tooltip on left">Click</button>
+                        <div class="col-lg-12">
+                            <h3 class="box-title m-b-30"><?=$_SESSION['congresso_nome'].' '.$_SESSION['congresso_sobrenome']?></h3>
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-custom nav-tabs" role="tablist">
+                                <li role="presentation" class="nav-item">
+                                    <a href="#info" class="nav-link active" aria-controls="home" role="tab" 
+                                        data-toggle="tab" aria-expanded="true">
+                                        <span class="visible-xs"><i class="ti-home"></i></span>
+                                        <span class="hidden-xs"> Informações básicas</span>
+                                    </a>
+                                </li>
+                                <li role="presentation" class="nav-item">
+                                    <a href="#registration" class="nav-link" aria-controls="profile" role="tab" 
+                                    data-toggle="tab" aria-expanded="false">
+                                    <span class="visible-xs"><i class="ti-user"></i></span> 
+                                    <span class="hidden-xs">Matrículas</span>
+                                    </a>
+                                </li>
+                                <li role="presentation" class="nav-item">
+                                    <a href="#certificate" class="nav-link" aria-controls="messages" role="tab" 
+                                    data-toggle="tab" aria-expanded="false">
+                                    <span class="visible-xs"><i class="ti-email"></i></span> 
+                                    <span class="hidden-xs">Certificados</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade active in" id="info">
+                                    <div class="col-md-3">
+                                        <b>Nome completo:</b>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p>Mark doe</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <b>Crachá:</b>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p>Mark</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <b>Sexo:</b>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p>Masculino</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <b>CPF:</b>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p>007.489.920-10</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <b>E-mail:</b>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p>markdoe@gmail.com</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <b>País de origem:</b>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p>Brasil</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <b>Cidade:</b>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p>Rio branco</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <b>Desde de:</b>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p>19/01/2017 10h41</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <b>Último acesso:</b>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p>24/05/2017 08h39</p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="registration">
+                                    <div class="well">
+                                        <div class="row row-registration">
+                                            <div class="col-md-6">
+                                                <h5>1º Lote</h5>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <button class="btn btn-outline btn-success"> 
+                                                    <i class="icon-doc m-r-5"></i> <span>Emitir certificado</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <b>Matrícula:</b>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p>Advocacia (R$120,00)</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <b>Transação:</b>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p>6821EBDE-E36E-4376-9093-219A793D4467</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <b>Status:</b>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p>Paga</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="certificate">
+                                    <div class="col-md-6">
+                                        <h3>Come on you have a lot message</h3>
+                                        <h4>you can use it with the small code</h4>
+                                    </div>
+                                    <div class="col-md-5 pull-right">
+                                        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a.</p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
                             </div>
                         </div>
                     </div><!-- /.row -->
