@@ -218,1569 +218,361 @@ d   <!-- Schedule -->
     <div class="tab-content lv1">
       <!-- tab1 -->
       <div id="tab-1" class="tab-pane fade in active">
-        <div class="schedule-tabs lv2">
-          <ul id="tabs-lv21"  class="nav nav-justified">
-            <li class="active"><a href="#tab-lv21-second" data-toggle="tab">Programação  1º dia</a></li>
-            <li><a href="#tab-lv21-1" data-toggle="tab">Programação 2º dia</a></li>
-            <li><a href="#tab-lv21-third" data-toggle="tab">Programação 3º dia</a></li>
-            <li><a href="#tab-lv21-last" data-toggle="tab">Programação 4º dia</a></li>
-          </ul>
-        </div>
-        <div class="tab-content lv2">
-          <div id="tab-lv21-1" class="tab-pane fade">
-            <div class="timeline">
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <div class="carousel-event" data-items="1" data-itemsdesktop="1" data-itemsdesktopsmall="1" data-itemstablet="1" data-itemsmobile="1" data-autoplay="false" data-responsive="true" data-pagination="true">
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                  </div>
+        <div class="container-events">
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock">
+                  <img src="../assets/images/clock.svg" alt="">
+                  15:00 <hr> 15:50 
                 </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Themeforest Intruction</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event04.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Responsive design concept</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Credenciamento</strong></h1>
+                <!-- <p class="speaker">Lúcio de Almeida Braga Jr.</p> -->
+                <!-- <p class="description">Descrição</p> -->
+              </div>
             </div>
           </div>
-          <div id="tab-lv21-second" class="tab-pane fade in active">
-            <div class="timeline">
 
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event01.jpg" alt="" class="media-object" />
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock">
+                  <img src="../assets/images/clock.svg" alt="">
+                  16:00 <hr> 16:50 
                 </div>
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">New Trends in Internet Marketing</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <div class="carousel-event" data-items="1" data-itemsdesktop="1" data-itemsdesktopsmall="1" data-itemstablet="1" data-itemsmobile="1" data-autoplay="false" data-responsive="true" data-pagination="true">
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                  </div>
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Themeforest Intruction</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event04.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Responsive design concept</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Sessão de Autógrafos</strong></h1>
+                <p class="speaker">Maria Berenice Dias</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
             </div>
           </div>
-          <div id="tab-lv21-third" class="tab-pane fade">
-            <div class="timeline">
 
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
+          <div class="event sol">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  17:00 <hr> 17:30 
                 </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event04.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Responsive design concept</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Solenidade de abertura</strong></h1>
+                <ul>
+                  <li><p class="speaker">Vanessa Vogliotti</p></li>
+                  <li><p class="speaker">Igami (Diretora Acadêmica da Uninorte/AC)</p></li>
+                  <li><p class="speaker">Adriano Iurconvite (Coordenador do curso de Direito da Uninorte/AC)</p></li>
+                  <li><p class="speaker">Marcos Vinícius Jardim Rodrigues (Presidente da OAB/AC)</p></li>
+                </ul>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
             </div>
           </div>
-          <div id="tab-lv21-last" class="tab-pane fade">
-            <div class="timeline">
 
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event01.jpg" alt="" class="media-object" />
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  17:30 <hr> 18:20 
                 </div>
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">New Trends in Internet Marketing</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Conferência:</strong> Tá afim?</h1>
+                <p class="speaker">Maria Berenice Dias</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
 
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <div class="carousel-event" data-items="1" data-itemsdesktop="1" data-itemsdesktopsmall="1" data-itemstablet="1" data-itemsmobile="1" data-autoplay="false" data-responsive="true" data-pagination="true">
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                  </div>
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  18:20 <hr> 18:40 
                 </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Themeforest Intruction</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Intervalo:</strong> Show musical e vernissage</h1>
+                <p class="speaker">Ed Trindade</p>
+                <p class="speaker">Nassara Nasserala</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
 
+          <div class="event sol">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  18:40 <hr> 19:40 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Mesa Redonda:</strong> Organizações criminosas e justiça penal negociada</h1>
+                <p class="speaker">Rogério Sanches</p>
+                <p class="speaker">Gilberto Jorge</p>
+                <p class="speaker">Cássio Tavares</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  19:50 <hr> 20:40 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Conferência:</strong> Crimes sexuais: temas controvertidos na doutrina e na jurisprudência</h1>
+                <p class="speaker">Rogério Sanches</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
             </div>
           </div>
         </div>
+
       </div>
       <!-- tab2 -->
       <div id="tab-2" class="tab-pane fade">
-        <div class="schedule-tabs lv2">
-          <ul id="tabs-lv22"  class="nav nav-justified">
-            <li class="active"><a href="#tab-lv22-second" data-toggle="tab">Programação 2º dia</a></li>
-            <li><a href="#tab-lv22-first" data-toggle="tab">Programação 2º dia</a></li>
-            <li><a href="#tab-lv22-third" data-toggle="tab">Programação 2º dia</a></li>
-            <li><a href="#tab-lv22-last" data-toggle="tab">Programação 2º dia</a></li>
-          </ul>
+        <div class="container-events">
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock">
+                  <img src="../assets/images/clock.svg" alt="">
+                  17:00 <hr> 17:50 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Conferência:</strong> O processo judicial eletrônico e os seus desafios para o adequado acesso a justiça</h1>
+                <p class="speaker">Lúcio de Almeida Braga Jr.</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock">
+                  <img src="../assets/images/clock.svg" alt="">
+                  18:00 <hr> 18:50 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Conferência:</strong> O dever de respeito aos precedentes no CPC/2015</h1>
+                <p class="speaker">Maria Penha Sousa Nascimento</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  18:50 <hr> 19:10 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Intervalo:</strong> Orquestra sinfônica</h1>
+                <p class="speaker">Quarteto de Cordas do Grupo Vivace</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  19:10 <hr> 20:00 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Conferência:</strong> Aplicação do Direito do Consumidor nas redes sociais</h1>
+                <p class="speaker">Cristiano Sobral</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="tab-content lv2">
-          <div id="tab-lv22-first" class="tab-pane fade in active">
-            <div class="timeline">
 
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <div class="carousel-event" data-items="1" data-itemsdesktop="1" data-itemsdesktopsmall="1" data-itemstablet="1" data-itemsmobile="1" data-autoplay="false" data-responsive="true" data-pagination="true">
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                  </div>
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Themeforest Intruction</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event04.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Responsive design concept</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-          </div>
-          <div id="tab-lv22-second" class="tab-pane fade">
-            <div class="timeline">
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/mariaberenice.jpg" alt="" class="media-object" />
-                </div>
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>Maria Berenice Dias</strong> / Advogada
-                          <div class="socials">
-                            <a href="http://www.facebook.com/MariaBereniceDias" target="_blank"><i class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com/mberenicedias"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.instagram.com/mberenicedias/?hl=pt" target="_blank"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Palestra de Direito Civil</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <div class="carousel-event" data-items="1" data-itemsdesktop="1" data-itemsdesktopsmall="1" data-itemstablet="1" data-itemsmobile="1" data-autoplay="false" data-responsive="true" data-pagination="true">
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                  </div>
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong> Prof. Eduardo Canuto</strong> / Coordenador Uninorte
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Themeforest Intruction</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-          </div>
-          <div id="tab-lv22-third" class="tab-pane fade">
-            <div class="timeline">
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event04.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Responsive design concept</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-          </div>
-          <div id="tab-lv22-last" class="tab-pane fade">
-            <div class="timeline">
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event01.jpg" alt="" class="media-object" />
-                </div>
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">New Trends in Internet Marketing</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <div class="carousel-event" data-items="1" data-itemsdesktop="1" data-itemsdesktopsmall="1" data-itemstablet="1" data-itemsmobile="1" data-autoplay="false" data-responsive="true" data-pagination="true">
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                  </div>
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Themeforest Intruction</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-          </div>
-        </div>
       </div>
       <!-- tab3 -->
       <div id="tab-3" class="tab-pane fade">
-        <div class="schedule-tabs lv2">
-          <ul id="tabs-lv23"  class="nav nav-justified">
-            <li class="active"><a href="#tab-lv23-first" data-toggle="tab">Programação 3º dia</a></li>
-            <li><a href="#tab-lv23-second" data-toggle="tab">Programação 3º dia</a></li>
-            <li><a href="#tab-lv23-third" data-toggle="tab">Programação 3º dia</a></li>
-            <li><a href="#tab-lv23-last" data-toggle="tab">Programação 3º dia</a></li>
-          </ul>
+        <div class="container-events">
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock">
+                  <img src="../assets/images/clock.svg" alt="">
+                  17:00 <hr> 17:50 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Conferência:</strong> Financiamento eleitoral e democracia</h1>
+                <p class="speaker">Erick Venâncio Lima do Nascimento</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock">
+                  <img src="../assets/images/clock.svg" alt="">
+                  18:00 <hr> 18:50 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Conferência:</strong> Os contrapontos e peculiaridades da competência comum em matéria ambiental</h1>
+                <p class="speaker">Erico Maurício Pires Barbosa</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  18:50 <hr> 19:10 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Intervalo:</strong> Stand-up comedy</h1>
+                <ul>
+                  <li><p class="speaker">Elaine Cristina</p></li>
+                </ul>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="event sol">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  19:10 <hr> 20:00 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Mesa Redonda:</strong> Reformas trabalhista e previdenciária: principais aspectos controvertidos</h1>
+                <p class="speaker">Dorotheo Barbosa Neto</p>
+                <p class="speaker">Raquel Nogueira</p>
+                <p class="speaker">César Claudino</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  20:10 <hr> 21:00 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Conferência:</strong> Recursos trabalhistas: O que mudou com o novo CPC?</h1>
+                <p class="speaker">Elisson Miessa</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="tab-content lv2">
-          <div id="tab-lv23-first" class="tab-pane fade in active">
-            <div class="timeline">
 
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event04.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Responsive design concept</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-          </div>
-          <div id="tab-lv23-second" class="tab-pane fade">
-            <div class="timeline">
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event01.jpg" alt="" class="media-object" />
-                </div>
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">New Trends in Internet Marketing</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event04.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Responsive design concept</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-          </div>
-          <div id="tab-lv23-third" class="tab-pane fade">
-            <div class="timeline">
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event01.jpg" alt="" class="media-object" />
-                </div>
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">New Trends in Internet Marketing</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <div class="carousel-event" data-items="1" data-itemsdesktop="1" data-itemsdesktopsmall="1" data-itemstablet="1" data-itemsmobile="1" data-autoplay="false" data-responsive="true" data-pagination="true">
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                  </div>
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Themeforest Intruction</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-          </div>
-          <div id="tab-lv23-last" class="tab-pane fade"><div class="timeline">
-
-            <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event01.jpg" alt="" class="media-object" />
-                </div>
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">New Trends in Internet Marketing</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <div class="carousel-event" data-items="1" data-itemsdesktop="1" data-itemsdesktopsmall="1" data-itemstablet="1" data-itemsmobile="1" data-autoplay="false" data-responsive="true" data-pagination="true">
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                  </div>
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Themeforest Intruction</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event04.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Responsive design concept</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-          </div></div>
-        </div>
       </div>
       <!-- tab4 -->
       <div id="tab-4" class="tab-pane fade">
-        <div class="schedule-tabs lv2">
-          <ul id="tabs-lv23"  class="nav nav-justified">
-            <li class="active"><a href="#tab-lv23-first" data-toggle="tab">Programação 4º dia</a></li>
-            <li><a href="#tab-lv23-second" data-toggle="tab">Programação 4º dia</a></li>
-            <li><a href="#tab-lv23-third" data-toggle="tab">Programação 4º dia</a></li>
-            <li><a href="#tab-lv23-last" data-toggle="tab">Programação 4º dia</a></li>
-          </ul>
+        <div class="container-events">
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock">
+                  <img src="../assets/images/clock.svg" alt="">
+                  17:00 <hr> 17:50 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Conferência:</strong> Proteção internacional dos direitos humanos no combate à violência contra a mulher</h1>
+                <p class="speaker">Rafael Barretto</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock">
+                  <img src="../assets/images/clock.svg" alt="">
+                  17:50 <hr> 18:40 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Conferência:</strong> A aplicabilidade e interpretação dos direitos fundamentais à luz da teoria de Robert Alexy</h1>
+                <p class="speaker">Laudivon Nogueira</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  18:40 <hr> 19:00 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Solenidade de encerramento:</strong> Atração musical e agradecimentos</h1>
+                <ul>
+                  <li><p class="speaker">Alana Carvalho (atração musical)</p></li>
+                  <li><p class="speaker">Comissão organizadora</p></li>
+                </ul>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="event sol">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  19:00 <hr> 20:30 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Painel:</strong> Novos mecanismos interpretativos do STF: desacordos morais razoáveis e a proteção dos direitos da personalidade à luz da jurisprudência do STF e os efeitos da multiparentalidade a partir das decisões do STF</h1>
+                <p class="speaker">Cristiano Chaves de Farias</p>
+                <p class="speaker">Melissa Veiga</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="tab-content lv2">
-          <div id="tab-lv23-first" class="tab-pane fade in active">
-            <div class="timeline">
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event04.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Responsive design concept</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-          </div>
-          <div id="tab-lv23-second" class="tab-pane fade">
-            <div class="timeline">
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event01.jpg" alt="" class="media-object" />
-                </div>
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">New Trends in Internet Marketing</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event04.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Responsive design concept</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-          </div>
-          <div id="tab-lv23-third" class="tab-pane fade">
-            <div class="timeline">
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event01.jpg" alt="" class="media-object" />
-                </div>
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">New Trends in Internet Marketing</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <div class="carousel-event" data-items="1" data-itemsdesktop="1" data-itemsdesktopsmall="1" data-itemstablet="1" data-itemsmobile="1" data-autoplay="false" data-responsive="true" data-pagination="true">
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                  </div>
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Themeforest Intruction</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-          </div>
-          <div id="tab-lv23-last" class="tab-pane fade"><div class="timeline">
-
-            <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event01.jpg" alt="" class="media-object" />
-                </div>
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">New Trends in Internet Marketing</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <div class="carousel-event" data-items="1" data-itemsdesktop="1" data-itemsdesktopsmall="1" data-itemstablet="1" data-itemsmobile="1" data-autoplay="false" data-responsive="true" data-pagination="true">
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                    <img src="assets/images/pages/img-event02.jpg" alt="" class="media-object" />
-                  </div>
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Themeforest Intruction</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event03.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock pe-lg"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro pe-lg"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Starting your own business</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Quis provident assumenda ratione ad hic ducimus neque nam incidunt officia harum deserunt odit, magni tempora molestias, impedit rem, quibusdam. Error, sint.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="post-wrap clearfix" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="post-media pull-left">
-                  <img src="assets/images/pages/img-event04.jpg" alt="" class="media-object" />
-                </div>
-                <!-- -->
-                <div class="media-body">
-                  <div class="post-header">
-                    <div class="post-meta">
-                      <span class="post-date"><i class="pe-7s-clock"></i> 08:00 - 08:45</span>
-                      <div class="speaker">
-                        <div class="post-readmore">
-                          <i class="pe-7s-micro"></i> <strong>John Doe</strong> / CEO at PremiumWP
-                          <div class="socials">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2 class="post-title">Responsive design concept</h2>
-                  </div>
-                  <div class="post-body">
-                    <div class="post-excerpt">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-          </div></div>
-        </div>
+        
       </div>
     </div>
   </div>
