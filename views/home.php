@@ -767,11 +767,11 @@ d   <!-- Schedule -->
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
           <div class="info">
-            <p class="name">Erick Venâncio Lima do Nascimento</p>
-            <p class="position">Advogado e Conselh. federal da OAB</p>
-            <p>Advogado, Especialista em Direito Público, atuando nas áreas eleitoral, administrativa e tributária.</p>
+            <p class="name">Cristiano Vieira Sobral Pinto</p>
+            <p class="position">Advogado</p>
+            <p>Doutorando em Direito. Professor de Direito Civil e Direito do Consumidor na Fundação Getúlio Vargas.</p>
             <a href="#" class="curriculum"
-              data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
+              data-toggle="modal" data-target="#modalcristianosobral"><strong>Veja o Mini Currículo!</strong></a>
             <div class="socials">
               <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -785,9 +785,9 @@ d   <!-- Schedule -->
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
           <div class="info">
-            <p class="name">Erick Venâncio Lima do Nascimento</p>
-            <p class="position">Advogado e Conselh. federal da OAB</p>
-            <p>Advogado, Especialista em Direito Público, atuando nas áreas eleitoral, administrativa e tributária.</p>
+            <p class="name">Élisson Miessa</p>
+            <p class="position">Procurador do Trabalho</p>
+            <p>Procurador do Trabalho. Professor de Direito Processual do Trabalho do Curso CERS on-line.</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
             <div class="socials">
@@ -803,9 +803,9 @@ d   <!-- Schedule -->
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
           <div class="info">
-            <p class="name">Erick Venâncio Lima do Nascimento</p>
-            <p class="position">Advogado e Conselh. federal da OAB</p>
-            <p>Advogado, Especialista em Direito Público, atuando nas áreas eleitoral, administrativa e tributária.</p>
+            <p class="name">Palestrante</p>
+            <p class="position">Advogado</p>
+            <p>Palestrante.</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
             <div class="socials">
@@ -982,7 +982,7 @@ Inscrição para estudante válida somente para graduação.</p>
   </div>
   <div class="row">
     <div class="col-sm-12 col-md-12">
-      <div class="sponsors" data-items="5" data-itemsdesktop="5" data-itemsdesktopsmall="5" data-itemstablet="5" data-itemsmobile="1" data-slidespeed="1" data-autoplay="true" data-nav="true" data-pagination="true">
+      <div class="sponsors" data-items="5" data-itemsdesktop="5" data-itemsdesktopsmall="5" data-itemstablet="5" data-itemsmobile="1" data-slidespeed=".5" data-autoplay="true" data-nav="true" data-pagination="true">
         <div class="item">
           <p class="image"><img src="assets/images/pages/defensoria.png" alt="Defensoria pública"></p>
         </div>
@@ -993,10 +993,16 @@ Inscrição para estudante válida somente para graduação.</p>
           <p class="image"><img src="assets/images/pages/oab.jpg" alt="Ordem dos Advogados do Brasil"></p>
         </div>
         <div class="item">
-          <p class="image"><img src="assets/images/pages/tjac.png" alt="Tribunal de justiça do Estado do Acre"></p>
+           <p class="image"><img src="assets/images/pages/tjac.png" alt="Tribunal de justiça do Estado do Acre"></p>
         </div>
-         <div class="item">
+        <div class="item">
           <p class="image"><img src="assets/images/pages/governo.png" alt="Governo do Estado do Acre"></p>
+        </div>
+        <div class="item">
+          <p class="image"><img src="assets/images/pages/mp.png" alt="Ministério Público do Estado do Acre"></p>
+        </div>
+        <div class="item">
+          <p class="image"><img src="assets/images/pages/pge.png" alt="Procuradoria Geral do Estado do Acre"></p>
         </div>
       </div>
     </div>
@@ -1453,7 +1459,7 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Palestrante</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Erick Venâncio Lima do Nascimento</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -1468,12 +1474,7 @@ Inscrição para estudante válida somente para graduação.</p>
 </div>
 
 <div class="modal fade" id="modalrafaelbarreto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialAdvogado, especialista em Direito Público, atuando nas áreas eleitoral, administrativa e
-tributária. Pós-graduado em direito público e cooperativo. Atualmente é conselheiro federal
-da OAB e representante da Diretoria do Conselho Federal da OAB junto ao Conselho Nacional
-do Ministério Público – CNMP, tendo sido escolhido recentemente como conselheiro do
-CNMP, função que, após aprovação pelo Senado Federal, passará a exercer em mandato de 2
-anos.og" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Rafael Barretto</h5>
@@ -1487,3 +1488,27 @@ anos.og" role="document">
     </div>
   </div>
 </div>
+
+ <div class="modal fade" id="modalcristianosobral" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Cristiano Vieira Sobral Pinto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p> Doutorando em Direito. Professor de Direito Civil e Direito do Consumidor na Fundação Getúlio Vargas, Associação do Ministério Público do Rio de Janeiro, Fundação Escola da Defensoria Pública do Rio de Janeiro, Escola da Magistratura do Estado do Rio de Janeiro, Complexo de Ensino Renato Saraiva e na Fundação do Ministério Público do Rio de Janeiro. Professor universitário, palestrante e autor de diversas obras jurídicas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
