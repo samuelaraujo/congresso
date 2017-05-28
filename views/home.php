@@ -972,6 +972,7 @@ Inscrição para estudante válida somente para graduação.</p>
 
 <!-- Sponsors -->
 <section class="page-section bg-parallax" id="sponsors">
+<div class="overlay"></div>
   <div class="row">
     <div class="col-sm-12">
       <div class="section-title">
