@@ -982,7 +982,7 @@ Inscrição para estudante válida somente para graduação.</p>
   </div>
   <div class="row">
     <div class="col-sm-12 col-md-12">
-      <div class="sponsors" data-items="5" data-itemsdesktop="5" data-itemsdesktopsmall="5" data-itemstablet="5" data-itemsmobile="2" data-slidespeed="1" data-autoplay="true" data-nav="true" data-pagination="true">
+      <div class="sponsors" data-items="5" data-itemsdesktop="5" data-itemsdesktopsmall="5" data-itemstablet="5" data-itemsmobile="1" data-slidespeed="1" data-autoplay="true" data-nav="true" data-pagination="true">
         <div class="item">
           <p class="image"><img src="assets/images/pages/defensoria.png" alt="Defensoria pública"></p>
         </div>
@@ -994,6 +994,9 @@ Inscrição para estudante válida somente para graduação.</p>
         </div>
         <div class="item">
           <p class="image"><img src="assets/images/pages/tjac.png" alt="Tribunal de justiça do Estado do Acre"></p>
+        </div>
+         <div class="item">
+          <p class="image"><img src="assets/images/pages/governo.png" alt="Governo do Estado do Acre"></p>
         </div>
       </div>
     </div>
@@ -1008,18 +1011,12 @@ Inscrição para estudante válida somente para graduação.</p>
   </div>
   <div class="row">
     <div class="col-sm-12 col-md-12">
-      <div class="sponsors" data-items="5" data-itemsdesktop="5" data-itemsdesktopsmall="5" data-itemstablet="5" data-itemsmobile="2" data-slidespeed="1" data-autoplay="true" data-nav="false" data-pagination="false">
+      <div class="sponsors" data-items="2" data-itemsdesktop="2" data-itemsdesktopsmall="2" data-itemstablet="2" data-itemsmobile="1" data-slidespeed="1" data-autoplay="true" data-nav="false" data-pagination="false">
         <div class="item">
-          <p class="image"><img src="assets/images/pages/defensoria.png" alt="Defensoria pública"></p>
-        </div>
-          <div class="item">
-          <p class="image"><img src="assets/images/pages/tr14.jpg" alt="Tribunal Regional do Trabalho"></p>
+          <p class="image"><img src="assets/images/pages/gerastur.png" alt="Gerastur Passagens Aéreas"></p>
         </div>
         <div class="item">
-          <p class="image"><img src="assets/images/pages/oab.jpg" alt="Ordem dos Advogados do Brasil"></p>
-        </div>
-        <div class="item">
-          <p class="image"><img src="assets/images/pages/tjac.png" alt="Tribunal de justiça do Estado do Acre"></p>
+          <p class="image"><img src="assets/images/pages/resorthotel.png" alt="Resort Hotel"></p>
         </div>
      </div>
     </div>
@@ -1138,7 +1135,7 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="section-title">
         <i class="pe-7s-users"></i>
         <h3>Participe deste evento</h3>
-        <p class="sub-title">Eventos culturais, Stands, Sorteios e muitas Promoções. Faça um investimento na sua carreira profissional</p>
+        <p class="sub-title">Eventos culturais, Stands, Sorteios e muitas Promoções. Faça um investimento na sua carreira profissional!</p>
       </div>
     </div>
   </div>
