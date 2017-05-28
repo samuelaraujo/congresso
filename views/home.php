@@ -987,9 +987,6 @@ Inscrição para estudante válida somente para graduação.</p>
           <p class="image"><img src="assets/images/pages/defensoria.png" alt="Defensoria pública"></p>
         </div>
         <div class="item">
-          <p class="image"><img src="assets/images/pages/cers.jpg" alt="Cers"></p>
-        </div>
-        <div class="item">
           <p class="image"><img src="assets/images/pages/tr14.jpg" alt="Tribunal Regional do Trabalho"></p>
         </div>
         <div class="item">
@@ -997,9 +994,6 @@ Inscrição para estudante válida somente para graduação.</p>
         </div>
         <div class="item">
           <p class="image"><img src="assets/images/pages/tjac.png" alt="Tribunal de justiça do Estado do Acre"></p>
-        </div>
-        <div class="item">
-          <p class="image"><img src="assets/images/pages/uninorte.png" alt="Uninorte"></p>
         </div>
       </div>
     </div>
@@ -1018,10 +1012,7 @@ Inscrição para estudante válida somente para graduação.</p>
         <div class="item">
           <p class="image"><img src="assets/images/pages/defensoria.png" alt="Defensoria pública"></p>
         </div>
-        <div class="item">
-          <p class="image"><img src="assets/images/pages/cers.jpg" alt="Cers"></p>
-        </div>
-        <div class="item">
+          <div class="item">
           <p class="image"><img src="assets/images/pages/tr14.jpg" alt="Tribunal Regional do Trabalho"></p>
         </div>
         <div class="item">
@@ -1030,10 +1021,7 @@ Inscrição para estudante válida somente para graduação.</p>
         <div class="item">
           <p class="image"><img src="assets/images/pages/tjac.png" alt="Tribunal de justiça do Estado do Acre"></p>
         </div>
-        <div class="item">
-          <p class="image"><img src="assets/images/pages/uninorte.png" alt="Uninorte"></p>
-        </div>
-      </div>
+     </div>
     </div>
   </div>
    <div class="row">
@@ -1041,6 +1029,9 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="section-title">
         <i class="pe-7s-config"></i>
         <h3>Organização</h3>
+        <div class="item">
+          <p class="image"><img src="assets/images/pages/uninorte.png" alt="Uninorte"></p>
+        </div>
        
       </div>
     </div>
@@ -1145,7 +1136,7 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="row">
     <div class="col-sm-12">
       <div class="section-title">
-        <i class="pe-7s-like"></i>
+        <i class="pe-7s-users"></i>
         <h3>Participe deste evento</h3>
         <p class="sub-title">Eventos culturais, Stands, Sorteios e muitas Promoções. Faça um investimento na sua carreira profissional</p>
       </div>
@@ -1154,82 +1145,46 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="row">
     <div class="col-sm-12 col-md-12">
        <div class="blog-posts">
-                              <div class="col-xs-12 col-sm-12 col-md-6">
-                                  <article class="post clearfix maxwidth500">
-                                      <div class="col-md-12 col-lg-6 p-0">
-                                          <div class="entry-header">
-                                              <div class="post-thumb">
-                                                  <img src="/Content/images/slide/estande_anhembi.jpg" alt="Estandes" title="Estandes" class="img-responsive img-fullwidth">
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="col-md-12 col-lg-6 p-0">
-                                          <div class="entry-content pt-10 pr-30 pl-40">
-                                              <h3 class="title text-theme-colored line-height-auto"><a href="/Home/Estandes" title="Estandes">Estandes</a></h3>
-                                              <p>O evento contará com uma área composta por 250 estandes, com expectativa de público de mais de 20 mil pessoas. Reserve seu espaço.</p>
-                                              <a href="/Home/Estandes" class="btn btn-colored btn-theme-colored text-uppercase mb-md-40">Saiba mais</a>
-                                              <div class="clearfix"></div>
-                                          </div>
-                                      </div>
-                                  </article>
-                              </div>
-                              <div class="col-xs-12 col-sm-12 col-md-6">
-                                  <article class="post clearfix maxwidth500">
-                                      <div class="col-md-12 col-lg-6 p-0">
-                                          <div class="entry-header">
-                                              <div class="post-thumb">
-                                                  <img src="/Content/images/slide/pacotes-viagem.jpg" alt="Pacotes de viagem" title="Pacotes de viagem" class="img-responsive img-fullwidth">
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="col-md-12 col-lg-6 p-0">
-                                          <div class="entry-content pt-10 pr-30 pl-40">
-                                              <h3 class="title text-theme-colored line-height-auto"><a href="/Home/PacotesViagem" title="Pacotes de viagem">Pacotes de viagem</a></h3>
-                                              <p>Passagens e hospedagens com valores diferenciados para o público da Conferência Nacional da Advocacia Brasileira.</p>
-                                              <a href="/Home/PacotesViagem" class="btn btn-colored btn-theme-colored text-uppercase mb-md-40">Saiba mais</a>
-                                              <div class="clearfix"></div>
-                                          </div>
-                                      </div>
-                                  </article>
-                              </div>
-                              <div class="col-xs-12 col-sm-12 col-md-6">
-                                  <article class="post clearfix maxwidth500">
-                                      <div class="col-md-12 col-lg-6 p-0">
-                                          <div class="entry-header">
-                                              <div class="post-thumb">
-                                                  <img src="/Content/images/slide/evandro.jpg" alt="Prêmio Evandro Lins e Silva" title="Prêmio Evandro Lins e Silva" class="img-responsive img-fullwidth">
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="col-md-12 col-lg-6 p-0">
-                                          <div class="entry-content pt-10 pr-30 pl-40">
-                                              <h3 class="title text-theme-colored line-height-auto"><a href="premio-evandro-lins.html" title="Prêmio Evandro Lins e Silva">Prêmio Evandro Lins e Silva</a></h3>
-                                              <p>Participe da 5ª edição do Prêmio Evandro Lins e Silva.</p>
-                                              <a class="btn btn-colored btn-gray text-uppercase mb-md-40">Em breve</a>
-                                              <div class="clearfix"></div>
-                                          </div>
-                                      </div>
-                                  </article>
-                              </div>
-                              <div class="col-xs-12 col-sm-12 col-md-6">
-                                  <article class="post clearfix maxwidth500">
-                                      <div class="col-md-12 col-lg-6 p-0">
-                                          <div class="entry-header">
-                                              <div class="post-thumb">
-                                                  <img src="/Content/images/slide/tribuna-livre.jpg" alt="Tribuna Livre" title="Tribuna Livre" class="img-responsive img-fullwidth">
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="col-md-12 col-lg-6 p-0">
-                                          <div class="entry-content pt-10 pr-30 pl-40">
-                                              <h3 class="title text-theme-colored line-height-auto"><a href="/Home/TribunaLivre" title="Tribuna Livre">Tribuna Livre</a></h3>
-                                              <p>A Tribuna Livre contará com uma sala exclusiva e se desenvolverá em 05 sessões, paralelas aos painéis da Conferência. Envie seu trabalho.</p>
-                                              <a href="/Home/TribunaLivre" class="btn btn-colored btn-theme-colored text-uppercase mb-md-40">Saiba mais</a>
-                                              <div class="clearfix"></div>
-                                          </div>
-                                      </div>
-                                  </article>
-                              </div>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <article class="post clearfix maxwidth500">
+                    <div class="col-md-12 col-lg-6 p-0">
+                        <div class="entry-header">
+                            <div class="post-thumb">
+                                <img src="http://conferencia.oab.org.br/Content/images/slide/estande_anhembi.jpg" alt="Estandes" title="Estandes" class="img-responsive img-fullwidth">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 p-0">
+                        <div class="entry-content pt-10 pr-30 pl-40">
+                            <h3 class="text-uppercase"><strong>Estandes</strong></h3>
+                            <p>O evento contará com uma área para estandes. Reserve seu espaço.</p>
+                            <a class="btn btn-theme btn-participe"><i class="fa fa-plus-square" aria-hidden="true"></i>
+                              Saiba mais</a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <article class="post clearfix maxwidth500">
+                    <div class="col-md-12 col-lg-6 p-0">
+                        <div class="entry-header">
+                            <div class="post-thumb">
+                                <img src="http://conferencia.oab.org.br/Content/images/slide/pacotes-viagem.jpg" alt="Pacotes de viagem" title="Pacotes de viagem" class="img-responsive img-fullwidth">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 p-0">
+                        <div class="entry-content pt-10 pr-30 pl-40">
+                            <h3 class="text-uppercase"><strong>Pacotes de viagem</strong></h3>
+                            <p>Passagens e hospedagens com valores diferenciados para o público da Conferência.</p>
+                            <a class="btn btn-theme btn-participe"><i class="fa fa-plus-square" aria-hidden="true"></i>
+                              Saiba mais</a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
     </div>
   </div>

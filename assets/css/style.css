@@ -1585,3 +1585,18 @@ ul.filter li.active a {
 		font-size: 13px;
 	}
 }
+
+.blog-posts .post {
+    background-color: #fff;
+    border: 2px solid #f1f1f1;
+    margin-bottom: 30px !important;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+
+.btn-participe {
+    border-radius: 5px !important;
+    border-width: 1px !important;
+    font-weight: 400 !important;
+         
+}
