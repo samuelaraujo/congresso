@@ -45,7 +45,7 @@
     <div class="wrap">
       <div class="date"><i class="pe-7s-date"></i>14<span>Agosto, 2017</span></div>
       <div class="location"><i class="pe-7s-map-marker"></i>Resort Hotel<span>Rio Branco, AC</span></div>
-      <div class="speakers"><i class="pe-7s-micro"></i>15 <span>Palestrantes</span></div>
+      <div class="speakers"><i class="pe-7s-micro"></i>11 <span>Palestrantes</span></div>
       <div class="remaining"><i class="pe-7s-add-user"></i>1200 <span>Ingressos</span></div>
     </div>
   </div>
@@ -262,8 +262,7 @@ d   <!-- Schedule -->
               <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                 <h1><strong>Solenidade de abertura</strong></h1>
                 <ul>
-                  <li><p class="speaker">Vanessa Vogliotti</p></li>
-                  <li><p class="speaker">Igami (Diretora Acadêmica da Uninorte/AC)</p></li>
+                  <li><p class="speaker">Vanessa Vogliotti Igami (Diretora Acadêmica da Uninorte/AC)</p></li>
                   <li><p class="speaker">Adriano Iurconvite (Coordenador do curso de Direito da Uninorte/AC)</p></li>
                   <li><p class="speaker">Marcos Vinícius Jardim Rodrigues (Presidente da OAB/AC)</p></li>
                 </ul>
