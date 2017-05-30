@@ -5,9 +5,9 @@ use Utils\Conexao;
 header('Content-type: application/json');
 $response = new stdClass();
 
-$credentials['email'] = PAGSEURO_EMAIL;
-$credentials['token'] = PAGSEURO_TOKEN;
-$url = sessionURL.'?email='.PAGSEURO_EMAIL.'&token='.PAGSEURO_TOKEN;
+$credentials['email'] = PAGSEGURO_EMAIL;
+$credentials['token'] = PAGSEGURO_TOKEN;
+$url = sessionURL.'?email='.PAGSEGURO_EMAIL.'&token='.PAGSEGURO_TOKEN;
 
 $credentials = http_build_query($credentials);
 

@@ -303,12 +303,12 @@ $(document).ready(function(){
                 senha: $('form#formCadastro #senha').val()
             };
 
-            $("#modal-pagamento").modal({
+            $("#modal-checkout").modal({
                 cache:false,
             	show: true,
                 keyboard: false,
                 backdrop: 'static',
-                remote: '/views/pagamento.php',
+                remote: '/views/checkout.php',
             });
         }else{
             $("form#formCadastro").valid();

@@ -222,7 +222,7 @@
 </div>
 
 <!--.modal -->
-<div id="modal-pagamento" class="modal fade" tabindex="-1" role="dialog">
+<div id="modal-checkout" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-loading">

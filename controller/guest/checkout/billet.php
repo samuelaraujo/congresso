@@ -22,12 +22,12 @@ $ingresso = $stmt->fetchObject();
 
 //configurações
 $url = transactionsURL;
-$credentials['email'] = PAGSEURO_EMAIL;
-$credentials['token'] = PAGSEURO_TOKEN;
+$credentials['email'] = PAGSEGURO_EMAIL;
+$credentials['token'] = PAGSEGURO_TOKEN;
 $credentials['paymentMode'] = 'default';
 $credentials['currency'] = 'BRL';
 $credentials['notificationURL'] = URL_APP.'/controller/guest/pagamento/callback';
-$credentials['paymentMethod'] = 'creditCard';
+$credentials['paymentMethod'] = 'boleto';
 $credentials['receiverEmail'] = PAGSEURO_EMAIL;
 
 //itens
@@ -36,22 +36,12 @@ $credentials['itemDescription1'] = $ingresso->lote.' - '.$ingresso->ingresso;
 $credentials['itemAmount1'] = $ingresso->valor;
 $credentials['itemQuantity1'] = 1;
 
-//parcelamento
-$credentials['installmentQuantity'] = 1;
-$credentials['installmentValue'] = $ingresso->valor;
-
 //dados do comprador
 $credentials['senderName'] = $params->usuario->nome.' '.$params->usuario->sobrenome;
 $credentials['senderCPF'] = $params->usuario->cpf;
 $credentials['senderAreaCode'] = '68';
 $credentials['senderPhone'] = '21025035';
 $credentials['senderEmail'] = $params->usuario->email;
-$credentials['senderHash'] = $params->senderhash;
-
-//dados do cartão de credito
-$credentials['creditCardToken'] = $params->cardtoken;
-$credentials['creditCardHolderName'] = $params->portador;
-$credentials['creditCardHolderCPF'] = $params->usuario->cpf;
 
 //endereço do cliente
 $credentials['shippingAddressStreet'] = 'R Bartolomeu Bueno';
@@ -93,12 +83,14 @@ if(isset($results->code)){
 	    'results' => array(
 	    	'codigo' => $results->code,
 	    	'status' => $results->status,
-	    	'descricao' => getStatusPagSeguro($results->status)
+	    	'descricao' => getStatusPagSeguro($results->status),
+	    	'link' => $results->paymentLink
 	    )
 	);
 }else{
 	http_response_code(500);
 	$response->error = 'Ocorreu um erro na sua transação de pagamento';
+	$response->results = $results;
 }
 
 echo json_encode($response);

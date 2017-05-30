@@ -258,4 +258,4 @@
 
 
 <!-- Javascripts -->
-<script type="text/javascript" src="javascripts/pagamento.js"></script>
+<script type="text/javascript" src="javascripts/checkout.js"></script>

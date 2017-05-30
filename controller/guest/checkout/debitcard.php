@@ -22,14 +22,14 @@ $ingresso = $stmt->fetchObject();
 
 //configurações
 $url = transactionsURL;
-$credentials['email'] = PAGSEURO_EMAIL;
-$credentials['token'] = PAGSEURO_TOKEN;
+$credentials['email'] = PAGSEGURO_EMAIL;
+$credentials['token'] = PAGSEGURO_TOKEN;
 $credentials['paymentMode'] = 'default';
 $credentials['currency'] = 'BRL';
 $credentials['notificationURL'] = URL_APP.'/controller/guest/pagamento/callback';
 $credentials['paymentMethod'] = 'eft';
 $credentials['bankName'] = $params->bank;
-$credentials['receiverEmail'] = PAGSEURO_EMAIL;
+$credentials['receiverEmail'] = PAGSEGURO_EMAIL;
 
 //itens
 $credentials['itemId1'] = $ingresso->id;

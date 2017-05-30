@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	if(isset($_POST['notificationType']) && $_POST['notificationType'] == 'transaction'){
 		//configurações
 		$codigo = $_POST['notificationCode'];
-		$url = notificationsURL.'/'.$codigo.'?email='.PAGSEURO_EMAIL.'&token='.PAGSEURO_TOKEN;
+		$url = notificationsURL.'/'.$codigo.'?email='.PAGSEGURO_EMAIL.'&token='.PAGSEGURO_TOKEN;
 		
 		$curl = curl_init($url);
 		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);

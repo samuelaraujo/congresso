@@ -132,7 +132,7 @@ $(document).ready(function(){
         params = JSON.stringify(params);
         //transactions
         app.util.getjson({
-          url : "/controller/guest/pagamento/billet",
+          url : "/controller/guest/checkout/billet",
           method : 'POST',
           contentType : "application/json",
           data: params,
@@ -186,7 +186,7 @@ $(document).ready(function(){
 
     //get session checkout transparent
     app.util.getjson({
-        url : "/controller/guest/pagamento/getsession",
+        url : "/controller/guest/checkout/getsession",
         method : 'POST',
         contentType : "application/json",
         success: function(response){
@@ -247,7 +247,7 @@ $(document).ready(function(){
               params = JSON.stringify(params);
               //transactions
               app.util.getjson({
-                  url : "/controller/guest/pagamento/creditcard",
+                  url : "/controller/guest/checkout/creditcard",
                   method : 'POST',
                   contentType : "application/json",
                   data: params,
@@ -354,7 +354,7 @@ $(document).ready(function(){
         params = JSON.stringify(params);
         //transactions
         app.util.getjson({
-          url : "/controller/guest/pagamento/debitcard",
+          url : "/controller/guest/checkout/debitcard",
           method : 'POST',
           contentType : "application/json",
           data: params,
@@ -546,7 +546,7 @@ $(document).ready(function(){
 
     //alterar ingresso
     $('button#alterar').livequery('click',function(event){
-      $("#modal-pagamento").modal('hide').data('bs.modal',null);
+      $("#modal-checkout").modal('hide').data('bs.modal',null);
     });
 
     function onError(response) {
