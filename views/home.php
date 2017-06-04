@@ -786,10 +786,10 @@ d   <!-- Schedule -->
           <div class="info">
             <p class="name">Élisson Miessa</p>
             <p class="position">Procurador do Trabalho</p>
-            <p>Procurador do Trabalho. Professor de Direito Processual do Trabalho do Curso CERS on-line.</p>
-            <br>
+            <p>Procurador do Trabalho, autor de obras jurídicas e atua como professor de Direito Processual do Trabalho.</p>
+            
             <a href="#" class="curriculum"
-              data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
+              data-toggle="modal" data-target="#modalelissonmiessa"><strong>Veja o Mini Currículo!</strong></a>
             <div class="socials">
               <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -803,9 +803,9 @@ d   <!-- Schedule -->
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
           <div class="info">
-            <p class="name">Palestrante</p>
-            <p class="position">Advogado</p>
-            <p>Palestrante.</p>
+            <p class="name">Érico Mauricio Pires Barbosa</p>
+            <p class="position">Procurador - PGEAC</p>
+            <p>Procurador do Estado, atuou na Proc. do Meio Ambiente, no Contencioso Geral e na Coord. de Precatórios, entre outros.</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
             <div class="socials">
@@ -1347,9 +1347,9 @@ Inscrição para estudante válida somente para graduação.</p>
           <ul class="clearfix">
             <li><i class="pe-7s-map-marker"></i><p>Resort Hotel<br>Estrada da Floresta, 5000 - Em frente a rotatória da 3º Ponte.</p></li>
             <li><i class="pe-7s-call"></i><p>
-            (68) 99946-1324<br>
-            (68) 99954-0696<br>
-            (68) 99973-5547<br>
+            (68) 99973-5547 Coord.<br>
+            (68) 99954-0696 V. Coord.<br>
+            (68) 99943-2501 Sec. Geral<br>
             </p><br></li>
             <li><i class="pe-7s-mail"></i><p>
             congressojuridicoacre<br>
@@ -1524,6 +1524,42 @@ Inscrição para estudante válida somente para graduação.</p>
     </div>
   </div>
 </div>
+
+
+ <div class="modal fade" id="modalelissonmiessa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Élisson Miessa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p> Procurador do Trabalho, atuando no Tribunal Regional do Trabalho da 15ª Região. Ex-Procurador do Trabalho do Tribunal Regional do Trabalho da 14ª Região. Professor de Direito Processual do Trabalho do Curso CERS. Autor e Coordenador de obras jurídicas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <div class="modal fade" id="modalericomauricio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Érico Mauricio Pires Barbosa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p>Procurador do Estado do Acre, estando há cinco anos na Chefia da Procuradoria do Meio Ambiente, tendo atuado antes no Contencioso Geral, na Coordenadoria de Precatórios, na Coordenadoria de Execuções Trabalhistas. Membro do Conselho Florestal Estadual do Acre – CEF; Membro da Comissão Estadual de Validação e Acompanhamento – CEVA do Sistema Estadual de Incentivos a Serviços Ambientais – SISA; Presidente da Comissão Permanente de Assuntos Jurídicos do Conselho Estadual de Meio Ambiente, Ciência e Tecnologia do Acre – CEMACT. Possui especialização em Direito Processual pela Universidade da Amazônia – UNAMA, Direito Constitucional e Direito Ambiental pela Universidade do Sul de Santa Catarina – UNISUL. É um dos mais conceituados especialistas de competência constitucional do país.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 
 
