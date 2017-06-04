@@ -1345,17 +1345,17 @@ Inscrição para estudante válida somente para graduação.</p>
         </div>
         <div class="contact-info">
           <ul class="clearfix">
-            <li><i class="pe-7s-map-marker"></i><p>Resort Hotel<br>Estrada da Floresta, 5000 - Em frente a rotatória da 3º Ponte.</p></li>
+            <li><i class="pe-7s-map-marker"></i><p>Resort Hotel<br>Estrada da Floresta, 5000 - Em frente a rotatória da 3º Ponte.<br><br></p></li>
             <li><i class="pe-7s-call"></i><p>
             (68) 99973-5547 Coord.<br>
             (68) 99954-0696 V. Coord.<br>
             (68) 99943-2501 Sec. Geral<br>
             </p><br></li>
             <li><i class="pe-7s-mail"></i><p>
-            congressojuridicoacre<br>
-            @gmail.com
+            congressojuridicoacre
+            @gmail.com<br><br><br>
             </p><br></li>
-            <li><i class="pe-7s-clock"></i><p>Mon - Fri : 9AM - 5PM<br>Sat - Sun : 9AM - 3PM</p><br></li>
+            <li><i class="pe-7s-clock"></i><p>Mon - Fri : 9AM - 5PM<br>Sat - Sun : 9AM - 3PM</p><br><br><br></li>
           </ul>
         </div>
       </div>
