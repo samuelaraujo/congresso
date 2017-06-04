@@ -807,7 +807,7 @@ d   <!-- Schedule -->
             <p class="position">Procurador - PGEAC</p>
             <p>Procurador do Estado, atuou na Proc. do Meio Ambiente, no Contencioso Geral e na Coord. de Precatórios, entre outros.</p>
             <a href="#" class="curriculum"
-              data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
+              data-toggle="modal" data-target="#modalericomauricio"><strong>Veja o Mini Currículo!</strong></a>
             <div class="socials">
               <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -821,11 +821,11 @@ d   <!-- Schedule -->
         <div class="speaker">
           <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
           <div class="info">
-            <p class="name">Palestrante</p>
-            <p class="position">Advogado</p>
-            <p>Palestrante.</p>
+            <p class="name">Melissa Veiga</p>
+            <p class="position">Advogado e Professora</p>
+            <p>Mestranda em Direito Privado na FA7. Especialista em Direito, atua também como professora de direito civil.</p>
             <a href="#" class="curriculum"
-              data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
+              data-toggle="modal" data-target="#modalmelissaveiga"><strong>Veja o Mini Currículo!</strong></a>
             <div class="socials">
               <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -1181,7 +1181,7 @@ Inscrição para estudante válida somente para graduação.</p>
                         <div class="entry-content pt-10 pr-30 pl-40">
                             <h3 class="text-uppercase"><strong>Estandes</strong></h3>
                             <p>O evento contará com uma área para estandes. Reserve seu espaço.</p>
-                            <a class="btn btn-theme btn-participe"><i class="fa fa-plus-square" aria-hidden="true"></i>
+                            <a class="btn btn-theme btn-participe" data-toggle="modal" data-target="#modalestande"><i class="fa fa-plus-square" aria-hidden="true"></i>
                               Saiba mais</a>
                             <div class="clearfix"></div>
                         </div>
@@ -1557,6 +1557,42 @@ Inscrição para estudante válida somente para graduação.</p>
     </div>
   </div>
 </div>
+
+ <div class="modal fade" id="modalmelissaveiga" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Melissa Veiga</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p>Mestranda em Direito Privado na FA7. Especialista em Direito pela Faculdade Integrada do Ceará (2009). Graduada em Direito pela Universidade do Sul de Santa Catarina (2003). Assessora pedagógica do curso de direito do Centro Universitário Christus. Professora de direito civil, atuando e desenvolvendo pesquisas especialmente nas áreas de direito das obrigações, família e sucessões.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <div class="modal fade" id="modalestande" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Melissa Veiga</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p>Mestranda em Direito Privado na FA7. Especialista em Direito pela Faculdade Integrada do Ceará (2009). Graduada em Direito pela Universidade do Sul de Santa Catarina (2003). Assessora pedagógica do curso de direito do Centro Universitário Christus. Professora de direito civil, atuando e desenvolvendo pesquisas especialmente nas áreas de direito das obrigações, família e sucessões.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 
 
