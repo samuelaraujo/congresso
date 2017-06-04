@@ -1201,7 +1201,7 @@ Inscrição para estudante válida somente para graduação.</p>
                         <div class="entry-content pt-10 pr-30 pl-40">
                             <h3 class="text-uppercase"><strong>Pacotes de viagem</strong></h3>
                             <p>Passagens e hospedagens com valores diferenciados para o público da Conferência.</p>
-                            <a class="btn btn-theme btn-participe"><i class="fa fa-plus-square" aria-hidden="true"></i>
+                            <a class="btn btn-theme btn-participe" data-toggle="modal" data-target="#modalpacontes" ><i class="fa fa-plus-square" aria-hidden="true"></i>
                               Saiba mais</a>
                             <div class="clearfix"></div>
                         </div>
@@ -1579,18 +1579,58 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Melissa Veiga</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Estandes</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-       <p>Mestranda em Direito Privado na FA7. Especialista em Direito pela Faculdade Integrada do Ceará (2009). Graduada em Direito pela Universidade do Sul de Santa Catarina (2003). Assessora pedagógica do curso de direito do Centro Universitário Christus. Professora de direito civil, atuando e desenvolvendo pesquisas especialmente nas áreas de direito das obrigações, família e sucessões.</p>
+       <p>O evento possui uma área espaçosa que reúne cinco espaços, que podem ser locados em conjunto ou individualmente, sendo:</p>
+
+​
+      <ul>
+        <li>Sala de treinamento Xapuri: 70 lugares</li>
+        <li>Sala de treinamento Rio Acre: 70 lugares</li>
+        <li>Sala de treinamento Rio Acre 2: 70 lugares</li>
+        <li>Auditório Rio Juruá: 170 lugares</li>
+      </ul>
+
+
+      <p> Aproveite nosso evento e feche ótimos negócios, o 1º Congresso Jurídico do Acre acontece em parceria com o Resort Hotel.</p>
       </div>
     </div>
   </div>
 </div>
 
+<div class="modal fade" id="modalpacontes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Pacotes de viagens e Hospedagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p>Na parceria com o <strong>Resort Hotel</strong>, serão oferecidos preços diferenciados de diárias para os participantes de outros estados.</p>
+
+​
+      <ul>
+        <li>Quarto Individual - 140 reais.</li>
+        <li>Duplo - 160 reais.</li>
+      </ul>
+
+
+       <p>Na parceria com a agência passagens <strong>GerasTur</strong>, serão oferecidos preços diferenciados passagens aéreas para os participantes.</p>
+
+      <ul>
+        <li>Entre em contato com <a href="http://gerastur.com.br/" target="_blank">GerasTur</a></li>
+      </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
