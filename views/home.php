@@ -787,6 +787,7 @@ d   <!-- Schedule -->
             <p class="name">Élisson Miessa</p>
             <p class="position">Procurador do Trabalho</p>
             <p>Procurador do Trabalho. Professor de Direito Processual do Trabalho do Curso CERS on-line.</p>
+            <br>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
             <div class="socials">
@@ -815,6 +816,25 @@ d   <!-- Schedule -->
           </div>
         </div>
       </div>
+
+       <div class="col-sm-4 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
+          <div class="info">
+            <p class="name">Palestrante</p>
+            <p class="position">Advogado</p>
+            <p>Palestrante.</p>
+            <a href="#" class="curriculum"
+              data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
+            <div class="socials">
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
 
 
@@ -909,19 +929,19 @@ Inscrição para estudante válida somente para graduação.</p>
           <h3>Estudante <span class="hot">Oferta!</span></h3>
           <p class="price valido"><span>R$</span>70,00<small>/Lote 1</small></p>
            <ul>
-            <li><i class="pe-7s-check pe-lg valido"></i>Até 31 de maio de 2017</li>
-            <li><i class="pe-7s-check pe-lg valido"></i>Pague parcelado!</li>
+            <li><i class="pe-7s-ticket pe-lg valido"></i>Garanta seu ingresso!</li> 
+            <li><i class="pe-7s-cart pe-lg valido"></i>Pague com PagSeguro UOL.</li>
             <li><i class="pe-7s-check pe-lg valido"></i><a href="#faq" class="scroll-link link">Dúvidas?</a></li>
           </ul>
           <button  class="btn-theme" onclick="window.location.href='/login'" >Inscreva-se</button>
-          <br><br>
-          <div class="separator mt-20 mb-10"> </div>
+          <br>
+         <!--  <div class="separator mt-20 mb-10"> </div>
            <p class="price"><span>R$</span><strike>100,00</strike><small>/Lote 2</small></p>
           <ul>
             <li><i class="pe-7s-check pe-lg"></i>A partir de 1º de junho de 2017</li>
             <li><i class="pe-7s-check pe-lg"></i><a href="#faq" class="scroll-link link">Dúvidas?</a></li>
           </ul>
-          <button  class="btn-theme active" onclick="window.location.href='/login'" disabled >Lote fechado</button>
+          <button  class="btn-theme active" onclick="window.location.href='/login'" disabled >Lote fechado</button> -->
         </div>
       </div>
       <div class="col-sm-4 col-md-4">
@@ -929,19 +949,19 @@ Inscrição para estudante válida somente para graduação.</p>
           <h3>Jovem Advogado <span class="hot">Oferta!</span></h3>
           <p class="price valido"><span>R$</span>100,00<small>/lote 1</small></p>
          <ul>
-            <li><i class="pe-7s-check pe-lg valido"></i>Até 31 de maio de 2017</li>
-            <li><i class="pe-7s-check pe-lg valido"></i>Pague parcelado!</li>
+            <li><i class="pe-7s-ticket pe-lg valido"></i>Garanta seu ingresso!</li> 
+            <li><i class="pe-7s-cart pe-lg valido"></i>Pague com PagSeguro UOL.</li>
             <li><i class="pe-7s-check pe-lg valido"></i><a href="#faq" class="scroll-link link">Dúvidas?</a></li>
           </ul>
            <button class="btn-theme" onclick="window.location.href='/login'">Inscreva-se</button>
-           <br><br>
-          <div class="separator mt-20 mb-10"> </div>
+           <br>
+        <!--   <div class="separator mt-20 mb-10"> </div>
            <p class="price"><span>R$</span><strike>130,00</strike><small>/Lote 2</small></p>
           <ul>
             <li><i class="pe-7s-check pe-lg"></i>A partir de 1º de junho de 2017</li>
             <li><i class="pe-7s-check pe-lg"></i><a href="#faq" class="scroll-link link">Dúvidas?</a></li>
           </ul>
-          <button class="btn-theme active" onclick="window.location.href='/login'" disabled >Lote Fechado</button>
+          <button class="btn-theme active" onclick="window.location.href='/login'" disabled >Lote Fechado</button> -->
         </div>
       </div>
       <div class="col-sm-4 col-md-4">
@@ -949,19 +969,19 @@ Inscrição para estudante válida somente para graduação.</p>
           <h3>Profissionais <span class="hot">Oferta!</span></h3>
           <p class="price valido"><span>R$</span>130,00<small>/lote 1</small></p>
          <ul>
-            <li><i class="pe-7s-check pe-lg valido"></i>Até 31 de maio de 2017</li>
-            <li><i class="pe-7s-check pe-lg valido"></i>Pague parcelado!</li>
+            <li><i class="pe-7s-ticket pe-lg valido"></i>Garanta seu ingresso!</li> 
+            <li><i class="pe-7s-cart pe-lg valido"></i>Pague com PagSeguro UOL.</li>
             <li><i class="pe-7s-check pe-lg valido"></i><a href="#faq" class="scroll-link link">Dúvidas?</a></li>
           </ul>
            <button  class="btn-theme" onclick="window.location.href='/login'" >Inscreva-se</button>
-          <br><br>
-          <div class="separator mt-20 mb-10"> </div>
+          <br>
+          <!-- <div class="separator mt-20 mb-10"> </div>
            <p class="price"><span>R$</span><strike>160,00</strike><small>/Lote 2</small></p>
           <ul>
             <li><i class="pe-7s-check pe-lg"></i>A partir de 1º de junho de 2017</li>
             <li><i class="pe-7s-check pe-lg"></i><a href="#faq" class="scroll-link link">Dúvidas?</a></li>
           </ul>
-          <button class="btn-theme active" onclick="window.location.href='/login'" disabled >Lote Fechado</button>
+          <button class="btn-theme active" onclick="window.location.href='/login'" disabled >Lote Fechado</button> -->
         </div>
       </div>
     </div>
