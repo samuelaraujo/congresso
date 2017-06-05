@@ -625,12 +625,12 @@ d   <!-- Schedule -->
             <br/>
             <a href="#" class="curriculum" 
               data-toggle="modal" data-target="#modallaudivonnogueira"><strong>Veja o Mini Currículo!</strong></a>
-            <div class="socials">
+            <!-- <div class="socials">
               <a href="#"><i class="fa fa-facebook"></i></a>
               <a href="#"><i class="fa fa-twitter"></i></a>
               <a href="#"><i class="fa fa-linkedin"></i></a>
               <a href="#"><i class="fa fa-instagram"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -643,47 +643,42 @@ d   <!-- Schedule -->
             <p align="justify">Desembargadora aposentada do Tribunal de Justiça do Estado do Rio Grande do Sul.</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalmariaberenice"><strong>Veja o Mini Currículo!</strong></a>
-            <div class="socials">
-              <a href="http://www.facebook.com/MariaBereniceDias" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a href="https://twitter.com/mberenicedias"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.instagram.com/mberenicedias/?hl=pt" target="_blank"><i class="fa fa-instagram"></i></a>
-            </div>
           </div>
         </div>
       </div>
       <div class="col-sm-4 col-md-3">
         <div class="speaker">
-          <div class="media"><p><img src="assets/images/pages/mariapenha.png" alt=""></p></div>
+          <div class="media"><p><img src="assets/images/pages/maria-penha.jpg" alt=""></p></div>
           <div class="info">
             <p class="name">Maria Penha Sousa Nascimento</p>
             <p class="position">Desembargadora Aposentada - TJAC</p>
             <p>Desembargadora aposentada do Tribunal de Justiça do Estado do Acre.</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalmariapenha"><strong>Veja o Mini Currículo!</strong></a>
-            <div class="socials">
+            <!-- <div class="socials">
               <a href="#"><i class="fa fa-twitter"></i></a>
               <a href="#"><i class="fa fa-linkedin"></i></a>
               <a href="#"><i class="fa fa-instagram"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
 
       <div class="col-sm-4 col-md-3">
         <div class="speaker">
-          <div class="media"><p><img src="assets/images/pages/rogeriosanches.png" alt=""></p></div>
+          <div class="media"><p><img src="assets/images/pages/sanches.jpg" alt=""></p></div>
           <div class="info">
             <p class="name">Rogério Sanches Cunha</p>
             <p class="position">Promotor de Justiça - MPSP</p>
             <p>Promotor de Justiça do Ministério Público de São Paulo e Professor da Escola Superior MP.</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalrogeriosanches"><strong>Veja o Mini Currículo!</strong></a>
-            <div class="socials">
+            <!-- <div class="socials">
               <a href="https://www.facebook.com/RogerioSanchesC" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="https://twitter.com/rogeriosanchesc" target="_blank"><i class="fa fa-twitter"></i></a>
               <a href="https://www.youtube.com/user/RogerioSanchesC" target="_blank"><i class="fa fa-youtube"></i></a>
               <a href="https://www.instagram.com/rogeriosanchescunha/?hl=pt-br" target="_blank"><i class="fa fa-instagram"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -693,35 +688,31 @@ d   <!-- Schedule -->
     <div class="col-md-12">
       <div class="col-sm-4 col-md-3">
         <div class="speaker">
-          <div class="media"><p><img src="assets/images/pages/cristianofarias.jpg" alt=""></p></div>
+          <div class="media"><p><img src="assets/images/pages/cristiano-chaves.jpg" alt=""></p></div>
           <div class="info">
             <p class="name">Cristiano Chaves de Farias</p>
             <p class="position">Promotor de Justiça - MPBA</p>
             <p>Promotor de Justiça do Ministério Público do Estado da Bahia. Mestre em Família na Sociedade Contemporânea pela UCSal.</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalcristianofarias"><strong>Veja o Mini Currículo!</strong></a>
-            <div class="socials">
+            <!-- <div class="socials">
               <a href="#"><i class="fa fa-facebook"></i></a>
               <a href="#"><i class="fa fa-twitter"></i></a>
               <a href="#"><i class="fa fa-linkedin"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
       <div class="col-sm-4 col-md-3">
         <div class="speaker">
-          <div class="media"><p><img src="assets/images/pages/rafaelbarreto.png" alt=""></p></div>
+          <div class="media"><p><img src="assets/images/pages/rafael-barreto.jpg" alt=""></p></div>
           <div class="info">
             <p class="name">Rafael Barretto</p>
             <p class="position">Advogado e Professor</p>
             <p>Mestre em Direito Público. Professor de Pós Graduação da Universidade Federal da Bahia (UFBA).</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalrafaelbarreto"><strong>Veja o Mini Currículo!</strong></a>
-            <div class="socials">
-              <a href="http://www.facebook.com/rafael.barretto.1" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a href="https://twitter.com/rconstitucional" target="_blank"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.instagram.com/rafaelbarrettoportalf3/?hl=pt" target="_blank"><i class="fa fa-instagram"></i></a>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -735,54 +726,54 @@ d   <!-- Schedule -->
             <p>Advogado especialista em Direito Econômico e Fiscal Internacional pela Universidade de Liège (Bélgica).</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modallucioalmeida"><strong>Veja o Mini Currículo!</strong></a>
-            <div class="socials">
+            <!-- <div class="socials">
               <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
               <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
 
       <div class="col-sm-4 col-md-3">
         <div class="speaker">
-          <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
+          <div class="media"><p><img src="assets/images/pages/erik.jpg" alt=""></p></div>
           <div class="info">
             <p class="name">Erick Venâncio Lima do Nascimento</p>
             <p class="position">Advogado e Conselh. federal da OAB</p>
             <p>Advogado, Especialista em Direito Público, atuando nas áreas eleitoral, administrativa e tributária.</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalerickvenancio"><strong>Veja o Mini Currículo!</strong></a>
-            <div class="socials">
+            <!-- <div class="socials">
               <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
               <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
 
        <div class="col-sm-4 col-md-3">
         <div class="speaker">
-          <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
+          <div class="media"><p><img src="assets/images/pages/cristiano.jpg" alt=""></p></div>
           <div class="info">
             <p class="name">Cristiano Vieira Sobral Pinto</p>
             <p class="position">Advogado</p>
             <p>Doutorando em Direito. Professor de Direito Civil e Direito do Consumidor na Fundação Getúlio Vargas.</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalcristianosobral"><strong>Veja o Mini Currículo!</strong></a>
-            <div class="socials">
+            <!-- <div class="socials">
               <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
               <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
         
       <div class="col-sm-4 col-md-3">
         <div class="speaker">
-          <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
+          <div class="media"><p><img src="assets/images/pages/elisson.jpg" alt=""></p></div>
           <div class="info">
             <p class="name">Élisson Miessa</p>
             <p class="position">Procurador do Trabalho</p>
@@ -790,29 +781,29 @@ d   <!-- Schedule -->
             
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalelissonmiessa"><strong>Veja o Mini Currículo!</strong></a>
-            <div class="socials">
+            <!-- <div class="socials">
               <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
               <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
 
       <div class="col-sm-4 col-md-3">
         <div class="speaker">
-          <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
+          <div class="media"><p><img src="assets/images/pages/erico.jpg" alt=""></p></div>
           <div class="info">
             <p class="name">Érico Mauricio Pires Barbosa</p>
             <p class="position">Procurador - PGEAC</p>
             <p>Procurador do Estado, atuou na Proc. do Meio Ambiente, no Contencioso Geral e na Coord. de Precatórios, entre outros.</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalericomauricio"><strong>Veja o Mini Currículo!</strong></a>
-            <div class="socials">
+            <!-- <div class="socials">
               <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
               <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -822,15 +813,15 @@ d   <!-- Schedule -->
           <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
           <div class="info">
             <p class="name">Melissa Veiga</p>
-            <p class="position">Advogado e Professora</p>
+            <p class="position">Advogada e Professora</p>
             <p>Mestranda em Direito Privado na FA7. Especialista em Direito, atua também como professora de direito civil.</p>
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalmelissaveiga"><strong>Veja o Mini Currículo!</strong></a>
-            <div class="socials">
+            <!-- <div class="socials">
               <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
               <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -1406,6 +1397,11 @@ Inscrição para estudante válida somente para graduação.</p>
       </div>
       <div class="modal-body">
        <p> Desembargadora aposentada do Tribunal de Justiça do Estado do Acre. Especialista em Direto Constitucional (pela UFAC, através de convênio com a UFMG) e possui MBA em Poder Judiciário realizado pela FGV na então Escola Superior da Magistratura no Acre (atualmente ESJUD). Por diversos anos, foi juíza de Direito titular da 1ª Vara da Fazenda Pública de Rio Branco, bem ainda, titular do Juizado Especial da Fazenda Pública, ambas unidades judiciárias da Capital. Ascendeu ao desembargo em novembro de 2015, pelo critério de antiguidade, após se dedicar por mais de 20 anos ao Judiciário Acreano no âmbito da magistratura do 1º Grau, aposentando-se voluntariamente em novembro de 2016.</p>
+        <div class="socials">
+          <a href="http://www.facebook.com/MariaBereniceDias" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/mberenicedias"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.instagram.com/mberenicedias/?hl=pt" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
       </div>
     </div>
   </div>
@@ -1422,6 +1418,12 @@ Inscrição para estudante válida somente para graduação.</p>
       </div>
       <div class="modal-body">
        <p> Promotor de Justiça do Ministério Público de São Paulo, Professor da Escola Superior do MP de São Paulo e do Mato Grasso. Professor de Penal e Coordenador Científico do CERS. Autor das seguintes obras: Manual de Direito Penal - Parte Geral, Manual de Direito Penal - Parte Especial, Código Penal para Concursos, Lei de Execução para Concursos, Prática Penal para o MP, todos publicados pela Editora Juspodivm. Rogério é um dos mais conhecidos e respeitados nomes do Direito Penal do país.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/RogerioSanchesC" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/rogeriosanchesc" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.youtube.com/user/RogerioSanchesC" target="_blank"><i class="fa fa-youtube"></i></a>
+          <a href="https://www.instagram.com/rogeriosanchescunha/?hl=pt-br" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
       </div>
     </div>
   </div>
@@ -1504,6 +1506,11 @@ Inscrição para estudante válida somente para graduação.</p>
       </div>
       <div class="modal-body">
        <p> Mestre em Direito Público. Professor de Pós Graduação da Universidade Federal da Bahia (UFBA), da Escola dos Magistrados da Bahia (EMAB) e da Escola Judiciária Eleitoral (EJE)/Tribunal Regional Eleitoral da Bahia (TRE). Secretário-Geral do Tribunal de Ética e Disciplina do Conselho Seccional da OAB/BA.</p>
+        <div class="socials">
+          <a href="http://www.facebook.com/rafael.barretto.1" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/rconstitucional" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.instagram.com/rafaelbarrettoportalf3/?hl=pt" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
       </div>
     </div>
   </div>
