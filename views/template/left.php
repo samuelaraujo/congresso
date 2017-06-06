@@ -30,8 +30,25 @@
             </li>
 
             <?php if(isset($_SESSION['congresso_gestor']) && $_SESSION['congresso_gestor'] == 1){ ?>
-                <li> <a href="<?=($_SESSION['congresso_gestor'] == 1 ? '/administrador/estabelecimento' : '/office/dashboard')?>" class="
-                waves-effect"><i class="icon-directions fa-fw" data-icon="v"></i> <span class="hide-menu"> Estabelecimentos </span></a>
+                <li> 
+                    <a href="/administrador/estabelecimento" class="waves-effect">
+                        <i class="ti-money fa-fw" data-icon="v"></i> <span class="hide-menu"> Pagamentos </span>
+                    </a>
+                </li>
+                <li> 
+                    <a href="/administrador/cliente" class="waves-effect">
+                        <i class="icon-people fa-fw" data-icon="v"></i> <span class="hide-menu"> Clientes </span>
+                    </a>
+                </li>
+                <li> 
+                    <a href="/administrador/lote" class="waves-effect">
+                        <i class="icon-layers fa-fw" data-icon="v"></i> <span class="hide-menu"> Lotes </span>
+                    </a>
+                </li>
+                <li> 
+                    <a href="/administrador/deficiencia" class="waves-effect">
+                        <i class="icon-directions fa-fw" data-icon="v"></i> <span class="hide-menu"> Deficiência </span>
+                    </a>
                 </li>
             <?php } ?>
 

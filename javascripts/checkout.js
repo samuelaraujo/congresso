@@ -127,6 +127,7 @@ $(document).ready(function(){
         $('#gerando-boleto').removeClass('hidden');
         //params
         var params = {
+          senderhash: senderHash,
           usuario: usuarios //utilizando variavel global(login.js)
         };
         params = JSON.stringify(params);

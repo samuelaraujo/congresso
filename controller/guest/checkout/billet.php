@@ -26,9 +26,9 @@ $credentials['email'] = PAGSEGURO_EMAIL;
 $credentials['token'] = PAGSEGURO_TOKEN;
 $credentials['paymentMode'] = 'default';
 $credentials['currency'] = 'BRL';
-$credentials['notificationURL'] = URL_APP.'/controller/guest/pagamento/callback';
+$credentials['notificationURL'] = URL_APP.'/controller/guest/checkout/callback';
 $credentials['paymentMethod'] = 'boleto';
-$credentials['receiverEmail'] = PAGSEURO_EMAIL;
+$credentials['receiverEmail'] = PAGSEGURO_EMAIL;
 
 //itens
 $credentials['itemId1'] = $ingresso->id;
@@ -42,6 +42,7 @@ $credentials['senderCPF'] = $params->usuario->cpf;
 $credentials['senderAreaCode'] = '68';
 $credentials['senderPhone'] = '21025035';
 $credentials['senderEmail'] = $params->usuario->email;
+$credentials['senderHash'] = $params->senderhash;
 
 //endereço do cliente
 $credentials['shippingAddressStreet'] = 'R Bartolomeu Bueno';

@@ -26,7 +26,7 @@ $credentials['email'] = PAGSEGURO_EMAIL;
 $credentials['token'] = PAGSEGURO_TOKEN;
 $credentials['paymentMode'] = 'default';
 $credentials['currency'] = 'BRL';
-$credentials['notificationURL'] = URL_APP.'/controller/guest/pagamento/callback';
+$credentials['notificationURL'] = URL_APP.'/controller/guest/checkout/callback';
 $credentials['paymentMethod'] = 'creditCard';
 $credentials['receiverEmail'] = PAGSEGURO_EMAIL;
 
