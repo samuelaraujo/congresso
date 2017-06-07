@@ -7,11 +7,11 @@ $oConexao = Conexao::getInstance();
 $params = json_decode(file_get_contents('php://input'));
 $response = new stdClass();
 
-if (!isset($_SESSION['avaliacao_uid'])) {
+if (!isset($_SESSION['congresso_uid'])) {
     throw new Exception('Usuário não autenticado', 400);
 }
 
-$id = $_SESSION['avaliacao_uid'];
+$id = $_SESSION['congresso_uid'];
 
 try {
     $stmt = $oConexao->prepare(

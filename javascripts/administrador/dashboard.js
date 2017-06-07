@@ -13,8 +13,26 @@ $(document).ready(function(){
                     $('#countLote h4').html(response.count.lotes);          
                     $('#countIngresso h4').html(response.count.ingressos);    
                     var html = '';
-                    console.log(response.results.length);
                     for (var i=0;i<response.results.length;i++) {
+                        var status = undefined;
+                        switch(parseInt(response.results[i].status)){
+                            case 1:
+                                status = 'Paga';
+                                labelStatus = 'label-success';
+                            break;
+                            case 2:
+                                status = 'Pendente';
+                                labelStatus = 'label-warning';
+                            break;
+                            case 3:
+                                status = 'Cancelado';
+                                labelStatus = 'label-danger';
+                            break;
+                            case 4:
+                                status = 'Estornado';
+                                labelStatus = 'label-warning';
+                            break;
+                        }
                         html += '<tr>'+
                                     '<td>'+ (i+1) + '</td>'+
                                     '<td>'+ response.results[i].codigo + '</td>'+
@@ -22,7 +40,7 @@ $(document).ready(function(){
                                     '<td>'+ response.results[i].cpf + '</td>'+
                                     '<td>'+ response.results[i].ingresso + '</td>'+
                                     '<td>'+ floatToMoney(response.results[i].valor, 'R$') + '</td>'+
-                                    '<td>'+ response.results[i].ingresso + '</td>'+
+                                    '<td><span class="label '+labelStatus+'">'+status+'</span></td>'+
                                 '</tr>';
                     }
                     $("table#table-pagamentos > tbody").html(html);

@@ -1,15 +1,13 @@
 <?php
-    // if (!isset(
-    //     $_SESSION['avaliacao_uid'],
-    //     $_SESSION['avaliacao_nome'],
-    //     $_SESSION['avaliacao_sobrenome'],
-    //     $_SESSION['avaliacao_email'],
-    //     $_SESSION['avaliacao_perfil'],
-    //     $_SESSION['avaliacao_gestor'],
-    //     $_SESSION['avaliacao_estabelecimento']
-    // ) || $_SESSION['avaliacao_gestor'] == 0) {
-    //     header('Location: /login');
-    // }
+    if (!isset(
+        $_SESSION['congresso_uid'],
+        $_SESSION['congresso_nome'],
+        $_SESSION['congresso_sobrenome'],
+        $_SESSION['congresso_email'],
+        $_SESSION['congresso_gestor']
+    ) || $_SESSION['congresso_gestor'] == 0) {
+        header('Location: /login');
+    }
 ?>
 <!-- Bootstrap Core CSS -->
 <link href="assets/template/bootstrap/css/bootstrap.min.css" rel="stylesheet">

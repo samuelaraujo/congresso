@@ -16,7 +16,6 @@ $(document).ready(function(){
 	});
 
     $('a#minhaconta').livequery('click',function(event){
-        
         var options = {
             cache:false,
             show: true,

@@ -9,7 +9,7 @@ $response = new stdClass();
 
 try {
     if (!isset(
-        $_SESSION['avaliacao_uid'],
+        $_SESSION['congresso_uid'],
         $params->senha
     )) {
         throw new Exception('Verifique os dados preenchidos', 400);
@@ -18,7 +18,7 @@ try {
     $oConexao->beginTransaction();
 
     $params->senha = sha1(SALT.$params->senha);
-    $id = $_SESSION['avaliacao_uid'];
+    $id = $_SESSION['congresso_uid'];
 
     $stmt = $oConexao->prepare(
         'UPDATE usuario 
