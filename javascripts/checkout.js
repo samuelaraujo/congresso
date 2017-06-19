@@ -424,7 +424,7 @@ $(document).ready(function(){
         data: params,
         success: function(response){
           if(response.success){
-            window.open(link,'_blank');
+            window.open(link);
             setTimeout(function(){
               window.location.href = "/";
             },5000);
@@ -486,7 +486,7 @@ $(document).ready(function(){
         data: params,
         success: function(response){
           if(response.success){
-            window.open(link,'_blank');
+            window.open(link);
             setTimeout(function(){
               window.location.href = "/";
             },5000);
