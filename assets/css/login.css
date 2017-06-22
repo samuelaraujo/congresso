@@ -249,7 +249,7 @@ form input[type=password],
   position: relative;
   z-index: 10;
   text-align: center;
-  margin: -12px 0 0 0;
+  margin: -30px 0 0 0;
 }
 .title .separador {
   display: block;
