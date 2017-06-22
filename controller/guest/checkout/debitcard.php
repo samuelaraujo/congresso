@@ -85,6 +85,8 @@ if(isset($results->code)){
 	    	'codigo' => $results->code,
 	    	'status' => $results->status,
 	    	'descricao' => getStatusPagSeguro($results->status),
+	    	'metodo' => 3,
+	    	'valor' => $ingresso->valor,
 	    	'link' => $results->paymentLink
 	    )
 	);

@@ -93,7 +93,9 @@ if(isset($results->code)){
 	    'results' => array(
 	    	'codigo' => $results->code,
 	    	'status' => $results->status,
-	    	'descricao' => getStatusPagSeguro($results->status)
+	    	'descricao' => getStatusPagSeguro($results->status),
+	    	'metodo' => 1,
+	    	'valor' => $ingresso->valor,
 	    )
 	);
 }else{

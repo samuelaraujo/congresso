@@ -31,7 +31,7 @@
 
             <?php if(isset($_SESSION['congresso_gestor']) && $_SESSION['congresso_gestor'] == 1){ ?>
                 <li> 
-                    <a href="/administrador/estabelecimento" class="waves-effect">
+                    <a href="/administrador/pagamento" class="waves-effect">
                         <i class="ti-money fa-fw" data-icon="v"></i> <span class="hide-menu"> Pagamentos </span>
                     </a>
                 </li>

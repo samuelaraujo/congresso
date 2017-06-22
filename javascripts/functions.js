@@ -30,6 +30,79 @@ $(document).ready(function(){
 });
 
 /*   
+  @brief Cria uma paginação
+  @param limit(int) - item por página
+  @param page(int) - página atual
+  @param total(int) - total de itens
+  @return pagination(text) - html da paginação
+*/
+function paginator(limit,page,total){
+  //pagination
+  var pagination = '';
+  var total_pages = Math.ceil(parseInt(total)/limit);
+  var right_link = page+3;
+
+  if(page > 1){
+      pagination +=   '<li>'+
+                          '<a href="#" data-page="1">'+
+                              '<span>Primeiro</span>'+
+                          '</a>'+
+                      '</li>'+
+                      '<li>'+
+                          '<a href="#" data-page="'+(page-1)+'">'+
+                              '<span>Anterior</span>'+
+                          '</a>'+
+                      '</li>';
+      for(var i=(page-2);i<page;i++){
+          if(i>0)
+              pagination +=   '<li>'+
+                                  '<a href="#" data-page="'+i+'">'+
+                                      '<span>'+i+'</span>'+
+                                  '</a>'+
+                              '</li>';
+      }   
+  }
+
+  if(page == total_pages){
+      pagination +=   '<li class="active">'+
+                          '<a href="#" data-page="'+page+'">'+
+                              '<span>'+page+'</span>'+
+                          '</a>'+
+                      '</li>';
+  }else{
+      pagination +=   '<li class="active">'+
+                          '<a href="#" data-page="'+page+'">'+
+                              '<span>'+page+'</span>'+
+                          '</a>'+
+                      '</li>';
+  }
+
+  for(var i=(page+1);i<=right_link;i++){
+      if(i <= total_pages){
+          pagination +=   '<li>'+
+                              '<a href="#" data-page="'+i+'">'+
+                                  '<span>'+i+'</span>'+
+                              '</a>'+
+                          '</li>';
+      }
+  }
+
+  if(page < total_pages){
+      pagination +=   '<li>'+
+                          '<a href="#" data-page="'+(page+1)+'">'+
+                              '<span>Próximo</span>'+
+                          '</a>'+
+                      '</li>'+
+                      '<li>'+
+                          '<a href="#" data-page="'+total_pages+'">'+
+                              '<span>Último</span>'+
+                          '</a>'+
+                      '</li>';
+  }
+  return pagination;
+}
+
+/*   
 	@brief Converte uma string em formato moeda para float
     @param valor(string) - o valor em moeda
     @return valor(float) - o valor em float
@@ -88,4 +161,32 @@ function floatToMoney(valor,mascara){
   }
   valor = mascara+' '+inteiro+","+decimal;  
   return valor;
+}
+
+/*   
+  @brief Cria as session local storage
+  @param nome(string) - o nome da session
+  @param valor(string) - o valor da session
+*/
+function setSession(session,value){
+  sessionStorage.setItem(session,value);
+}
+
+/*   
+  @brief Retorna a session local storage
+  @param nome(string) - o nome da session
+  @param valor(string) - o valor da session
+  @return valor(string)
+*/
+function getSession(session){
+  return sessionStorage.getItem(session);
+}
+
+/*   
+  @brief Destroi a session local storage
+  @param nome(string) - o nome da session
+  @param valor(string) - o valor da session
+*/
+function destroySession(session){
+  sessionStorage.removeItem(session);
 }

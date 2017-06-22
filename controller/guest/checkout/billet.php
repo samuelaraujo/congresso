@@ -42,7 +42,7 @@ $credentials['senderCPF'] = $params->usuario->cpf;
 $credentials['senderAreaCode'] = '68';
 $credentials['senderPhone'] = '21025035';
 $credentials['senderEmail'] = $params->usuario->email;
-$credentials['senderHash'] = $params->senderhash;
+//$credentials['senderHash'] = $params->senderhash;
 
 //endereço do cliente
 $credentials['shippingAddressStreet'] = 'R Bartolomeu Bueno';
@@ -85,6 +85,8 @@ if(isset($results->code)){
 	    	'codigo' => $results->code,
 	    	'status' => $results->status,
 	    	'descricao' => getStatusPagSeguro($results->status),
+	    	'metodo' => 2,
+	    	'valor' => $ingresso->valor,
 	    	'link' => $results->paymentLink
 	    )
 	);

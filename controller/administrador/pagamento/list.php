@@ -23,21 +23,22 @@ try {
     $search = isset($params->search[0])
                         ? ' AND
 								(
-									nomefantasia LIKE :query OR
-									cpfcnpj LIKE :query OR
-									telefone LIKE :query
+									p.codigo LIKE :query OR
+									c.nome LIKE :query OR
+									c.cpf LIKE :query
 								)
 							'
                         : null;
 
-    $idestabelecimento = $_SESSION['avaliacao_estabelecimento'];
-
     $stmt = $oConexao->prepare(
         'SELECT
-			id,nomefantasia,cpfcnpj,telefone,status
-		FROM estabelecimento
-		WHERE status = :status' .' '.$search.'
-		LIMIT :offset,:limit'
+            CONCAT(c.nome,\' \', c.sobrenome) cliente,c.cpf,i.nome ingresso,p.id,p.valor,p.codigo,p.metodo,p.status,p.link
+        FROM pagamento p
+        INNER JOIN usuario c ON c.id = p.idusuario
+        INNER JOIN ingresso i ON i.id = p.idingresso
+        WHERE p.status = :status' .' '.$search.'
+		ORDER BY p.id DESC
+        LIMIT :offset,:limit'
     );
     $stmt->bindParam('offset', $offset, PDO::PARAM_INT);
     $stmt->bindParam('limit', $limit, PDO::PARAM_INT);
@@ -56,8 +57,10 @@ try {
     $count = $oConexao->prepare(
         'SELECT
 			COUNT(*)
-		FROM estabelecimento
-		WHERE status = :status' .' '.$search
+		FROM pagamento p
+        INNER JOIN usuario c ON c.id = p.idusuario
+        INNER JOIN ingresso i ON i.id = p.idingresso
+		WHERE p.status = :status' .' '.$search
     );
 
     if (isset($params->search[0])) {
@@ -72,20 +75,32 @@ try {
     $status = 1;
     $count->bindParam('status', $status);
     $count->execute();
-    $count_ativos = $count->fetchColumn();
+    $count_pagas = $count->fetchColumn();
 
     $status = 2;
     $count->bindParam('status', $status);
     $count->execute();
-    $count_inativos = $count->fetchColumn();
+    $count_pendentes = $count->fetchColumn();
+
+    $status = 3;
+    $count->bindParam('status', $status);
+    $count->execute();
+    $count_cancelados = $count->fetchColumn();
+
+    $status = 4;
+    $count->bindParam('status', $status);
+    $count->execute();
+    $count_estornados = $count->fetchColumn();
 
     http_response_code(200);
     $response = array(
         'results' => $results,
         'count' => array(
             'results' => $count_results,
-            'ativos' => $count_ativos,
-            'inativos' => $count_inativos
+            'pagas' => $count_pagas,
+            'pendentes' => $count_pendentes,
+            'cancelados' => $count_cancelados,
+            'estornados' => $count_estornados
         ),
     );
 } catch (PDOException $e) {

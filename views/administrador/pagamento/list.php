@@ -1,13 +1,11 @@
 <?php
     if (!isset(
-        $_SESSION['avaliacao_uid'],
-        $_SESSION['avaliacao_nome'],
-        $_SESSION['avaliacao_sobrenome'],
-        $_SESSION['avaliacao_email'],
-        $_SESSION['avaliacao_perfil'],
-        $_SESSION['avaliacao_gestor'],
-        $_SESSION['avaliacao_estabelecimento']
-    ) || $_SESSION['avaliacao_gestor'] == 0) {
+        $_SESSION['congresso_uid'],
+        $_SESSION['congresso_nome'],
+        $_SESSION['congresso_sobrenome'],
+        $_SESSION['congresso_email'],
+        $_SESSION['congresso_gestor']
+    ) || $_SESSION['congresso_gestor'] == 0) {
         header('Location: /login');
     }
 ?>
@@ -38,12 +36,12 @@
         
         <div class="row bg-title">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Estabelecimentos</h4>
+                <h4 class="page-title">Pagamentos</h4>
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <ol class="breadcrumb">
                     <li><a href="/administrador/dashboard">Dashboard</a></li>
-                    <li><a href="/administrador/estabelecimento">Estabelecimentos</a></li>
+                    <li><a href="/administrador/pagamento">Pagamentos</a></li>
                     <li class="active">Lista</li>
                 </ol>
             </div><!-- /.col-lg-12 -->
@@ -61,28 +59,48 @@
 
                     <ul class="nav nav customtab nav-tabs hidden" role="tablist">
                         <li class="nav-item">
-                            <a href="#status" id="ativo" data-status="1"
+                            <a href="#status" id="paga" data-status="1"
                                 class="nav-link active" data-toggle="tab">
-                                <span class="hidden-xs"> Ativo</span>
-                                <span id="count-ativo" class="label label-rouded label-success pull-right m-l-5">1</span>
+                                <span class="hidden-xs"> Paga</span>
+                                <span id="count-paga" class="label label-rouded label-success pull-right m-l-5">1</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#status" id="inativo" data-status="2"
+                            <a href="#status" id="pendente" data-status="2"
                                 class="nav-link" data-toggle="tab">
-                                <span class="hidden-xs"> Inativo</span>
-                                <span id="count-inativo" class="label label-rouded label-danger pull-right m-l-5">1</span>
+                                <span class="hidden-xs"> Pendente</span>
+                                <span id="count-pendente" class="label label-rouded label-warning pull-right m-l-5">1</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#status" id="cancelado" data-status="3"
+                                class="nav-link" data-toggle="tab">
+                                <span class="hidden-xs"> Cancelado</span>
+                                <span id="count-cancelado" class="label label-rouded label-danger pull-right m-l-5">1</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#status" id="estornado" data-status="4"
+                                class="nav-link" data-toggle="tab">
+                                <span class="hidden-xs"> Estornado</span>
+                                <span id="count-estornado" class="label label-rouded label-default pull-right m-l-5">1</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <div id="col-reload" class="pull-right hidden">
                                 <div class="text-right">
-                                    <img src="assets/images/loading.gif">
+                                    <img src="assets/images/common/loading.gif">
                                     <span>Processando...</span>
                                 </div>
                             </div>
                         </li>
                     </ul><!-- /.nav nav-tabs -->
+
+                    <div id="add" class="pull-right hidden">
+                        <button class="btn btn-info btn-sm btn-add waves-effect waves-light" type="button">
+                            <span class="btn-label"><i class="fa fa-plus"></i></span>Pagamento Manual
+                        </button>
+                    </div>
 
                     <div class="tab-content">
                         <div class="tab-pane active" id="status" aria-expanded="true">
@@ -92,7 +110,7 @@
                                     <div class="form-group">
                                         <div class="input-group">
                                             <input id="search" type="text" 
-                                            class="form-control input-sm" placeholder="Busca">
+                                            class="form-control input-sm" placeholder="Busca por código, cliente e CPF">
                                             <span class="input-group-addon">
                                                 <i class="fa fa-search"></i>
                                             </span>
@@ -122,18 +140,19 @@
 
                             <div class="table-responsive">
                                 <div id="table-loading" class="text-center">
-                                    <img src="assets/images/loading.gif">
+                                    <img src="assets/images/common/loading.gif">
                                     <p>Aguarde um pouco, estamos processando...</p>
                                 </div>
                                 <table id="table-results" class="table hidden">
                                     <thead>
                                       <tr>
-                                        <th><input type="checkbox" id="checkAll"></th>
                                         <th>#</th>
-                                        <th>NOME</th>
-                                        <th>CPF/CNPJ</th>
-                                        <th>TELEFONE</th>
-                                        <th class="text-center">Status</th>
+                                        <th>Cliente</th>
+                                        <th>CPF</th>
+                                        <th>Ingresso</th>
+                                        <th>Valor</th>
+                                        <th class="text-center">Método</th>
+                                        <th class="text-center">Link</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -176,5 +195,5 @@
 
 <!-- javascripts -->
 <script type="text/javascript" src="javascripts/functions.js"></script>
-<script type="text/javascript" src="javascripts/administrador/estabelecimento/list.js"></script>
+<script type="text/javascript" src="javascripts/administrador/pagamento/list.js"></script>
 <script type="text/javascript" src="javascripts/administrador/global.js"></script>

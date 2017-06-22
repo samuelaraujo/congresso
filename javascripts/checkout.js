@@ -142,7 +142,10 @@ $(document).ready(function(){
               //set pagamentos
               pagamentos = {
                 codigo: response.results.codigo,
-                status: response.results.status
+                status: response.results.status,
+                metodo: response.results.metodo,
+                valor: response.results.valor,
+                link: response.results.link
               };
               $('#carrinho').addClass('hidden');
               $('#pagamento').addClass('hidden');
@@ -156,9 +159,7 @@ $(document).ready(function(){
               $('#mensagem #pagamento-boleto #pagamento-codigo').html('Código: '+response.results.codigo);
               $('#mensagem #pagamento-boleto #pagamento-status').html('Status: '+response.results.descricao);
               $('#gerando-boleto').addClass('hidden');
-              $('button#voltar').removeClass('hidden');
-              $('button#imprimir').removeClass('hidden');
-              $('button#imprimir').attr('data-link', response.results.link);
+              $('button#finalizarcadastro').removeClass('hidden');
             }
           },
           error: function(response){
@@ -257,7 +258,9 @@ $(document).ready(function(){
                       //set pagamentos
                       pagamentos = {
                         codigo: response.results.codigo,
-                        status: response.results.status
+                        status: response.results.status,
+                        metodo: response.results.metodo,
+                        valor: response.results.valor
                       };
 
                       $('#mensagem').removeClass('hidden');
@@ -364,7 +367,10 @@ $(document).ready(function(){
               //set pagamentos
               pagamentos = {
                 codigo: response.results.codigo,
-                status: response.results.status
+                status: response.results.status,
+                metodo: response.results.metodo,
+                valor: response.results.valor,
+                link: response.results.link
               };
 
               $('#mensagem').removeClass('hidden');
@@ -467,11 +473,10 @@ $(document).ready(function(){
       }
     });
 
-    //imprimir
-    $('button#imprimir').livequery('click',function(event){
-      var link = $(this).data('link');
-      $('button#imprimir').html('PROCESSANDO...');
-      $('button#imprimir').prop("disabled",true);
+    //finalizar cadastro através do boleto
+    $('button#finalizarcadastro').livequery('click',function(event){
+      $('button#finalizarcadastro').html('PROCESSANDO...');
+      $('button#finalizarcadastro').prop("disabled",true);
       //params
       var params = {
         pagamento: pagamentos, //utilizando variavel global(login.js)
@@ -486,15 +491,12 @@ $(document).ready(function(){
         data: params,
         success: function(response){
           if(response.success){
-            window.open(link);
-            setTimeout(function(){
-              window.location.href = "/";
-            },5000);
+            window.location.href = "/";
           }
         },
         error(response){
-          $('button#imprimir').html('IMPRIMIR');
-          $('button#imprimir').prop("disabled",false);
+          $('button#finalizarcadastro').html('IMPRIMIR');
+          $('button#finalizarcadastro').prop("disabled",false);
         }
       });
     });
@@ -530,7 +532,7 @@ $(document).ready(function(){
       $('button#pagar').addClass('hidden');
       $('button#voltar').addClass('hidden');
       $('button#banking').addClass('hidden');
-      $('button#imprimir').addClass('hidden');
+      $('button#finalizarcadastro').addClass('hidden');
       $('#cartaoCredito').addClass('hidden');
       $('#cartaoDebito').addClass('hidden');
       $('#mensagem').addClass('hidden');

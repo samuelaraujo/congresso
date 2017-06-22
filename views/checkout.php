@@ -56,7 +56,7 @@
         <img src="assets/images/common/icon_timer.svg" width="128">
       </div>
       <div id="pagamento-boleto" class="col-md-12 text-center hidden">
-        <h1>Seu pagamento está em processamento</h1>
+        <h1>O boleto foi enviado para o seu e-mail</h1>
         <h3>O pedido será confirmado somente após a aprovação do pagamento</h3>
         <p id="pagamento-codigo"></p>
         <p id="pagamento-status"></p>
@@ -253,7 +253,7 @@
   <button id="retornar" class="btn btn-warning hidden" type="button">RETORNAR</button>
   <button id="continuar" class="btn btn-success hidden" type="button">CONTINUAR</button>
   <button id="finalizar" class="btn btn-success hidden" type="button">FINALIZAR</button>
-  <button id="imprimir" class="btn btn-success hidden" type="button">IMPRIMIR BOLETO</button>
+  <button id="finalizarcadastro" class="btn btn-success hidden" type="button">FINALIZAR CADASTRO</button>
 </div><!--/.modal-footer-->
 
 

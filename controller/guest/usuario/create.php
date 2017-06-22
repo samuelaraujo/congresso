@@ -21,7 +21,9 @@ try {
         $params->usuario->pais,
         $params->usuario->cidade,
         $params->pagamento->codigo,
-        $params->pagamento->status
+        $params->pagamento->metodo,
+        $params->pagamento->status,
+        $params->pagamento->valor
     )) {
         throw new Exception('Verifique os dados preenchidos', 400);
     }
@@ -30,6 +32,11 @@ try {
 
     //criptografia da senha com SALT
     $params->usuario->senha = sha1(SALT.$params->usuario->senha);
+
+    //verifica se tem link
+    if($params->pagamento->link == '')
+        $params->pagamento->link = null;
+
 
     $stmt = $oConexao->prepare('INSERT INTO
                  usuario(idingresso,nome,sobrenome,cracha,sexo,email,
@@ -52,13 +59,16 @@ try {
 
     //pagamento do usuário
     $stmt = $oConexao->prepare('INSERT INTO
-                 pagamento(idingresso,idusuario,codigo,status,created_at,updated_at
-                ) VALUES (?,?,?,?,now(),now())');
+                 pagamento(idingresso,idusuario,codigo,metodo,valor,status,link,created_at,updated_at
+                ) VALUES (?,?,?,?,?,?,?,now(),now())');
     $stmt->execute(array(
         $params->usuario->ingresso,
         $usuario_id,
         $params->pagamento->codigo, 
-        $params->pagamento->status
+        $params->pagamento->metodo,
+        $params->pagamento->valor,
+        $params->pagamento->status,
+        $params->pagamento->link
     ));
 
     //permissões do usuário
