@@ -45,8 +45,8 @@
     <div class="wrap">
       <div class="date"><i class="pe-7s-date"></i>14<span>Agosto, 2017</span></div>
       <div class="location"><i class="pe-7s-map-marker"></i>Resort Hotel<span>Rio Branco, AC</span></div>
-      <div class="speakers"><i class="pe-7s-micro"></i>11 <span>Palestrantes</span></div>
-      <div class="remaining"><i class="pe-7s-add-user"></i>1200 <span>Ingressos</span></div>
+      <div class="speakers"><i class="pe-7s-micro"></i>13 <span>Palestrantes</span></div>
+      <div class="remaining"><i class="pe-7s-add-user"></i>1000 <span>Ingressos</span></div>
     </div>
   </div>
   <div class="col-ms-12">
@@ -111,11 +111,11 @@
         <div class="section-title">
           <i class="pe-7s-display2"></i>
           <h3 class="text-center">Sobre o Evento</h3>
-          <p class="text-left">O I Congresso Jurídico da UNINORTE/AC é um evento destinado a todos aqueles possuem atuação ou interesse nas mais diversas áreas da ciência do Direito, desde os acadêmicos em formação até advogados, bacharéis e profissionais dos mais variados campos da seara jurídica em todas as partes do Estado do Acre e do Brasil.</p>
-          <p class="text-left">Em um projeto inovador, realizado pela União Educacional do Norte (UNINORTE) e uma comissão de acadêmicos, o presente evento terá por duração o período de 04 (quatro) dias, compreendendo-se entre os dias 14 e 17 de agosto de 2017, em Rio Branco, Acre.</p>
-          <p class="text-left">Realizando-se no Centro de Convenções do Resort Hotel, com capacidade para aproximadamente 1.500 (mil e quinhentas) pessoas, a estrutura deste Congresso contará com modernos recursos de som e imagem, bem ainda variados sistemas automatizados de recepção, credenciamento e meios que facilitarão a participação de seus inscritos com os congressistas, o que permitirá a total comodidade, mobilidade e interação de seus inscritos nesta realização.</p>
-          <p class="text-left">Com foco em ramos jurídicos de direito civil e processual civil, penal e processual penal, bem como o direito constitucional, eleitoral, humanos e a deontologia jurídica, o evento visará discutir temas elementares de alguns dos pontos mais importantes de interesse público na atualidade.</p>
-          <p class="text-left">Nesta ocasião, serão proporcionados aos seus participantes debates, painéis temáticos, mesas redondas e apresentações de artigos científicos, através de um rico compartilhamento de experiências e aprendizados entre desembargadores, doutrinadores, juízes, procuradores, promotores, discentes, docentes e profissionais da advocacia pública e privada a nível local e nacional, onde sua principal missão vislumbra-se em fomentar a reflexão de assuntos que influenciam diretamente a sociedade em geral por meio das abordagens mencionadas.</p>
+          <p class="text-left">O Congresso Jurídico OAB/AC é um evento destinado a todos aqueles possuem atuação ou interesse nas mais diversas áreas da ciência do Direito, desde os acadêmicos em formação até advogados, bacharéis e profissionais dos mais variados campos da seara jurídica em todas as partes do Estado do Acre e do Brasil.</p>
+          <p class="text-left">Em um projeto inovador, realizado pela Ordem dos Advogados do Brasil (OAB) – Seccional Acre e uma comissão de acadêmicos da XXIV Turma de Direito Vespertino da Uninorte/AC, o presente evento terá por duração o período de 04 (quatro) dias, compreendendo-se entre os dias 14 e 17 de agosto de 2017, em Rio Branco, Acre.</p>
+          <p class="text-left">Realizando-se no Teatro Universitário da Universidade Federal do Acre(UFAC), com capacidade para aproximadamente 1.000 (um mil) pessoas, a estrutura deste Congresso contará com modernos recursos de som e imagem, bem ainda variados sistemas automatizados de recepção, credenciamento e meios que facilitarão a participação de seus inscritos com os congressistas, o que permitirá a total comodidade, mobilidade e interação de seus inscritos nesta realização.</p>
+          <p class="text-left">Com foco em ramos jurídicos de direito civil e processual civil, penal e processual penal, bem como o direito constitucional, eleitoral, humanos e a deontologia jurídica, o evento visará discutir temas elementares de alguns dos pontos mais importantes de interesse público na atualidade, sobretudo os desafios e transformações que norteiam o Poder Judiciário contemporâneo e suas funções essenciais à justiça.</p>
+          <p class="text-left">Nesta ocasião, serão proporcionados aos seus participantes debates, painéis temáticos, mesas redondas e apresentações de artigos científicos, através de um rico compartilhamento de experiências e aprendizados entre desembargadores, doutrinadores, juízes, procuradores, promotores, discentes, docentes e profissionais da advocacia pública e privada a nível local e nacional, onde sua principal missão vislumbra-se em fomentar a reflexão de assuntos que influenciam diretamente a sociedade em geral por meio das abordagens mencionadas. </p>
           <p class="text-left">Este acontecimento, em especial, direciona-se em sua essência para os advogados, bacharéis e para os estudantes de Direito, classes estas que representam o futuro do Direito acreano e nacional, e que merecem total atenção e dedicação para que realizações heterogêneas como esta, possam estimulá-los ainda mais no despertar daquilo que objetivam, lutam ou lutarão em prol da mais pura e lídima justiça – o grande pilar desta louvável profissão.</p>
       </div>
     </div>
@@ -170,12 +170,12 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-6">
-        <p class="timer" data-from="0" data-to="1200" data-speed="4000"></p>
+        <p class="timer" data-from="0" data-to="1000" data-speed="4000"></p>
         <p class="separator"></p>
         <p class="name">Ingressos</p>
       </div>
       <div class="col-md-3 col-sm-6">
-        <p class="timer" data-from="0" data-to="11" data-speed="8000"></p>
+        <p class="timer" data-from="0" data-to="13" data-speed="8000"></p>
         <p class="separator"></p>
         <p class="name">Palestrantes</p>
       </div>
@@ -201,7 +201,7 @@
       <div class="section-title">
         <i class="pe-7s-date"></i>
         <h3>Programação do Evento</h3>
-        <p class="sub-title">Confira tudo, uma programação incrível em palestras, paineis tematicos, mesas redodas, confira a programação da 1ª edição do Congresso Jurídico Uninorte</p>
+        <p class="sub-title">Confira tudo, uma programação incrível em palestras, paineis tematicos, mesas redodas, confira a programação do Congresso Jurídico OAB-AC</p>
       </div>
     </dconfira a iv>
   </di
@@ -891,9 +891,9 @@ d   <!-- Schedule -->
         <p class="sub-title">Baixe o aplicativo do congresso, aproveite toda programação com interatividade entre os participantes e palestrantes, confira nosso app. </p>
         <div class="sistema"></div>
         <div class="button">
-          <button class="btn btn-theme" type="submit"><i class="fa fa-android fa-fw" aria-hidden="true"></i>Disponível na Play Store</button>
+          <button class="btn btn-theme" type="submit"><i class="fa fa-android fa-fw" aria-hidden="true"></i>Em Breve na Play Store</button>
           <a href="#" class="btn btn-theme" ><i class="fa fa-apple fa-fw" aria-hidden="true">
-          </i>Disponível na App Store</a>
+          </i>Em Breve na App Store</a>
         </div>
       </div>
     </div>
@@ -1312,8 +1312,8 @@ Inscrição para estudante válida somente para graduação.</p>
     <div class="row">
       <div class="col-sm-12 col-md-12">
         <!-- <div id="gmap"></div> -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62871.03910393446!2d-67.86983641651317!3d-9.980470073251194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5cd453ff16c3fa59!2sResort+Hotel+Amaz%C3%B4nia+Rio!5e0!3m2!1spt-PT!2sbr!4v1495459864204" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <div class="contact-form clearfix">
+        <iframe src="https://www.google.com/maps/embed/v1/place?q=Teatro%20Universit%C3%A1rio%20-%20ufac&key=AIzaSyAKAIx_gkfGuWmVFXdQKq8rLgbUDgw08-I" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div class="contact-form clearfix">
           <form id="contact-form" method="post" action="./contact/contact-process.php">
             <div class="col-sm-6">
               <div class="input-text">
@@ -1336,7 +1336,7 @@ Inscrição para estudante válida somente para graduação.</p>
         </div>
         <div class="contact-info">
           <ul class="clearfix">
-            <li><i class="pe-7s-map-marker"></i><p>Resort Hotel<br>Estrada da Floresta, 5000 - Em frente a rotatória da 3º Ponte.<br><br></p></li>
+            <li><i class="pe-7s-map-marker"></i><p>Teatro Universitário<br>Campus da Universidade Federal do Acre, Rio Branco - AC, 69917-400<br><br></p></li>
             <li><i class="pe-7s-call"></i><p>
             (68) 99973-5547 Coord.<br>
             (68) 99954-0696 V. Coord.<br>
@@ -1594,16 +1594,7 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="modal-body">
        <p>O evento possui uma área espaçosa que reúne cinco espaços, que podem ser locados em conjunto ou individualmente, sendo:</p>
 
-​
-      <ul>
-        <li>Sala de treinamento Xapuri: 70 lugares</li>
-        <li>Sala de treinamento Rio Acre: 70 lugares</li>
-        <li>Sala de treinamento Rio Acre 2: 70 lugares</li>
-        <li>Auditório Rio Juruá: 170 lugares</li>
-      </ul>
-
-
-      <p> Aproveite nosso evento e feche ótimos negócios, o 1º Congresso Jurídico do Acre acontece em parceria com o Resort Hotel.</p>
+      <p> Aproveite nosso evento e feche ótimos negócios.</p>
       </div>
     </div>
   </div>
