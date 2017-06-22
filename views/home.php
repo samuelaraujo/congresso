@@ -55,7 +55,7 @@
         <div class="slider1">
           <div class="slide-image"><div class="overlay-pattern"></div></div>
           <div class="slide-caption">
-            <!-- <h1>I CONGRESSO JURÍDICO <br> UNINORTE ACRE</h1> -->
+            <!-- <h1>I CONGRESSO JURÍDICO <br> AOB ACRE</h1> -->
             <h3>Agosto 14-17, 2017</h3>
           </div>
         </div>
@@ -577,7 +577,7 @@ d   <!-- Schedule -->
   </div>
   <!-- /Schedule -->
   <div class="col-sm-12">
-    <div class="btn-download"><a href="assets/documents/programacao_congresso_juridico_uninorte_acre.pdf" target="_blank" class="btn btn-theme"><i class="fa fa-download"></i>Download da Programação</a></div>
+    <div class="btn-download"><a href="assets/documents/programacao_congresso_juridico.pdf" title="CONGRESSO" target="_blank" class="btn btn-theme"><i class="fa fa-download"></i>Download da Programação</a></div>
   </div>
 </section>
 <!-- /Schedule-->
@@ -593,7 +593,7 @@ d   <!-- Schedule -->
             <p class="sub-title">Seja um patrocinador! divulgue sua marca aqui!</p>
             <p class="sub-title">Conheça os planos de patrocíno disponíveis para empresas.</p>
             <div class="button">
-             <a href="assets/documents/carta_de_patrocinio_I_congresso_juridico_acre.pdf" target="_blank" class="btn btn-theme buy-theme">Veja Mais!</a>
+             <a href="assets/documents/carta_de_patrocinio_congresso.pdf" target="_blank" class="btn btn-theme buy-theme">Veja Mais!</a>
             </div>
           </div>
         </div>
