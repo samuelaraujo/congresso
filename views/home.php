@@ -1,3 +1,5 @@
+it
+
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
@@ -25,7 +27,7 @@
         <div class="btn-menu"></div>
         <nav id="mainnav" class="mainnav">
           <ul class="menu nav navbar-nav">
-            <li class="active"><a href="#container" class="scroll-link">Início</a></li>
+            <li class="active"><a href="#container" class="scroll-link"><i class="pe-7s-home pe-fw"></i> Início</a></li>
             <li><a href="#about" class="scroll-link">Sobre</a></li>
             <li><a href="#schedule" class="scroll-link">Programação</a></li>
             <li><a href="#price" class="scroll-link">Inscrições</a></li>
@@ -224,7 +226,7 @@ d   <!-- Schedule -->
               <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                 <div class="clock">
                   <img src="../assets/images/clock.svg" alt="">
-                  15:00 <hr> 15:50 
+                  15:00 <hr> 15:00 
                 </div>
               </div>
               <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
@@ -240,7 +242,7 @@ d   <!-- Schedule -->
               <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                 <div class="clock">
                   <img src="../assets/images/clock.svg" alt="">
-                  16:00 <hr> 16:50 
+                  16:00 <hr> 16:00 
                 </div>
               </div>
               <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
@@ -262,9 +264,9 @@ d   <!-- Schedule -->
               <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                 <h1><strong>Solenidade de abertura</strong></h1>
                 <ul>
-                  <li><p class="speaker">Vanessa Vogliotti Igami (Diretora Acadêmica da Uninorte/AC)</p></li>
+                  <li><p class="speaker">Marcos Vinícius Jardim Rodrigues (Presidente da OAB/AC)</p></li>
                   <li><p class="speaker">Adriano Iurconvite (Coordenador do curso de Direito da Uninorte/AC)</p></li>
-                  <li><p class="speaker">Marcos Vinícius Jardim Rodrigues (Presidente da OAB/AC)</p></li>
+                  <li><p class="speaker">Minoru Martins Kimpara (Presidente da OAB/AC)</p></li>
                 </ul>
                 <!-- <p class="description">Descrição</p> -->
               </div>
@@ -390,13 +392,29 @@ d   <!-- Schedule -->
               </div>
             </div>
           </div>
+          
+           <div class="event">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="clock interval">
+                  <img src="../assets/images/clock.svg" alt="">
+                  19:10 <hr> 20:00 
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h1><strong>Conferência:</strong> Reflexos da Lei 13.146/150(Estatuto da Pessoa com Deficiência) no Código Civíl Brasileiro</h1>
+                <p class="speaker">Igor Clem</p>
+                <!-- <p class="description">Descrição</p> -->
+              </div>
+            </div>
+          </div>
 
           <div class="event">
             <div class="row">
               <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                 <div class="clock interval">
                   <img src="../assets/images/clock.svg" alt="">
-                  19:10 <hr> 20:00 
+                  20:10 <hr> 21:00 
                 </div>
               </div>
               <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
@@ -564,7 +582,7 @@ d   <!-- Schedule -->
               <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                 <h1><strong>Painel:</strong> Novos mecanismos interpretativos do STF: desacordos morais razoáveis e a proteção dos direitos da personalidade à luz da jurisprudência do STF e os efeitos da multiparentalidade a partir das decisões do STF</h1>
                 <p class="speaker">Cristiano Chaves de Farias</p>
-                <p class="speaker">Melissa Veiga</p>
+                <p class="speaker">Melissa Ourives Veiga</p>
                 <!-- <p class="description">Descrição</p> -->
               </div>
             </div>
@@ -810,7 +828,7 @@ d   <!-- Schedule -->
 
        <div class="col-sm-4 col-md-3">
         <div class="speaker">
-          <div class="media"><p><img src="assets/images/pages/silhueta.png" alt=""></p></div>
+          <div class="media"><p><img src="assets/images/pages/melissa.png" alt=""></p></div>
           <div class="info">
             <p class="name">Melissa Veiga</p>
             <p class="position">Advogada e Professora</p>
@@ -825,6 +843,26 @@ d   <!-- Schedule -->
           </div>
         </div>
       </div>
+
+      <div class="col-sm-4 col-md-3">
+        <div class="speaker">
+          <div class="media"><p><img src="assets/images/pages/igorclem.png" alt=""></p></div>
+          <div class="info">
+            <p class="name">Igor Clem</p>
+            <p class="position">Advogado e Professor</p>
+            <p>Advogado, MBA em Relações do Trabalho. Atualmente é professor da Faculdade da Amazônia Ocidental.</p>
+            <a href="#" class="curriculum"
+              data-toggle="modal" data-target="#modaligorclem"><strong>Veja o Mini Currículo!</strong></a>
+            <!-- <div class="socials">
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+
 
 
 
@@ -993,7 +1031,7 @@ Inscrição para estudante válida somente para graduação.</p>
   </div>
   <div class="row">
     <div class="col-sm-12 col-md-12">
-      <div class="sponsors" data-items="5" data-itemsdesktop="5" data-itemsdesktopsmall="5" data-itemstablet="5" data-itemsmobile="1" data-slidespeed=".5" data-autoplay="true" data-nav="true" data-pagination="true">
+      <div class="sponsors" data-items="5" data-itemsdesktop="5" data-itemsdesktopsmall="5" data-itemstablet="5" data-itemsmobile="1" data-slidespeed="1" data-autoplay="true" data-nav="true" data-pagination="true">
         <div class="item">
           <p class="image"><img src="assets/images/pages/defensoria.png" alt="Defensoria pública"></p>
         </div>
@@ -1001,19 +1039,19 @@ Inscrição para estudante válida somente para graduação.</p>
           <p class="image"><img src="assets/images/pages/tr14.jpg" alt="Tribunal Regional do Trabalho"></p>
         </div>
         <div class="item">
-          <p class="image"><img src="assets/images/pages/oab.jpg" alt="Ordem dos Advogados do Brasil"></p>
-        </div>
-        <div class="item">
            <p class="image"><img src="assets/images/pages/tjac.png" alt="Tribunal de justiça do Estado do Acre"></p>
-        </div>
-        <div class="item">
-          <p class="image"><img src="assets/images/pages/governo.png" alt="Governo do Estado do Acre"></p>
         </div>
         <div class="item">
           <p class="image"><img src="assets/images/pages/mp.png" alt="Ministério Público do Estado do Acre"></p>
         </div>
         <div class="item">
           <p class="image"><img src="assets/images/pages/pge.png" alt="Procuradoria Geral do Estado do Acre"></p>
+        </div>
+         <div class="item">
+          <p class="image"><img src="assets/images/pages/sepn.jpg" alt="Secretaria de Estado de Pequenos Negócios"></p>
+        </div>
+        <div class="item">
+          <p class="image"><img src="assets/images/pages/idha.png" alt="Instituto de Direitos humanos do Acre"></p>
         </div>
       </div>
     </div>
@@ -1028,12 +1066,18 @@ Inscrição para estudante válida somente para graduação.</p>
   </div>
   <div class="row">
     <div class="col-sm-12 col-md-12">
-      <div class="sponsors" data-items="2" data-itemsdesktop="2" data-itemsdesktopsmall="2" data-itemstablet="2" data-itemsmobile="1" data-slidespeed="1" data-autoplay="true" data-nav="false" data-pagination="false">
+      <div class="sponsors" data-items="4" data-itemsdesktop="4" data-itemsdesktopsmall="2" data-itemstablet="2" data-itemsmobile="1" data-slidespeed="1" data-autoplay="true" data-nav="false" data-pagination="false">
         <div class="item">
           <p class="image"><img src="assets/images/pages/gerastur.png" alt="Gerastur Passagens Aéreas"></p>
         </div>
         <div class="item">
-          <p class="image"><img src="assets/images/pages/resorthotel.png" alt="Resort Hotel"></p>
+          <p class="image"><img src="assets/images/pages/lotus.jpg" alt="Lótus Cerimonial"></p>
+        </div>
+         <div class="item">
+          <p class="image"><img src="assets/images/pages/jackhair.png" alt="Jack Hair Design"></p>
+        </div>
+         <div class="item">
+          <p class="image"><img src="assets/images/pages/kambo.png" alt="Kambô Tecnologia"></p>
         </div>
      </div>
     </div>
@@ -1044,9 +1088,12 @@ Inscrição para estudante válida somente para graduação.</p>
         <i class="pe-7s-config"></i>
         <h3>Organização</h3>
         <div class="item">
-          <p class="image"><img src="assets/images/pages/uninorte.png" alt="Uninorte"></p>
+          <p class="image"><img src="assets/images/pages/oab.jpg" alt="Ordem dos Advogados do Brasil"></p>
         </div>
-       
+        <div class="item">
+          <p class="image"><img src="assets/images/pages/turma.jpg" alt="Uninorte"></p>
+        </div>
+
       </div>
     </div>
   </div>
@@ -1582,6 +1629,22 @@ Inscrição para estudante válida somente para graduação.</p>
 </div>
 
 
+ <div class="modal fade" id="modaligorclem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Igor Clem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p>Advogado. Graduado em Universidade José do Rosário Velano. MBA em Direito e Relações do Trabalho. Especialista em Docência do Ensino Superior. Professor de Introdução ao Estudo do Direito, Direito Civil, Direito Processual Civil, Prática Processual Penal, Ética Geral e Profissional, da Faculdade da Amazônia Ocidental. Diretor da Escola Superior da Advocacia da OAB/AC.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
  <div class="modal fade" id="modalestande" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -1592,9 +1655,7 @@ Inscrição para estudante válida somente para graduação.</p>
         </button>
       </div>
       <div class="modal-body">
-       <p>O evento possui uma área espaçosa que reúne cinco espaços, que podem ser locados em conjunto ou individualmente, sendo:</p>
-
-      <p> Aproveite nosso evento e feche ótimos negócios.</p>
+       <p>O evento possui uma área reservada para estandes, que podem ser locados, aproveite nosso evento e feche ótimos negócios. Entre em contato com a nossa coordenação!</p>
       </div>
     </div>
   </div>
@@ -1610,16 +1671,7 @@ Inscrição para estudante válida somente para graduação.</p>
         </button>
       </div>
       <div class="modal-body">
-       <p>Na parceria com o <strong>Resort Hotel</strong>, serão oferecidos preços diferenciados de diárias para os participantes de outros estados.</p>
-
-​
-      <ul>
-        <li>Quarto Individual - 140 reais.</li>
-        <li>Duplo - 160 reais.</li>
-      </ul>
-
-
-       <p>Na parceria com a agência passagens <strong>GerasTur</strong>, serão oferecidos preços diferenciados passagens aéreas para os participantes.</p>
+       <p>Em oferencimento do nosso patrocinador, a agência passagens <strong>GerasTur</strong>, pacotes de viagens serão oferecidos preços diferenciados aos participantes do congresso.</p>
 
       <ul>
         <li>Entre em contato com <a href="http://gerastur.com.br/" target="_blank">GerasTur</a></li>
