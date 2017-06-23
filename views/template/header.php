@@ -22,7 +22,7 @@
                     <div class="title">
                         <span class="hidden-xs">Congresso</span>
                         <span class="hidden-xs">Jurídico</span>
-                        <span class="hidden-xs">Uninorte</span>
+                        <span class="hidden-xs">OAB ACRE</span>
                     </div>
                 </a>
             </div>

@@ -173,6 +173,10 @@ body {
   color: #ffffff;
   border: 1px solid #D94432;
 }
+.btn-block .btn-label{
+  float: left;
+  margin-right: 0;
+}
 /*Custom tab*/
 .customtab li.active a,
 .customtab li.active a:hover,

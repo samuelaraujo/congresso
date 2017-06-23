@@ -3,9 +3,55 @@ var search = undefined;
 var page = 1;
 var offset = 0;
 var limit = 10;
-var status = 1;
+var status = 99;
 
 $(document).ready(function(){
+
+    //validate
+    $('form#formPagamento').validate({
+        rules: {
+            pesquisa: {
+                required: true,
+                minlength: 3
+            }
+        },
+        messages: {
+            pesquisa: { 
+                required: 'Preencha sua pesquisa',
+                minlength: 'Pesquisa mínimo de 3 caracteres'
+            }
+        },
+        highlight: function (element, errorClass, validClass) {
+            if (element.type === "radio") {
+                this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+                $(element).closest('.form-group').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+            } else {
+                $(element).closest('.form-group').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+                $(element).closest('.form-group').find('i.fa').remove();
+                $(element).closest('.form-group').append('<i class="fa fa-times fa-validate form-control-feedback fa-absolute"></i>');
+            }
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            if (element.type === "radio") {
+                this.findByName(element.name).removeClass(errorClass).addClass(validClass);
+            } else {
+                $(element).closest('.form-group').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+                $(element).closest('.form-group').find('i.fa').remove();
+                $(element).closest('.form-group').append('<i class="fa fa-check fa-validate form-control-feedback fa-absolute"></i>');
+            }
+        },
+        errorElement: 'span',
+        errorClass: 'help-block',
+        errorPlacement: function(error, element) {
+            if(element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else if (element.attr("type") == "radio") {
+                error.insertAfter(element.parent().parent());
+            }else{
+                error.insertAfter(element);
+            }
+        }
+    });
 
     function checkSuccess(){
         //success
@@ -25,24 +71,9 @@ $(document).ready(function(){
                         {offset: offset, limit: limit, status: status, search: search};
         params = JSON.stringify(params);
 
-        if(reload)
-            $('#col-reload').removeClass('hidden');
-
-        //remove all itens active
-        $('.nav .nav-item a').removeClass('active');
-        switch(parseInt(status)){
-            case 1: 
-                $('a#paga').addClass('active');
-            break;
-            case 2: 
-                $('a#pendente').addClass('active');
-            break;
-            case 3: 
-                $('a#cancelado').addClass('active');
-            break;
-            case 4: 
-                $('a#estornado').addClass('active');
-            break;
+        if(reload){
+            $('#table-loading').removeClass('hidden');
+            $('#table-info').addClass('hidden');
         }
 
         //list
@@ -54,7 +85,7 @@ $(document).ready(function(){
             success: function(response){
                 var html = '';
                 for (var i=0;i<response.results.length;i++) {
-                    var metodo, link = undefined;
+                    var status, metodo, link = undefined;
                     switch(parseInt(response.results[i].metodo)){
                         case 1:
                             metodo = '<i class="fa fa-credit-card"></i> <span>(Crédito)</span>';
@@ -69,8 +100,26 @@ $(document).ready(function(){
                             metodo = '-';
                         break;
                     }
+                    switch(parseInt(response.results[i].status)){
+                            case 1:
+                                status = 'Paga';
+                                labelStatus = 'label-success';
+                            break;
+                            case 2:
+                                status = 'Pendente';
+                                labelStatus = 'label-warning';
+                            break;
+                            case 3:
+                                status = 'Cancelado';
+                                labelStatus = 'label-danger';
+                            break;
+                            case 4:
+                                status = 'Estornado';
+                                labelStatus = 'label-warning';
+                            break;
+                        }
                     if(response.results[i].link != undefined){
-                        link = '<a href="'+ response.results[i].link +'" target="_blank">Acessar</a>';
+                        link = '<a id="setStatus" href="javascript:;">Pagar</a>';
                     }else{
                         link = '-';
                     }
@@ -82,14 +131,13 @@ $(document).ready(function(){
                                 '<td>'+ response.results[i].ingresso + '</td>'+
                                 '<td>'+ floatToMoney(response.results[i].valor, 'R$') + '</td>'+
                                 '<td class="text-center">'+ metodo +'</td>'+
+                                '<td><span class="label '+labelStatus+'">'+status+'</span></td>'+
                                 '<td class="text-center">'+ link +'</td>'+
                             '</tr>';
                 }
                 if(parseInt(response.count.results) >= 1){
 
                     $('#col-total').removeClass('hidden');
-                    $('#col-search').removeClass('hidden');
-                    $('#col-action').addClass('hidden');
                     $('#pagination-length').html('Exibindo ' + response.results.length + ' de ' + response.count.results + ' registros');
                     
                     var pagination = paginator(limit,page,response.count.results);
@@ -108,15 +156,8 @@ $(document).ready(function(){
                     $('#table-results').removeClass('hidden');
                     $("#table-results > tbody").html(html);
                 }
-                $('#table-loading').addClass('hidden');
-                $('#add').removeClass('hidden');
-                $('ul.customtab').removeClass('hidden');
-                $('#count-paga').html(response.count.pagas);
-                $('#count-pendente').html(response.count.pendentes);
-                $('#count-cancelado').html(response.count.cancelados);
-                 $('#count-estornado').html(response.count.estornados);
                 if(reload)
-                    $('#col-reload').addClass('hidden');
+                    $('#table-loading').addClass('hidden');
             },
             error : onError
         });
@@ -128,7 +169,7 @@ $(document).ready(function(){
             page = parseInt($(this).data('page'));
             offset = Math.ceil((page-1) * limit);
             if(search != undefined && search.length >= 3){
-                list(true, search);
+                list(true, search, status);
             }else{
                 list(true);
             }
@@ -137,32 +178,24 @@ $(document).ready(function(){
     });
 
     //search
-    $('input#search').livequery('keyup',function(event){
-        search = $(this).val();
-        if(search == undefined){
-          return;
-        }else{
+    $('button#procurar').livequery('click',function(event){
+        if($("form#formPagamento").valid()){
+            search = $('form#formPagamento input#pesquisa').val();
             list(true, search, status);
+        }else{
+            $("form#formPagamento").valid();
         }
+        return false;
     });
 
-    //set list tab item
-    $('a#paga,a#pendente,a#cancelado,a#estornado').livequery('click',function(event){
-        status = $(this).data('status');
-        list(true, search, status);
-    });
-
-    //add form
-    $('button.btn-add').livequery('click',function(event){
-        window.location.href = "/administrador/pagamento/add";
+    //cancel
+    $('button#cancelar').livequery('click',function(event){
+        window.location.href = "/administrador/pagamento/";
+        return false;
     });
 
     function onError(response) {
       console.log(response);
     }
-
-    //init
-    list();
-    checkSuccess();
 
 });

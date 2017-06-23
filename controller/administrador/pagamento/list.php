@@ -6,7 +6,7 @@ header('Content-type: application/json');
 $oConexao = Conexao::getInstance();
 $params = json_decode(file_get_contents('php://input'));
 $response = new stdClass();
-$response->count = array('ativos' => 0, 'inativos' => 0, 'arquivados' => 0);
+$response->count = array('pagas' => 0, 'pendentes' => 0, 'cancelados' => 0, 'estornados' => 0);
 
 try {
     $offset = isset($params->offset) && $params->offset > 0
@@ -16,9 +16,10 @@ try {
                         ? $params->limit
                         : 200;
 
-    $status = isset($params->status)
-                        ? $params->status
-                        : 1;
+    $status = isset($params->status) && $params->status == 99
+                        ? ' p.status <> :status'
+                        : ' p.status = :status';
+                        //: 1;
 
     $search = isset($params->search[0])
                         ? ' AND
@@ -36,7 +37,7 @@ try {
         FROM pagamento p
         INNER JOIN usuario c ON c.id = p.idusuario
         INNER JOIN ingresso i ON i.id = p.idingresso
-        WHERE p.status = :status' .' '.$search.'
+        WHERE '.$status.' '.$search.'
 		ORDER BY p.id DESC
         LIMIT :offset,:limit'
     );
@@ -48,8 +49,7 @@ try {
         $stmt->bindParam('query', $query);
     }
 
-    //$status = 1;
-    $stmt->bindParam('status', $status, PDO::PARAM_INT);
+    $stmt->bindParam('status', $params->status, PDO::PARAM_INT);
 
     $stmt->execute();
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -60,7 +60,7 @@ try {
 		FROM pagamento p
         INNER JOIN usuario c ON c.id = p.idusuario
         INNER JOIN ingresso i ON i.id = p.idingresso
-		WHERE p.status = :status' .' '.$search
+		WHERE '.$status.' '.$search
     );
 
     if (isset($params->search[0])) {
@@ -68,6 +68,7 @@ try {
         $count->bindParam('query', $query);
     }
 
+    $status = $params->status;
     $count->bindParam('status', $status);
     $count->execute();
     $count_results = $count->fetchColumn();

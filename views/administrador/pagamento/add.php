@@ -50,9 +50,30 @@
         <div class="row">
             <div class="col-md-4">                
                 <div class="white-box">
+                    <form id="formPagamento" name="formPagamento">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="senha">Busca por:</label>
+                                    <input type="text" class="form-control" 
+                                        id="pesquisa" name="pesquisa" placeholder="Busca por código, cliente e CPF"> 
+                                </div>                                
+                            </div>
+                        </div>
 
-                    
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="submit" id="procurar"
+                                    class="btn btn-info btn-sm btn-block">
+                                    <span class="btn-label"><i class="fa fa-search"></i></span>Procurar
+                                </button>
+                                <button type="button" id="cancelar"
+                                    class="btn btn-default btn-sm btn-block">Voltar
+                                </button>
+                            </div>
+                        </div>
 
+                    </form><!--/form-->
                 </div><!--/.white-box-->
             </div>
 
@@ -60,7 +81,12 @@
                 <div class="white-box">
 
                     <div class="table-responsive">
-                        <div id="table-loading" class="text-center">
+                        <div id="table-info" class="text-center m-t-20" 
+                        style="margin-bottom: 68px;">
+                            <i class="fa fa-search fa-2x"></i>
+                            <p class="m-t-10">Faça uma busca pelo código da transação, nome do cliente ou CPF</p>
+                        </div>
+                        <div id="table-loading" class="text-center hidden">
                             <img src="assets/images/common/loading.gif">
                             <p>Aguarde um pouco, estamos processando...</p>
                         </div>
@@ -73,7 +99,8 @@
                                 <th>Ingresso</th>
                                 <th>Valor</th>
                                 <th class="text-center">Método</th>
-                                <th class="text-center">Link</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Ação</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -81,6 +108,25 @@
                           </table>
                           <p id="notfound" class="hidden"></p>
                     </div>
+
+                    <div id="col-total" class="row hidden">
+                        <div class="col-md-6">
+                          <nav aria-label="Page navigation">
+                              <ul id="pagination" class="pagination pagination-sm">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                              </ul>
+                            </nav>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-right m-t-30">
+                                <span id="pagination-length"></span>
+                            </div>
+                        </div>
+                    </div><!--/.row -->
 
                 </div><!--/.white-box-->
             </div>
@@ -94,5 +140,5 @@
 
 <!-- javascripts -->
 <script type="text/javascript" src="javascripts/functions.js"></script>
-<script type="text/javascript" src="javascripts/administrador/pagamento/list.js"></script>
+<script type="text/javascript" src="javascripts/administrador/pagamento/add.js"></script>
 <script type="text/javascript" src="javascripts/administrador/global.js"></script>
