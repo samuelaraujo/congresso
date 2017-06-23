@@ -15,7 +15,7 @@ try {
         FROM pagamento p
         INNER JOIN usuario c ON c.id = p.idusuario
         INNER JOIN ingresso i ON i.id = p.idingresso
-        WHERE p.status=1
+        WHERE p.status<>99
         ORDER BY p.id DESC LIMIT 0,20'
     );
     $stmt->execute();
@@ -25,7 +25,7 @@ try {
         'SELECT
             COUNT(*)
         FROM pagamento
-        WHERE status=1'
+        WHERE status<>99'
     );
     $stmt->execute();
     $count_results_pagamento = $stmt->fetchColumn();
