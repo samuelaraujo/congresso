@@ -18,13 +18,13 @@
             <div class="flat-form">
                 <ul class="tabs">
                     <li>
-                        <a href="#login">Login</a>
+                        <a href="#login"><i class="pe-7s-users "></i>  Login</a>
                     </li>
                     <li>
-                        <a href="#cadastro" class="active">Inscreva-se</a>
+                        <a href="#cadastro" class="active"><i class="pe-7s-pen"></i>  Inscreva-se</a>
                     </li>
                     <li>
-                        <a href="#reset">Resetar Senha</a>
+                        <a href="#reset"><i class="pe-7s-paper-plane"></i>  Resetar Senha</a>
                     </li>
                 </ul>
                 <div id="login" class="form-action hide">

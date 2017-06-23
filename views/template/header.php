@@ -1,4 +1,4 @@
-<!-- Preloader -->
+Preloader -->
 <div class="preloader">
     <div class="cssload-speeding-wheel"></div>
 </div>
@@ -17,13 +17,13 @@
             <div class="top-left-part">
                 <a class="logo" href="<?=($_SESSION['congresso_gestor'] == 1 ? '/administrador/dashboard' : '/office/dashboard')?>">
                     <b>
-                        <img src="assets/images/common/icon-dashboard.svg" alt="home" />
+                        <img src="assets/images/common/logobranca.png" alt="home" />
                     </b>
-                    <div class="title">
+                   <!--  <div class="title">
                         <span class="hidden-xs">Congresso</span>
                         <span class="hidden-xs">Jurídico</span>
-                        <span class="hidden-xs">Uninorte</span>
-                    </div>
+                       
+                    </div> -->
                 </a>
             </div>
         </div>
@@ -31,4 +31,4 @@
         <!-- /.navbar-top-links -->
         <!-- /.navbar-static-side -->
     </nav>
-    <!-- End Top Navigation -->
+    <!-- End Top Navigation
