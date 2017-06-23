@@ -46,7 +46,7 @@ it
   <div class="event-background clearfix">
     <div class="wrap">
       <div class="date"><i class="pe-7s-date"></i>14<span>Agosto, 2017</span></div>
-      <div class="location"><i class="pe-7s-map-marker"></i>Resort Hotel<span>Rio Branco, AC</span></div>
+      <div class="location"><i class="pe-7s-map-marker"></i>teatro universitario<span>Rio Branco, AC</span></div>
       <div class="speakers"><i class="pe-7s-micro"></i>13 <span>Palestrantes</span></div>
       <div class="remaining"><i class="pe-7s-add-user"></i>1000 <span>Ingressos</span></div>
     </div>
@@ -266,7 +266,7 @@ d   <!-- Schedule -->
                 <ul>
                   <li><p class="speaker">Marcos Vinícius Jardim Rodrigues (Presidente da OAB/AC)</p></li>
                   <li><p class="speaker">Adriano Iurconvite (Coordenador do curso de Direito da Uninorte/AC)</p></li>
-                  <li><p class="speaker">Minoru Martins Kimpara (Presidente da OAB/AC)</p></li>
+                  <li><p class="speaker">Minoru Martins Kimpara (Reitor da Universidade Federal do Acre)</p></li>
                 </ul>
                 <!-- <p class="description">Descrição</p> -->
               </div>
@@ -564,7 +564,7 @@ d   <!-- Schedule -->
                 <h1><strong>Solenidade de encerramento:</strong> Atração musical e agradecimentos</h1>
                 <ul>
                   <li><p class="speaker">Alana Carvalho (atração musical)</p></li>
-                  <li><p class="speaker">Comissão organizadora</p></li>
+                  <li><p class="speaker">Thiago Poersch (Secretário Geral da OAB/AC) | Comissão Organizadora</p></li>
                 </ul>
                 <!-- <p class="description">Descrição</p> -->
               </div>
@@ -627,7 +627,7 @@ d   <!-- Schedule -->
       <div class="section-title">
         <i class="pe-7s-micro"></i>
         <h3>Palestrantes</h3>
-        <p class="sub-title">Mestres, Desembargadores, autores de obras jurídicas, profissionais atuantes em todas áreas Jurídicas: confira os renomados palestrantes do Iº Congresso Jurídico Uninorte-Acre.</p>
+        <p class="sub-title">Mestres, Desembargadores, autores de obras jurídicas, profissionais atuantes em todas áreas Jurídicas: confira os renomados palestrantes do Congresso Jurídico OAB/AC.</p>
     </div>
   </div>
   <div class="row">
@@ -1091,7 +1091,7 @@ Inscrição para estudante válida somente para graduação.</p>
           <p class="image"><img src="assets/images/pages/oab.jpg" alt="Ordem dos Advogados do Brasil"></p>
         </div>
         <div class="item">
-          <p class="image"><img src="assets/images/pages/turma.jpg" alt="Uninorte"></p>
+          <p class="image"><img src="assets/images/pages/turma.jpg" alt=" Turma Uninorte"></p>
         </div>
 
       </div>
@@ -1289,7 +1289,7 @@ Inscrição para estudante válida somente para graduação.</p>
           </div>
           <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
             <div class="panel-body">
-               A inscrição poderá ser feita até o primeiro dia do evento, em seu credenciamento, podendo ser feita a qualquer tempo por site, aplicativo ou presencialmente com os organizadores do evento na Uninorte/AC.
+               A inscrição poderá ser feita até o primeiro dia do evento, em seu credenciamento, podendo ser feita a qualquer tempo por site, aplicativo ou presencialmente com os organizadores do evento na OAB/AC.
             </div>
           </div>
         </div>
@@ -1319,7 +1319,7 @@ Inscrição para estudante válida somente para graduação.</p>
           </div>
           <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
             <div class="panel-body">
-              O certificado do Congresso estará disponível através de link em nosso gerenciador (site do evento) , que redicionará para o site da Uninorte/AC, onde o certificado de 30 (trinta) horas será gerado digitalmente.
+              O certificado do Congresso estará disponível neste site, na página de inscrições, O usuário deve fazer o Login que o redicionará para a área do usuário, onde o certificado de 30 (trinta) horas será gerado digitalmente.
             </div>
           </div>
         </div>
@@ -1334,6 +1334,21 @@ Inscrição para estudante válida somente para graduação.</p>
           <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
             <div class="panel-body">
              As perguntas poderão ser feitas através do chat disponível no aplicativo oficial do evento, onde serão selecionadas pelo presidente do painel ou mediador da mesa redonda.
+            </div>
+          </div>
+        </div>
+
+         <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingSix">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseFive">
+              Meu boleto já venceu, como posso efetuar o pagamento?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+            <div class="panel-body">
+             Entre em contato através dos nossos canais(Telefones, Email, Formulário), solicitando um novo boleto, será enviado um novo boleto para o email cadastrado, ou pelo link na área do usuário.  
             </div>
           </div>
         </div>
@@ -1401,10 +1416,8 @@ Inscrição para estudante válida somente para graduação.</p>
     <div class="bottom">
       <div class="row">
         <div class="col-sm-12">
-          <div class="socials">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
+         <div class="socials">
+            <a href="https://www.facebook.com/congressojuridicoacre" target="_blank"><i class="fa fa-facebook"></i></a>
           </div>
           <div class="copyright"><p class="copyright">© 2017 Kambô Tecnologia. Todos os direitos reservados.</p></div>
         </div>
@@ -1671,7 +1684,7 @@ Inscrição para estudante válida somente para graduação.</p>
         </button>
       </div>
       <div class="modal-body">
-       <p>Em oferencimento do nosso patrocinador, a agência passagens <strong>GerasTur</strong>, pacotes de viagens serão oferecidos preços diferenciados aos participantes do congresso.</p>
+       <p>Em oferecimento do nosso patrocinador, a agência passagens <strong>GerasTur</strong>, pacotes de viagens serão oferecidos preços diferenciados aos participantes do congresso.</p>
 
       <ul>
         <li>Entre em contato com <a href="http://gerastur.com.br/" target="_blank">GerasTur</a></li>
