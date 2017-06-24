@@ -79,31 +79,31 @@
                                         <b>Nome completo:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p>Mark doe</p>
+                                        <p><?=$_SESSION['congresso_nome'].' '.$_SESSION['congresso_sobrenome']?></p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>Crachá:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p>Mark</p>
+                                        <p><?=$_SESSION['congresso_nome']?></p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>Sexo:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p>Masculino</p>
+                                        <p>||</p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>CPF:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p>007.489.920-10</p>
+                                        <p><?=$_SESSION['congresso_cpf']?></p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>E-mail:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p>markdoe@gmail.com</p>
+                                        <p><?=$_SESSION['congresso_email']?></p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>País de origem:</b>
@@ -148,7 +148,7 @@
                                                 <b>Matrícula:</b>
                                             </div>
                                             <div class="col-md-9">
-                                                <p>Advocacia (R$120,00)</p>
+                                                <p><?=$_SESSION['congresso_uid']?></p>
                                             </div>
                                             <div class="col-md-3">
                                                 <b>Transação:</b>
@@ -160,7 +160,7 @@
                                                 <b>Status:</b>
                                             </div>
                                             <div class="col-md-9">
-                                                <p>Paga</p>
+                                                <p>Aguardando pagamento</p>
                                             </div>
                                         </div>
                                     </div>
@@ -168,11 +168,11 @@
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="certificate">
                                     <div class="col-md-6">
-                                        <h3>Come on you have a lot message</h3>
-                                        <h4>you can use it with the small code</h4>
+                                        <h3>Aguarde a conclusão do curso para impressão do certificado!</h3>
+                                        <h4>OBRIGADO POR PARTICIPAR DO EVENTO</h4>
                                     </div>
                                     <div class="col-md-5 pull-right">
-                                        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a.</p>
+                                        <p></p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
