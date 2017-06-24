@@ -1376,7 +1376,7 @@ Inscrição para estudante válida somente para graduação.</p>
         <!-- <div id="gmap"></div> -->
         <iframe src="https://www.google.com/maps/embed/v1/place?q=Teatro%20Universit%C3%A1rio%20-%20ufac&key=AIzaSyAKAIx_gkfGuWmVFXdQKq8rLgbUDgw08-I" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
           <div class="contact-form clearfix">
-          <form id="contact-form" method="post" action="./contact/contact-process.php">
+          <form id="contact-form" method="post" action="../assets/contact/contact-process.php">
             <div class="col-sm-6">
               <div class="input-text">
                 <input type="text" name="name" class="input-name form-control" placeholder="Nome completo" required="required">
