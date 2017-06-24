@@ -104,10 +104,10 @@
 							var result, alertClass;
 
 							if ( msg == 'Success' ) {
-								result = 'Your message has been sent. Thank you!';
+								result = 'Sua Messagem foi enviada, Aguarde nosso contato!';
 								alertClass = 'msg-success';
 							} else {
-								result = 'Error sending email.';
+								result = 'Erro ao enviar email.';
 								alertClass = 'msg-error';
 							}
 
