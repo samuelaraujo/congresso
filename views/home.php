@@ -1415,7 +1415,8 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="row">
         <div class="col-sm-12">
          <div class="socials">
-            <a href="https://www.facebook.com/congressojuridicoacre" target="_blank"><i class="fa fa-facebook"></i></a>
+           <!--  <a href="https://www.facebook.com/congressojuridicoacre" target="_blank"><i class="fa fa-facebook"></i></a> -->
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcongressojuridicoacre&tabs=timeline&width=400&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=449282188765782" width="400" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </div>
           <div class="copyright"><p class="copyright">© 2017 Kambô Tecnologia. Todos os direitos reservados.</p></div>
         </div>

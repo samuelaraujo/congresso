@@ -1449,7 +1449,8 @@ ul.filter li.active a {
     text-align: center;
 }
 .bottom .socials {
-	margin-bottom: 30px;
+	margin-bottom: 10px;
+	margin-top: -50px;
 }
 .bottom .socials a {
 	display: inline-block;
