@@ -27,14 +27,28 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			$results = simplexml_load_string($xml);
 			$results = json_decode(json_encode($results));
 
-			//pagamento
+			//get
 			$stmt = $oConexao->prepare(
-			    'UPDATE pagamento SET status=?,updated_at=now() WHERE codigo=?'
-			);
-			$stmt->execute(array(
-			    $results->status,
-			    $results->code
-			));
+		        'SELECT
+					id,codigo,status
+				FROM pagamento
+				WHERE codigo=?
+				LIMIT 1'
+		    );
+
+		    $stmt->execute(array($id));
+		    $results = $stmt->fetchObject();
+
+		    if($results->status != 1){
+				//pagamento
+				$stmt = $oConexao->prepare(
+				    'UPDATE pagamento SET status=?,updated_at=now() WHERE codigo=?'
+				);
+				$stmt->execute(array(
+				    $results->status,
+				    $results->code
+				));
+			}
 		}
 
 	}

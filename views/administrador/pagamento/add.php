@@ -48,7 +48,7 @@
         </div><!-- /.row -->
 
         <div class="row">
-            <div class="col-md-4">                
+            <div class="col-md-3">                
                 <div class="white-box">
                     <form id="formPagamento" name="formPagamento">
                         <div class="row">
@@ -56,7 +56,7 @@
                                 <div class="form-group">
                                     <label for="senha">Busca por:</label>
                                     <input type="text" class="form-control" 
-                                        id="pesquisa" name="pesquisa" placeholder="Busca por código, cliente e CPF"> 
+                                        id="pesquisa" name="pesquisa" placeholder="código, cliente e CPF"> 
                                 </div>                                
                             </div>
                         </div>
@@ -77,8 +77,15 @@
                 </div><!--/.white-box-->
             </div>
 
-            <div class="col-md-8">                
+            <div class="col-md-9">                
                 <div class="white-box">
+
+                    <div id="success" class="alert alert-success hidden">
+                        <button type="button" class="close" data-dismiss="alert" 
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                        <p></p>
+                    </div>
 
                     <div class="table-responsive">
                         <div id="table-info" class="text-center m-t-20" 

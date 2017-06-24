@@ -2,7 +2,7 @@
 	
 use Utils\Conexao;
 
-header('Content-type: application/json');
+header('Content-type: application/json; charset=ISO-8859-1');
 $oConexao = Conexao::getInstance();
 $params = json_decode(file_get_contents('php://input'));
 $response = new stdClass();
@@ -32,7 +32,7 @@ $credentials['receiverEmail'] = PAGSEGURO_EMAIL;
 
 //itens
 $credentials['itemId1'] = $ingresso->id;
-$credentials['itemDescription1'] = $ingresso->lote.' - '.$ingresso->ingresso;
+$credentials['itemDescription1'] = utf8_decode($ingresso->lote.' - '.$ingresso->ingresso);
 $credentials['itemAmount1'] = $ingresso->valor;
 $credentials['itemQuantity1'] = 1;
 
@@ -41,7 +41,7 @@ $credentials['installmentQuantity'] = 1;
 $credentials['installmentValue'] = $ingresso->valor;
 
 //dados do comprador
-$credentials['senderName'] = $params->usuario->nome.' '.$params->usuario->sobrenome;
+$credentials['senderName'] = utf8_decode($params->usuario->nome.' '.$params->usuario->sobrenome);
 $credentials['senderCPF'] = $params->usuario->cpf;
 $credentials['senderAreaCode'] = '68';
 $credentials['senderPhone'] = '21025035';
@@ -101,6 +101,7 @@ if(isset($results->code)){
 }else{
 	http_response_code(500);
 	$response->error = 'Ocorreu um erro na sua transação de pagamento';
+	$response->results = $results;
 }
 
 echo json_encode($response);

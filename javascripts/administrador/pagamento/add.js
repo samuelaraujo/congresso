@@ -118,10 +118,10 @@ $(document).ready(function(){
                                 labelStatus = 'label-warning';
                             break;
                         }
-                    if(response.results[i].link != undefined){
-                        link = '<a id="setStatus" href="javascript:;">Pagar</a>';
+                    if(response.results[i].link != undefined && response.results[i].status != 1){
+                        link = '<a id="receber" href="javascript:;" data-codigo="'+ response.results[i].codigo +'">Receber</a>';
                     }else{
-                        link = '-';
+                        link = '<a href="javascript:;">-</a>';
                     }
 
                     html += '<tr>'+
@@ -186,6 +186,33 @@ $(document).ready(function(){
             $("form#formPagamento").valid();
         }
         return false;
+    });
+
+    //receber
+    $('a#receber').livequery('click',function(event){
+        var codigo = $(this).data('codigo');
+        //params
+        var params = {
+            codigo: codigo
+        }
+        params = JSON.stringify(params);
+
+        $(this).html('<img src="assets/images/common/loading.gif" style="height:22px;">');
+        //status
+        app.util.getjson({
+            url : "/controller/administrador/pagamento/receive",
+            method : 'POST',
+            contentType : "application/json",
+            data: params,
+            success: function(response){
+                if(response.success){
+                    setSession('success', response.success);
+                    list(true, search, status);
+                    checkSuccess();
+                }
+            },
+            error: onError()
+        });
     });
 
     //cancel

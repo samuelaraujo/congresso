@@ -57,7 +57,7 @@
       </div>
       <div id="pagamento-boleto" class="col-md-12 text-center hidden">
         <h1>O boleto foi enviado para o seu e-mail</h1>
-        <h3>O pedido será confirmado somente após a aprovação do pagamento</h3>
+        <h3>O pedido será confirmado somente após a aprovação do pagamento, para continuar clique em "Finalizar cadastro".</h3>
         <p id="pagamento-codigo"></p>
         <p id="pagamento-status"></p>
         <img src="assets/images/common/icon_timer.svg" width="128">

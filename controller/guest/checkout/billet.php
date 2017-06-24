@@ -2,7 +2,7 @@
 	
 use Utils\Conexao;
 
-header('Content-type: application/json');
+header('Content-type: application/json; charset=ISO-8859-1');
 $oConexao = Conexao::getInstance();
 $params = json_decode(file_get_contents('php://input'));
 $response = new stdClass();
@@ -32,17 +32,17 @@ $credentials['receiverEmail'] = PAGSEGURO_EMAIL;
 
 //itens
 $credentials['itemId1'] = $ingresso->id;
-$credentials['itemDescription1'] = $ingresso->lote.' - '.$ingresso->ingresso;
+$credentials['itemDescription1'] = utf8_decode($ingresso->lote.' - '.$ingresso->ingresso);
 $credentials['itemAmount1'] = $ingresso->valor;
 $credentials['itemQuantity1'] = 1;
 
 //dados do comprador
-$credentials['senderName'] = $params->usuario->nome.' '.$params->usuario->sobrenome;
+$credentials['senderName'] = utf8_decode($params->usuario->nome.' '.$params->usuario->sobrenome);
 $credentials['senderCPF'] = $params->usuario->cpf;
 $credentials['senderAreaCode'] = '68';
 $credentials['senderPhone'] = '21025035';
 $credentials['senderEmail'] = $params->usuario->email;
-//$credentials['senderHash'] = $params->senderhash;
+$credentials['senderHash'] = $params->senderhash;
 
 //endereço do cliente
 $credentials['shippingAddressStreet'] = 'R Bartolomeu Bueno';
