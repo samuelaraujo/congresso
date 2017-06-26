@@ -524,24 +524,24 @@ function envia_email($email, $assunto, $msg, $emaile, $nome)
   // Define os dados do servidor e tipo de conexão
   // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   $mail->IsSMTP(); // Define que a mensagem será SMTP
-  $mail->Host = 'smtp.sendgrid.net'; // Endereço do servidor SMTP
+  $mail->Host = 'smtp.gmail.com'; // Endereço do servidor SMTP
   $mail->SMTPAuth = true; // Usa autenticação SMTP? (opcional)
   $mail->Mailer = 'smtp';
   $mail->Timeout = 5;
   $mail->Port = 587; //porta 465 ou 587
-  $mail->Username = 'apikey'; // Usuário do servidor SMTP
-  $mail->Password = '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'; // Senha do servidor SMTP
+  $mail->Username = 'kambo.tecnologia@gmail.com'; // Usuário do servidor SMTP
+  $mail->Password = 'Kambo2017'; // Senha do servidor SMTP
 
   // Define o remetente
   // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   $mail->From = $emaile; // Seu e-mail
-  $mail->FromName = 'Markday'; // Seu nome
+  $mail->FromName = 'Kambo Tecnologia LTDA'; // Seu nome
 
   // Define os destinatário(s)
   // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   $mail->AddAddress($email, $nome);
-  $mail->addReplyTo('contato@markday.com.br', 'Markday encontre e agende serviços de beleza & bem-estar em qualquer lugar, a todo momento');
-  $mail->AddBCC($emaile); // Copia
+  // $mail->addReplyTo('contato@markday.com.br', 'Markday encontre e agende serviços de beleza & bem-estar em qualquer lugar, a todo momento');
+  // $mail->AddBCC($emaile); // Copia
   // $mail->AddBCC('fulano@dominio.com.br', 'Fulano da Silva'); // Cópia Oculta
 
   // Define os dados técnicos da Mensagem
