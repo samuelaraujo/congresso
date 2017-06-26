@@ -17,6 +17,9 @@ $(document).ready(function(){
     //set value cart
     $('#carrinho .valor').html(floatToMoney(usuarios.valor,'R$'));
 
+    //mask
+    $('#datanascimento').mask('00/00/0000');
+
     //use format
     numerocartao.payform('formatCardNumber');
     cvc.payform('formatCardCVC');
@@ -66,6 +69,17 @@ $(document).ready(function(){
         },
         ano: { 
           required: true
+        },
+        datanascimento: { 
+          required: true
+        },
+        area: { 
+          required: true,
+          minlength: 2
+        },
+        telefone: { 
+          required: true,
+          minlength: 9
         }
       },
       messages: {
@@ -84,6 +98,17 @@ $(document).ready(function(){
         },
         ano: { 
           required: 'Qual o ano de validade?'
+        },
+        datanascimento: { 
+          required: 'Qual a data de nascimento do portador?'
+        },
+        area: { 
+          required: 'Qual o area do telefone?',
+          minlength: 'DDD mínimo de 2 digitos'
+        },
+        telefone: { 
+          required: 'Qual o número de telefone?',
+          minlength: 'Telefone mínimo de 9 digitos'
         }
       },
       highlight: function (element, errorClass, validClass) {
@@ -259,14 +284,16 @@ $(document).ready(function(){
           $('button#voltar').prop("disabled",true);
 
           var cardNumber = numerocartao.val();
+          var cardMonth = mes.val().toString();
+          var cardYear = ano.val().toString();
           cardNumber = cardNumber.toString().replace(/ /g,"");
           
           PagSeguroDirectPayment.createCardToken({
             cardNumber: cardNumber,
             brand: brand,
             cvv: cvc.val(),
-            expirationMonth: mes.val(),
-            expirationYear: ano.val(),
+            expirationMonth: cardMonth,
+            expirationYear: cardYear,
             success: function(response){
               cardToken = response.card.token;
               //params
@@ -274,6 +301,9 @@ $(document).ready(function(){
                 senderhash: senderHash,
                 cardtoken: cardToken,
                 portador: portador.val(),
+                cardbirthdate: $('input#datanascimento').val(),
+                cardarea: $('input#area').val(),
+                cardphone: $('input#telefone').val(),
                 usuario: usuarios //utilizando variavel global(login.js)
               };
               params = JSON.stringify(params);

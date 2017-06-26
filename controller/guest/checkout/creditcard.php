@@ -52,6 +52,9 @@ $credentials['senderHash'] = $params->senderhash;
 $credentials['creditCardToken'] = $params->cardtoken;
 $credentials['creditCardHolderName'] = $params->portador;
 $credentials['creditCardHolderCPF'] = $params->usuario->cpf;
+$credentials['creditCardHolderBirthDate'] = $params->cardbirthdate;
+$credentials['creditCardHolderAreaCode'] = $params->cardarea;
+$credentials['creditCardHolderPhone'] = $params->cardphone;
 
 //endereço do cliente
 $credentials['shippingAddressStreet'] = 'R Bartolomeu Bueno';

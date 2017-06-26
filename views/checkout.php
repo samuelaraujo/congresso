@@ -190,6 +190,28 @@
           </div>
         </div>
       </div>
+      <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="datanascimento">Data de nascimento(do portador)</label>
+              <input type="text" class="form-control" id="datanascimento" name="datanascimento">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="area">DDD</label>
+              <input type="text" class="form-control" id="area" name="area">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="datanascimento">Telefone</label>
+              <input type="text" class="form-control" id="telefone" name="telefone">
+            </div>
+          </div>
+        </div>
     </form>
   </div><!--/.row-->
 
@@ -265,4 +287,5 @@
 
 
 <!-- Javascripts -->
+<script type="text/javascript" src="assets/javascript/jquery.mask.js"></script>
 <script type="text/javascript" src="javascripts/checkout.js"></script>
