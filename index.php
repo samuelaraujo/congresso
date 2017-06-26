@@ -72,6 +72,8 @@ if(empty($url_path)){
 	}
 }elseif(file_exists('views/'.$url_path.'/'.$url_subpath.'/'.$url_file.'.php')){
 	include 'views/'.$url_path.'/'.$url_subpath.'/'.$url_file.'.php';
+}else{
+	include 'views/404.php';
 }
 ?>
 

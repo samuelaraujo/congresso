@@ -124,6 +124,7 @@ $(document).ready(function(){
         $('#cartaoDebito').removeClass('hidden');
       }else{
         $('button#alterar').addClass('hidden');
+        $('#errorBoleto').addClass('hidden');
         $('#gerando-boleto').removeClass('hidden');
         //params
         var params = {
@@ -143,28 +144,54 @@ $(document).ready(function(){
               pagamentos = {
                 codigo: response.results.codigo,
                 status: response.results.status,
+                descricao: response.results.descricao,
                 metodo: response.results.metodo,
                 valor: response.results.valor,
                 link: response.results.link
               };
-              $('#carrinho').addClass('hidden');
-              $('#pagamento').addClass('hidden');
-              $('#mensagem').removeClass('hidden');
-                $('#mensagem #pagamento-pago').addClass('hidden');
-                $('#mensagem #pagamento-aguardando').addClass('hidden');
-                $('#mensagem #pagamento-cancelado').addClass('hidden');
-                $('#mensagem #pagamento-devolvido').addClass('hidden');
-                $('#mensagem #pagamento-debito').addClass('hidden');
-              $('#mensagem #pagamento-boleto').removeClass('hidden');
-              $('#mensagem #pagamento-boleto #pagamento-codigo').html('Código: '+response.results.codigo);
-              $('#mensagem #pagamento-boleto #pagamento-status').html('Status: '+response.results.descricao);
-              $('#gerando-boleto').addClass('hidden');
-              $('button#finalizarcadastro').removeClass('hidden');
+
+              //create usuario
+              //params
+              var params = {
+                pagamento: pagamentos, //utilizando variavel global(login.js)
+                usuario: usuarios //utilizando variavel global(login.js)
+              };
+              params = JSON.stringify(params);
+              //save
+              app.util.getjson({
+                url : "/controller/guest/usuario/create",
+                method : 'POST',
+                contentType : "application/json",
+                data: params,
+                success: function(response){
+                  if(response.success){
+                    $('#carrinho').addClass('hidden');
+                    $('#pagamento').addClass('hidden');
+                    $('#mensagem').removeClass('hidden');
+                      $('#mensagem #pagamento-pago').addClass('hidden');
+                      $('#mensagem #pagamento-aguardando').addClass('hidden');
+                      $('#mensagem #pagamento-cancelado').addClass('hidden');
+                      $('#mensagem #pagamento-devolvido').addClass('hidden');
+                      $('#mensagem #pagamento-debito').addClass('hidden');
+                    $('#mensagem #pagamento-boleto').removeClass('hidden');
+                    $('#mensagem #pagamento-boleto #pagamento-codigo').html('Código: '+pagamentos.codigo);
+                    $('#mensagem #pagamento-boleto #pagamento-status').html('Status: '+pagamentos.descricao);
+                    $('#gerando-boleto').addClass('hidden');
+                    $('button#finalizarcadastro').removeClass('hidden');
+                  }
+                },
+                error(response){
+                  $('#errorBoleto').find('.alert').append('<p>'+ response.error +'</p>');
+                  $('#errorBoleto').removeClass('hidden');
+                }
+              });
             }
           },
           error: function(response){
             $('button#alterar').removeClass('hidden');
             $('#gerando-boleto').addClass('hidden');
+            $('#errorBoleto').find('.alert').append('<p>Ocorreu um erro ao gerar o boleto, tente novamente</p>');
+            $('#errorBoleto').removeClass('hidden');
           }
         });
       }
@@ -231,8 +258,11 @@ $(document).ready(function(){
           $('button#pagar').prop("disabled",true);
           $('button#voltar').prop("disabled",true);
 
+          var cardNumber = numerocartao.val();
+          cardNumber = cardNumber.toString().replace(/ /g,"");
+          
           PagSeguroDirectPayment.createCardToken({
-            cardNumber: numerocartao.val(),
+            cardNumber: cardNumber,
             brand: brand,
             cvv: cvc.val(),
             expirationMonth: mes.val(),
@@ -316,7 +346,18 @@ $(document).ready(function(){
                       }
                     }
                   },
-                  error : onError
+                 error: function(response){
+                  var html = '<ul>';
+                  $.map(response.errors, function(error){
+                    html += '<li>'+error+'</li>';
+                  });
+                  html += '</ul>';
+                  $('#errorCartaoCredito').find('.alert').append(html);
+                  $('#errorCartaoCredito').removeClass('hidden');
+                  $('button#pagar').html('PAGAR');
+                  $('button#pagar').prop("disabled",false);
+                  $('button#voltar').prop("disabled",false);
+                }
               });
             },
             error: function(response){
@@ -329,7 +370,7 @@ $(document).ready(function(){
               $('#errorCartaoCredito').removeClass('hidden');
               $('button#pagar').html('PAGAR');
               $('button#pagar').prop("disabled",false);
-              $('button#voltar').prop("disabled",true);
+              $('button#voltar').prop("disabled",false);
             },
             complete: function(response){}
           });
@@ -353,6 +394,7 @@ $(document).ready(function(){
         //params
         var params = {
           bank: bank,
+          senderhash: senderHash,
           usuario: usuarios //utilizando variavel global(login.js)
         };
         params = JSON.stringify(params);
@@ -475,30 +517,7 @@ $(document).ready(function(){
 
     //finalizar cadastro através do boleto
     $('button#finalizarcadastro').livequery('click',function(event){
-      $('button#finalizarcadastro').html('PROCESSANDO...');
-      $('button#finalizarcadastro').prop("disabled",true);
-      //params
-      var params = {
-        pagamento: pagamentos, //utilizando variavel global(login.js)
-        usuario: usuarios //utilizando variavel global(login.js)
-      };
-      params = JSON.stringify(params);
-      //save
-      app.util.getjson({
-        url : "/controller/guest/usuario/create",
-        method : 'POST',
-        contentType : "application/json",
-        data: params,
-        success: function(response){
-          if(response.success){
-            window.location.href = "/";
-          }
-        },
-        error(response){
-          $('button#finalizarcadastro').html('IMPRIMIR');
-          $('button#finalizarcadastro').prop("disabled",false);
-        }
-      });
+      window.location.href = "/";
     });
 
     //finalizar

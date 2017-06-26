@@ -19,7 +19,6 @@ try {
     $status = isset($params->status) && $params->status == 99
                         ? ' p.status <> :status'
                         : ' p.status = :status';
-                        //: 1;
 
     $search = isset($params->search[0])
                         ? ' AND
@@ -76,32 +75,32 @@ try {
     $status = 1;
     $count->bindParam('status', $status);
     $count->execute();
-    $count_pagas = $count->fetchColumn();
+    $count_aguardando = $count->fetchColumn();
 
     $status = 2;
     $count->bindParam('status', $status);
     $count->execute();
-    $count_pendentes = $count->fetchColumn();
+    $count_analise = $count->fetchColumn();
 
     $status = 3;
     $count->bindParam('status', $status);
     $count->execute();
-    $count_cancelados = $count->fetchColumn();
+    $count_paga = $count->fetchColumn();
 
-    $status = 4;
+    $status = 7;
     $count->bindParam('status', $status);
     $count->execute();
-    $count_estornados = $count->fetchColumn();
+    $count_cancelada = $count->fetchColumn();
 
     http_response_code(200);
     $response = array(
         'results' => $results,
         'count' => array(
             'results' => $count_results,
-            'pagas' => $count_pagas,
-            'pendentes' => $count_pendentes,
-            'cancelados' => $count_cancelados,
-            'estornados' => $count_estornados
+            'aguardando' => $count_aguardando,
+            'analise' => $count_analise,
+            'paga' => $count_paga,
+            'cancelada' => $count_cancelada
         ),
     );
 } catch (PDOException $e) {

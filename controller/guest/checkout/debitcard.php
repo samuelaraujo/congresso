@@ -43,6 +43,7 @@ $credentials['senderCPF'] = $params->usuario->cpf;
 $credentials['senderAreaCode'] = '68';
 $credentials['senderPhone'] = '21025035';
 $credentials['senderEmail'] = $params->usuario->email;
+$credentials['senderHash'] = $params->senderhash;
 
 //endereço do cliente
 $credentials['shippingAddressStreet'] = 'R Bartolomeu Bueno';

@@ -66,6 +66,13 @@
   </div><!--/.mensagem-->
 
   <div id="pagamento" class="pagamento"><!--.pagamento-->
+    <div id="errorBoleto" class="row hidden">
+      <div class="col-md-12">
+        <div class="alert alert-warning">
+          <p></p>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-12">
         <h1 class="text-center">Como deseja efetuar o pagamento do seu ingresso?</h1>

@@ -22,7 +22,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <!---start-header---->
         <div class="header">
           <div class="logo">
-            <h1><a href="#">Ohh</a></h1>
+            <h1><a href="javascript:;">Ohh</a></h1>
           </div>
         </div>
         <!---728x90--->

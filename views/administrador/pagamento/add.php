@@ -48,7 +48,7 @@
         </div><!-- /.row -->
 
         <div class="row">
-            <div class="col-md-3">                
+            <div class="col-md-3">     
                 <div class="white-box">
                     <form id="formPagamento" name="formPagamento">
                         <div class="row">
@@ -92,6 +92,22 @@
                         style="margin-bottom: 68px;">
                             <i class="fa fa-search fa-2x"></i>
                             <p class="m-t-10">Faça uma busca pelo código da transação, nome do cliente ou CPF</p>
+                        </div>
+                        <div id="col-legenda" class="col-md-12 hidden m-t-10">
+                            <div class="legenda">
+                                <ul class="p-l-0">
+                                    <li><span>Legenda: </span></li>
+                                    <li>
+                                        <i class="fa fa-credit-card"></i> Crédito
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-credit-card-alt"></i> Débito
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-barcode"></i> Boleto
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div id="table-loading" class="text-center hidden">
                             <img src="assets/images/common/loading.gif">

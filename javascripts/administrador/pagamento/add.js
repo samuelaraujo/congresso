@@ -88,37 +88,37 @@ $(document).ready(function(){
                     var status, metodo, link = undefined;
                     switch(parseInt(response.results[i].metodo)){
                         case 1:
-                            metodo = '<i class="fa fa-credit-card"></i> <span>(Crédito)</span>';
+                            metodo = '<i class="fa fa-credit-card"></i>';
                         break;
                         case 2:
-                            metodo = '<i class="fa fa-barcode"></i> <span>(Boleto)</span>';
+                            metodo = '<i class="fa fa-barcode"></i>';
                         break;
                         case 3:
-                            metodo = '<i class="fa fa-credit-card-alt"></i> <span>(Débito)</span>';
+                            metodo = '<i class="fa fa-credit-card-alt"></i>';
                         break;
                         default:
                             metodo = '-';
                         break;
                     }
                     switch(parseInt(response.results[i].status)){
-                            case 1:
-                                status = 'Paga';
-                                labelStatus = 'label-success';
-                            break;
-                            case 2:
-                                status = 'Pendente';
-                                labelStatus = 'label-warning';
-                            break;
-                            case 3:
-                                status = 'Cancelado';
-                                labelStatus = 'label-danger';
-                            break;
-                            case 4:
-                                status = 'Estornado';
-                                labelStatus = 'label-warning';
-                            break;
-                        }
-                    if(response.results[i].link != undefined && response.results[i].status != 1){
+                        case 1:
+                            status = 'Aguardando pgto';
+                            labelStatus = 'label-warning';
+                        break;
+                        case 2:
+                            status = 'Em análise';
+                            labelStatus = 'label-warning';
+                        break;
+                        case 3:
+                            status = 'Paga';
+                            labelStatus = 'label-success';
+                        break;
+                        case 7:
+                            status = 'Cancelada';
+                            labelStatus = 'label-danger';
+                        break;
+                    }
+                    if(response.results[i].link != undefined && response.results[i].status != 3){
                         link = '<a id="receber" href="javascript:;" data-codigo="'+ response.results[i].codigo +'">Receber</a>';
                     }else{
                         link = '<a href="javascript:;">-</a>';
@@ -137,6 +137,7 @@ $(document).ready(function(){
                 }
                 if(parseInt(response.count.results) >= 1){
 
+                    $('#col-legenda').removeClass('hidden');
                     $('#col-total').removeClass('hidden');
                     $('#pagination-length').html('Exibindo ' + response.results.length + ' de ' + response.count.results + ' registros');
                     
@@ -148,9 +149,7 @@ $(document).ready(function(){
                     $('#notfound').removeClass('hidden');
                     $('#notfound').html('Nenhum registro encontrado');
                     $('#table-results').addClass('hidden');
-                    $('#col-total').addClass('hidden');
-                    $('#col-search').addClass('hidden');
-                    $('#col-action').addClass('hidden');
+                    $('#col-legenda').addClass('hidden');
                 }else{
                     $('#notfound').addClass('hidden');
                     $('#table-results').removeClass('hidden');

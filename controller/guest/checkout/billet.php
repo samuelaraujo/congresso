@@ -92,7 +92,7 @@ if(isset($results->code)){
 	);
 }else{
 	http_response_code(500);
-	$response->error = 'Ocorreu um erro na sua transação de pagamento';
+	$response->error = 'Ocorreu um erro ao gerar o boleto, tente novamente';
 	$response->results = $results;
 }
 

@@ -17,20 +17,20 @@ $(document).ready(function(){
                         var status = undefined;
                         switch(parseInt(response.results[i].status)){
                             case 1:
+                                status = 'Aguardando pgto';
+                                labelStatus = 'label-warning';
+                            break;
+                            case 2:
+                                status = 'Em análise';
+                                labelStatus = 'label-info';
+                            break;
+                            case 3:
                                 status = 'Paga';
                                 labelStatus = 'label-success';
                             break;
-                            case 2:
-                                status = 'Pendente';
-                                labelStatus = 'label-warning';
-                            break;
-                            case 3:
-                                status = 'Cancelado';
+                            case 7:
+                                status = 'Cancelada';
                                 labelStatus = 'label-danger';
-                            break;
-                            case 4:
-                                status = 'Estornado';
-                                labelStatus = 'label-warning';
                             break;
                         }
                         html += '<tr>'+

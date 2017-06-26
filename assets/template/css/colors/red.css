@@ -270,3 +270,11 @@ i.btn-label{
   padding: 10px;
   margin-bottom: 20px;
 }
+#col-legenda .legenda ul{
+  display: block;
+  list-style: none;
+}
+#col-legenda .legenda ul li{
+  display: inline;
+  margin-right: 10px;
+}

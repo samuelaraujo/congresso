@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		    $stmt->execute(array($id));
 		    $results = $stmt->fetchObject();
 
-		    if($results->status != 1){
+		    if($results->status != 3){
 				//pagamento
 				$stmt = $oConexao->prepare(
 				    'UPDATE pagamento SET status=?,updated_at=now() WHERE codigo=?'

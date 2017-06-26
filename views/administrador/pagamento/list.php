@@ -59,31 +59,31 @@
 
                     <ul class="nav nav customtab nav-tabs hidden" role="tablist">
                         <li class="nav-item">
-                            <a href="#status" id="paga" data-status="1"
+                            <a href="#status" id="paga" data-status="3"
                                 class="nav-link active" data-toggle="tab">
                                 <span class="hidden-xs"> Paga</span>
                                 <span id="count-paga" class="label label-rouded label-success pull-right m-l-5">1</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#status" id="pendente" data-status="2"
+                            <a href="#status" id="aguardando" data-status="1"
                                 class="nav-link" data-toggle="tab">
-                                <span class="hidden-xs"> Pendente</span>
-                                <span id="count-pendente" class="label label-rouded label-warning pull-right m-l-5">1</span>
+                                <span class="hidden-xs"> Aguardando pagamento</span>
+                                <span id="count-aguardando" class="label label-rouded label-warning pull-right m-l-5">1</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#status" id="cancelado" data-status="3"
+                            <a href="#status" id="analise" data-status="2"
                                 class="nav-link" data-toggle="tab">
-                                <span class="hidden-xs"> Cancelado</span>
-                                <span id="count-cancelado" class="label label-rouded label-danger pull-right m-l-5">1</span>
+                                <span class="hidden-xs"> Em análise</span>
+                                <span id="count-analise" class="label label-rouded label-info pull-right m-l-5">1</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#status" id="estornado" data-status="4"
+                            <a href="#status" id="cancelada" data-status="7"
                                 class="nav-link" data-toggle="tab">
-                                <span class="hidden-xs"> Estornado</span>
-                                <span id="count-estornado" class="label label-rouded label-default pull-right m-l-5">1</span>
+                                <span class="hidden-xs"> Cancelada</span>
+                                <span id="count-cancelada" class="label label-rouded label-danger pull-right m-l-5">1</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -111,12 +111,29 @@
                                         <div class="input-group">
                                             <input id="search" type="text" 
                                             class="form-control input-sm" placeholder="Busca por código, cliente e CPF">
-                                            <span class="input-group-addon">
+                                            <span class="input-group-addon p-r-20">
                                                 <i class="fa fa-search"></i>
                                             </span>
                                         </div>
                                     </div>
                                   </form>
+                            </div>
+
+                            <div id="col-legenda" class="col-md-8 m-t-5 hidden">
+                                <div class="legenda">
+                                    <ul>
+                                        <li><span>Legenda: </span></li>
+                                        <li>
+                                            <i class="fa fa-credit-card"></i> Crédito
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-credit-card-alt"></i> Débito
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-barcode"></i> Boleto
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
 
                             <div id="col-action" class="col-md-8 hidden">
@@ -147,6 +164,7 @@
                                     <thead>
                                       <tr>
                                         <th>#</th>
+                                        <th>Código</th>
                                         <th>Cliente</th>
                                         <th>CPF</th>
                                         <th>Ingresso</th>

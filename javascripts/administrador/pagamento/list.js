@@ -3,7 +3,7 @@ var search = undefined;
 var page = 1;
 var offset = 0;
 var limit = 10;
-var status = 1;
+var status = 3; //status (3) = paga
 
 $(document).ready(function(){
 
@@ -19,7 +19,7 @@ $(document).ready(function(){
         }, 5000);
     }
 
-    function list(reload = false, search = undefined, status = 1){
+    function list(reload = false, search = undefined, status = 3){
         var params = (search == undefined) ? 
                         {offset: offset, limit: limit, status: status} : 
                         {offset: offset, limit: limit, status: status, search: search};
@@ -32,16 +32,16 @@ $(document).ready(function(){
         $('.nav .nav-item a').removeClass('active');
         switch(parseInt(status)){
             case 1: 
-                $('a#paga').addClass('active');
+                $('a#aguardando').addClass('active');
             break;
             case 2: 
-                $('a#pendente').addClass('active');
+                $('a#analise').addClass('active');
             break;
             case 3: 
-                $('a#cancelado').addClass('active');
+                $('a#paga').addClass('active');
             break;
-            case 4: 
-                $('a#estornado').addClass('active');
+            case 7: 
+                $('a#cancelada').addClass('active');
             break;
         }
 
@@ -57,13 +57,13 @@ $(document).ready(function(){
                     var metodo, link = undefined;
                     switch(parseInt(response.results[i].metodo)){
                         case 1:
-                            metodo = '<i class="fa fa-credit-card"></i> <span>(Crédito)</span>';
+                            metodo = '<i class="fa fa-credit-card"></i>';
                         break;
                         case 2:
-                            metodo = '<i class="fa fa-barcode"></i> <span>(Boleto)</span>';
+                            metodo = '<i class="fa fa-barcode"></i>';
                         break;
                         case 3:
-                            metodo = '<i class="fa fa-credit-card-alt"></i> <span>(Débito)</span>';
+                            metodo = '<i class="fa fa-credit-card-alt"></i>';
                         break;
                         default:
                             metodo = '-';
@@ -77,6 +77,7 @@ $(document).ready(function(){
 
                     html += '<tr>'+
                                 '<td>'+ response.results[i].id + '</td>'+
+                                '<td>'+ response.results[i].codigo + '</td>'+
                                 '<td>'+ response.results[i].cliente + '</td>'+
                                 '<td>'+ response.results[i].cpf + '</td>'+
                                 '<td>'+ response.results[i].ingresso + '</td>'+
@@ -89,6 +90,7 @@ $(document).ready(function(){
 
                     $('#col-total').removeClass('hidden');
                     $('#col-search').removeClass('hidden');
+                    $('#col-legenda').removeClass('hidden');
                     $('#col-action').addClass('hidden');
                     $('#pagination-length').html('Exibindo ' + response.results.length + ' de ' + response.count.results + ' registros');
                     
@@ -103,6 +105,7 @@ $(document).ready(function(){
                     $('#col-total').addClass('hidden');
                     $('#col-search').addClass('hidden');
                     $('#col-action').addClass('hidden');
+                    $('#col-legenda').addClass('hidden');
                 }else{
                     $('#notfound').addClass('hidden');
                     $('#table-results').removeClass('hidden');
@@ -111,10 +114,10 @@ $(document).ready(function(){
                 $('#table-loading').addClass('hidden');
                 $('#add').removeClass('hidden');
                 $('ul.customtab').removeClass('hidden');
-                $('#count-paga').html(response.count.pagas);
-                $('#count-pendente').html(response.count.pendentes);
-                $('#count-cancelado').html(response.count.cancelados);
-                 $('#count-estornado').html(response.count.estornados);
+                $('#count-aguardando').html(response.count.aguardando);
+                $('#count-analise').html(response.count.analise);
+                $('#count-paga').html(response.count.paga);
+                $('#count-cancelada').html(response.count.cancelada);
                 if(reload)
                     $('#col-reload').addClass('hidden');
             },
@@ -128,9 +131,9 @@ $(document).ready(function(){
             page = parseInt($(this).data('page'));
             offset = Math.ceil((page-1) * limit);
             if(search != undefined && search.length >= 3){
-                list(true, search);
+                list(true, search, status);
             }else{
-                list(true);
+                list(true, undefined, status);
             }
         }
         return false;
@@ -147,7 +150,7 @@ $(document).ready(function(){
     });
 
     //set list tab item
-    $('a#paga,a#pendente,a#cancelado,a#estornado').livequery('click',function(event){
+    $('a#paga,a#aguardando,a#analise,a#cancelada').livequery('click',function(event){
         status = $(this).data('status');
         list(true, search, status);
     });
