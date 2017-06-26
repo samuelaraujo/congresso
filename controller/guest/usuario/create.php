@@ -34,7 +34,7 @@ try {
     $params->usuario->senha = sha1(SALT.$params->usuario->senha);
 
     //verifica se tem link
-    if($params->pagamento->link == '')
+    if(!isset($params->pagamento->link))
         $params->pagamento->link = null;
 
 

@@ -69,7 +69,7 @@ $(document).ready(function(){
                             metodo = '-';
                         break;
                     }
-                    if(response.results[i].link != undefined){
+                    if(response.results[i].link != undefined && response.results[i].status != 3){
                         link = '<a href="'+ response.results[i].link +'" target="_blank">Acessar</a>';
                     }else{
                         link = '-';

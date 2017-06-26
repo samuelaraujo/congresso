@@ -319,61 +319,86 @@ $(document).ready(function(){
                       pagamentos = {
                         codigo: response.results.codigo,
                         status: response.results.status,
+                        descricao: response.results.descricao,
                         metodo: response.results.metodo,
                         valor: response.results.valor
                       };
 
-                      $('#mensagem').removeClass('hidden');
-                        $('#mensagem #pagamento-pago').addClass('hidden');
-                        $('#mensagem #pagamento-aguardando').addClass('hidden');
-                        $('#mensagem #pagamento-cancelado').addClass('hidden');
-                        $('#mensagem #pagamento-devolvido').addClass('hidden');
-                        $('#mensagem #pagamento-debito').addClass('hidden');
-                      switch(parseInt(response.results.status)){
-                        case 1:
-                        case 2:
-                          $('#carrinho').addClass('hidden');
-                          $('button#pagar').addClass('hidden');
-                          $('button#voltar').addClass('hidden');
-                          $('#cartaoCredito').addClass('hidden');
-                          $('button#finalizar').removeClass('hidden');
-                          $('#mensagem #pagamento-aguardando').removeClass('hidden');
-                          $('#mensagem #pagamento-aguardando #pagamento-codigo').html('Código: '+response.results.codigo);
-                          $('#mensagem #pagamento-aguardando #pagamento-status').html('Status: '+response.results.descricao);
-                        break;
-                        case 3:
-                          //set transaction pay approved
-                          pay = true;
-                          $('#carrinho').addClass('hidden');
-                          $('button#pagar').addClass('hidden');
-                          $('button#voltar').addClass('hidden');
-                          $('#cartaoCredito').addClass('hidden');
-                          $('button#continuar').removeClass('hidden');
-                          $('#mensagem #pagamento-pago').removeClass('hidden');
-                          $('#mensagem #pagamento-pago #pagamento-codigo').html('Código: '+response.results.codigo);
-                          $('#mensagem #pagamento-pago #pagamento-status').html('Status: '+response.results.descricao);
-                        break;
-                        case 6:
-                          $('#carrinho').addClass('hidden');
-                          $('button#pagar').addClass('hidden');
-                          $('button#voltar').addClass('hidden');
-                          $('#cartaoCredito').addClass('hidden');
-                          $('button#retornar').removeClass('hidden');
-                          $('#mensagem #pagamento-devolvido').removeClass('hidden');
-                          $('#mensagem #pagamento-devolvido #pagamento-codigo').html('Código: '+response.results.codigo);
-                          $('#mensagem #pagamento-devolvido #pagamento-status').html('Status: '+response.results.descricao);
-                        break;
-                        case 7:
-                          $('#carrinho').addClass('hidden');
-                          $('button#pagar').addClass('hidden');
-                          $('button#voltar').addClass('hidden');
-                          $('#cartaoCredito').addClass('hidden');
-                          $('button#retornar').removeClass('hidden');
-                          $('#mensagem #pagamento-cancelado').removeClass('hidden');
-                          $('#mensagem #pagamento-cancelado #pagamento-codigo').html('Código: '+response.results.codigo);
-                          $('#mensagem #pagamento-cancelado #pagamento-status').html('Status: '+response.results.descricao);
-                        break;
-                      }
+                      //params
+                      var params = {
+                        pagamento: pagamentos, //utilizando variavel global(login.js)
+                        usuario: usuarios //utilizando variavel global(login.js)
+                      };
+                      params = JSON.stringify(params);
+                      //save
+                      app.util.getjson({
+                        url : "/controller/guest/usuario/create",
+                        method : 'POST',
+                        contentType : "application/json",
+                        data: params,
+                        success: function(response){
+                          if(response.success){
+                            $('#mensagem').removeClass('hidden');
+                            $('#mensagem #pagamento-pago').addClass('hidden');
+                            $('#mensagem #pagamento-aguardando').addClass('hidden');
+                            $('#mensagem #pagamento-cancelado').addClass('hidden');
+                            $('#mensagem #pagamento-devolvido').addClass('hidden');
+                            $('#mensagem #pagamento-debito').addClass('hidden');
+                            switch(parseInt(pagamentos.status)){
+                              case 1:
+                              case 2:
+                                $('#carrinho').addClass('hidden');
+                                $('button#pagar').addClass('hidden');
+                                $('button#voltar').addClass('hidden');
+                                $('#cartaoCredito').addClass('hidden');
+                                $('button#finalizar').removeClass('hidden');
+                                $('#mensagem #pagamento-aguardando').removeClass('hidden');
+                                $('#mensagem #pagamento-aguardando #pagamento-codigo').html('Código: '+pagamentos.codigo);
+                                $('#mensagem #pagamento-aguardando #pagamento-status').html('Status: '+pagamentos.descricao);
+                              break;
+                              case 3:
+                                //set transaction pay approved
+                                pay = true;
+                                $('#carrinho').addClass('hidden');
+                                $('button#pagar').addClass('hidden');
+                                $('button#voltar').addClass('hidden');
+                                $('#cartaoCredito').addClass('hidden');
+                                $('button#continuar').removeClass('hidden');
+                                $('#mensagem #pagamento-pago').removeClass('hidden');
+                                $('#mensagem #pagamento-pago #pagamento-codigo').html('Código: '+pagamentos.codigo);
+                                $('#mensagem #pagamento-pago #pagamento-status').html('Status: '+pagamentos.descricao);
+                              break;
+                              case 6:
+                                $('#carrinho').addClass('hidden');
+                                $('button#pagar').addClass('hidden');
+                                $('button#voltar').addClass('hidden');
+                                $('#cartaoCredito').addClass('hidden');
+                                $('button#retornar').removeClass('hidden');
+                                $('#mensagem #pagamento-devolvido').removeClass('hidden');
+                                $('#mensagem #pagamento-devolvido #pagamento-codigo').html('Código: '+pagamentos.codigo);
+                                $('#mensagem #pagamento-devolvido #pagamento-status').html('Status: '+pagamentos.descricao);
+                              break;
+                              case 7:
+                                $('#carrinho').addClass('hidden');
+                                $('button#pagar').addClass('hidden');
+                                $('button#voltar').addClass('hidden');
+                                $('#cartaoCredito').addClass('hidden');
+                                $('button#retornar').removeClass('hidden');
+                                $('#mensagem #pagamento-cancelado').removeClass('hidden');
+                                $('#mensagem #pagamento-cancelado #pagamento-codigo').html('Código: '+pagamentos.codigo);
+                                $('#mensagem #pagamento-cancelado #pagamento-status').html('Status: '+pagamentos.descricao);
+                              break;
+                            }
+                          }
+                        },
+                        error(response){
+                          $('#errorCartaoCredito').find('.alert').append('<p>'+ response.error +'</p>');
+                          $('#errorCartaoCredito').removeClass('hidden');
+                          $('button#pagar').html('PAGAR');
+                          $('button#pagar').prop("disabled",false);
+                          $('button#voltar').prop("disabled",false);
+                        }
+                      });
                     }
                   },
                  error: function(response){
@@ -518,30 +543,9 @@ $(document).ready(function(){
     //continuar
     $('button#continuar').livequery('click',function(event){
       if(pay){
-        $('button#continuar').html('PROCESSANDO...');
-        $('button#continuar').prop("disabled",true);
-        //params
-        var params = {
-          pagamento: pagamentos, //utilizando variavel global(login.js)
-          usuario: usuarios //utilizando variavel global(login.js)
-        };
-        params = JSON.stringify(params);
-        //save
-        app.util.getjson({
-          url : "/controller/guest/usuario/create",
-          method : 'POST',
-          contentType : "application/json",
-          data: params,
-          success: function(response){
-            if(response.success){
-              window.location.href = "/dashboard";
-            }
-          },
-          error(response){
-            $('button#continuar').html('CONTINUAR');
-            $('button#continuar').prop("disabled",false);
-          }
-        });
+        window.location.href = "/dashboard";
+      }else{
+        window.location.href = "/";
       }
     });
 

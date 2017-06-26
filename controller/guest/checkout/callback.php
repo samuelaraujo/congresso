@@ -3,6 +3,8 @@
 use Utils\Conexao;
 
 header("access-control-allow-origin: https://sandbox.pagseguro.uol.com.br");
+header("access-control-allow-origin: https://pagseguro.uol.com.br");
+header("access-control-allow-origin: http://pagseguro.uol.com.br");
 header('Content-type: application/json');
 $oConexao = Conexao::getInstance();
 
