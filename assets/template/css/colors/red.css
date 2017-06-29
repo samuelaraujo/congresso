@@ -267,6 +267,20 @@ i.btn-label{
   font-weight: 500;
   display: block;
 }
+.modal-body fieldset .form-group{
+  margin-bottom: 10px;
+}
+.modal-body fieldset span.bg-success,
+.modal-body fieldset span.bg-warning,
+.modal-body fieldset span.bg-danger,
+.modal-body fieldset span.bg-default,
+.modal-body fieldset span.bg-info{
+  color: #FFF;
+}
+
+.modal-body fieldset span.bg-cracha{
+  background: #feffd4;
+}
 /*nav-tabs*/
 .nav-custom .nav-link.active, .nav-custom > li.active > a, .nav-custom > li.active > a:hover, .nav-custom > li.active > a:focus{
   background-color: #f5f5f5;

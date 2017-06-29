@@ -11,12 +11,12 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-loading">
-              <div class="col-md-12 text-center">
-                <div class="loading">
-                    <img src="assets/images/common/loading.gif" width="38">
-                    <p>Aguarde, processando...</p>
-                </div>
-              </div>
+                  <div class="col-md-12 text-center">
+                        <div class="loading">
+                            <img src="assets/images/common/loading.gif" width="38">
+                            <p>Aguarde, processando...</p>
+                        </div>
+                  </div>
             </div><!-- /.modal-loading -->
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

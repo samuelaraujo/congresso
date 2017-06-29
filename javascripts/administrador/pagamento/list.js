@@ -1,4 +1,5 @@
 //variable global
+var id = 0;
 var search = undefined;
 var page = 1;
 var offset = 0;
@@ -163,10 +164,7 @@ $(document).ready(function(){
 
     //get
     $('a#detalhar').livequery('click',function(event){
-        var params = {
-            id: $(this).data('id')
-        };
-        params = JSON.stringify(params);
+        id =  $(this).data('id');
 
         var options = {
             cache:false,
@@ -176,27 +174,10 @@ $(document).ready(function(){
         }
         $("div#modal").modal(options);
 
-        $('div#modal .modal-content').load('views/administrador/pagamento/view.php',function(result){
-            //get
-            app.util.getjson({
-                url : "/controller/administrador/pagamento/get",
-                method : 'POST',
-                contentType : "application/json",
-                data: params,
-                success: function(response){
-                    console.log(response.codigo);
-                    console.log(response.id);
-                    if(response.id){
-                        //set
-                        $('form#formPagamento #codigo').val(response.codigo);
-                        $('form#formPagamento span#sobrenome').val(response.sobrenome);
-                        $('form#formPagamento span#email').val(response.email);
-                        $('form#formPagamento span#desde').val(response.created_at);
-                    }
-                },
-                error : onError
-            });
-        });
+        //clear
+        $('div#modal .modal-content').html('');
+
+        $('div#modal .modal-content').load('views/administrador/pagamento/view.php');
         return false;
     });
 
