@@ -98,7 +98,7 @@
 
                     <div id="add" class="pull-right hidden">
                         <button class="btn btn-info btn-sm btn-add waves-effect waves-light" type="button">
-                            <span class="btn-label"><i class="fa fa-plus"></i></span>Pagamento Manual
+                            <span class="btn-label"><i class="fa fa-plus"></i></span>Baixar pgto
                         </button>
                     </div>
 
@@ -132,25 +132,12 @@
                                         <li>
                                             <i class="fa fa-barcode"></i> Boleto
                                         </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div id="col-action" class="col-md-8 hidden">
-                                <div class="btn-group pull-right">
-                                    <button type="button" class="btn btn-sm btn-default dropdown-toggle" 
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-cog btn-label"></i>Ações&nbsp;&nbsp;
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li>
-                                        <a id="setStatus" href="javascript:void(0);" data-status="1">
-                                          <i class="fa fa-unlock drop-down-icon"></i> Ativar</a>
-                                      </li>
-                                      <li>
-                                        <a id="setStatus" href="javascript:void(0);" data-status="2">
-                                          <i class="fa fa-lock drop-down-icon"></i> Inativar</a>
-                                      </li>
+                                        <li>
+                                            <i class="ti-link"></i> Link de pgto.
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-search"></i> Detalhes
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -170,13 +157,13 @@
                                         <th>Ingresso</th>
                                         <th>Valor</th>
                                         <th class="text-center">Método</th>
-                                        <th class="text-center">Link</th>
+                                        <th class="text-center"></th>
                                       </tr>
                                     </thead>
                                     <tbody>
                                     </tbody>
-                                  </table>
-                                  <p id="notfound" class="hidden"></p>
+                                </table>
+                                <p id="notfound" class="hidden"></p>
                             </div>
 
                             <div id="col-total" class="row hidden">

@@ -70,20 +70,21 @@ $(document).ready(function(){
                         break;
                     }
                     if(response.results[i].link != undefined && response.results[i].status != 3){
-                        link = '<a href="'+ response.results[i].link +'" target="_blank">Acessar</a>';
+                        link = '<a href="'+ response.results[i].link +'" target="_blank"><i class="ti-link"></a>';
                     }else{
-                        link = '-';
+                        link = '';
                     }
 
                     html += '<tr>'+
                                 '<td>'+ response.results[i].id + '</td>'+
-                                '<td>'+ response.results[i].codigo + '</td>'+
+                                '<td>'+ response.results[i].created_at + '</td>'+
                                 '<td>'+ response.results[i].cliente + '</td>'+
                                 '<td>'+ response.results[i].cpf + '</td>'+
                                 '<td>'+ response.results[i].ingresso + '</td>'+
                                 '<td>'+ floatToMoney(response.results[i].valor, 'R$') + '</td>'+
                                 '<td class="text-center">'+ metodo +'</td>'+
                                 '<td class="text-center">'+ link +'</td>'+
+                                '<td class="text-center"><a href="javascript:;" id="detalhar" data-id="'+ response.results[i].id + '"><i class="fa fa-search"></i></a></td>'+
                             '</tr>';
                 }
                 if(parseInt(response.count.results) >= 1){
@@ -158,6 +159,45 @@ $(document).ready(function(){
     //add form
     $('button.btn-add').livequery('click',function(event){
         window.location.href = "/administrador/pagamento/add";
+    });
+
+    //get
+    $('a#detalhar').livequery('click',function(event){
+        var params = {
+            id: $(this).data('id')
+        };
+        params = JSON.stringify(params);
+
+        var options = {
+            cache:false,
+            show: true,
+            keyboard: false,
+            backdrop: 'static'
+        }
+        $("div#modal").modal(options);
+
+        $('div#modal .modal-content').load('views/administrador/pagamento/view.php',function(result){
+            //get
+            app.util.getjson({
+                url : "/controller/administrador/pagamento/get",
+                method : 'POST',
+                contentType : "application/json",
+                data: params,
+                success: function(response){
+                    console.log(response.codigo);
+                    console.log(response.id);
+                    if(response.id){
+                        //set
+                        $('form#formPagamento #codigo').val(response.codigo);
+                        $('form#formPagamento span#sobrenome').val(response.sobrenome);
+                        $('form#formPagamento span#email').val(response.email);
+                        $('form#formPagamento span#desde').val(response.created_at);
+                    }
+                },
+                error : onError
+            });
+        });
+        return false;
     });
 
     function onError(response) {

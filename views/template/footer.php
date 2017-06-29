@@ -13,7 +13,7 @@
             <div class="modal-loading">
               <div class="col-md-12 text-center">
                 <div class="loading">
-                    <img src="assets/images/loading.gif" width="38">
+                    <img src="assets/images/common/loading.gif" width="38">
                     <p>Aguarde, processando...</p>
                 </div>
               </div>

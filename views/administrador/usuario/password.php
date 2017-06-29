@@ -28,8 +28,8 @@
     </form>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-    <button type="button" id="salvarMudarsenha" class="btn btn-success">Salvar</button>
+    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Fechar</button>
+    <button type="button" id="salvarMudarsenha" class="btn btn-sm btn-success">Salvar</button>
 </div>
 
 <!-- javascripts -->

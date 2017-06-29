@@ -32,7 +32,9 @@ try {
 
     $stmt = $oConexao->prepare(
         'SELECT
-            CONCAT(c.nome,\' \', c.sobrenome) cliente,c.cpf,i.nome ingresso,p.id,p.valor,p.codigo,p.metodo,p.status,p.link
+            UPPER(CONCAT(c.nome,\' \', c.sobrenome)) cliente,c.cpf,i.nome ingresso,
+            p.id,p.valor,p.codigo,p.metodo,p.status,p.link,
+            DATE_FORMAT(p.created_at, "%d/%m/%Y %h\h%i") created_at
         FROM pagamento p
         INNER JOIN usuario c ON c.id = p.idusuario
         INNER JOIN ingresso i ON i.id = p.idingresso
