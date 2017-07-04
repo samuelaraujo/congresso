@@ -4,7 +4,7 @@ var search = undefined;
 var page = 1;
 var offset = 0;
 var limit = 10;
-var status = 3; //status (3) = paga
+var status = 1; //status (1) = ativo
 
 $(document).ready(function(){
 
@@ -20,7 +20,7 @@ $(document).ready(function(){
         }, 5000);
     }
 
-    function list(reload = false, search = undefined, status = 3){
+    function list(reload = false, search = undefined, status = 1){
         var params = (search == undefined) ? 
                         {offset: offset, limit: limit, status: status} : 
                         {offset: offset, limit: limit, status: status, search: search};
@@ -33,66 +33,36 @@ $(document).ready(function(){
         $('.nav .nav-item a').removeClass('active');
         switch(parseInt(status)){
             case 1: 
-                $('a#aguardando').addClass('active');
+                $('a#ativo').addClass('active');
             break;
             case 2: 
-                $('a#analise').addClass('active');
-            break;
-            case 3: 
-                $('a#paga').addClass('active');
-            break;
-            case 7: 
-                $('a#cancelada').addClass('active');
+                $('a#inativo').addClass('active');
             break;
         }
 
         //list
         app.util.getjson({
-            url : "/controller/administrador/pagamento/list",
+            url : "/controller/administrador/lote/list",
             method : 'POST',
             contentType : "application/json",
             data: params,
             success: function(response){
                 var html = '';
                 for (var i=0;i<response.results.length;i++) {
-                    var metodo, link = undefined;
-                    switch(parseInt(response.results[i].metodo)){
-                        case 1:
-                            metodo = '<i class="fa fa-credit-card"></i>';
-                        break;
-                        case 2:
-                            metodo = '<i class="fa fa-barcode"></i>';
-                        break;
-                        case 3:
-                            metodo = '<i class="fa fa-credit-card-alt"></i>';
-                        break;
-                        default:
-                            metodo = '-';
-                        break;
-                    }
-                    if(response.results[i].link != undefined && response.results[i].status != 3){
-                        link = '<a href="'+ response.results[i].link +'" target="_blank"><i class="ti-link"></a>';
-                    }else{
-                        link = '';
-                    }
-
                     html += '<tr>'+
+                                 '<td><input type="checkbox" class="checkItem" value="'+ response.results[i].id + '"></td>'+
                                 '<td>'+ response.results[i].id + '</td>'+
-                                '<td>'+ response.results[i].created_at + '</td>'+
-                                '<td>'+ response.results[i].cliente + '</td>'+
-                                '<td>'+ response.results[i].cpf + '</td>'+
-                                '<td>'+ response.results[i].ingresso + '</td>'+
-                                '<td>'+ floatToMoney(response.results[i].valor, 'R$') + '</td>'+
-                                '<td class="text-center">'+ metodo +'</td>'+
-                                '<td class="text-center">'+ link +'</td>'+
-                                '<td class="text-center"><a href="javascript:;" id="detalhar" data-id="'+ response.results[i].id + '"><i class="fa fa-search"></i></a></td>'+
+                                '<td>'+ response.results[i].nome +'</td>'+
+                                '<td class="text-center">'+
+                                    '<a href="/administrador/lote/edit/'+ response.results[i].id +'" id="editar" class="m-r-10"><i class="fa fa-pencil"></i></a>'+
+                                    '<a href="javascript:;" id="detalhar" data-id="'+ response.results[i].id + '"><i class="fa fa-search"></i></a>'+
+                                '</td>'+
                             '</tr>';
                 }
                 if(parseInt(response.count.results) >= 1){
 
                     $('#col-total').removeClass('hidden');
                     $('#col-search').removeClass('hidden');
-                    $('#col-legenda').removeClass('hidden');
                     $('#col-action').addClass('hidden');
                     $('#pagination-length').html('Exibindo ' + response.results.length + ' de ' + response.count.results + ' registros');
                     
@@ -107,7 +77,6 @@ $(document).ready(function(){
                     $('#col-total').addClass('hidden');
                     $('#col-search').removeClass('hidden');
                     $('#col-action').addClass('hidden');
-                    $('#col-legenda').addClass('hidden');
                 }else{
                     $('#notfound').addClass('hidden');
                     $('#table-results').removeClass('hidden');
@@ -116,10 +85,8 @@ $(document).ready(function(){
                 $('#table-loading').addClass('hidden');
                 $('#add').removeClass('hidden');
                 $('ul.customtab').removeClass('hidden');
-                $('#count-aguardando').html(response.count.aguardando);
-                $('#count-analise').html(response.count.analise);
-                $('#count-paga').html(response.count.paga);
-                $('#count-cancelada').html(response.count.cancelada);
+                $('#count-ativos').html(response.count.ativos);
+                $('#count-inativos').html(response.count.inativos);
                 if(reload)
                     $('#col-reload').addClass('hidden');
             },
@@ -152,14 +119,39 @@ $(document).ready(function(){
     });
 
     //set list tab item
-    $('a#paga,a#aguardando,a#analise,a#cancelada').livequery('click',function(event){
+    $('a#ativo,a#inativo').livequery('click',function(event){
         status = $(this).data('status');
         list(true, search, status);
     });
 
-    //add form
-    $('button.btn-add').livequery('click',function(event){
-        window.location.href = "/administrador/pagamento/add";
+    //check all list
+    $('#checkAll').livequery('click',function(event){
+        var count = 0;
+        $(':checkbox.checkItem').prop('checked', this.checked);    
+        var count = 0;
+        $('.checkItem:checked').each(function(){
+            if(this.checked)
+                count++;
+        })
+        if(count >= 1){
+            $('#col-action').removeClass('hidden');
+        }else{
+            $('#col-action').addClass('hidden');
+        }
+    });
+
+    //check item
+    $('.checkItem').livequery('change',function(event){
+        var count = 0;
+        $('.checkItem:checked').each(function(){
+            if(this.checked)
+                count++;
+        })
+        if(count >= 1){
+            $('#col-action').removeClass('hidden');
+        }else{
+            $('#col-action').addClass('hidden');
+        }
     });
 
     //get
@@ -177,8 +169,40 @@ $(document).ready(function(){
         //clear
         $('div#modal .modal-content').html('');
 
-        $('div#modal .modal-content').load('views/administrador/pagamento/view.php');
+        $('div#modal .modal-content').load('views/administrador/lote/view.php');
         return false;
+    });
+
+    //setStatus
+    $('a#setStatus').livequery('click',function(event){
+        var status = $(this).data('status');
+        var items = [];
+        $('.checkItem:checked').each(function(){
+            items.push($(this).val());
+        });
+
+        //params
+        var params = {
+            lotes: items,
+            status: status
+        }
+        params = JSON.stringify(params);
+
+        //status
+        app.util.getjson({
+            url : "/controller/administrador/lote/setstatus",
+            method : 'POST',
+            contentType : "application/json",
+            data: params,
+            success: function(response){
+                if(response.success){
+                    setSession('success', response.success);
+                    list();
+                    checkSuccess();
+                }
+            },
+            error: onError()
+        });
     });
 
     function onError(response) {
