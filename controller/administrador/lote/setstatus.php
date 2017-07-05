@@ -15,7 +15,7 @@ try {
         throw new Exception('Verifique os dados preenchidos', 400);
     }
 
-    $idsClientes = implode(',', $lotes);
+    $idsLotes = implode(',', $lotes);
 
     $oConexao->beginTransaction();
 
@@ -23,7 +23,7 @@ try {
         'UPDATE lote l SET status=?'.
         'WHERE FIND_IN_SET(cast(l.id AS CHAR), ?)'
     );
-    $stmt->execute(array($status, $idsClientes));
+    $stmt->execute(array($status, $idsLotes));
 
     http_response_code(200);
     $response->success = 'Atualizado com sucesso';

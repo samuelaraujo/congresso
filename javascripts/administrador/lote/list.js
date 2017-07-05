@@ -154,6 +154,11 @@ $(document).ready(function(){
         }
     });
 
+    //add form
+    $('button.btn-add').livequery('click',function(event){
+        window.location.href = "/administrador/lote/add";
+    });
+
     //get
     $('a#detalhar').livequery('click',function(event){
         id =  $(this).data('id');

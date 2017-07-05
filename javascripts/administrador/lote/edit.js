@@ -1,12 +1,11 @@
 //variable global
 var lotes = {};
+var remove = []; 
 
 $(document).ready(function(){
 
     //validate
     $('form#formLote').validate({
-        onfocusout: false,
-        onkeyup: false,
         rules: {
             nome: {
                 required: true,
@@ -71,16 +70,17 @@ $(document).ready(function(){
                     $('#nome').val(response.nome);
 
                     //itens
-                    for (var i=1;i<=response.ingresso.length;i++) {
+                    for (var i=0;i<response.ingresso.length;i++) {
                         var item = $('div#item:first').clone();
                         item.attr('data-id',i);
                         item.find('.form-group').removeClass('has-success has-feedback');
                         item.find('.form-group i').remove();
-                        item.find('#ingresso').val(response.ingresso[i-1].nome);
-                        item.find('#qtd').val(response.ingresso[i-1].qtd);
-                        item.find('#valor').val(response.ingresso[i-1].valor);
-                        item.find('#valor').unmask().mask('#.##0,00', {reverse: true});
-                        if(i > 1){
+                        item.find('#ingressoId').val(response.ingresso[i].id);
+                        item.find('#ingressoNome').val(response.ingresso[i].nome);
+                        item.find('#ingressoQtd').val(response.ingresso[i].qtd);
+                        item.find('#ingressoValor').val(response.ingresso[i].valor);
+                        item.find('#ingressoValor').unmask().mask('#.##0,00', {reverse: true});
+                        if(i >= 1){
                             item.find('button#item-excluir').removeClass('hidden');
                             item.find('button#item-duplicar').removeClass('hidden');
                         }
@@ -146,10 +146,11 @@ $(document).ready(function(){
         item.attr('data-id',count);
         item.find('.form-group').removeClass('has-success has-feedback');
         item.find('.form-group i').remove();
-        item.find('#ingresso').val('');
-        item.find('#qtd').val('');
-        item.find('#valor').val('');
-        item.find('#valor').unmask().mask('#.##0,00', {reverse: true});
+        item.find('#ingressoId').val('');
+        item.find('#ingressoNome').val('');
+        item.find('#ingressoQtd').val('');
+        item.find('#ingressoValor').val('');
+        item.find('#ingressoValor').unmask().mask('#.##0,00', {reverse: true});
         item.find('button#item-excluir').removeClass('hidden');
         item.find('button#item-duplicar').removeClass('hidden');
         return false;
@@ -165,11 +166,17 @@ $(document).ready(function(){
         item.attr('data-id',count);
         item.find('.form-group').removeClass('has-success has-feedback');
         item.find('.form-group i').remove();
-        item.find('#valor').unmask().mask('#.##0,00', {reverse: true});
+        item.find('#ingressoValor').unmask().mask('#.##0,00', {reverse: true});
     });
 
     //remove
     $('button#item-excluir').livequery('click',function(event){
+        var item =  $(this).parents('#item').find('input#ingressoId').val();
+        remove.push(item);
+        var input = $("<input>").attr("type", "hidden").attr("name", "removeId[]").val(remove);
+        $('#itens-remove').append($(input));
+
+        //remove block well
         $(this).parents('#item').remove();
     });
 

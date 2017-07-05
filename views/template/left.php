@@ -47,7 +47,7 @@
                 </li>
                 <li> 
                     <a href="/administrador/deficiencia" class="waves-effect">
-                        <i class="icon-directions fa-fw" data-icon="v"></i> <span class="hide-menu"> Deficiência </span>
+                        <i class="fa fa-wheelchair" data-icon="v"></i> <span class="hide-menu"> Deficiência </span>
                     </a>
                 </li>
             <?php } ?>

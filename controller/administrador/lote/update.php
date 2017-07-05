@@ -9,13 +9,7 @@ $response = new stdClass();
 
 try {
     if (!isset(
-        $params->id,
-        $params->nome,
-        $params->cracha,
-        $params->sexo, 
-        $params->pais,
-        $params->estado,
-        $params->cidade
+        $_POST['nome']
     )) {
         throw new Exception('Verifique os dados preenchidos', 400);
     }
@@ -23,43 +17,87 @@ try {
     $oConexao->beginTransaction();
 
     $stmt = $oConexao->prepare(
-        'UPDATE usuario
-			SET nome=?,sobrenome=?,cracha=?,sexo=?,idpais=?,idcidade=?,updated_at=now()
+        'UPDATE lote
+			SET nome=?,updated_at=now()
 			WHERE id=?'
         );
     $stmt->execute(array(
-        $params->nome,
-        $params->sobrenome, 
-        $params->cracha, 
-        $params->sexo,
-        $params->pais,
-        $params->cidade,
-        $params->id
+        $_POST['nome'],
+        $_POST['id']
     )); 
 
-    // Apaga todos as permissões do usuário
-    $stmt = $oConexao->prepare(
-    'DELETE FROM usuario_permissao
-	 	WHERE idusuario=?
-	');
-    $stmt->execute(array(
-        $params->id
-    ));
+    //adicionar ou atualizar ingressos
+    $count_ingresso = sizeof($_POST['ingressoId']);
+    for($i=0; $i<$count_ingresso; $i++){
+        
+        //params
+        $ingressoId = $_POST['ingressoId'][$i];
+        $ingressoNome = $_POST['ingressoNome'][$i];
+        $ingressoQtd = $_POST['ingressoQtd'][$i];
+        $ingressoValor = $_POST['ingressoValor'][$i];
 
-    // Perfil de Acesso comum
-    $stmt = $oConexao->prepare(
-    'INSERT INTO usuario_permissao(
-			idusuario,regra
-		) VALUES (
-			:idusuario,:regra
-		)');
+        $stmt = $oConexao->prepare(
+            'SELECT 
+                COUNT(*)
+            FROM ingresso 
+            WHERE id = ?'
+        );
+        $stmt->execute(array(
+            $ingressoId
+        ));
+        $count = $stmt->fetchColumn();
 
-    $usuario_permissao = array('idusuario' => $params->id);
-    $regras = array('/dashboard', '/certificado', '/conta');
+        if($count){
+            //update
+            $stmt = $oConexao->prepare(
+                'UPDATE ingresso
+                    SET nome=?,qtd=?,valor=?,updated_at=now()
+                    WHERE id=?'
+                );
+            $stmt->execute(array(
+                $ingressoNome,
+                $ingressoQtd,
+                converteValorMonetario($ingressoValor),
+                $ingressoId
+            )); 
+        }else{
+            //insert
+            $stmt = $oConexao->prepare(
+            'INSERT INTO
+                ingresso(
+                    idlote,nome,qtd,valor,status,created_at,updated_at
+                ) VALUES (
+                    ?,?,?,?,1,now(),now()
+                )');
 
-    foreach ($regras as $regra) {
-        $usuario_permissao['regra'] = $regra;
-        $stmt->execute($usuario_permissao);
+            $stmt->execute(array(
+                $_POST['id'],
+                $ingressoNome,
+                $ingressoQtd,
+                converteValorMonetario($ingressoValor)
+            ));
+        }
+
+    }
+
+    //atualizar ingressos
+    $count_ingresso = isset($_POST['removeId']) 
+                            ? sizeof($_POST['removeId']) 
+                            : 0;
+    for($i=0; $i<$count_ingresso; $i++){
+
+        //params
+        $ingressoId = $_POST['removeId'][$i];
+
+        //update status
+        $stmt = $oConexao->prepare(
+            'UPDATE ingresso
+                SET status=2
+                WHERE id=?'
+            );
+        $stmt->execute(array(
+            $ingressoId
+        )); 
     }
 
     $oConexao->commit();

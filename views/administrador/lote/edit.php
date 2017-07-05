@@ -41,7 +41,7 @@
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <ol class="breadcrumb">
                     <li><a href="/administrador/dashboard">Dashboard</a></li>
-                    <li><a href="/administrador/usuario">Lotes</a></li>
+                    <li><a href="/administrador/lote">Lotes</a></li>
                     <li class="active">Editar</li>
                 </ol>
             </div><!-- /.col-lg-12 -->
@@ -104,19 +104,24 @@
                                 <div class="row">
                                     <div id="itens" class="col-md-12">
                                         <div id="item" class="well" data-id="1">
+                                            <input type="hidden" id="ingressoId" 
+                                                name="ingressoId[]">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <input type="text" 
                                                         class="form-control" 
-                                                        id="ingresso" name="ingresso[]" placeholder="Ingresso"> 
+                                                        id="ingressoNome" 
+                                                        name="ingressoNome[]" 
+                                                        placeholder="Ingresso"> 
                                                     </div>                                
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
                                                         <input type="text" 
                                                         class="form-control" 
-                                                        id="qtd" name="qtd[]" 
+                                                        id="ingressoQtd" 
+                                                        name="ingressoQtd[]" 
                                                         placeholder="Quantidade"> 
                                                     </div> 
                                                 </div>
@@ -124,7 +129,8 @@
                                                     <div class="form-group">
                                                         <input type="text" 
                                                         class="form-control" 
-                                                        id="valor" name="valor[]" 
+                                                        id="ingressoValor" 
+                                                        name="ingressoValor[]" 
                                                         placeholder="Valor"> 
                                                     </div> 
                                                 </div>
@@ -147,6 +153,7 @@
                                             </div>
                                         </div>                  
                                     </div>
+                                    <div id="itens-remove"></div>
                                 </div>
 
                                 <div class="row">

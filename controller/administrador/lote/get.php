@@ -30,7 +30,8 @@ try {
     $stmt = $oConexao->prepare(
         'SELECT id,nome,qtd,valor,status
         FROM ingresso
-        WHERE idlote=?'
+        WHERE idlote=?
+        AND status=1'
     );
     $stmt->execute(array(
         $params->id
