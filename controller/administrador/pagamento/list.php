@@ -25,6 +25,7 @@ try {
 								(
 									p.codigo LIKE :query OR
 									c.nome LIKE :query OR
+                                    c.sobrenome LIKE :query OR
 									c.cpf LIKE :query
 								)
 							'
@@ -39,7 +40,7 @@ try {
         INNER JOIN usuario c ON c.id = p.idusuario
         INNER JOIN ingresso i ON i.id = p.idingresso
         WHERE '.$status.' '.$search.'
-		ORDER BY p.id DESC
+		ORDER BY p.id DESC, p.updated_at DESC
         LIMIT :offset,:limit'
     );
     $stmt->bindParam('offset', $offset, PDO::PARAM_INT);

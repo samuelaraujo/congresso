@@ -11,7 +11,7 @@ try {
 
     $stmt = $oConexao->prepare(
         'SELECT
-            CONCAT(c.nome,\' \', c.sobrenome) cliente,c.cpf,i.nome ingresso,p.valor,p.codigo,p.status
+            UPPER(CONCAT(c.nome,\' \', c.sobrenome)) cliente,c.cpf,i.nome ingresso,p.valor,p.codigo,p.status
         FROM pagamento p
         INNER JOIN usuario c ON c.id = p.idusuario
         INNER JOIN ingresso i ON i.id = p.idingresso

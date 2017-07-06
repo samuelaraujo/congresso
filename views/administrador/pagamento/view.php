@@ -67,7 +67,7 @@
 			            <span id="nome" class="dados"></span>
 			        </div>
 		        </div>
-		        <div class="col-md-12">
+		        <div class="col-md-6">
 			        <div class="form-group">
 			            <label class="control-label">Crachá:</label>
 			            <span id="cracha" class="dados bg-cracha"></span>
@@ -75,11 +75,23 @@
 		        </div>
 		        <div class="col-md-6">
 			        <div class="form-group">
+			            <label class="control-label">E-mail:</label>
+			            <span id="email" class="dados"></span>
+			        </div>
+		        </div>
+		        <div class="col-md-4">
+			        <div class="form-group">
+			            <label class="control-label">Telefone:</label>
+			            <span id="telefone" class="dados"></span>
+			        </div>
+		        </div>
+		        <div class="col-md-4">
+			        <div class="form-group">
 			            <label class="control-label">CPF:</label>
 			            <span id="cpf" class="dados"></span>
 			        </div>
 		        </div>
-		        <div class="col-md-6">
+		        <div class="col-md-4">
 			        <div class="form-group">
 			            <label class="control-label">Sexo:</label>
 			            <span id="sexo" class="dados"></span>

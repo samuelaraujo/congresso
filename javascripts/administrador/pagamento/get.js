@@ -14,7 +14,7 @@ $(document).ready(function(){
 	        data: params,
 	        success: function(response){
 	            if(response.id){
-	            	var metodo, status, bgstatus, sexo = undefined;
+	            	var metodo, status, bgstatus, sexo, telefone = undefined;
                     switch(parseInt(response.metodo)){
                         case 1:
                             metodo = 'Cartão de crédito';
@@ -55,6 +55,12 @@ $(document).ready(function(){
                     	sexo = 'Feminino';
                     }
 
+                    if(response.telefone == undefined){
+                        telefone = 'N/A';
+                    }else{
+                        telefone = response.telefone;
+                    }
+
 	                //set
 	                $('form#formPagamento span#codigo').html(response.codigo);
 	                $('form#formPagamento span#metodo').html(metodo);
@@ -66,7 +72,9 @@ $(document).ready(function(){
 
 	                $('form#formPagamento span#nome').html(response.cliente);
 	                $('form#formPagamento span#cracha').html(response.cracha);
-	                $('form#formPagamento span#cpf').html(response.cpf);
+                    $('form#formPagamento span#email').html(response.email);
+	                $('form#formPagamento span#telefone').html(telefone);
+                    $('form#formPagamento span#cpf').html(response.cpf);
 	                $('form#formPagamento span#sexo').html(sexo);
 	                $('form#formPagamento span#pais').html(response.pais);
 	                $('form#formPagamento span#cidade').html(response.cidade);

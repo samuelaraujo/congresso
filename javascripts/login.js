@@ -3,6 +3,9 @@ var usuarios = pagamentos = {};
 
 $(document).ready(function(){
 
+    //mask
+    $("#telefone").mask("(00) 0000-00009");
+
 	$('ul.tabs a').livequery( "click", function(event){
 		var tabnavs = $(this).attr('href');
         $(this).parent().parent().find('li a').removeClass('active');
@@ -85,6 +88,9 @@ $(document).ready(function(){
                 required: true,
                 minlength: 3
             },
+            telefone: { 
+                required: true
+            },
             ingresso: { 
                 required: true
             },
@@ -130,6 +136,9 @@ $(document).ready(function(){
             cracha: { 
                 required: 'Como deseja ter seu nome no crachá?',
                 minlength: 'Só aceitamos nomes superior a três letras'
+            },
+            telefone: { 
+                required: 'Oi, precisamos do seu contato'
             },
             ingresso: { 
                 required: 'Vamos lá, qual ingresso deseja adquirir?'
@@ -292,6 +301,7 @@ $(document).ready(function(){
                 nome: $('form#formCadastro #nome').val(),
                 sobrenome: $('form#formCadastro #sobrenome').val(),
                 cracha: $('form#formCadastro #cracha').val(),
+                telefone: $('form#formCadastro #telefone').val(),
                 email: $('form#formCadastro #email').val(),
                 ingresso: $('form#formCadastro #ingresso').val(),
                 valor: $('form#formCadastro #ingresso option:selected').attr('data-value') != undefined ? $('form#formCadastro #ingresso option:selected').attr('data-value') : 0.00,

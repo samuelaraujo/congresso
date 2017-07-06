@@ -31,6 +31,18 @@
 		        </div>
 		        <div class="col-md-6">
 			        <div class="form-group">
+			            <label class="control-label">Telefone:</label>
+			            <span id="telefone" class="dados"></span>
+			        </div>
+		        </div>
+		        <div class="col-md-6">
+			        <div class="form-group">
+			            <label class="control-label">E-mail:</label>
+			            <span id="email" class="dados"></span>
+			        </div>
+		        </div>
+		        <div class="col-md-6">
+			        <div class="form-group">
 			            <label class="control-label">CPF:</label>
 			            <span id="cpf" class="dados"></span>
 			        </div>

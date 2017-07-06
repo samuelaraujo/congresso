@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Nome no Crachá<abbr>*</abbr></label>
                                     <input id="cracha" name="cracha" placeholder="Nome no crachá" class="form-control" type="text" maxLength="60">
@@ -105,6 +105,12 @@
                                 <div class="form-group">
                                     <label>E-mail<abbr>*</abbr></label>
                                     <input id="email" name="email" placeholder="E-mail" class="form-control" type="email" maxLength="160">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Telefone<abbr>*</abbr></label>
+                                    <input id="telefone" name="telefone" placeholder="Telefone" class="form-control" type="text">
                                 </div>
                             </div>
                         </div>
@@ -244,6 +250,7 @@
 <script type="text/javascript" src="assets/javascript/validate/cpfBR.js"></script>
 <script type="text/javascript" src="assets/javascript/validate/checkcpf.js"></script>
 <script type="text/javascript" src="assets/javascript/validate/checkemail.js"></script>
+<script type="text/javascript" src="assets/javascript/jquery.mask.js"></script>
 <script type="text/javascript" src="javascripts/functions.js"></script>
 <script type="text/javascript" src="javascripts/login.js"></script>
 

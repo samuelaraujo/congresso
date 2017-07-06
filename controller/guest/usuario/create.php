@@ -39,9 +39,9 @@ try {
 
 
     $stmt = $oConexao->prepare('INSERT INTO
-                 usuario(idingresso,nome,sobrenome,cracha,sexo,email,
+                 usuario(idingresso,nome,sobrenome,cracha,sexo,email,telefone,
                  cpf,senha,idpais,idcidade,created_at,updated_at
-                ) VALUES (?,?,?,?,?,?,?,?,?,?,now(),now())');
+                ) VALUES (?,?,?,?,?,?,?,?,?,?,?,now(),now())');
     $stmt->execute(array(
         $params->usuario->ingresso,
         $params->usuario->nome,
@@ -49,6 +49,7 @@ try {
         $params->usuario->cracha,
         $params->usuario->sexo,
         $params->usuario->email,
+        $params->usuario->telefone,
         $params->usuario->cpf,
         $params->usuario->senha,
         $params->usuario->pais,

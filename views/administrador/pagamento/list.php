@@ -151,7 +151,7 @@
                                     <thead>
                                       <tr>
                                         <th>#</th>
-                                        <th>Código</th>
+                                        <th>Data</th>
                                         <th>Cliente</th>
                                         <th>CPF</th>
                                         <th>Ingresso</th>
