@@ -54,8 +54,9 @@
 
             <?php if(isset($_SESSION['congresso_gestor']) && $_SESSION['congresso_gestor'] != 1){ ?>
                 <li> 
-                    <a href="/office/certificado" class="waves-effect">
-                        <i class="icon-doc p-r-10" data-icon="v"></i> <span class="hide-menu"> Certificado </span>
+                    <a href="/office/cliente/edit/<?=$_SESSION['congresso_uid']?>" 
+                        class="waves-effect">
+                        <i class="icon-user" data-icon="v"></i> <span class="hide-menu"> Meu perfil </span>
                     </a>
                 </li>
             <?php } ?>
