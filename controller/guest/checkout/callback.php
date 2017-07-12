@@ -14,7 +14,11 @@ $response = new stdClass();
 include_once BASE_DIR.'/vendor/phpmailer/class.phpmailer.php';
 include_once BASE_DIR.'/vendor/phpmailer/class.smtp.php';
 
-if(isset($_POST['notificationType']) && $_POST['notificationType'] == 'transaction'){
+if(isset(
+	$_POST['notificationCode'],
+	$_POST['notificationType']
+)) 	{
+
 	//configurações
 	$codigo = $_POST['notificationCode'];
 	$url = notificationsURL.'/'.$codigo.'?email='.PAGSEGURO_EMAIL.'&token='.PAGSEGURO_TOKEN;
@@ -25,6 +29,7 @@ if(isset($_POST['notificationType']) && $_POST['notificationType'] == 'transacti
 	curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
 	
 	$xml = curl_exec($curl);
+	$http = curl_getinfo($curl); //info http
 
 	if($xml == 'Unauthorized'){
 		//objeto
@@ -76,6 +81,18 @@ if(isset($_POST['notificationType']) && $_POST['notificationType'] == 'transacti
 			$response->success = 'Transação atualizada com sucesso';
 		}
 	}
+ 
+   	$today = date("Y_m_d");
+   	$file = fopen("LogPagSeguro.$today.txt", "ab");
+   	$hour = date("H:i:s T");
+   	fwrite($file,"Log de Notificações e consulta\\\\r\\\\n");
+   	fwrite($file,"Hora da consulta: $hour \\\\r\\\\n");
+   	fwrite($file,"HTTP: ".$http['http_code']." \\\\r\\\\n");
+   	fwrite($file,"Código de Notificação:".$codigo." \\\\r\\\\n");
+   	fwrite($file, "Código da transação:".$results->code."\\\\r\\\\n");
+   	fwrite($file, "Status da transação:".$results->status."\\\\r\\\\n");
+  	fwrite($file,"____________________________________ \\\\r\\\\n");
+   	fclose($file);
 
 }else{
 	http_response_code(500);
