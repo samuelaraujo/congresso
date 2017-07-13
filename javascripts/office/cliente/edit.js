@@ -3,6 +3,21 @@ var clientes = {};
 
 $(document).ready(function(){
 
+    //mask
+    $("#telefone").mask("(00) 0000-00009");
+
+    function checkSuccess(){
+        //success
+        if(getSession('success')){
+            $('#success').removeClass('hidden');
+            $('#success').find('p').html(getSession('success'));
+        }
+        setTimeout(function() {
+            $('#success').addClass('hidden');
+            destroySession('success');
+        }, 5000);
+    }
+
     //validate
     $('form#formCliente').validate({
         onfocusout: false,
@@ -181,6 +196,7 @@ $(document).ready(function(){
                 nome: $('#nome').val(),
                 sobrenome: $('#sobrenome').val(),
                 cracha: $('#cracha').val(),
+                telefone: $('#telefone').val(),
                 sexo: $('#sexo').val(),
                 pais: $('#pais').val(),
                 estado: $('#estado').val(),
@@ -203,7 +219,7 @@ $(document).ready(function(){
                 success: function(response){
                     if(response.success){
                         setSession('success', response.success);
-                        window.location.href = "/office/cliente";
+                        window.location.href = "/office/cliente/edit/"+clientes.id;
                     }
                 },
                 error : function(response){
@@ -233,5 +249,6 @@ $(document).ready(function(){
 
     //init
     get();
+    checkSuccess();
 
 });

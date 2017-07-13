@@ -47,7 +47,7 @@
                 
                     <div class="row">
                         <div class="col-lg-12">
-                            <h3 class="box-title m-b-30"><?=$_SESSION['congresso_nome'].' '.$_SESSION['congresso_sobrenome']?></h3>
+                            <h3 class="box-title m-b-30">Olá <?=$_SESSION['congresso_nome'].' '.$_SESSION['congresso_sobrenome']?></h3>
                             <!-- Nav tabs -->
                             <ul class="nav nav-custom nav-tabs" role="tablist">
                                 <li role="presentation" class="nav-item">
@@ -79,55 +79,55 @@
                                         <b>Nome completo:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p><?=$_SESSION['congresso_nome'].' '.$_SESSION['congresso_sobrenome']?></p>
+                                        <p id="cliente"></p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>Crachá:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p><?=$_SESSION['congresso_nome']?></p>
+                                        <p id="cracha"></p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>Sexo:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p>||</p>
+                                        <p id="sexo"></p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>CPF:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p><?=$_SESSION['congresso_cpf']?></p>
+                                        <p id="cpf"></p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>E-mail:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p><?=$_SESSION['congresso_email']?></p>
+                                        <p id="email"></p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>País de origem:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p>Brasil</p>
+                                        <p id="pais"></p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>Cidade:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p>Rio branco</p>
+                                        <p id="cidade"></p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>Desde de:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p>19/01/2017 10h41</p>
+                                        <p id="created_at"></p>
                                     </div>
                                     <div class="col-md-3">
                                         <b>Último acesso:</b>
                                     </div>
                                     <div class="col-md-9">
-                                        <p>24/05/2017 08h39</p>
+                                        <p id="login_at"></p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -135,11 +135,11 @@
                                     <div class="well">
                                         <div class="row row-registration">
                                             <div class="col-md-6">
-                                                <h5>1º Lote</h5>
+                                                <h5 id="lote">1º Lote</h5>
                                             </div>
                                             <div class="col-md-6 text-right">
-                                                <button class="btn btn-outline btn-success"> 
-                                                    <i class="icon-doc m-r-5"></i> <span>Emitir certificado</span>
+                                                <button class="btn btn-success"> 
+                                                    <i class="icon-doc m-r-5"></i> <span>2ª via de boleto</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -148,19 +148,19 @@
                                                 <b>Matrícula:</b>
                                             </div>
                                             <div class="col-md-9">
-                                                <p><?=$_SESSION['congresso_uid']?></p>
+                                                <p id="matricula"></p>
                                             </div>
                                             <div class="col-md-3">
                                                 <b>Transação:</b>
                                             </div>
                                             <div class="col-md-9">
-                                                <p>6821EBDE-E36E-4376-9093-219A793D4467</p>
+                                                <p id="transacao"></p>
                                             </div>
                                             <div class="col-md-3">
                                                 <b>Status:</b>
                                             </div>
                                             <div class="col-md-9">
-                                                <p>Aguardando pagamento</p>
+                                                <p id="status"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -191,4 +191,5 @@
 <?php require_once 'views/template/footer.php'; ?>
 
 <!-- javascripts -->
-<!-- <script type="text/javascript" src="javascripts/vendor/login.js"></script> -->
+<script type="text/javascript" src="javascripts/office/dashboard.js"></script>
+<script type="text/javascript" src="javascripts/office/global.js"></script>

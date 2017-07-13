@@ -24,13 +24,14 @@ try {
 
     $stmt = $oConexao->prepare(
         'UPDATE usuario
-			SET nome=?,sobrenome=?,cracha=?,sexo=?,idpais=?,idcidade=?,updated_at=now()
+			SET nome=?,sobrenome=?,cracha=?,telefone=?,sexo=?,idpais=?,idcidade=?,updated_at=now()
 			WHERE id=?'
         );
     $stmt->execute(array(
         $params->nome,
         $params->sobrenome, 
         $params->cracha, 
+        $params->telefone,
         $params->sexo,
         $params->pais,
         $params->cidade,

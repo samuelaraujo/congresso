@@ -61,6 +61,12 @@
                         </div>
                     </div>
 
+                    <div id="success" class="alert alert-success hidden">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                        <p></p>
+                    </div>
+
                     <div id="form" class="row hidden">
 
                         <div class="col-sm-12 col-xs-12">
@@ -211,6 +217,7 @@
 
 <!-- javascripts -->
 <script type="text/javascript" src="assets/javascript/jquery.validate.min.js"></script>
-<script type="text/javascript" src="assets/javascript/validate/checkemail.js"></script>
+<script type="text/javascript" src="assets/javascript/jquery.mask.js"></script>
 <script type="text/javascript" src="javascripts/functions.js"></script>
 <script type="text/javascript" src="javascripts/office/cliente/edit.js"></script>
+<script type="text/javascript" src="javascripts/office/global.js"></script>
