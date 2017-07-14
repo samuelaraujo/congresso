@@ -10,7 +10,7 @@
                         alt="user-img" 
                         class="img-circle"> 
                         <span class="hide-menu">
-                            <?=$_SESSION['congresso_nome'].' '.$_SESSION['congresso_sobrenome']?>
+                            <?=$_SESSION['congresso_nome']?>
                         <span class="fa arrow"></span>
                     </span>
                 </a>

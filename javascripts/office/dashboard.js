@@ -1,3 +1,6 @@
+//variable global
+var clientes, pagamentos = {};
+
 $(document).ready(function(){
 
     function list(){
@@ -8,7 +11,13 @@ $(document).ready(function(){
             contentType : "application/json",
             success: function(response){
                 if(response.id){
-                    var sexo = undefined;
+                    var telefone, sexo, status, labelStatus, metodo, segundaVia = undefined;
+                    if (response.telefone == undefined) {
+                        telefone = 'N/A';
+                    }else{
+                        telefone = response.telefone;
+                    }
+
                     if (response.sexo == 'M') {
                         sexo = 'Masculino';
                     }else{
@@ -19,18 +28,34 @@ $(document).ready(function(){
                         case 1:
                             status = 'Aguardando pgto';
                             labelStatus = 'label-warning';
+                            segundaVia = true;
                         break;
                         case 2:
                             status = 'Em análise';
                             labelStatus = 'label-info';
+                            segundaVia = true;
                         break;
                         case 3:
                             status = 'Paga';
                             labelStatus = 'label-success';
+                            segundaVia = false;
                         break;
                         case 7:
                             status = 'Cancelada';
                             labelStatus = 'label-danger';
+                            segundaVia = true;
+                        break;
+                    }
+
+                    switch(parseInt(response.metodo)){
+                        case 1:
+                            metodo = 'Crédito';
+                        break;
+                        case 2:
+                            metodo = 'Boleto';
+                        break;
+                        case 3:
+                            metodo = 'Débito';
                         break;
                     }
 
@@ -38,6 +63,7 @@ $(document).ready(function(){
                     $('p#cracha').html(response.cracha);
                     $('p#sexo').html(sexo);
                     $('p#cpf').html(response.cpf);
+                    $('p#telefone').html(telefone);
                     $('p#email').html(response.email);
                     $('p#cidade').html(response.cidade);
                     $('p#pais').html(response.pais);
@@ -47,45 +73,41 @@ $(document).ready(function(){
                     $('p#matricula').html(response.id);
                     $('p#transacao').html(response.codigo);
                     $('p#status').html('<span class="label '+labelStatus+'">'+status+'</span>');
-                    
+                    $('p#ingresso').html(response.ingresso);
+                    $('p#valor').html(response.valor);
+                    $('p#metodo').html(metodo);
+                    $('p#created_pay_at').html(response.created_pay_at);
+                    $('p#updated_pay_at').html(response.updated_pay_at);
+                    if(segundaVia)
+                        $('button#btn-segundavia').removeClass('hidden');
 
-                    // var html = '';
-                    // for (var i=0;i<response.results.length;i++) {
-                    //     var status = undefined;
-                    //     switch(parseInt(response.results[i].status)){
-                    //         case 1:
-                    //             status = 'Aguardando pgto';
-                    //             labelStatus = 'label-warning';
-                    //         break;
-                    //         case 2:
-                    //             status = 'Em análise';
-                    //             labelStatus = 'label-info';
-                    //         break;
-                    //         case 3:
-                    //             status = 'Paga';
-                    //             labelStatus = 'label-success';
-                    //         break;
-                    //         case 7:
-                    //             status = 'Cancelada';
-                    //             labelStatus = 'label-danger';
-                    //         break;
-                    //     }
-                    //     html += '<tr>'+
-                    //                 '<td>'+ (i+1) + '</td>'+
-                    //                 '<td>'+ response.results[i].codigo + '</td>'+
-                    //                 '<td>'+ response.results[i].cliente + '</td>'+
-                    //                 '<td>'+ response.results[i].cpf + '</td>'+
-                    //                 '<td>'+ response.results[i].ingresso + '</td>'+
-                    //                 '<td>'+ floatToMoney(response.results[i].valor, 'R$') + '</td>'+
-                    //                 '<td><span class="label '+labelStatus+'">'+status+'</span></td>'+
-                    //             '</tr>';
-                    // }
-                    // $("table#table-pagamentos > tbody").html(html);
+                    //set 
+                    clientes = response;
+                    
                 }
             },
             error : onError
         });
     }
+
+    $('button#btn-segundavia').livequery('click',function(event){
+
+        var options = {
+            cache:false,
+            show: true,
+            keyboard: false,
+            backdrop: 'static'
+        }
+        $("div#modal").modal(options);
+        $('div#modal .modal-content').load('views/office/checkout/billet.php');
+        return false;
+    });
+
+    //navegação abas
+    $('a.nav-link').livequery('click',function(event){
+        $('a.nav-link').removeClass('active');
+        $(this).addClass('active');
+    });
 
     function onError(response) {
       console.log(response);

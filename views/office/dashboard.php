@@ -100,6 +100,12 @@
                                         <p id="cpf"></p>
                                     </div>
                                     <div class="col-md-3">
+                                        <b>Telefone:</b>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p id="telefone"></p>
+                                    </div>
+                                    <div class="col-md-3">
                                         <b>E-mail:</b>
                                     </div>
                                     <div class="col-md-9">
@@ -138,8 +144,9 @@
                                                 <h5 id="lote">1º Lote</h5>
                                             </div>
                                             <div class="col-md-6 text-right">
-                                                <button class="btn btn-success"> 
-                                                    <i class="icon-doc m-r-5"></i> <span>2ª via de boleto</span>
+                                                <button id="btn-segundavia" 
+                                                    class="btn btn-success hidden"> 
+                                                    <i class="icon-doc m-r-5"></i> <span>2ª via de pagamento</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -157,11 +164,42 @@
                                                 <p id="transacao"></p>
                                             </div>
                                             <div class="col-md-3">
+                                                <b>Ingresso:</b>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p id="ingresso"></p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <b>Valor:</b>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p id="valor"></p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <b>Método:</b>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p id="metodo"></p>
+                                            </div>
+                                            <div class="col-md-3">
                                                 <b>Status:</b>
                                             </div>
                                             <div class="col-md-9">
                                                 <p id="status"></p>
                                             </div>
+                                            <div class="col-md-3">
+                                                <b>Criado em:</b>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p id="created_pay_at"></p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <b>Atualizado em:</b>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p id="updated_pay_at"></p>
+                                            </div>
+                                            <div class="clearfix"></div>
                                         </div>
                                     </div>
                                     <div class="clearfix"></div>
@@ -169,7 +207,7 @@
                                 <div role="tabpanel" class="tab-pane fade" id="certificate">
                                     <div class="col-md-6">
                                         <h3>Aguarde a conclusão do curso para impressão do certificado!</h3>
-                                        <h4>OBRIGADO POR PARTICIPAR DO EVENTO</h4>
+                                        <h4>Obrigado por participar do evento!!!</h4>
                                     </div>
                                     <div class="col-md-5 pull-right">
                                         <p></p>
@@ -193,3 +231,6 @@
 <!-- javascripts -->
 <script type="text/javascript" src="javascripts/office/dashboard.js"></script>
 <script type="text/javascript" src="javascripts/office/global.js"></script>
+
+<!-- Javascript Pagseguro -->
+<script type="text/javascript" src="<?=javascriptURL?>"></script>
