@@ -46,16 +46,13 @@ $(document).ready(function(){
 						status: response.results.status,
 						descricao: response.results.descricao,
 						metodo: response.results.metodo,
-						valor: response.results.valor,
-						link: response.results.link
+						valor: parseFloat(response.results.valor),
+						link: response.results.link,
+						codigoupdate: clientes.codigo //codigo de atualização da transação
 					};
 
 					//params
-					var params = {
-						pagamento: pagamentos, //utilizando variavel global(dashboard.js)
-						usuario: usuarios 
-					};
-					params = JSON.stringify(params);
+					params = JSON.stringify(pagamentos);
 
 					//update
 					app.util.getjson({
@@ -65,7 +62,14 @@ $(document).ready(function(){
 						data: params,
 						success: function(response){
 							if(response.success){
-							    
+								//remove hidden
+								$('.modal-loading').addClass('hidden');
+								$('.modal-header').removeClass('hidden');
+								$('.modal-body').removeClass('hidden');
+								$('.modal-footer').removeClass('hidden');
+
+							    $('#successModal').find('.alert').append('<p>'+ response.success +'</p>');
+	            				$('#successModal').removeClass('hidden');
 							}
 						},
 						error(response){
@@ -83,6 +87,11 @@ $(document).ready(function(){
 			}
 		});
     }
+
+    $('button#btn-imprimir').livequery('click',function(event){
+    	window.href = pagamentos.link;
+    	return false;
+    });
 
     function onError(response) {
       console.log(response);
