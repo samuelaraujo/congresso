@@ -9,13 +9,12 @@ $response = new stdClass();
 
 try {
     if (!isset(
-        $params->id,
-        $params->nome,
-        $params->cracha,
-        $params->sexo, 
-        $params->pais,
-        $params->estado,
-        $params->cidade
+        $params->codigo,
+        $params->valor,
+        $params->status,
+        $params->link,
+        $params->metodo,
+        $params->codigoupdate
     )) {
         throw new Exception('Verifique os dados preenchidos', 400);
     }
@@ -23,50 +22,23 @@ try {
     $oConexao->beginTransaction();
 
     $stmt = $oConexao->prepare(
-        'UPDATE usuario
-			SET nome=?,sobrenome=?,cracha=?,telefone=?,sexo=?,idpais=?,idcidade=?,updated_at=now()
-			WHERE id=?'
+        'UPDATE pagamento
+			SET codigo=?,metodo=?,valor=?,link=?,status=?,created_at=now(),updated_at=now()
+			WHERE codigo=?'
         );
     $stmt->execute(array(
-        $params->nome,
-        $params->sobrenome, 
-        $params->cracha, 
-        $params->telefone,
-        $params->sexo,
-        $params->pais,
-        $params->cidade,
-        $params->id
+        $params->codigo
+        $params->metodo,
+        $params->valor,
+        $params->link,
+        $params->status, 
+        $params->codigoupdate
     )); 
-
-    // Apaga todos as permissões do usuário
-    $stmt = $oConexao->prepare(
-    'DELETE FROM usuario_permissao
-	 	WHERE idusuario=?
-	');
-    $stmt->execute(array(
-        $params->id
-    ));
-
-    // Perfil de Acesso comum
-    $stmt = $oConexao->prepare(
-    'INSERT INTO usuario_permissao(
-			idusuario,regra
-		) VALUES (
-			:idusuario,:regra
-		)');
-
-    $usuario_permissao = array('idusuario' => $params->id);
-    $regras = array('/dashboard', '/certificado', '/conta');
-
-    foreach ($regras as $regra) {
-        $usuario_permissao['regra'] = $regra;
-        $stmt->execute($usuario_permissao);
-    }
 
     $oConexao->commit();
 
     http_response_code(200);
-    $response->success = 'Atualizado com sucesso';
+    $response->success = 'Boleto gerado com sucesso';
 } catch (PDOException $e) {
     //echo $e->getMessage();
     http_response_code(500);

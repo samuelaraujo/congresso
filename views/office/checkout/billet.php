@@ -27,6 +27,12 @@
         </div>
     </div>
 
+    <div class="col-md-12">
+        <button id="btn-imprimir" 
+            class="btn btn-success"> 
+            <i class="icon-printer m-r-5"></i> <span>Imprimir</span>
+        </button>
+    </div>
     
 </div>
 <div class="modal-footer hidden">

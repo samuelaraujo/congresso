@@ -7,7 +7,7 @@ ini_set('display_errors', 1);
 //definindo os dados de acesso ao banco de dados(DEVELOPER)
 define('DB', 'mysql');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'juridico');
+define('DB_NAME', 'congresso');
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
 define('SALT', '&$15#*cg!1='); //nunca mudar(salt padrão)
