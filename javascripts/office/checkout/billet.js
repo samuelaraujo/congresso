@@ -78,7 +78,6 @@ $(document).ready(function(){
 						}
 					});
 
-					console.log(params);
 				}
 			},
 			error: function(response){
@@ -89,7 +88,7 @@ $(document).ready(function(){
     }
 
     $('button#btn-imprimir').livequery('click',function(event){
-    	window.href = pagamentos.link;
+    	window.open(pagamentos.link);
     	return false;
     });
 

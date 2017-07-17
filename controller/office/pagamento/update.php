@@ -24,10 +24,10 @@ try {
     $stmt = $oConexao->prepare(
         'UPDATE pagamento
 			SET codigo=?,metodo=?,valor=?,link=?,status=?,created_at=now(),updated_at=now()
-			WHERE codigo=?'
+            WHERE codigo=?'
         );
     $stmt->execute(array(
-        $params->codigo
+        $params->codigo,
         $params->metodo,
         $params->valor,
         $params->link,

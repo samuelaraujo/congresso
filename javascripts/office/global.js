@@ -15,36 +15,6 @@ $(document).ready(function(){
         return false;
 	});
 
-    $('a#minhaconta').livequery('click',function(event){
-        var options = {
-            cache:false,
-            show: true,
-            keyboard: false,
-            backdrop: 'static'
-        }
-        $("div#modal").modal(options);
-
-        $('div#modal .modal-content').load('views/administrador/usuario/view.php',function(result){
-            //get
-            app.util.getjson({
-                url : "/controller/administrador/usuario/get",
-                method : 'POST',
-                contentType : "application/json",
-                success: function(response){
-                    if(response.id){
-                        //set
-                        $('form#formMinhaconta input#nome').val(response.nome);
-                        $('form#formMinhaconta input#sobrenome').val(response.sobrenome);
-                        $('form#formMinhaconta input#email').val(response.email);
-                        $('form#formMinhaconta input#desde').val(response.created_at);
-                    }
-                },
-                error : onError
-            });
-        });
-        return false;
-    });
-
     $('a#mudarsenha').livequery('click',function(event){
 
         var options = {
@@ -54,7 +24,7 @@ $(document).ready(function(){
             backdrop: 'static'
         }
         $("div#modal").modal(options);
-        $('div#modal .modal-content').load('views/administrador/usuario/password.php');
+        $('div#modal .modal-content').load('views/office/cliente/password.php');
         return false;
     });
 
