@@ -115,7 +115,7 @@
           <p class="text-left">Em um projeto inovador, realizado pela Ordem dos Advogados do Brasil (OAB) – Seccional Acre e uma comissão de acadêmicos da XXIV Turma de Direito Vespertino da Uninorte/AC, o presente evento terá por duração o período de 04 (quatro) dias, compreendendo-se entre os dias 14 e 17 de agosto de 2017, em Rio Branco, Acre.</p>
           <p class="text-left">Realizando-se no Teatro Universitário da Universidade Federal do Acre(UFAC), com capacidade para aproximadamente 1.000 (um mil) pessoas, a estrutura deste Congresso contará com modernos recursos de som e imagem, bem ainda variados sistemas automatizados de recepção, credenciamento e meios que facilitarão a participação de seus inscritos com os congressistas, o que permitirá a total comodidade, mobilidade e interação de seus inscritos nesta realização.</p>
           <p class="text-left">Com foco em ramos jurídicos de direito civil e processual civil, penal e processual penal, bem como o direito constitucional, eleitoral, humanos e a deontologia jurídica, o evento visará discutir temas elementares de alguns dos pontos mais importantes de interesse público na atualidade, sobretudo os desafios e transformações que norteiam o Poder Judiciário contemporâneo e suas funções essenciais à justiça.</p>
-          <p class="text-left">Nesta ocasião, serão proporcionados aos seus participantes debates, painéis temáticos, mesas redondas e apresentações de artigos científicos, através de um rico compartilhamento de experiências e aprendizados entre desembargadores, doutrinadores, juízes, procuradores, promotores, discentes, docentes e profissionais da advocacia pública e privada a nível local e nacional, onde sua principal missão vislumbra-se em fomentar a reflexão de assuntos que influenciam diretamente a sociedade em geral por meio das abordagens mencionadas. </p>
+          <p class="text-left">Nesta ocasião, serão proporcionados aos seus participantes debates, painéis temáticos, através de um rico compartilhamento de experiências e aprendizados entre desembargadores, doutrinadores, juízes, procuradores, promotores, discentes, docentes e profissionais da advocacia pública e privada a nível local e nacional, onde sua principal missão vislumbra-se em fomentar a reflexão de assuntos que influenciam diretamente a sociedade em geral por meio das abordagens mencionadas. </p>
           <p class="text-left">Este acontecimento, em especial, direciona-se em sua essência para os advogados, bacharéis e para os estudantes de Direito, classes estas que representam o futuro do Direito acreano e nacional, e que merecem total atenção e dedicação para que realizações heterogêneas como esta, possam estimulá-los ainda mais no despertar daquilo que objetivam, lutam ou lutarão em prol da mais pura e lídima justiça – o grande pilar desta louvável profissão.</p>
       </div>
     </div>
@@ -368,8 +368,8 @@ d   <!-- Schedule -->
                 </div>
               </div>
               <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-                <h1><strong>Conferência:</strong> O dever de respeito aos precedentes no CPC/2015</h1>
-                <p class="speaker">Maria Penha Sousa Nascimento</p>
+                <h1><strong>Conferência:</strong> Mediação e Concialiação no processo de inventário.</h1>
+                <p class="speaker">Luiz Vitório Camolez</p>
                 <!-- <p class="description">Descrição</p> -->
               </div>
             </div>
@@ -664,11 +664,12 @@ d   <!-- Schedule -->
       </div>
       <div class="col-sm-4 col-md-3">
         <div class="speaker">
-          <div class="media"><p><img src="assets/images/pages/maria-penha.jpg" alt=""></p></div>
+          <div class="media"><p><img src="assets/images/pages/camolez.png" alt=""></p></div>
           <div class="info">
-            <p class="name">Maria Penha Sousa Nascimento</p>
-            <p class="position">Desembargadora Aposentada - TJAC</p>
-            <p>Desembargadora aposentada do Tribunal de Justiça do Estado do Acre.</p>
+            <p class="name">Luiz Vitório Camolez</p>
+            <p class="position">Juiz de Direito - TJAC</p>
+            <p>Juiz de Direito do Tribunal de Justiça do Estado do Acre e presidente da ASMAC.</p>
+
             <a href="#" class="curriculum"
               data-toggle="modal" data-target="#modalmariapenha"><strong>Veja o Mini Currículo!</strong></a>
             <!-- <div class="socials">
@@ -953,7 +954,7 @@ Inscrição para estudante válida somente para graduação.</p>
     <div class="pricing-table">
       <div class="col-sm-4 col-md-4">
         <div class="item">
-          <h3>Estudante <span class="hot">Oferta!</span></h3>
+          <h3>Estudante <br><span class="hot">Oferta!</span></h3>
           <p class="price valido"><span>R$</span>70,00<small>/Lote 1</small></p>
            <ul>
             <li><i class="pe-7s-ticket pe-lg valido"></i>Garanta seu ingresso!</li> 
@@ -973,7 +974,7 @@ Inscrição para estudante válida somente para graduação.</p>
       </div>
       <div class="col-sm-4 col-md-4">
         <div class="item">
-          <h3>Jovem Advogado <span class="hot">Oferta!</span></h3>
+          <h3>Jovem Advogado <br><span class="hot">Oferta!</span></h3>
           <p class="price valido"><span>R$</span>100,00<small>/lote 1</small></p>
          <ul>
             <li><i class="pe-7s-ticket pe-lg valido"></i>Garanta seu ingresso!</li> 
@@ -993,7 +994,7 @@ Inscrição para estudante válida somente para graduação.</p>
       </div>
       <div class="col-sm-4 col-md-4">
         <div class="item">
-          <h3>Profissionais <span class="hot">Oferta!</span></h3>
+          <h3>Advogado | Profissionais <span class="hot">Oferta!</span></h3>
           <p class="price valido"><span>R$</span>130,00<small>/lote 1</small></p>
          <ul>
             <li><i class="pe-7s-ticket pe-lg valido"></i>Garanta seu ingresso!</li> 
@@ -1064,17 +1065,14 @@ Inscrição para estudante válida somente para graduação.</p>
   </div>
   <div class="row">
     <div class="col-sm-12 col-md-12">
-      <div class="sponsors" data-items="4" data-itemsdesktop="4" data-itemsdesktopsmall="2" data-itemstablet="2" data-itemsmobile="1" data-slidespeed="1" data-autoplay="true" data-nav="false" data-pagination="false">
+      <div class="sponsors" data-items="3" data-itemsdesktop="3" data-itemsdesktopsmall="2" data-itemstablet="2" data-itemsmobile="1" data-slidespeed="1" data-autoplay="true" data-nav="false" data-pagination="false">
         <div class="item">
           <p class="image"><img src="assets/images/pages/gerastur.png" alt="Gerastur Passagens Aéreas"></p>
         </div>
         <div class="item">
           <p class="image"><img src="assets/images/pages/lotus.jpg" alt="Lótus Cerimonial"></p>
         </div>
-         <div class="item">
-          <p class="image"><img src="assets/images/pages/jackhair.png" alt="Jack Hair Design"></p>
-        </div>
-         <div class="item">
+        <div class="item">
           <p class="image"><img src="assets/images/pages/kambo.png" alt="Kambô Tecnologia"></p>
         </div>
      </div>
@@ -1085,7 +1083,7 @@ Inscrição para estudante válida somente para graduação.</p>
       <div class="section-title">
         <i class="pe-7s-config"></i>
         <h3>Organização</h3>
-        <div class="item">
+        <div class="item" >
           <p class="image"><img src="assets/images/pages/oab.jpg" alt="Ordem dos Advogados do Brasil"></p>
         </div>
         <div class="item">
@@ -1346,7 +1344,7 @@ Inscrição para estudante válida somente para graduação.</p>
           </div>
           <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
             <div class="panel-body">
-             Entre em contato através dos nossos canais(Telefones, Email, Formulário), solicitando um novo boleto, será enviado um novo boleto para o email cadastrado, ou pelo link na área do usuário.  
+             Acesse a Área de Usuário, na guia Matrícula gere a segunda via. Qualquer  dúvida entre contato através dos nossos canais(Telefones, Email, Formulário), solicitando um novo boleto, será enviado um novo boleto para o email cadastrado, ou pelo link na área do usuário.  
             </div>
           </div>
         </div>
@@ -1449,17 +1447,15 @@ Inscrição para estudante válida somente para graduação.</p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Maria Penha Sousa Nascimento</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Luiz Vitório Camolez</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-       <p> Desembargadora aposentada do Tribunal de Justiça do Estado do Acre. Especialista em Direto Constitucional (pela UFAC, através de convênio com a UFMG) e possui MBA em Poder Judiciário realizado pela FGV na então Escola Superior da Magistratura no Acre (atualmente ESJUD). Por diversos anos, foi juíza de Direito titular da 1ª Vara da Fazenda Pública de Rio Branco, bem ainda, titular do Juizado Especial da Fazenda Pública, ambas unidades judiciárias da Capital. Ascendeu ao desembargo em novembro de 2015, pelo critério de antiguidade, após se dedicar por mais de 20 anos ao Judiciário Acreano no âmbito da magistratura do 1º Grau, aposentando-se voluntariamente em novembro de 2016.</p>
+       <p> Juiz de Direito Titular da Vara de Órfãos e Sucessões da Comarca de Rio Branco (Presidente da Asmac, biênio 2017-2019).</p>
         <div class="socials">
-          <a href="http://www.facebook.com/MariaBereniceDias" target="_blank"><i class="fa fa-facebook"></i></a>
-          <a href="https://twitter.com/mberenicedias"><i class="fa fa-twitter"></i></a>
-          <a href="https://www.instagram.com/mberenicedias/?hl=pt" target="_blank"><i class="fa fa-instagram"></i></a>
+          
         </div>
       </div>
     </div>
@@ -1687,6 +1683,8 @@ Inscrição para estudante válida somente para graduação.</p>
 
       <ul>
         <li>Entre em contato com <a href="http://gerastur.com.br/" target="_blank">GerasTur</a></li>
+        <li><a href="http://gerastur.com.br/" target="_blank">(68) 3227-2875</a></li>
+        <li><a href="http://gerastur.com.br/" target="_blank">(68) 9 9963-1429</a></li>
       </ul>
 
       </div>
