@@ -44,7 +44,7 @@
   <div class="event-background clearfix">
     <div class="wrap">
       <div class="date"><i class="pe-7s-date"></i>14<span>Agosto, 2017</span></div>
-      <div class="location"><i class="pe-7s-map-marker"></i>teatro universitario<span>Rio Branco, AC</span></div>
+      <div class="location"><i class="pe-7s-map-marker"></i>Teatro universitário<span>Rio Branco, AC</span></div>
       <div class="speakers"><i class="pe-7s-micro"></i>13 <span>Palestrantes</span></div>
       <div class="remaining"><i class="pe-7s-add-user"></i>1000 <span>Ingressos</span></div>
     </div>
