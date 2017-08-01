@@ -927,9 +927,9 @@ d   <!-- Schedule -->
         <p class="sub-title">Baixe o aplicativo do congresso, aproveite toda programação com interatividade entre os participantes e palestrantes, confira nosso app. </p>
         <div class="sistema"></div>
         <div class="button">
-          <button class="btn btn-theme" type="submit"><i class="fa fa-android fa-fw" aria-hidden="true"></i>Em Breve na Play Store</button>
-          <a href="#" class="btn btn-theme" ><i class="fa fa-apple fa-fw" aria-hidden="true">
-          </i>Em Breve na App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=net.moblee.oabcongressoac&hl=pt_BR" class="btn btn-theme" target="_blank"><i class="fa fa-android fa-fw" aria-hidden="true"></i>Disponível na Play Store</button>
+          <a href="" class="btn btn-theme" target="_blank"><i class="fa fa-apple fa-fw" aria-hidden="true">
+          </i>Disponível na App Store</a>
         </div>
       </div>
     </div>
