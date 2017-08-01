@@ -204,7 +204,7 @@
 
                 <div id="reset" class="form-action hide">
                     <h1>Nova Senha</h1>
-                    <form name="formReset" role="form" novalidate>
+                    <form id="formReset" name="formReset">
                         <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
                             <div id="errorPassword" class="row hidden">
                                 <div class="col-md-12">
@@ -224,13 +224,13 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>E-mail</label>
-                                        <input name="email" placeholder="E-mail" class="form-control" type="email" required>
+                                        <input id="email" name="email" placeholder="E-mail" class="form-control" type="email" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <button id="recuperar" class="btn btn-success btn-fill btn-wd" type="sumit">ENVIAR</button>
+                                    <button id="recuperar" class="btn btn-success btn-fill btn-wd">ENVIAR</button>
                                 </div>
                             </div>
                         </div>
