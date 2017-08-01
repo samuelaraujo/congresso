@@ -37,7 +37,7 @@ try {
         FROM usuario
         WHERE gestor=0 
         AND status=:status '.$search.'
-		ORDER BY nome ASC, id, DESC
+		ORDER BY nome ASC, id DESC
         LIMIT :offset,:limit'
     );
     $stmt->bindParam('offset', $offset, PDO::PARAM_INT);

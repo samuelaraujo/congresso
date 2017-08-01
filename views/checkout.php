@@ -77,7 +77,7 @@
       <div class="col-md-12">
         <h1 class="text-center">Como deseja efetuar o pagamento do seu ingresso?</h1>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <a id="setPagamento" 
           class="block forma-pagamento text-center" href="javascript:;" data-rel="1">
           <div class="block-content block-content-full">
@@ -86,7 +86,7 @@
           </div>
         </a>
       </div>
-      <div class="col-md-4">
+      <!-- <div class="col-md-4">
         <a id="setPagamento" 
           class="block forma-pagamento text-center" href="javascript:;" data-rel="2">
           <div class="block-content block-content-full bg-modern">
@@ -94,8 +94,8 @@
             <p>Débito online</p>
           </div>
         </a>
-      </div>
-      <div class="col-md-4">
+      </div> -->
+      <div class="col-md-6">
         <a id="setPagamento" 
           class="block forma-pagamento text-center" href="javascript:;" data-rel="3">
           <div class="block-content block-content-full bg-modern">

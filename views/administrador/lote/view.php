@@ -38,8 +38,8 @@
 	                          <tr>
 	                            <th>#</th>
 	                            <th>Nome</th>
-	                            <th class="text-center"></th>
-	                            <th class="text-center"></th>
+	                            <th class="text-center">Qtd</th>
+	                            <th class="text-center">Valor</th>
 	                            <th class="text-center"></th>
 	                          </tr>
 	                        </thead>
