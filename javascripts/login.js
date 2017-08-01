@@ -369,6 +369,53 @@ $(document).ready(function(){
         return false;
     });
 
+    //recuperar-senha
+    $('button#recuperar').livequery('click',function(event){
+        if($("form#formReset").valid()){
+            usuarios = {
+                email: $('form#formReset #email').val(),
+                senha: $('form#formReset #senha').val()
+            };
+
+            $('button#login').html('PROCESSANDO...');
+            $('button#login').prop("disabled",true);
+
+            //params
+            var params = {};
+            params = JSON.stringify(usuarios);
+
+            app.util.getjson({
+                url : "/controller/guest/usuario/password-reset",
+                method : 'POST',
+                contentType : "application/json",
+                data: params,
+                success: function(response){
+                    if(response.results.id){
+                        if(response.success){
+                            $('#successPassword').removeClass('hidden');
+                            $('#successPassword').find('.alert p').html(response.success);
+                        }else{
+                            $('#errorPassword').removeClass('hidden');
+                            $('#errorPassword').find('.alert p').html(response.error);
+                        }
+                        $('button#recuperar').html('ENVIAR');
+                        $('button#recuperar').prop("disabled",false);
+                    }
+                },
+                error : function(response){
+                    response = JSON.parse(response.responseText);
+                    $('#errorPassword').removeClass('hidden');
+                    $('#errorPassword').find('.alert p').html(response.error);
+                    $('button#recuperar').html('ENVIAR');
+                    $('button#recuperar').prop("disabled",false);
+                }
+            });
+        }else{
+            $("form#formReset").valid();
+        }
+        return false;
+    });
+
 	function onError(response) {
       console.log(response);
     }

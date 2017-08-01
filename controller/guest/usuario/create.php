@@ -40,8 +40,8 @@ try {
 
     $stmt = $oConexao->prepare('INSERT INTO
                  usuario(idingresso,nome,sobrenome,cracha,sexo,email,telefone,
-                 cpf,senha,idpais,idcidade,created_at,updated_at
-                ) VALUES (?,?,?,?,?,?,?,?,?,?,?,now(),now())');
+                 cpf,senha,idpais,idcidade,iddeficiencia,created_at,updated_at
+                ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,now(),now())');
     $stmt->execute(array(
         $params->usuario->ingresso,
         $params->usuario->nome,
@@ -53,7 +53,8 @@ try {
         $params->usuario->cpf,
         $params->usuario->senha,
         $params->usuario->pais,
-        $params->usuario->cidade
+        $params->usuario->cidade,
+        $params->usuario->deficiencia
     ));    
 
     $usuario_id = $oConexao->lastInsertId();
