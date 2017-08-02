@@ -929,7 +929,7 @@ d   <!-- Schedule -->
         <div class="sistema"></div>
         <div class="button">
           <a href="https://play.google.com/store/apps/details?id=net.moblee.oabcongressoac&hl=pt_BR" class="btn btn-theme" target="_blank"><i class="fa fa-android fa-fw" aria-hidden="true"></i>Disponível na Play Store</button>
-          <a href="" class="btn btn-theme" target="_blank"><i class="fa fa-apple fa-fw" aria-hidden="true">
+          <a href="https://itunes.apple.com/us/app/congresso-oab-ac/id1261082510?l=pt&ls=1&mt=8" class="btn btn-theme" target="_blank"><i class="fa fa-apple fa-fw" aria-hidden="true">
           </i>Disponível na App Store</a>
         </div>
       </div>
