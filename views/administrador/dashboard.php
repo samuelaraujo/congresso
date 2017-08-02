@@ -43,10 +43,10 @@
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="white-box">
-                    <div class="r-icon-stats"> <i class="ti-money bg-megna"></i>
+                    <div class="r-icon-stats"> <i class="ti-reload bg-megna"></i>
                         <div id="countPagamento" class="bodystate">
                             <h4>0</h4> 
-                            <span class="text-muted">Pagamentos</span> 
+                            <span class="text-muted">Transações</span> 
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                     <div class="r-icon-stats"> <i class="ti-ticket bg-inverse"></i>
                         <div id="countIngresso" class="bodystate">
                             <h4>0</h4> 
-                            <span class="text-muted">Ingressos</span> 
+                            <span class="text-muted">Tipo de Ingresso</span> 
                         </div>
                     </div>
                 </div>
@@ -86,8 +86,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="white-box">
-                    <h3 class="box-title m-b-0">Pagamentos</h3>
-                    <p class="text-muted">Últimos registros</p>
+                    <h3 class="box-title m-b-0">TRANSAÇÕES</h3>
+                    <p class="text-muted">Últimas Compras</p>
                     <div class="table-responsive">
                         <table id="table-pagamentos" class="table table-hover">
                             <thead>
