@@ -422,8 +422,8 @@ $(document).ready(function(){
                 email: $('form#formReset #email').val()
             };
 
-            $('button#login').html('PROCESSANDO...');
-            $('button#login').prop("disabled",true);
+            $('button#recuperar').html('PROCESSANDO...');
+            $('button#recuperar').prop("disabled",true);
 
             //params
             var params = {};
@@ -435,17 +435,15 @@ $(document).ready(function(){
                 contentType : "application/json",
                 data: params,
                 success: function(response){
-                    if(response.results.id){
-                        if(response.success){
-                            $('#successPassword').removeClass('hidden');
-                            $('#successPassword').find('.alert p').html(response.success);
-                        }else{
-                            $('#errorPassword').removeClass('hidden');
-                            $('#errorPassword').find('.alert p').html(response.error);
-                        }
-                        $('button#recuperar').html('ENVIAR');
-                        $('button#recuperar').prop("disabled",false);
+                    if(response.success){
+                        $('#successPassword').removeClass('hidden');
+                        $('#successPassword').find('.alert p').html(response.success);
+                    }else{
+                        $('#errorPassword').removeClass('hidden');
+                        $('#errorPassword').find('.alert p').html(response.error);
                     }
+                    $('button#recuperar').html('ENVIAR');
+                    $('button#recuperar').prop("disabled",false);
                 },
                 error : function(response){
                     response = JSON.parse(response.responseText);

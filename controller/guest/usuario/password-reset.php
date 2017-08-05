@@ -8,8 +8,8 @@ $params = json_decode(file_get_contents('php://input'));
 $response = new stdClass();
 
 //phpmailer
-include_once BASE_DIR.'/vendor/phpmailer/class.phpmailer.php';
-include_once BASE_DIR.'/vendor/phpmailer/class.smtp.php';
+require_once '../vendor/phpmailer/class.phpmailer.php';
+require_once '../vendor/phpmailer/class.smtp.php';
 
 try {
 
@@ -22,7 +22,7 @@ try {
     $stmt = $oConexao->prepare('
         SELECT id,nome,sobrenome,cpf,email
             FROM usuario
-            WHERE email = upper(?)
+            WHERE email=upper(?)
     ');
     $stmt->execute(array(
         $params->email
@@ -47,19 +47,19 @@ try {
      * @url        url para o cliente mudar a senha
      */
     $layout = sendPasswordReset(
-        $results->nome.' '.$results->sobrenome, 
+        $results->nome, 
         $results->email, 
         $url
     );
 
     if (envia_email(
+        $results->nome,
         $results->email,
         'Redefina sua senha',
         $layout,
-        EMAIL_NOREPLAY,
-        $results->nome
+        EMAIL_NOREPLAY
     )) {
-        ++$send_email;
+        $send_email++;
     }
 
     if ($send_email >= 1) {

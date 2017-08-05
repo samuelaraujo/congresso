@@ -543,7 +543,7 @@ $(document).ready(function(){
     //continuar
     $('button#continuar').livequery('click',function(event){
       if(pay){
-        window.location.href = "/dashboard";
+        window.location.href = "/office/dashboard";
       }else{
         window.location.href = "/";
       }
