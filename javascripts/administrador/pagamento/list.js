@@ -5,6 +5,7 @@ var page = 1;
 var offset = 0;
 var limit = 10;
 var status = 3; //status (3) = paga
+var clientes, results = {};
 
 $(document).ready(function(){
 
@@ -54,8 +55,10 @@ $(document).ready(function(){
             data: params,
             success: function(response){
                 var html = '';
+                //set results
+                results = response.results;
                 for (var i=0;i<response.results.length;i++) {
-                    var metodo, link = undefined;
+                    var metodo, link, segundavia = undefined;
                     switch(parseInt(response.results[i].metodo)){
                         case 1:
                             metodo = '<i class="fa fa-credit-card"></i>';
@@ -71,9 +74,15 @@ $(document).ready(function(){
                         break;
                     }
                     if(response.results[i].link != undefined && response.results[i].status != 3){
-                        link = '<a href="'+ response.results[i].link +'" target="_blank"><i class="ti-link"></a>';
+                        link = '<a href="'+ response.results[i].link +'" target="_blank" title="Link de pgto."><i class="ti-link"></a>';
                     }else{
                         link = '';
+                    }   
+
+                    if(response.results[i].status != 3){
+                        segundavia = '<a href="javascript:;" id="pagar" data-id="'+ response.results[i].id + '" title="2° via de pagamento"><i class="icon-loop"></a>';
+                    }else{
+                        segundavia = '';
                     }
 
                     html += '<tr>'+
@@ -85,6 +94,7 @@ $(document).ready(function(){
                                 '<td>'+ floatToMoney(response.results[i].valor, 'R$') + '</td>'+
                                 '<td class="text-center">'+ metodo +'</td>'+
                                 '<td class="text-center">'+ link +'</td>'+
+                                '<td class="text-center">'+ segundavia +'</td>'+
                                 '<td class="text-center"><a href="javascript:;" id="detalhar" data-id="'+ response.results[i].id + '"><i class="fa fa-search"></i></a></td>'+
                             '</tr>';
                 }
@@ -178,6 +188,36 @@ $(document).ready(function(){
         $('div#modal .modal-content').html('');
 
         $('div#modal .modal-content').load('views/administrador/pagamento/view.php');
+        return false;
+    });
+
+    //segunda via
+    $('a#pagar').livequery('click',function(event){
+        id =  $(this).data('id');
+        for(var i=0; i<results.length; i++){
+            if(id == results[i].id){
+                clientes = {
+                    idingresso: results[i].idingresso,
+                    nome: results[i].nome,
+                    sobrenome: results[i].sobrenome,
+                    cpf: results[i].cpf,
+                    email: results[i].email
+                };
+            }
+        }
+
+        var options = {
+            cache:false,
+            show: true,
+            keyboard: false,
+            backdrop: 'static'
+        }
+        $("div#modal").modal(options);
+
+        //clear
+        $('div#modal .modal-content').html('');
+
+        $('div#modal .modal-content').load('views/administrador/checkout/billet.php');
         return false;
     });
 

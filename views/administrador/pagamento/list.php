@@ -105,7 +105,7 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="status" aria-expanded="true">
                             
-                            <div id="col-search" class="col-md-4 hidden">
+                            <div id="col-search" class="col-md-3 hidden">
                                 <form>
                                     <div class="form-group">
                                         <div class="input-group">
@@ -119,7 +119,7 @@
                                   </form>
                             </div>
 
-                            <div id="col-legenda" class="col-md-8 m-t-5 hidden">
+                            <div id="col-legenda" class="col-md-9 m-t-5 hidden">
                                 <div class="legenda">
                                     <ul>
                                         <li><span>Legenda: </span></li>
@@ -134,6 +134,9 @@
                                         </li>
                                         <li>
                                             <i class="ti-link"></i> Link de pgto.
+                                        </li>
+                                        <li>
+                                            <i class="icon-loop"></i> 2° via de pgto
                                         </li>
                                         <li>
                                             <i class="fa fa-search"></i> Detalhes
@@ -202,3 +205,6 @@
 <script type="text/javascript" src="javascripts/functions.js"></script>
 <script type="text/javascript" src="javascripts/administrador/pagamento/list.js"></script>
 <script type="text/javascript" src="javascripts/administrador/global.js"></script>
+
+<!-- Javascript Pagseguro -->
+<script type="text/javascript" src="<?=javascriptURL?>"></script>

@@ -33,7 +33,7 @@ try {
 
     $stmt = $oConexao->prepare(
         'SELECT
-            UPPER(CONCAT(c.nome,\' \', c.sobrenome)) cliente,c.cpf,i.nome ingresso,
+            UPPER(CONCAT(c.nome,\' \', c.sobrenome)) cliente,c.nome,c.sobrenome,c.cpf,c.email,i.id idingresso,i.nome ingresso,
             p.id,p.valor,p.codigo,p.metodo,p.status,p.link,
             DATE_FORMAT(p.created_at, "%d/%m/%Y %h\h%i") created_at
         FROM pagamento p
