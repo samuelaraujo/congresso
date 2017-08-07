@@ -95,6 +95,8 @@ $(document).ready(function(){
 							if(response.success){
 								//add hidden
 								$('form#formPagamento').addClass('hidden');
+								$('button#enviarBoleto').addClass('hidden');
+								$('button#fechar').removeClass('hidden');
 							
 							    $('#successModal').find('.alert').append('<p>'+ response.success +'</p>');
 	            				$('#successModal').removeClass('hidden');
@@ -113,6 +115,9 @@ $(document).ready(function(){
 			error: function(response){
 				$('#errorModal').find('.alert').append('<p>Ocorreu um erro ao gerar o boleto, tente novamente</p>');
             	$('#errorModal').removeClass('hidden');
+
+            	$('button#enviarBoleto').html('Enviar');
+                $('button#enviarBoleto').prop("disabled",false);
 			}
 		});
 		return false;

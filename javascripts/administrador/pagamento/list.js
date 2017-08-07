@@ -201,7 +201,8 @@ $(document).ready(function(){
                     nome: results[i].nome,
                     sobrenome: results[i].sobrenome,
                     cpf: results[i].cpf,
-                    email: results[i].email
+                    email: results[i].email,
+                    codigo: results[i].codigo
                 };
             }
         }

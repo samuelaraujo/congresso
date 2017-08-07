@@ -38,13 +38,13 @@
                         <span id="nome" class="dados"></span>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="form-group">
                         <label for="email" class="control-label">E-mail:</label>
                         <span id="email" class="dados"></span>
                     </div>
                 </div>
-                 <div class="col-md-6">
+                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="cpf" class="control-label">CPF:</label>
                         <span id="cpf" class="dados"></span>
@@ -66,7 +66,11 @@
     
 </div>
 <div class="modal-footer hidden">
-    <button type="button" id="enviarBoleto" class="btn btn-sm btn-success">Enviar</button>
+    <button id="enviarBoleto" class="btn btn-success btn-sm" type="button">
+        <span class="btn-label"><i class="icon-paper-plane"></i></span>Enviar
+    </button>
+    <button type="button" id="fechar" class="btn btn-sm btn-default hidden" 
+        data-dismiss="modal">Fechar</button>
 </div>
 
 <!-- javascripts -->
