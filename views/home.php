@@ -352,8 +352,8 @@ d   <!-- Schedule -->
                 </div>
               </div>
               <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-                <h1><strong>Conferência:</strong> O processo judicial eletrônico e os seus desafios para o adequado acesso a justiça</h1>
-                <p class="speaker">Lúcio de Almeida Braga Jr.</p>
+                <h1><strong>Conferência:</strong> A cultura punitiva do poder judiciário: uma análise jurisprudencial do TJAC</h1>
+                <p class="speaker">kaio Marcellus de Oliveira Pereira</p>
                 <!-- <p class="description">Descrição</p> -->
               </div>
             </div>
@@ -736,13 +736,13 @@ d   <!-- Schedule -->
 
       <div class="col-sm-4 col-md-3">
         <div class="speaker">
-          <div class="media"><p><img src="assets/images/pages/lucioalmeida.png" alt=""></p></div>
+          <div class="media"><p><img src="assets/images/pages/kaiomarcellus.png" alt=""></p></div>
           <div class="info">
-            <p class="name">Lúcio de Almeida Braga Jr.</p>
-            <p class="position">Advogado e Professor</p>
-            <p>Advogado especialista em Direito Econômico e Fiscal Internacional pela Universidade de Liège (Bélgica).</p>
+            <p class="name">kaio Marcellus de Oliveira Pereira</p>
+            <p class="position">Professor e Presidente IDHA</p>
+            <p>Professor de Direito Constitucional da Instituição de Ensino Superior do Acre (IESACRE) e Presidente do IDHA.</p>
             <a href="#" class="curriculum"
-              data-toggle="modal" data-target="#modallucioalmeida"><strong>Veja o Mini Currículo!</strong></a>
+              data-toggle="modal" data-target="#modalkaiomarcelus"><strong>Veja o Mini Currículo!</strong></a>
             <!-- <div class="socials">
               <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -1516,17 +1516,17 @@ Inscrição para estudante válida somente para graduação.</p>
   </div>
 </div>
     
-<div class="modal fade" id="modallucioalmeida" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade" id="modalkaiomarcelus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Lúcio de Almeida Braga Jr.</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Kaio Marcellus de Oliveira Pereira⁠⁠⁠⁠</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-       <p> Advogado especialista em Direito Econômico e Fiscal Internacional pela Universidade de Liège (Bélgica). Professor da União Educacional do Norte (UNINORTE), com atuação na docência nas disciplinas de Direito Processual Civil e Conciliação, Mediação e Arbitragem.</p>
+       <p> Mestrando em Direito, Estado e Constituição pela Universidade de Brasília (UNB). Pós-graduado em Direito Empresarial pela Fundação Getúlio Vargas (FGV); Pós-graduado em Direito Constitucional pela Universidade Cândido Mendes (UCAM). Professor de Processo Penal da Faculdade de Direito Barão do Rio Branco da União Educacional do Norte (UNINORTE). Professor de Direito Constitucional da Instituição de Ensino Superior do Acre (IESACRE). Palestrante e Professor convidado em cursos preparatórios para concursos na área de Direito Eleitoral (MAGISTER). Advogado e sócio do escritório ORS Advogados. Membro da Comissão de Ciências Criminas e Segurança Pública da OAB/DF (gestão 2013-2016). Presidente do IDHA (Instituto de Direitos Humanos do Acre).</p>
       </div>
     </div>
   </div>
