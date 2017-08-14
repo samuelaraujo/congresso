@@ -46,8 +46,8 @@
                     </a>
                 </li>
                 <li> 
-                    <a href="/administrador/deficiencia" class="waves-effect">
-                        <i class="fa fa-wheelchair" data-icon="v"></i> <span class="hide-menu"> Deficiência </span>
+                    <a href="/administrador/credenciamento" class="waves-effect">
+                        <i class="ti-id-badge" data-icon="v"></i> <span class="hide-menu"> Credenciamento </span>
                     </a>
                 </li>
             <?php } ?>
