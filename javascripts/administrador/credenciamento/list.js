@@ -21,7 +21,7 @@ $(document).ready(function(){
         }, 5000);
     }
 
-    function list(reload = false, search = undefined, status = 3){
+    function list(reload = false, search = undefined, status = 1){
         var params = (search == undefined) ? 
                         {offset: offset, limit: limit, status: status} : 
                         {offset: offset, limit: limit, status: status, search: search};
@@ -34,10 +34,16 @@ $(document).ready(function(){
         $('.nav .nav-item a').removeClass('active');
         switch(parseInt(status)){
             case 1: 
-                $('a#confirmado').addClass('active');
+                $('a#primeiro').addClass('active');
             break;
             case 2: 
-                $('a#naoconfirmado').addClass('active');
+                $('a#segundo').addClass('active');
+            break;
+            case 3: 
+                $('a#terceiro').addClass('active');
+            break;
+            case 4: 
+                $('a#quarto').addClass('active');
             break;
         }
 
@@ -52,18 +58,12 @@ $(document).ready(function(){
                 //set results
                 results = response.results;
                 for (var i=0;i<response.results.length;i++) {
-                    var metodo, link, segundavia = undefined;
-                   
-                    if(response.results[i].link != undefined && response.results[i].status != 3){
-                        link = '<a href="'+ response.results[i].link +'" target="_blank" title="Link de pgto."><i class="ti-link"></a>';
-                    }else{
-                        link = '';
-                    }   
+                    var material = undefined;
 
-                    if(response.results[i].status != 3){
-                        segundavia = '<a href="javascript:;" id="pagar" data-id="'+ response.results[i].id + '" title="2° via de pagamento"><i class="icon-loop"></a>';
+                    if(response.results[i].material == 1){
+                        material = '<i class="icon-book-open text-success"></a>';
                     }else{
-                        segundavia = '';
+                        material = '';
                     }
 
                     html += '<tr>'+
@@ -73,10 +73,7 @@ $(document).ready(function(){
                                 '<td>'+ response.results[i].cpf + '</td>'+
                                 '<td>'+ response.results[i].ingresso + '</td>'+
                                 '<td>'+ floatToMoney(response.results[i].valor, 'R$') + '</td>'+
-                                '<td class="text-center">'+ metodo +'</td>'+
-                                '<td class="text-center">'+ link +'</td>'+
-                                '<td class="text-center">'+ segundavia +'</td>'+
-                                '<td class="text-center"><a href="javascript:;" id="detalhar" data-id="'+ response.results[i].id + '"><i class="fa fa-search"></i></a></td>'+
+                                '<td class="text-center">'+ material +'</td>'+
                             '</tr>';
                 }
                 if(parseInt(response.count.results) >= 1){
@@ -107,10 +104,10 @@ $(document).ready(function(){
                 $('#table-loading').addClass('hidden');
                 $('#add').removeClass('hidden');
                 $('ul.customtab').removeClass('hidden');
-                $('#count-aguardando').html(response.count.aguardando);
-                $('#count-analise').html(response.count.analise);
-                $('#count-paga').html(response.count.paga);
-                $('#count-cancelada').html(response.count.cancelada);
+                $('#count-primeiro').html(response.count.primeiro_dia);
+                $('#count-segundo').html(response.count.segundo_dia);
+                $('#count-terceiro').html(response.count.terceiro_dia);
+                $('#count-quarto').html(response.count.quarto_dia);
                 if(reload)
                     $('#col-reload').addClass('hidden');
             },

@@ -55,23 +55,16 @@
                         <div class="panel-body">
                             <form id="formClienteBusca" name="formClienteBusca">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="nome">Nome<abbr>*</abbr></label>
-                                            <input type="text" class="form-control" id="nome" name="nome"> 
-                                        </div>                                
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="cpf">CPF<small>(Apenas número)</small></label>
-                                            <input type="text" class="form-control" id="cpf" name="cpf"> 
+                                            <label for="nome">Nome, CPF ou E-mail<abbr>*</abbr></label>
+                                            <input type="text" class="form-control" id="pesquisa" name="pesquisa"> 
                                         </div>                                
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <button type="submit" id="salvar" 
+                                        <button type="submit" id="procurar" 
                                             class="btn btn-success waves-effect waves-light m-r-10">Procurar</button>
                                         <button type="button" id="cancelar" 
                                             class="btn btn-inverse waves-effect waves-light">Voltar</button>
@@ -84,20 +77,11 @@
             </div><!-- /.col-lg-12 -->
         </div><!-- /.row -->
 
-        <div class="row">
+        <div id="form-row" class="row hidden">
             <div class="col-md-12">                
                 <div class="white-box">
 
-                    <div id="form-loading" class="row hidden">
-                        <div class="col-lg-12">
-                            <div class="text-center">
-                                <img src="assets/images/common/loading.gif">
-                                <p>Aguarde um pouco, estamos processando...</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="form" class="row">
+                    <div class="row">
 
                         <div class="col-sm-12 col-xs-12">
                             <h3 class="box-title m-b-0">Novo credenciamento</h3>
@@ -114,6 +98,9 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- hidden input -->
+                                <input type="hidden" id="id" name="id">
 
                                 <div class="row">
                                     <div class="col-md-12">
@@ -146,25 +133,39 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="sexo">Presença<abbr>*</abbr></label>
-                                            <div class="checkbox checkbox-success">
-                                                <input id="todos" type="checkbox">
-                                                <label for="todos">Marcar todos</label>
+                                            <div class="form-group">
+                                                <div class="checkbox checkbox-success">
+                                                    <input id="todos" type="checkbox">
+                                                    <label for="todos">Marcar todos</label>
+                                                </div>
                                             </div>
                                             <div class="checkbox checkbox-success">
-                                                <input id="primeiro" type="checkbox">
+                                                <input id="primeiro" 
+                                                    name="presenca[]" 
+                                                    type="checkbox" 
+                                                    value="1">
                                                 <label for="primeiro">1° dia</label>
                                             </div>
                                             <div class="checkbox checkbox-success">
-                                                <input id="segundo" type="checkbox">
+                                                <input id="segundo" 
+                                                    name="presenca[]"
+                                                    type="checkbox"
+                                                    value="2">
                                                 <label for="segundo">2° dia</label>
                                             </div>
                                             <div class="checkbox checkbox-success">
-                                                <input id="terceiro" type="checkbox">
-                                                <label for="terceiro">3° dia</label>
+                                                <input id="terceiro" 
+                                                    name="presenca[]"
+                                                    type="checkbox"
+                                                    value="3">
+                                                <label for="presenca">3° dia</label>
                                             </div>
                                             <div class="checkbox checkbox-success">
-                                                <input id="quarto" type="checkbox">
-                                                <label for="quarto">4° dia</label>
+                                                <input id="quarto" 
+                                                    name="presenca[]"
+                                                    type="checkbox"
+                                                    value="4">
+                                                <label for="presenca[]">4° dia</label>
                                             </div>
                                         </div>                                
                                     </div>
@@ -175,7 +176,7 @@
                                         <div class="form-group">
                                             <label for="pais">Recebeu o material didático do evento?<abbr>*</abbr></label>
                                              <div class="checkbox checkbox-success">
-                                                <input id="material" type="checkbox">
+                                                <input id="material" name="material" type="checkbox" value="1">
                                                 <label for="material">Sim</label>
                                             </div>
                                         </div>                                
@@ -186,8 +187,6 @@
                                     <div class="col-md-12">
                                         <button type="submit" id="salvar" 
                                             class="btn btn-success waves-effect waves-light m-r-10">Salvar</button>
-                                        <button type="button" id="cancelar" 
-                                            class="btn btn-inverse waves-effect waves-light">Voltar</button>
                                     </div>
                                 </div>
 
@@ -210,4 +209,4 @@
 <script type="text/javascript" src="assets/javascript/jquery.validate.min.js"></script>
 <script type="text/javascript" src="assets/javascript/validate/checkemail.js"></script>
 <script type="text/javascript" src="javascripts/functions.js"></script>
-<!-- <script type="text/javascript" src="javascripts/administrador/cliente/edit.js"></script> -->
+<script type="text/javascript" src="javascripts/administrador/credenciamento/add.js"></script>

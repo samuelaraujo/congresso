@@ -16,41 +16,31 @@ try {
                         ? $params->limit
                         : 200;
 
-    switch ($params->status) {
-        case 1:
-            $status = '2017-08-14 15:00:00';
-            break;
-        case 2:
-            $status = '2017-08-15 17:00:00';
-            break;
-        case 3:
-            $status = '2017-08-16 17:00:00';
-            break;
-        case 4:
-            $status = '2017-08-17 17:00:00';
-            break;
-    }
+    $status = isset($params->status)
+                        ? $params->status
+                        : 1;
 
     $search = isset($params->search[0])
                         ? ' AND
-                                (
-                                    c.nome LIKE :query OR
-                                    c.cpf LIKE :query
-                                )
-                            '
+								(
+									c.nome LIKE :query OR
+                                    c.sobrenome LIKE :query OR
+									c.cpf LIKE :query OR
+                                    c.email LIKE :query
+								)
+							'
                         : null;
 
     $stmt = $oConexao->prepare(
         'SELECT
-            cd.id,c.nome,UPPER(CONCAT(c.nome,\' \', c.sobrenome)) cliente,c.cpf,
-            DATE_FORMAT(cd.created_at, "%d/%m/%Y") created_at,cd.material,
+            c.id,UPPER(c.nome) nome,UPPER(c.sobrenome) sobrenome,c.cpf,c.email,
             i.nome ingresso,p.valor,p.codigo,p.metodo,p.status
         FROM usuario c
-        INNER JOIN credenciamento cd ON(c.id=cd.idusuario)
         INNER JOIN pagamento p ON c.id=p.idusuario
         INNER JOIN ingresso i ON i.id = p.idingresso
-        WHERE cd.created_at=:status '.$search.'
-        ORDER BY cd.id DESC
+        WHERE c.gestor=0 
+        AND c.status=:status '.$search.'
+		ORDER BY c.nome ASC, c.id DESC
         LIMIT :offset,:limit'
     );
     $stmt->bindParam('offset', $offset, PDO::PARAM_INT);
@@ -68,12 +58,11 @@ try {
 
     $count = $oConexao->prepare(
         'SELECT
-            COUNT(*)
-        FROM usuario c
-        INNER JOIN credenciamento cd ON(c.id=cd.idusuario)
-        INNER JOIN pagamento p ON c.id=p.idusuario
-        INNER JOIN ingresso i ON i.id = p.idingresso
-        WHERE cd.created_at=:status '.$search
+			COUNT(*)
+		FROM usuario c
+        INNER JOIN pagamento p ON(c.id=p.idusuario)
+		WHERE c.gestor=0 
+        AND c.status=:status '.$search
     );
 
     if (isset($params->search[0])) {
@@ -85,35 +74,23 @@ try {
     $count->execute();
     $count_results = $count->fetchColumn();
 
-    $status = '2017-08-14 15:00:00';
+    $status = 1;
     $count->bindParam('status', $status);
     $count->execute();
-    $count_primeiro_dia = $count->fetchColumn();
+    $count_ativos = $count->fetchColumn();
 
-    $status = '2017-08-15 17:00:00';
+    $status = 2;
     $count->bindParam('status', $status);
     $count->execute();
-    $count_segundo_dia = $count->fetchColumn();
-
-    $status = '2017-08-16 17:00:00';
-    $count->bindParam('status', $status);
-    $count->execute();
-    $count_terceiro_dia = $count->fetchColumn();
-
-    $status = '2017-08-17 17:00:00';
-    $count->bindParam('status', $status);
-    $count->execute();
-    $count_quarto_dia = $count->fetchColumn();
+    $count_inativos = $count->fetchColumn();
 
     http_response_code(200);
     $response = array(
         'results' => $results,
         'count' => array(
             'results' => $count_results,
-            'primeiro_dia' => $count_primeiro_dia,
-            'segundo_dia' => $count_segundo_dia,
-            'terceiro_dia' => $count_terceiro_dia,
-            'quarto_dia' => $count_quarto_dia
+            'ativos' => $count_ativos,
+            'inativos' => $count_inativos
         ),
     );
 } catch (PDOException $e) {

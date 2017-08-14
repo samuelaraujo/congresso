@@ -90,7 +90,7 @@
 
                     <div id="add" class="pull-right hidden">
                         <button class="btn btn-info btn-sm btn-add waves-effect waves-light" type="button">
-                            <span class="btn-label"><i class="fa fa-plus"></i></span>Novo
+                            <span class="btn-label"><i class="fa fa-plus"></i></span>Novo credenciamento
                         </button>
                     </div>
 
@@ -116,10 +116,7 @@
                                     <ul>
                                         <li><span>Legenda: </span></li>
                                         <li>
-                                            <i class="icon-book-open"></i> Recebeu material
-                                        </li>
-                                        <li>
-                                            <i class="icon-user-following text-success"></i> Credenciar
+                                            <i class="icon-book-open"></i> Material didático
                                         </li>
                                     </ul>
                                 </div>
@@ -136,6 +133,9 @@
                                         <th>#</th>
                                         <th>Data</th>
                                         <th>Cliente</th>
+                                        <th>CPF</th>
+                                        <th>Ingresso</th>
+                                        <th>Valor</th>
                                         <th class="text-center"></th>
                                       </tr>
                                     </thead>
