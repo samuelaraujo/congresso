@@ -70,7 +70,7 @@
              
                 <div id="cadastro" class="form-action show">
                     <h1>Dados Pessoais</h1>
-                      <h1>ATENÇÃO! FAÇA SUA INSCRIÇÃO, ESCOLHA MODALIDADE BOLETO E PAGUE DIRETAMENTE NO LOCAL DO EVENTO!</h1>
+                      <h1>ATENÇÃO! FAÇA SUA INSCRIÇÃO E PAGUE DIRETAMENTE NO LOCAL DO EVENTO!</h1>
                     <form id="formCadastro" name="formCadastro">
                         <div class="row">
                             <div class="col-md-12">
