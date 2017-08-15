@@ -23,6 +23,9 @@ $(document).ready(function(){
             },
             cidade: { 
                 required: true
+            },
+            ingresso: { 
+                required: true
             }
         },
         messages: {
@@ -41,6 +44,9 @@ $(document).ready(function(){
             },
             cidade: { 
                 required: 'Falta pouco, qual cidade você reside?'
+            },
+            ingresso: { 
+                required: 'Qual o ingresso do cliente?'
             }
         },
         highlight: function (element, errorClass, validClass) {
@@ -107,6 +113,28 @@ $(document).ready(function(){
                     window.location.href = "/404";
                 }
 
+                //lote
+                app.util.getjson({
+                    url : "/controller/guest/lote/get",
+                    method : 'POST',
+                    contentType : "application/json",
+                    success: function(response){
+                        var options = '<option value="" disabled selected>Lote</option>';
+                        for (var i=0;i<response.results.length;i++) {
+                            selected = (response.results[i].id==clientes.idingresso) ? 'selected="selected"' : '';
+                            options += '<optgroup label="'+response.results[i].nome+'">'
+                            for(var j=0;j<response.results[i].ingresso.length;j++){
+                                options += '<option value="'+response.results[i].ingresso[j].id+'" data-value="'+response.results[i].ingresso[j].valor+'" '+selected+'>'+ 
+                                            response.results[i].ingresso[j].nome + ' - '  + floatToMoney(response.results[i].ingresso[j].valor,'R$')
+                                        +'</option>';
+                            }
+                            options += '</optgroup>';
+                        }
+                        $("#ingresso").html(options);
+                    },
+                    error : onError
+                });
+
                 //pais de origem
                 app.util.getjson({
                     url : "/controller/guest/estadocidade/getpais",
@@ -157,7 +185,8 @@ $(document).ready(function(){
                         success: function(response){
                             options = undefined;
                             for (var i=0;i<response.results.length;i++) {
-                                options += '<option value="'+response.results[i].id+'">'+ response.results[i].nome+'</option>';
+                                selected = (response.results[i].id==clientes.idcidade) ? 'selected="selected"' : '';
+                                options += '<option value="'+response.results[i].id+'" '+selected+'>'+ response.results[i].nome+'</option>';
                             }
                             $("#cidade").html(options);
                         },
@@ -183,7 +212,8 @@ $(document).ready(function(){
                 sexo: $('#sexo').val(),
                 pais: $('#pais').val(),
                 estado: $('#estado').val(),
-                cidade: $('#cidade').val()
+                cidade: $('#cidade').val(),
+                ingresso: $('#ingresso').val()
             };
 
             //params

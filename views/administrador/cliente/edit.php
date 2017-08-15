@@ -127,6 +127,17 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
+                                            <label for="ingresso">Ingresso<abbr>*</abbr></label>
+                                            <select class="form-control" id="ingresso" name="ingresso">
+                                                <option value="" disabled selected>Ingresso</option>
+                                            </select>
+                                        </div>                                
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
                                             <label for="sexo">Sexo<abbr>*</abbr></label>
                                             <select class="form-control" id="sexo" name="sexo">
                                                 <option value="" disabled selected>Sexo</option>
@@ -142,7 +153,7 @@
                                         <div class="form-group">
                                             <label for="pais">País de origem</label>
                                             <select class="form-control" id="pais" name="pais">
-                                                <option value="" disabled selected>Páis</option>
+                                                <option value="" disabled selected>País</option>
                                             </select>
                                         </div>                                
                                     </div>

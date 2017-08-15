@@ -50,6 +50,11 @@
                         <i class="ti-id-badge" data-icon="v"></i> <span class="hide-menu"> Credenciamento </span>
                     </a>
                 </li>
+                <li> 
+                    <a href="/administrador/sorteio" class="waves-effect">
+                        <i class="icon-present" data-icon="v"></i> <span class="hide-menu"> Sorteio </span>
+                    </a>
+                </li>
             <?php } ?>
 
             <?php if(isset($_SESSION['congresso_gestor']) && $_SESSION['congresso_gestor'] != 1){ ?>
@@ -57,6 +62,12 @@
                     <a href="/office/cliente/edit/<?=$_SESSION['congresso_uid']?>" 
                         class="waves-effect">
                         <i class="icon-user" data-icon="v"></i> <span class="hide-menu"> Meu perfil </span>
+                    </a>
+                </li>
+                <li> 
+                    <a href="/office/credenciamento/add" 
+                        class="waves-effect">
+                        <i class="ti-id-badge" data-icon="v"></i> <span class="hide-menu"> Presença </span>
                     </a>
                 </li>
             <?php } ?>

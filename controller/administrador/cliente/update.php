@@ -15,7 +15,8 @@ try {
         $params->sexo, 
         $params->pais,
         $params->estado,
-        $params->cidade
+        $params->cidade,
+        $params->ingresso
     )) {
         throw new Exception('Verifique os dados preenchidos', 400);
     }
@@ -24,7 +25,7 @@ try {
 
     $stmt = $oConexao->prepare(
         'UPDATE usuario
-			SET nome=?,sobrenome=?,cracha=?,sexo=?,idpais=?,idcidade=?,updated_at=now()
+			SET nome=?,sobrenome=?,cracha=?,sexo=?,idpais=?,idcidade=?,idingresso=?,updated_at=now()
 			WHERE id=?'
         );
     $stmt->execute(array(
@@ -34,6 +35,7 @@ try {
         $params->sexo,
         $params->pais,
         $params->cidade,
+        $params->ingresso,
         $params->id
     )); 
 

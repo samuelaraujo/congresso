@@ -4,6 +4,9 @@
 error_reporting(E_ALL ^ E_WARNING);
 ini_set('display_errors', 1);
 
+//timezone
+date_default_timezone_set('America/Rio_Branco');
+
 //definindo os dados de acesso ao banco de dados(DEVELOPER)
 define('DB', 'mysql');
 define('DB_HOST', 'localhost');
