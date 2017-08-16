@@ -51,6 +51,11 @@
                     </a>
                 </li>
                 <li> 
+                    <a href="/administrador/presenca/add" class="waves-effect">
+                        <i class="icon-user-following" data-icon="v"></i> <span class="hide-menu"> Presença </span>
+                    </a>
+                </li>
+                <li> 
                     <a href="/administrador/sorteio" class="waves-effect">
                         <i class="icon-present" data-icon="v"></i> <span class="hide-menu"> Sorteio </span>
                     </a>

@@ -94,15 +94,15 @@
                                                 <input id="segundo" 
                                                     name="presenca[]"
                                                     type="checkbox"
-                                                    value="2" disabled="disabled">
-                                                <label for="segundo">2° dia - Entrada</label>
+                                                    value="3" disabled="disabled">
+                                                <label for="segundo">3° dia - Entrada</label>
                                             </div>
                                             <div class="checkbox checkbox-success">
                                                 <input id="presenca" 
                                                     name="presenca"
                                                     type="checkbox"
-                                                    value="2">
-                                                <label for="presenca">2° dia - Saída</label>
+                                                    value="3">
+                                                <label for="presenca">3° dia - Saída</label>
                                             </div>
                                             <div class="checkbox checkbox-success hidden">
                                                 <input id="terceiro" 
