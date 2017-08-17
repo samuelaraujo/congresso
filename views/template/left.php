@@ -46,13 +46,8 @@
                     </a>
                 </li>
                 <li> 
-                    <a href="/administrador/credenciamento" class="waves-effect">
-                        <i class="ti-id-badge" data-icon="v"></i> <span class="hide-menu"> Credenciamento </span>
-                    </a>
-                </li>
-                <li> 
-                    <a href="/administrador/presenca/add" class="waves-effect">
-                        <i class="icon-user-following" data-icon="v"></i> <span class="hide-menu"> Presença </span>
+                    <a href="/administrador/presenca/" class="waves-effect">
+                        <i class="ti-id-badge" data-icon="v"></i> <span class="hide-menu"> Presença </span>
                     </a>
                 </li>
                 <li> 

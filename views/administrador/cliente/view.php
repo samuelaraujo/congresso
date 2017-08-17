@@ -68,6 +68,20 @@
 			        </div>
 		        </div>
 		    </div>
+		    <div class="row">
+		        <div class="col-md-6">
+			        <div class="form-group">
+			            <label class="control-label">Ingresso:</label>
+			            <span id="ingresso" class="dados"></span>
+			        </div>
+		        </div>
+		        <div class="col-md-6">
+			        <div class="form-group">
+			            <label class="control-label">Valor:</label>
+			            <span id="valor" class="dados"></span>
+			        </div>
+		        </div>
+		    </div>
 		</fieldset>
     </form>
 </div>

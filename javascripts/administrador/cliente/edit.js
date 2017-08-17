@@ -12,6 +12,14 @@ $(document).ready(function(){
                 required: true,
                 minlength: 5
             },
+            cracha: { 
+                required: true,
+                minlength: 3
+            },
+            email: {
+                required: true, 
+                email: true
+            },
             sexo: { 
                 required: true
             },
@@ -32,6 +40,14 @@ $(document).ready(function(){
             nome: { 
                 required: 'Preencha o nome de usuário',
                 minlength: 'Vamos lá o nome de usuário deve ter cinco caracteres'
+            },
+            cracha: { 
+                required: 'Como deseja ter seu nome no crachá?',
+                minlength: 'Só aceitamos nomes superior a três letras'
+            },
+            email: { 
+                required: 'Preencha seu email', 
+                email: 'Ops, tem certeza que é um email válido?'
             },
             sexo: { 
                 required: 'Qual o seu sexo?'
@@ -121,9 +137,9 @@ $(document).ready(function(){
                     success: function(response){
                         var options = '<option value="" disabled selected>Lote</option>';
                         for (var i=0;i<response.results.length;i++) {
-                            selected = (response.results[i].id==clientes.idingresso) ? 'selected="selected"' : '';
                             options += '<optgroup label="'+response.results[i].nome+'">'
                             for(var j=0;j<response.results[i].ingresso.length;j++){
+                                selected = (response.results[i].ingresso[j].id==parseInt(clientes.idingresso)) ? 'selected="selected"' : '';
                                 options += '<option value="'+response.results[i].ingresso[j].id+'" data-value="'+response.results[i].ingresso[j].valor+'" '+selected+'>'+ 
                                             response.results[i].ingresso[j].nome + ' - '  + floatToMoney(response.results[i].ingresso[j].valor,'R$')
                                         +'</option>';
@@ -209,6 +225,7 @@ $(document).ready(function(){
                 nome: $('#nome').val(),
                 sobrenome: $('#sobrenome').val(),
                 cracha: $('#cracha').val(),
+                email: $('#email').val(),
                 sexo: $('#sexo').val(),
                 pais: $('#pais').val(),
                 estado: $('#estado').val(),

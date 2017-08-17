@@ -175,7 +175,10 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <button type="submit" id="salvar" 
-                                            class="btn btn-success waves-effect waves-light m-r-10">Salvar</button>
+                                            class="btn btn-success waves-effect waves-light m-r-10">Salvar e adicionar outro</button>
+
+                                        <button type="button" id="voltar" 
+                                            class="btn btn-inverse waves-effect waves-light">Voltar</button>
                                     </div>
                                 </div>
 

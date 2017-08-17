@@ -36,6 +36,8 @@ $(document).ready(function(){
 	                $('form#formCliente span#sexo').html(sexo);
 	                $('form#formCliente span#pais').html(response.pais);
 	                $('form#formCliente span#cidade').html(response.cidade);
+	                $('form#formCliente span#ingresso').html(response.ingresso);
+	                $('form#formCliente span#valor').html(response.valor);
 
 	                //hidden
 	                $('.modal-loading').addClass('hidden');

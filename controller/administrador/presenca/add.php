@@ -17,13 +17,15 @@ try {
     $oConexao->beginTransaction();
 
     //params
+    $ip = $_SERVER['REMOTE_ADDR'];
+
     $entrada = isset($_POST['entrada']) 
-                        ? date('Y-m-d h:i:s') 
-                        : null;
+                        ? 'now()'
+                        : 'null';
 
     $saida = isset($_POST['saida']) 
-                        ? date('Y-m-d h:i:s')
-                        : null;
+                        ? 'now()'
+                        : 'null';
 
     $material = isset($_POST['material']) 
                         ? $_POST['material'] 
@@ -32,15 +34,14 @@ try {
     $stmt = $oConexao->prepare(
         'INSERT INTO 
             credenciamento(
-                idusuario,material,entrada,saida,created_at
+                idusuario,ip,material,entrada,saida,created_at
             ) VALUES(
-                ?,?,?,?,now()
+                ?,?,?,'. $entrada .','. $saida .',now()
             )');
     $stmt->execute(array(
         $_POST['id'],
-        $material,
-        $entrada,
-        $saida
+        $ip,
+        $material
     )); 
 
     $oConexao->commit();

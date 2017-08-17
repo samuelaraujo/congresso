@@ -12,6 +12,7 @@ try {
         $params->id,
         $params->nome,
         $params->cracha,
+        $params->email,
         $params->sexo, 
         $params->pais,
         $params->estado,
@@ -25,13 +26,14 @@ try {
 
     $stmt = $oConexao->prepare(
         'UPDATE usuario
-			SET nome=?,sobrenome=?,cracha=?,sexo=?,idpais=?,idcidade=?,idingresso=?,updated_at=now()
+			SET nome=?,sobrenome=?,cracha=?,email=?,sexo=?,idpais=?,idcidade=?,idingresso=?,updated_at=now()
 			WHERE id=?'
         );
     $stmt->execute(array(
         $params->nome,
         $params->sobrenome, 
         $params->cracha, 
+        $params->email, 
         $params->sexo,
         $params->pais,
         $params->cidade,

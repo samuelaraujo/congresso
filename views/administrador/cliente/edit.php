@@ -119,7 +119,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="email">E-mail<abbr>*</abbr></label>
-                                            <input type="text" class="form-control" id="email" name="email" disabled="disabled"> 
+                                            <input type="text" class="form-control" id="email" name="email"> 
                                         </div>                                
                                     </div>
                                 </div>

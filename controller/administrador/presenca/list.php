@@ -18,16 +18,16 @@ try {
 
     switch ($params->status) {
         case 1:
-            $status = '2017-08-14';
+            $status = '2017-08-14 15:00:00';
             break;
         case 2:
-            $status = '2017-08-15';
+            $status = '2017-08-15 17:00:00';
             break;
         case 3:
-            $status = '2017-08-16';
+            $status = '2017-08-16 17:00:00';
             break;
         case 4:
-            $status = '2017-08-17';
+            $status = '2017-08-17 17:00:00';
             break;
     }
 
@@ -44,15 +44,12 @@ try {
         'SELECT
             cd.id,c.nome,UPPER(CONCAT(c.nome,\' \', c.sobrenome)) cliente,c.cpf,
             DATE_FORMAT(cd.created_at, "%d/%m/%Y") created_at,cd.material,
-            DATE_FORMAT(cd.entrada, "%d/%m/%Y %h\h%i") entrada,
-            DATE_FORMAT(cd.saida, "%d/%m/%Y %h\h%i") saida,
             i.nome ingresso,p.valor,p.codigo,p.metodo,p.status
         FROM usuario c
         INNER JOIN credenciamento cd ON(c.id=cd.idusuario)
         INNER JOIN pagamento p ON c.id=p.idusuario
         INNER JOIN ingresso i ON i.id = p.idingresso
-        WHERE DATE_FORMAT(cd.created_at, "%Y-%m-%d")=:status '.$search.'
-        GROUP BY cd.idusuario
+        WHERE cd.created_at=:status '.$search.'
         ORDER BY cd.id DESC
         LIMIT :offset,:limit'
     );
@@ -76,7 +73,7 @@ try {
         INNER JOIN credenciamento cd ON(c.id=cd.idusuario)
         INNER JOIN pagamento p ON c.id=p.idusuario
         INNER JOIN ingresso i ON i.id = p.idingresso
-        WHERE DATE_FORMAT(cd.created_at, "%Y-%m-%d")=:status '.$search
+        WHERE cd.created_at=:status '.$search
     );
 
     if (isset($params->search[0])) {
@@ -88,22 +85,22 @@ try {
     $count->execute();
     $count_results = $count->fetchColumn();
 
-    $status = '2017-08-14';
+    $status = '2017-08-14 15:00:00';
     $count->bindParam('status', $status);
     $count->execute();
     $count_primeiro_dia = $count->fetchColumn();
 
-    $status = '2017-08-15';
+    $status = '2017-08-15 17:00:00';
     $count->bindParam('status', $status);
     $count->execute();
     $count_segundo_dia = $count->fetchColumn();
 
-    $status = '2017-08-16';
+    $status = '2017-08-16 17:00:00';
     $count->bindParam('status', $status);
     $count->execute();
     $count_terceiro_dia = $count->fetchColumn();
 
-    $status = '2017-08-17';
+    $status = '2017-08-17 17:00:00';
     $count->bindParam('status', $status);
     $count->execute();
     $count_quarto_dia = $count->fetchColumn();

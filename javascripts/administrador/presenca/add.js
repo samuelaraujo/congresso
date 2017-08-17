@@ -182,7 +182,7 @@ $(document).ready(function(){
 
     //cancel
     $('button#cancelar').livequery('click',function(event){
-        window.location.href = "/administrador/presenca/add";
+        window.location.href = "/administrador/presenca/";
         return false;
     });
 
