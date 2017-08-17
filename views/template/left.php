@@ -69,12 +69,6 @@
                         <i class="icon-user" data-icon="v"></i> <span class="hide-menu"> Meu perfil </span>
                     </a>
                 </li>
-                <li> 
-                    <a href="/office/credenciamento/add" 
-                        class="waves-effect">
-                        <i class="ti-id-badge" data-icon="v"></i> <span class="hide-menu"> Presença </span>
-                    </a>
-                </li>
             <?php } ?>
 
         </ul>
