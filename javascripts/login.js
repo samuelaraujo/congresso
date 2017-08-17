@@ -329,7 +329,7 @@ $(document).ready(function(){
 	        for (var i=0;i<response.results.length;i++) {
 	        	options += '<optgroup label="'+response.results[i].nome+'">'
 	        	for(var j=0;j<response.results[i].ingresso.length;j++){
-                    if(response.results[i].ingresso[j].id != 4){
+                    if(response.results[i].ingresso[j].id != 7){
                         options += '<option value="'+response.results[i].ingresso[j].id+'" data-value="'+response.results[i].ingresso[j].valor+'">'+ 
                                 response.results[i].ingresso[j].nome + ' - '  + floatToMoney(response.results[i].ingresso[j].valor,'R$')
                             +'</option>';
