@@ -85,13 +85,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Nome<abbr>*</abbr></label>
-                                    <input id="nome" name="nome" placeholder="Seu nome" class="form-control" type="text" maxLength="60" disabled="disabled">
+                                    <input id="nome" name="nome" placeholder="Seu nome" class="form-control" type="text" maxLength="60" >
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Sobrenome</label>
-                                    <input id="sobrenome" name="sobrenome" placeholder="Sobrenome" class="form-control" type="text" maxLength="40" disabled="disabled">
+                                    <input id="sobrenome" name="sobrenome" placeholder="Sobrenome" class="form-control" type="text" maxLength="40">
                                 </div>
                             </div>
                         </div>
@@ -99,19 +99,19 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Nome no Crachá<abbr>*</abbr></label>
-                                    <input id="cracha" name="cracha" placeholder="Nome no crachá" class="form-control" type="text" maxLength="60" disabled="disabled">
+                                    <input id="cracha" name="cracha" placeholder="Nome no crachá" class="form-control" type="text" maxLength="60" >
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>E-mail<abbr>*</abbr></label>
-                                    <input id="email" name="email" placeholder="E-mail" class="form-control" type="email" maxLength="160" disabled="disabled">
+                                    <input id="email" name="email" placeholder="E-mail" class="form-control" type="email" maxLength="160" >
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Telefone<abbr>*</abbr></label>
-                                    <input id="telefone" name="telefone" placeholder="Telefone" class="form-control" type="text" disabled="disabled">
+                                    <input id="telefone" name="telefone" placeholder="Telefone" class="form-control" type="text" >
                                 </div>
                             </div>
                         </div>
@@ -119,7 +119,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Ingresso<abbr>*</abbr></label>
-                                    <select id="ingresso" name="ingresso" class="form-control" disabled="disabled">
+                                    <select id="ingresso" name="ingresso" class="form-control" >
                                        <option value="" disabled selected>Lote</option>
                                     </select>
                                 </div>
@@ -129,8 +129,8 @@
                                 <div class="row">
                                     <div class="form-group col-md-12">
                                         <div class="radio">
-                                            <label class="col-md-6"><input id="sexo" name="sexo" value="M" type="radio" disabled="disabled"> Masculino</label>
-                                            <label class="col-md-6"><input id="sexo" name="sexo" value="F" type="radio" disabled="disabled"> Feminino</label>
+                                            <label class="col-md-6"><input id="sexo" name="sexo" value="M" type="radio" > Masculino</label>
+                                            <label class="col-md-6"><input id="sexo" name="sexo" value="F" type="radio" > Feminino</label>
                                         </div>
                                     </div>
                                 </div>
@@ -140,13 +140,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>CPF<small>(Apenas número)</small><abbr>*</abbr></label>
-                                    <input id="cpf" name="cpf" placeholder="CPF" class="form-control" type="text" maxLength="11" disabled="disabled">
+                                    <input id="cpf" name="cpf" placeholder="CPF" class="form-control" type="text" maxLength="11" >
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Possui algum tipo de deficiência?<abbr>*</abbr></label>
-                                    <select id="deficiencia" name="deficiencia" class="form-control" disabled="disabled">
+                                    <select id="deficiencia" name="deficiencia" class="form-control" >
                                         <option value="" disabled selected>Deficiência</option>
                                     </select>
                                 </div>
@@ -156,7 +156,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>País de Origem<abbr>*</abbr></label>
-                                    <select id="pais" name="pais" class="form-control" disabled="disabled">
+                                    <select id="pais" name="pais" class="form-control" >
                                         <option value="" disabled selected>Pais</option>
                                     </select>
                                 </div>
@@ -164,7 +164,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Estado<abbr>*</abbr></label>
-                                    <select id="estado" name="estado" class="form-control" disabled="disabled">
+                                    <select id="estado" name="estado" class="form-control" >
                                         <option value="" disabled selected>Estado</option>
                                     </select>
                                 </div>
@@ -172,7 +172,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Cidade<abbr>*</abbr></label>
-                                    <select id="cidade" name="cidade" class="form-control" disabled="disabled">
+                                    <select id="cidade" name="cidade" class="form-control" >
                                         <option value="" disabled selected>Cidade</option>
                                     </select>
                                 </div>
@@ -182,19 +182,19 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Senha<abbr>*</abbr></label>
-                                    <input id="senha" name="senha" placeholder="Senha" class="form-control" type="password" maxLength="255" disabled="disabled">
+                                    <input id="senha" name="senha" placeholder="Senha" class="form-control" type="password" maxLength="255" >
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Confirmar Senha<abbr>*</abbr></label>
-                                    <input id="confirmasenha" name="confirmasenha" placeholder="Confirmar Senha" class="form-control" type="password" maxLength="255" disabled="disabled">
+                                    <input id="confirmasenha" name="confirmasenha" placeholder="Confirmar Senha" class="form-control" type="password" maxLength="255" >
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <button id="salvar" class="btn btn-success btn-fill btn-wd" disabled="disabled">
+                                <button id="salvar" class="btn btn-success btn-fill btn-wd" >
                                     <span>CADASTRAR</span>
                                 </button>
                             </div>
