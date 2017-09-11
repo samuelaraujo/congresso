@@ -311,3 +311,18 @@ i.btn-label{
   display: inline;
   margin-right: 10px;
 }
+/*certificado*/
+.certificado .name{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.6em;
+  color: #212121;
+  position: absolute;
+  top: 51%;
+  left: 34%;
+}
+.certificado .certification{
+  background: url('/assets/images/common/certification.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 595px;
+}

@@ -205,12 +205,21 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="certificate">
-                                    <div class="col-md-6">
-                                        <h3>Aguarde a conclusão do curso para impressão do certificado!</h3>
-                                        <h4>Obrigado por participar do evento!!!</h4>
+                                    <div class="congratulation hidden">
+                                        <div class="col-md-12">
+                                            <h3>Obrigado por participar do evento!!!</h3>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button id="btn-certificado" 
+                                                class="btn btn-success"> 
+                                                <i class="icon-graduation m-r-5"></i> <span>Emitir certificado</span>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="col-md-5 pull-right">
-                                        <p></p>
+                                    <div class="notcongratulation">
+                                        <div class="col-md-12">
+                                            <h3>Não é possível emitir o seu certificado!!!</h3>
+                                        </div>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -229,6 +238,8 @@
 <?php require_once 'views/template/footer.php'; ?>
 
 <!-- javascripts -->
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+<script src="http://html2canvas.hertzen.com/build/html2canvas.js"></script>
 <script type="text/javascript" src="javascripts/office/dashboard.js"></script>
 <script type="text/javascript" src="javascripts/office/global.js"></script>
 

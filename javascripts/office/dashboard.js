@@ -39,6 +39,8 @@ $(document).ready(function(){
                             status = 'Paga';
                             labelStatus = 'label-success';
                             segundaVia = false;
+                            $('div.congratulation').removeClass('hidden');
+                            $('div.notcongratulation').addClass('hidden');
                         break;
                         case 7:
                             status = 'Cancelada';
@@ -100,6 +102,20 @@ $(document).ready(function(){
         }
         $("div#modal").modal(options);
         $('div#modal .modal-content').load('views/office/checkout/billet.php');
+        return false;
+    });
+
+    $('button#btn-certificado').livequery('click',function(event){
+
+        var options = {
+            cache:false,
+            show: true,
+            keyboard: false,
+            backdrop: 'static'
+        }
+        $("div#modal").modal(options);
+        $('div#modal .modal-dialog').addClass('modal-lg');
+        $('div#modal .modal-content').load('views/office/certificado/view.php');
         return false;
     });
 
