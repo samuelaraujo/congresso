@@ -20,21 +20,23 @@ $(document).ready(function(){
         });
     };
 
-    $('button#girar').livequery('click',function(event){
-        $('h1#id').html('0000000');
-        $('h3#cliente').html('???????');
-        setTimeout(function(){
-            save();
-        }, 10000);
-    });
-
     function onError(response) {
       console.log(response);
     }
 
     //save
-    setTimeout(function(){
-        save();
+    save();
+
+    
+    setTimeout(function() {
+    console.log("loading1...");
+    save1();   
     }, 5000);
+       
+     setTimeout(function() {
+        console.log("loading...");
+     save();
+     }, 10000);
+   
 
 });
