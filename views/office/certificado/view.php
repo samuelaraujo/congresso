@@ -1,3 +1,4 @@
+
 <div class="modal-loading">
   	<div class="col-md-12 text-center">
 	    <div class="loading">
@@ -26,8 +27,11 @@
     
 </div>
 <div class="modal-footer hidden">
-    <button id="btn-pdf" type="button" class="btn btn-sm btn-success">Salvar em PDF</button>
+    <span style="color: red; font-size-adjust: 10px;">* Para baixar o certificado utilize navegador Firefox</span> 
+    <button id="btn-pdf" type="button" class="btn btn-sm btn-success">Baixar PDF</button>
+    <button id="btn-pdfImp" type="button" class="btn btn-sm btn-success">Imprimir PDF</button>
     <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Fechar</button>
+  
 </div>
 
 <!-- javascripts -->

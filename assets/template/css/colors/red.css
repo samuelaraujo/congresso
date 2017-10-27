@@ -326,3 +326,7 @@ i.btn-label{
   width: 100%;
   height: 595px;
 }
+
+.novaAba {
+    target-new: tab ! important;
+}
