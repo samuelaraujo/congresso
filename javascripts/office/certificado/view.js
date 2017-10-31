@@ -1,69 +1,54 @@
-$(document).ready(function(){
+var user = sessionStorage.getItem('1');
+var cpf = sessionStorage.getItem('2');
+console.log(user);
+console.log(cpf);
+ //Limpar
+localStorage.clear();
 
-	var usuarios =	{
-		ingresso: clientes.idingresso,
-		nome: clientes.nome,
-		sobrenome: clientes.sobrenome,
-		status: clientes.status
-	};
+var divNome = document.querySelector('.name');
+var divCpf = document.querySelector('.cpf');
+var divData = document.querySelector('.data');
+ 
+divNome.innerHTML = user;
+divCpf.innerHTML = cpf;
+divData.innerHTML = dataAtualFormatada();
 
-	//set nome
-	$('.certificado .name').html(usuarios.nome + ' ' + usuarios.sobrenome);
+function dataAtualFormatada(){
+    var data = new Date();
+    var dia = data.getDate();
+    if (dia.toString().length == 1)
+      dia = "0"+dia;
+    var mes = data.getMonth()+1;
+    if (mes.toString().length == 1)
+      mes = "0"+mes;
+    var ano = data.getFullYear();  
+    var hora = data.getHours(); 
+    var min = data.getMinutes(); 
+    var seg = data.getSeconds();  
+    return dia+"/"+mes+"/"+ano + " As " + hora+":"+min+":"+seg;
+}
 
-	$('.modal-loading').addClass('hidden');
-	$('.modal-header').removeClass('hidden');
-	$('.modal-body').removeClass('hidden');
-	$('.modal-footer').removeClass('hidden');
-	var elem = $('.modal-body');
-	
+var pdf = document.querySelector("#btn-pdf");
+console.log(pdf);
 
-    $('button#btn-pdf').livequery('click',function(event){
-    	pdf();
-    	return false;
-    });
-
-     $('button#btn-pdfImp').livequery('click',function(event){
-      
-
-     return false;
-    });
-
-    function onError(response) {
-      console.log(response);
-    }
-
+pdf.addEventListener("click", function(event) {
 
     function pdf() {
-     if(parseInt(usuarios.status) == 3){
+   
             var d = new Date();
             var n = d.getTime();
-            var doc = new jsPDF('landscape', 'pt', [768, 595]);
+            var doc = new jsPDF('landscape');
                 doc.addHTML($('div#certificado'), function() {
 
                 doc.save("certificado-pdf-"+n+".pdf");
             });
-        }
-        return doc;
-    }
-    
-
-function printElem(elem){
-    var mywindow = window.open();
-    console.log(elem);
-    mywindow.document.write('<html><head><title>' + document.title  + '</title>');
-    mywindow.document.write('</head><body >');
-    mywindow.document.write(elem);
-    console.log(mywindow.document);
-    mywindow.document.write('</body></html>');
-
-    mywindow.document.close(); // necessary for IE >= 10
-    mywindow.focus(); // necessary for IE >= 10*/
-
-    mywindow.print();
-    mywindow.close();
-
-    return true;
-}
+      return doc;
+    };
 
 
+   
+    pdf();
+     
 });
+
+

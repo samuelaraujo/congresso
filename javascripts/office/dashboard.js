@@ -1,5 +1,5 @@
 //variable global
-var clientes, pagamentos = {};
+var clientes, pagamentos, usuarios = {};
 
 $(document).ready(function(){
 
@@ -85,6 +85,13 @@ $(document).ready(function(){
 
                     //set 
                     clientes = response;
+
+                        usuarios =  {
+                            ingresso: clientes.idingresso,
+                            nome: clientes.nome,
+                            sobrenome: clientes.sobrenome,
+                            status: clientes.status
+                        };
                     
                 }
             },
@@ -107,15 +114,12 @@ $(document).ready(function(){
 
     $('button#btn-certificado').livequery('click',function(event){
 
-        var options = {
-            cache:false,
-            show: true,
-            keyboard: false,
-            backdrop: 'static'
-        }
-        $("div#modal").modal(options);
-        $('div#modal .modal-dialog').addClass('modal-lg');
-        $('div#modal .modal-content').load('views/office/certificado/view.php');
+        var user = clientes.nome +" "+ clientes.sobrenome;
+        console.log("usuarios: " + user);
+        sessionStorage.setItem('1',user);
+        sessionStorage.setItem('2',clientes.cpf);
+        window.open('views/office/certificado/view.php');
+       
         return false;
     });
 
