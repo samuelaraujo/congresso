@@ -1,6 +1,11 @@
 
 <link href="/../../assets/template/css/colors/red.css" id="theme" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style type="text/css" >
+body{
+margin: 0px;
+}
+</style>
 <!-- <div class="modal-loading">
   	<div class="col-md-12 text-center">
 	    <div class="loading">
@@ -21,18 +26,18 @@
 
     <div class="row">
 	    <div class="col-md-12">
-	        <div id="certificado" class="certificado">
-                <div class="name"></div>
-                <div class="cpf"></div>
-                <div class="data"></div>
-                <div class="certification"></div>
+	           <div id="certificado" class="certificado">
+               <img class="image" src="/../../assets/images/common/certification.png">
+               <div class="name"></div>
+               <div class="cpf"></div>
+               <div class="data"></div>
             </div>
 	    </div>
     </div>
     
 </div>
 <div class="modal-footer">
-    <span>* Para baixar o certificado não utilize dispositivos moveis</span> 
+    
     <button id="btn-pdf" type="button" class="btn btn-sm btn-success">Baixar PDF</button>
     <button id="btn-pdfImp" type="button" class="btn btn-sm btn-success">Imprimir PDF</button>
 </div>

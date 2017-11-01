@@ -1,7 +1,5 @@
 var user = sessionStorage.getItem('1');
 var cpf = sessionStorage.getItem('2');
-console.log(user);
-console.log(cpf);
  //Limpar
 localStorage.clear();
 
@@ -25,11 +23,10 @@ function dataAtualFormatada(){
     var hora = data.getHours(); 
     var min = data.getMinutes(); 
     var seg = data.getSeconds();  
-    return dia+"/"+mes+"/"+ano + " As " + hora+":"+min+":"+seg;
+    return dia+"/"+mes+"/"+ano + " As " + hora+":"+min+":"+seg+" Hs";
 }
 
 var pdf = document.querySelector("#btn-pdf");
-console.log(pdf);
 
 pdf.addEventListener("click", function(event) {
 
@@ -37,17 +34,30 @@ pdf.addEventListener("click", function(event) {
    
             var d = new Date();
             var n = d.getTime();
-            var doc = new jsPDF('landscape');
-                doc.addHTML($('div#certificado'), function() {
-
-                doc.save("certificado-pdf-"+n+".pdf");
+            var doc = new jsPDF('l', 'pt', 'a4');
+           
+            doc.addHTML($('div#certificado'), x, y, callback, function() {
+            doc.save("certificado-pdf-"+n+".pdf")
             });
+
+
       return doc;
     };
 
 
    
     pdf();
+     
+});
+
+var pdfImp = document.querySelector("#btn-pdfImp");
+var footer = document.querySelector(".modal-footer");
+
+pdfImp.addEventListener("click", function(event) {
+    footer.classList.add("hidden");
+    window.print();
+    footer.classList.remove("hidden");
+
      
 });
 
