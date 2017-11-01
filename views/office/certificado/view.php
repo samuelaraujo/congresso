@@ -38,8 +38,8 @@ margin: 0px;
 </div>
 <div class="modal-footer">
     
-    <button id="btn-pdf" type="button" class="btn btn-sm btn-success">Baixar PDF</button>
-    <button id="btn-pdfImp" type="button" class="btn btn-sm btn-success">Imprimir PDF</button>
+  <!--   <button id="btn-pdf" type="button" class="btn btn-sm btn-success">Baixar PDF</button> -->
+    <button id="btn-pdfImp" type="button" class="btn btn-sm btn-success"> Imprimir PDF</button>
 </div>
 
 <!-- javascripts -->

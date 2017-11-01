@@ -26,29 +26,29 @@ function dataAtualFormatada(){
     return dia+"/"+mes+"/"+ano + " As " + hora+":"+min+":"+seg+" Hs";
 }
 
-var pdf = document.querySelector("#btn-pdf");
+// var pdf = document.querySelector("#btn-pdf");
 
-pdf.addEventListener("click", function(event) {
+// pdf.addEventListener("click", function(event) {
 
-    function pdf() {
+//     function pdf() {
    
-            var d = new Date();
-            var n = d.getTime();
-            var doc = new jsPDF('l', 'pt', 'a4');
+//             var d = new Date();
+//             var n = d.getTime();
+//             var doc = new jsPDF('l', 'pt', 'a4');
            
-            doc.addHTML($('div#certificado'), function() {
-            doc.save("certificado-pdf-"+n+".pdf")
-            });
+//             doc.addHTML($('div#certificado'), function() {
+//             doc.save("certificado-pdf-"+n+".pdf")
+//             });
 
 
-      return doc;
-    };
+//       return doc;
+//     };
 
 
    
-    pdf();
+//     pdf();
      
-});
+// });
 
 var pdfImp = document.querySelector("#btn-pdfImp");
 var footer = document.querySelector(".modal-footer");
