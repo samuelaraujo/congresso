@@ -36,7 +36,7 @@ pdf.addEventListener("click", function(event) {
             var n = d.getTime();
             var doc = new jsPDF('l', 'pt', 'a4');
            
-            doc.addHTML($('div#certificado'), x, y, callback, function() {
+            doc.addHTML($('div#certificado'), function() {
             doc.save("certificado-pdf-"+n+".pdf")
             });
 
